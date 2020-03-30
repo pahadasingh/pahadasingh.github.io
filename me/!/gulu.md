@@ -216,10 +216,6 @@ TODO Basic List
  - List for today and tomorrow day tasks on priority
 
 
-#########################################
-http://www...kalonline.com/ExportPS.aspx?code=SA18004374&month=August%20-%202019
-http://www...kalonline.com/ExportPS.aspx?code=SA18004374&month=August - 2019
-
 ----------------- Company1 --------------------------------
 365 login
 sraban.kumar@company.com
