@@ -36,7 +36,6 @@
 - [questions](questions.txt)
 - [r](r.txt)
 - [react](react.txt)
-- [README](README.md)
 - [resig](resig.txt)
 - [sdlc](sdlc.txt)
 - [security](security.txt)
