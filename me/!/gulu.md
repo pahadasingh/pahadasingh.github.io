@@ -56,7 +56,7 @@ sraban_pvt@ymail.com|30p^t29.23ltd21=3
 
 
 `Skype`
-- sraban.pvt@moc.evil|QW@12345678
+- sraban.pvt@moc.evil|QW@12345689
 - sraban.edkal@moc.liamg|chrn@lt
 
 `Myntra`
