@@ -1,0 +1,7 @@
+1. Read and Prepare all Laravel ORM models
+2. Java basics about session handling, file uploading, exception handling
+3. Token and jwt based authentication in laravel and spring-boot with dummy project
+4. Read/Imagine some designings in bootstarp - material - ionic
+5. MySQL All advance concepts like ACID, Normalisation
+6. Programming Stuffs/DataStructure like sorting/searching/linked-list handling
+7. Some Interviews, PI and puzzling stuffs

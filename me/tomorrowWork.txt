@@ -1,0 +1,30 @@
+1. Listen one latest archieve Newsonair
+2. Economic times need to be reviewed
+3. Read/Select an audio book
+4. *Topic tomorrow to work/enjoy
+5. Youtube for new topics like 
+    - ORM understanding laravel
+      - Relations, events, Queues, Task Scheduling
+    - Laravel Material understanding
+    - SVN/GIT working commands-tools
+    - Jira/Pivotal understanding
+    - Angular material, Ionic designing
+
+6. Practise in Keyboard typing blindly with formulla 
+
+
+######### --- 05Aug2019 --- ###########
+
+Laravel ( https://coderstape.com/series/5-laravel-58-tutorial-from-the-ground-up )
+
+Laravel 5.8 Tutorial From Scratch - e14 - Eloquent BelongsTo & HasMany Relationships
+Eloquent Accessors & RESTful Controller
+https://github.com/coderstape/laravel-58-from-scratch
+https://dev.to/mezie/event-driven-laravel-applications-12a6
+
+shortcut for writing bootstrap # .col-10
+
+vue.js
+-------
+npm run dev / npm run watch
+rm -rf node_modules && npm install

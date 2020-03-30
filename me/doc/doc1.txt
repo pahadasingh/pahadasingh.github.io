@@ -1,0 +1,14 @@
+php artisan make:model User -m
+ORM Properties
+$table
+$attributes
+$fillable
+$guarded
+$primaryKey
+$incrementing
+$keyType
+$timestamps
+$dateFormat
+CREATED_AT
+UPDATED_AT
+$connection
