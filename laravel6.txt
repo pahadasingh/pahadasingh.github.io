@@ -1,0 +1,38 @@
+public/index.php
+   -> bootstrap/app.php
+   -> Loads Application Class Object then calls three singleton container binding
+       -> 1. Http(request - middleware - response),   2. Console Terminal(input - middleware - output), 3. Exceptions Handling
+
+--------------------------
+- About traits
+- create a user from:$ factory(App\User::class)->create()
+
+Bitfumes
+Laravel Activity Log-
+https://www.youtube.com/watch?v=XWFXikdTFcw
+
+1. Package Laravel Activity Log in database By Team Spatie - Intro and Setup
+2. Package Laravel Horizon - Monitor Redis Queue Jobs
+     php artisan queue:work
+     php artisan horizon
+3. Laravel Horizon - Deploy with Supervisor
+     what is the use of ubuntu apt-get install supervisor
+
+Horizon
+Dusk
+Envoy
+Telescope
+Scout
+Passport
+Socialite
+Laravel Forge,
+
+PHP Companion sublime series
+
+pa queue:table;
+
+
+sudo apt-get install supervisor
+
+###########################################
+sraban/chrn@lt - https://rextester.com/l/mysql_online_compiler
