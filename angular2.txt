@@ -1,0 +1,332 @@
+## Calling Multiple Observers returns output in a single subscriber in Angular
+
+  private apiReqKey:any = ['LoadCountryMasterPopUp', 'LoadIPTransaction','LoadProductTransaction','LoadApplicationTypeTransaction','LoadApplicationCategoryTransaction','LoadIPTypeTransaction','LoadCompanyTransaction','LoadSubjectAreaTransaction','LoadOfficeTransaction','LoadCurrencyTransaction','LoadApplicationStatusTransaction'];
+  
+  public requestMultipleApi(): Observable<any[]> {
+    let url = this.app.shared.urls.masters+'/';
+    let responses: any = [];
+    for (let key of this.apiReqKey) {
+      responses.push(this.app.shared.postCurl(url+key, 'V', {}));
+    }
+    return forkJoin(responses);
+  }
+
+  public loadApis() { 
+    this.requestMultipleApi().subscribe( output => {
+      let i = 0;
+      for (let key of this.apiReqKey) {
+
+        switch (key) {
+          case "LoadCountryMasterPopUp":
+              this.countryMethod(output[i]);
+            break;
+          case "LoadIPTransaction":
+              this.ipMethod(output[i]);
+            break;
+          case "LoadProductTransaction":
+              this.productTransaction(output[i]);
+            break;          
+          case "LoadApplicationTypeTransaction":
+              this.applicationType(output[i]);
+            break;          
+          case "LoadApplicationCategoryTransaction":
+              this.applicationCategory(output[i]);
+            break;          
+          case "LoadIPTypeTransaction":
+              this.ipType(output[i]);
+            break;          
+          case "LoadCompanyTransaction":
+              this.companyTransaction(output[i]);
+            break;          
+          case "LoadSubjectAreaTransaction":
+              this.subjectAreaTransaction(output[i]);
+            break;          
+          case "LoadOfficeTransaction":
+              this.officeTransaction(output[i]);
+            break;          
+          case "LoadCurrencyTransaction":
+              this.currencyTransaction(output[i]);
+            break;          
+          case "LoadApplicationStatusTransaction":
+              this.applicationStatusTransaction(output[i]);
+            break;
+        }
+        i++;
+      }
+    }, error => {
+      this.app.toast("Some of api are not working!!!", 'warning');
+    });
+
+  }
+
+
+  =================================================
+
+## Ways File Uploading in Http Observer in ANgular
+
+
+setFilesByte( event, field, oldFiles = '') {
+    //var loader = this.loadingCtrl.create({content: "Uploading..."}); loader.present();
+    
+    const files = event.target.files || event.srcElement.files;
+    
+    if( field.value == oldFiles ) {
+      var oldFilesBackUp = oldFiles;
+      field.setValue("");
+    }else{
+      oldFiles = field.value;
+    }
+
+    if (!files) {
+      this.toast("File not available", 'warning');
+      return;
+    }
+
+    var totalFileSize = 0;
+    for (let i = 0; i < files.length; i++) {
+      var fileSize = files[i].size;
+      fileSize = fileSize / 1048576; //size in mb
+      totalFileSize += fileSize;
+    }
+    if(totalFileSize > 10) {
+      this.toast("File size exceeding 10Mb", 'warning');
+      event.target.value = "";
+      return false;
+    }
+
+    let promise = new Promise((resolve, reject) => {
+        const formImages: any = {};
+        if(files.length) {
+          let reader = new FileReader();
+          reader.readAsDataURL(files[0]);
+          //reader.readAsArrayBuffer( new Blob([files[0]]) );
+          reader.onload = () => {
+            if(reader.result) {
+              formImages.IMAGE_NAME = files[0].name;
+              formImages.IMAGE_TYPE = files[0].type;
+              formImages.BINARY_IMAGE = (<any>reader.result).split(',')[1];
+              //var arrayBuffer:any = reader.result, array = new Uint8Array(arrayBuffer), binaryString = String.fromCharCode.apply(null, array);
+              //formImages.BINARY_IMAGE = binaryString;
+              resolve(formImages);
+            }else{
+              reject('error');
+            }
+          };
+        }
+    });
+
+    promise.then((formImages) => {
+      if(formImages != 'error') {
+        let url = this.shared.urls.masters+'/UploadImage'; 
+        this.shared.uploadCurl( url, formImages ).subscribe((output:any) => {
+          if(output.status) {
+            oldFiles = oldFiles ? oldFiles+':'+output.response : output.response;
+            field.setValue(oldFiles);
+            this.toast('Uploaded Succcessfully', 'success');
+          }else{
+            event.target.value = "";
+            field.setValue("");
+            this.toast(output.message, 'warning');
+          }
+          
+        });
+      }
+    });
+}
+
+setFiles( event, field, oldFiles = '') {
+    //var loader = this.loadingCtrl.create({content: "Uploading..."}); loader.present();
+    const files = event.target.files || event.srcElement.files;
+    let url = this.shared.urls.masters+'/UploadToTempFolder'; 
+    if( field.value == oldFiles ) {
+      var oldFilesBackUp = oldFiles;
+      field.setValue("");
+    }else{
+      oldFiles = field.value;
+    }
+
+    if (!files) {
+      this.toast("File not available", 'warning');
+      return;
+    }
+
+    var totalFileSize = 0;
+    for (let i = 0; i < files.length; i++) {
+      var fileSize = files[i].size;
+      fileSize = fileSize / 1048576; //size in mb
+      totalFileSize += fileSize;
+    }
+    if(totalFileSize > 10) {
+      this.toast("File size exceeding 10Mb", 'warning');
+      event.target.value = "";
+      return false;
+    }
+
+    const formData: FormData = new FormData();
+    for (let i = 0; i < files.length; i++) {
+      formData.append('IMAGE_NAME', files[i], files[i].name);
+    }
+
+    this.shared.uploadCurl(url, formData).subscribe((output:any) => {
+        if(output.status) {
+          oldFiles = oldFiles ? oldFiles+':'+output.response : output.response;
+          field.setValue(oldFiles);
+          this.toast('Uploaded Succcessfully', 'success');
+        }else{
+          event.target.value = "";
+          field.setValue("");
+          this.toast(output.message, 'warning');
+        }
+        //loader.dismiss();
+      }
+    );
+  }
+
+###################################################################################
+
+## Any Form Submitting in Angular Ajax
+
+
+  anything(method: string, path: string, body: Object = {}, params: HttpParams = new HttpParams(), headers: HttpHeaders = new HttpHeaders() ): Observable<any> {
+    const token = this.jwtService.getToken();
+    if(token) params = params.append('api_token', token.toString());
+    if(method == "get"){
+      return this.http.get(`${environment.api_url_mlm}${path}`, { params }).pipe(catchError(this.formatErrors));
+    } else if(method == "post"){
+      headers.append("Content-Type", "multipart/form-data");
+      return this.http.post(`${environment.api_url_mlm}${path}`, this.createFormData(body) , { params, headers }  ).pipe(catchError(this.formatErrors));
+    } else {
+      console.log('#error in api call');
+    } 
+  }
+
+  get(path: string, params: HttpParams = new HttpParams()): Observable<any> {
+    const token = this.jwtService.getToken();
+    if(token) params = params.append('api_token', token.toString());
+    return this.http.get(`${environment.api_url}${path}`, { params })
+      .pipe(catchError(this.formatErrors));
+  }
+
+  put(path: string, body: Object = {}, params: HttpParams = new HttpParams()): Observable<any> {
+    const token = this.jwtService.getToken();
+    if(token) params = params.append('api_token', token.toString());
+    return this.http.put(
+      `${environment.api_url}${path}`,
+      JSON.stringify(body), { params }
+    ).pipe(catchError(this.formatErrors));
+  }
+
+  post(path: string, body: Object = {}, params: HttpParams = new HttpParams()): Observable<any> {
+    const token = this.jwtService.getToken();
+    if(token) params = params.append('api_token', token.toString());
+    
+    return this.http.post(
+      `${environment.api_url}${path}`,
+      JSON.stringify(body), { params }
+    ).pipe(catchError(this.formatErrors));
+  }
+
+  delete(path): Observable<any> {
+    return this.http.delete(
+      `${environment.api_url}${path}`
+    ).pipe(catchError(this.formatErrors));
+  }
+
+  createFormData(object: Object, form?: FormData, namespace?: string): FormData {
+      
+
+      const formData = form || new FormData();
+      for (let property in object) {
+          if (!object.hasOwnProperty(property) || !object[property]) {
+              continue;
+          }
+          const formKey = namespace ? `${namespace}[${property}]` : property;
+          if (object[property] instanceof Date) {
+              formData.append(formKey, object[property].toISOString());
+          } else if (typeof object[property] === 'object' && !(object[property] instanceof File)) {
+              this.createFormData(object[property], formData, formKey);
+          } else {
+              formData.append(formKey, object[property]);
+          }
+      }
+
+      return formData;
+  }
+
+================================================
+
+## Trim Jsons()
+
+var what = Object.prototype.toString;
+function trimJson(obj, fn = checkAndFixNull) {
+  var wo = what.call(obj);
+  if (wo == "[object Object]") {
+    Object.keys(obj).forEach(function(key){
+      fn(obj, key);
+      var item = obj[key], w = what.call(item);
+      if (w == "[object Object]" || w == "[object Array]") {
+        trimJson(item, fn);
+      }
+    });
+  }
+  else if (wo == "[object Array]") {
+    obj.forEach(function(item, ix) {
+      fn(obj, ix);
+    });
+    obj.forEach(function(item, ix) {
+      var w = what.call(item);
+      if (w == "[object Object]" || w == "[object Array]") {
+        trimJson(item, fn);
+      }
+    });
+  }
+  return obj;
+}
+
+====================================================
+
+## DateTime to String Formatting
+
+var timeObjToStrFormat = function date2str(x, y) {
+    /*
+      x - date timeStamp Object like new Date()
+      y - Formate String "dd-MMM-yyyy"
+    */
+    x = new Date(x);
+    y = y.split('Y').join('y');
+    y = y.split('D').join('d');
+    y = y.split('H').join('h');
+    y = y.split('S').join('s');
+    var z = {
+        M: x.getMonth() + 1,
+        d: x.getDate(),
+        h: x.getHours(),
+        m: x.getMinutes(),
+        s: x.getSeconds()
+    };
+  
+    y = y.replace(/(y+)/g, function(v) {
+        return x.getFullYear().toString().slice(-v.length)
+    });
+  
+    y = y.replace(/(M+|d+|h+|m+|s+)/g, function(v) {
+        let objValue = eval('z.' + v.slice(-1));
+        if(v.indexOf('M') !== -1 && v.length > 2) {
+           var month = []; 
+           if(v.length == 3) {
+              month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"];
+           }else{
+             month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+           }
+           return month[objValue-1];
+         } else {
+            return ((v.length > 1 ? "0" : "") + objValue).slice(-2)
+         }
+    });
+    return y;
+}
+
+
+
+
+

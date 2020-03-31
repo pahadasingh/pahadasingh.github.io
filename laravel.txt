@@ -1,0 +1,177 @@
+=> V7
+# Commands
+============================
+composer global require laravel/installer
+composer create-project [PACKAGE] [DESTINATION PATH] [--FLAGS]
+composer create-project laravel/laravel /Applications/MAMP/htdocs/test_laravel
+composer create-project laravel/laravel ProjectName
+composer create-project --prefer-dist laravel/laravel NameOfProject "Version"
+"minimum-stability": "stable"
+
+php composer.phar create-project --prefer-dist laravel/laravel lar-project "5.7.*"
+$ composer create-project --prefer-dist laravel/lumen blog
+
+```sh
+php artisan serve
+php artisan make:model User -m
+php artisan make:model Task -m -c -r
+php artisan migrate
+php artisan route:list
+
+composer install
+php artisan horizon:install
+php artisan telescope:install
+php artisan storage:link
+php artisan migrate --seed
+php artisan db:seed
+php artisan db:seed --class=DevDatabaseSeeder
+php artisan package:discover
+php artisan migrate:fresh --seed
+php artisan route:list --path=api
+php artisan queue:work --tries=1 --queue="data-ingestion-default" --daemon
+php artisan schedule run: used to run scheduled jobs in Laravel.
+php artisan make:console FooCommand
+composer create-project laravel/laravel your-project-name version
+composer create-project laravel/lumen your-project-name version
+composer create-project laravel/vapour your-project-name version
+
+
+php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
+php artisan backup:run
+php artisan tinker
+> PrepareNewsletterSubscriptionEmail::dispatch();
+```
+
+# Latest RND/Study/Preparation
+===========================
+https://codeshare.io/sraban-laravel7
+
+
+
+
+# Search
+===========================
+https://codeshare.io/sraban-laravel2
+https://codeshare.io/sraban-laravel3
+https://codeshare.io/sraban-laravel4
+Laravel Projects in github
+Angular Projects in github
+https://gist.github.com/msurguy/8590765
+*https://github.com/guillaumebriday/laravel-blog
+https://imgur.com/a/Jbnwj
+https://github.com/ant-vel
+
+
+
+# Understanding Search images
+============================
+what is the difference CI and Laravel
+ORM
+redis in laravel works for boardcasting the event
+use of Horizon and Telescope in laravel and How
+and QUE_DRIVER is redis how it works
+$user->roles()->sync()
+--
+auth()->user()->tokens->each(function ($token, $key) {
+    $token->delete();
+});
+
+
+# Thoughts
+============================
+MVC architectural pattern
+Laravel is released under the MIT license.Therefore, its source code is hosted on GitHub.
+Composer = application-level package manager for PHP.
+- Laravel nexted transaction
+- How to create a large project consumes huge memory in angular
+- What are the drawbacks of using laravel and angular
+- What is the changes in previous and current version
+
+
+1. Design patterns are recipes for building maintainable code.
+understandable
+intuitive
+adaptable
+debuggable
+makes communication between developers more efficient
+
+2. Pattern
+Creational - instatiating, 
+structural - composition between object / usages of interface and abstract class,  
+behavioural - communication between object
+
+3. 
+what is core "->make()"" funtion in laravel
+
+4.
+Provider Pattern let you extentds the framework by registering new classes 
+
+
+# Links
+============================
+https://paiza.cloud/containers
+https://proxy-engineering-paiza-io.paiza.cloud/entry/paizacloud_laravel#main
+
+https://www.toptal.com/web/cookie-free-authentication-with-json-web-tokens-an-example-in-laravel-and-angularjs
+http://www.laravelinterviewquestions.com/blog/laravel-interview-questions-nja/
+https://www.laravelbestpractices.com/
+https://www.innofied.com/top-10-laravel-best-practices/
+https://2019.quickadminpanel.com/
+*https://codingcompiler.com/laravel-interview-questions-answers/
+*https://www.wisdomjobs.com/e-university/laravel-interview-questions.html
+*https://laracasts.com/discuss/channels/general-discussion/laravel-security
+*https://laravel.com/docs/5.3/errors
+*https://www.w3resource.com/laravel/error-handling.php
+*https://stackify.com/laravel-logging-tutorial/
+*https://auth0.com/blog/why-laravel-is-the-recommended-framework-for-secure-mission-critical-applications/
+*https://serversideup.net/laravel-gates-and-policies-in-an-api-driven-spa/
+
+
+https://www.quora.com/How-can-I-use-database-transactions-in-Laravel
+https://stackoverflow.com/questions/57709233/laravel-eloquent-orm-transactions-why-we-need-rollback
+
+
+# Fundamentals
+============================
+Route::when('*', 'csrf', ['post']);
+
+
+
+
+# Concepts in Program
+============================
+
+
+
+
+# Tips & Tricks
+============================
+
+
+
+
+# Programs 
+============================
+
+
+
+# About Laravel
+============================
+https://www.resourcifi.com/blog/why-laravel-is-a-good-choice-in-2019/
+
+  So, we have talked a lot about Laravel and understood as to why Laravel is a good choice in 2019
+
+  Laravel’s fundamental concepts include Routing, Views, Eloquent ORM, Controllers, Middleware, Models & Migrations, Requests, and Responses.
+
+  Middleware bridges the gap between a request and a response.
+
+  Laravel possess the most potent ORM (Object-relational Mapping)
+
+  These libraries make the life of dedicated Laravel developers easier by facilitating easy implementation features like active user checking, Bcrypt hash, password reset, CSRF(Cross Site Request Falsification) Protection, Encryption and many more.
+
+  Laravel development services includes many security features like authentication system, reduce vulnerabilities From CSRF (cross-site request forgery), 
+  protection against XSS (cross-site scripting), SQL Injection, secured cookies, forcing HTTPS when exchanging sensitive data and more. 
+  Also, due to its large and active community support, any loophole found in security is handled immediately by the skilled members.
+  
+  
+  

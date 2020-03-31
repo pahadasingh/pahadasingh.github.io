@@ -1,0 +1,295 @@
+# Commands
+============================
+Artisan, Ticker, REPL
+```sh
+php artisan key:generate
+php artisan make:auth
+php artisan make:controller passwordController // php artisan make:controller MailController --plain // make:controller AjaxController --plain
+
+php artisan make:provider TestFacadesServiceProvider
+php artisan serve
+
+php artisan config:cache --> when env file changed - clear cache and restart artisan
+php artisan route:cache --> cache enabled
+php artisan list
+php artisan help serve
+php artisan dump-server --format=html > dump.html
+php artisan make:console <name-of-command>
+php artisan make:middleware SecondMiddleware
+php artisan down
+php artisan up
+
+php artisan event:generate --> app/Events and app/Listeners
+php artisan 
+````
+
+
+# Keywords
+============================
+- Command handler
+- Dispatch to a Queue
+- Bind a class to service provider
+- ServiceProvider boots and registers facades
+- add that ServiceProvider to config/app.php as provider
+- Listener handles all events and activities
+- Event are boardcasted
+- Event are like observer implementation which is subscribed and activities are shared to the listeners
+- Event and Listener decouple webapp
+- Listener handle() all activities by the events
+- Middleware handle($request, Closure $next) return the controler using $next($request)
+
+# Thoughts
+============================
+PSR-11 compliant container
+protected static function sraban(Request $request)
+uses of event and listners in laravel
+
+
+
+# Links
+============================
+https://github.com/illuminate/contracts
+
+
+
+# Fundamentals
+============================
+- Laravel supports HTTP middleware and also includes CSRF tokens and authentication model.
+- resources/views/auth. It includes user registration, authentication and password controllers.
+- helper encrypt(), decrypt() done using OpenSSL and AES-256 cipher
+- All the values included in Laravel are signed using the protocol Message Authentication Code(MAC) so that the underlying value cannot be tampered with once it is encrypted
+- how to use Gates and Policies for authorizing a user in a Laravel web application
+- resource/assets/js/bootstrp.js register all the tokens for the the valid session and includes a meta tag which stores csrf-token with Axios Http Lib
+- Contract contain no implementation and new dependcies 
+- Facades are static interfaces to classes
+- service container contains all the facade interfaces as static
+- If APP_DEBUG = true, then the risk of sensitive information to the end user is higher
+- if APP_LOG = daily --> 5days, log_max_file => 25, APP_LOG_LEVEL
+- error, critical, alert, emergency messages
+- Sessions are used to store information about the user across the requests
+- Laravel provides various drivers like file, cookie, apc, array, Memcached, Redis, and database to handle session data
+- The query to the database can be fired using raw SQL, fluent query builder, Eloquent ORM.
+- Middleware acts as a bridge between a request and a response. It is a type of filtering mechanism. 
+- middleware are added in app/Http/Kernel.php as global and route specific
+
+# Concepts in Program
+============================
+
+
+
+
+# Tips & Tricks
+============================
+Printing last executed query. ----------  DB::enableQueryLog(); DB::getQueryLog(); 
+Logging all queries in Laravel. ---------  DB::listen(function ($query){ pp($query); });
+
+
+
+
+# Programs 
+============================
+$users = DB::table('users')->paginate(15);
+User::paginate(10)->onEachSide(5);
+##
+if (Hash::check('plain-text', $hashedPassword)) {
+   // The passwords match...
+}
+
+##
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\Controller;
+
+class passwordController extends Controller{
+
+public function update(Request $request) {
+      // Validate the new password length...
+      $request->user()->fill([
+         'password' => Hash::make($request->newPassword) // Hashing passwords
+      ])->save();
+   }
+}
+##
+use Illuminate\Contracts\Encryption\DecryptException;
+
+public function storeSecret(Request $request, $id) {
+	$user = User::findOrFail($id);
+	$user->fill([
+	 'secret' => encrypt($request->secret)
+	])->save();
+}
+
+// Exception for decryption thrown in facade
+try {
+   $decrypted = decrypt($encryptedValue);
+} catch (DecryptException $e) {
+   //
+}
+
+##
+
+public function authenticate() {
+      if (Auth::attempt(['email' => $email, 'password' => $password])) {
+      
+         // Authentication passed...
+         return redirect()->intended('dashboard');
+      }
+   }
+##
+public function postContact(Request $request) {
+	return $request->all();
+}
+
+##
+<form>
+{{ csrf_field() }}
+</form>
+
+##
+<?php echo csrf_token() ?>
+
+
+##
+void send(string|array $view, array $data, Closure|string $callback)
+Mail::send([‘text’=>’text.view’], $data, $callback);
+   public function html_email() {
+      $data = array('name'=>"Virat Gandhi");
+      Mail::send('mail', $data, function($message) {
+         $message->to('abc@gmail.com', 'Tutorials Point')->subject
+            ('Laravel HTML Testing Mail');
+         $message->from('xyz@gmail.com','Virat Gandhi');
+      });
+      echo "HTML Email Sent. Check your inbox.";
+   }
+
+##
+Route::post('/uploadfile','UploadFileController@showUploadFile');
+$file = $request->file('image');
+$file->move('./uploads',$file->getClientOriginalName());
+
+##
+   public function validateform(Request $request) {
+      print_r($request->all());
+      $this->validate($request,[
+         'username'=>'required|max:8',
+         'password'=>'required'
+      ]);
+   }
+
+
+@if (count($errors) > 0)
+   <div class = "alert alert-danger">
+      <ul>
+         @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+         @endforeach
+      </ul>
+   </div>
+@endif
+
+##
+if($request->session()->has('my_name'))
+$value = $request->session()->get('my_name');
+$request->session()->put('my_name', 'value');
+$request->session()->forget('my_name');
+
+##
+Route::get('localization/{locale}','LocalizationController@index');
+public function index(Request $request,$locale) {
+      //set’s application’s locale
+      app()->setLocale($locale);
+      
+      //Gets the translated message and displays it
+      echo trans('lang.msg');
+   }
+
+##
+
+Route::get('/test', ['as'=>'testing',function() {
+   return view('test2');
+}]);
+
+return redirect()->route('testing');
+return redirect()->action(‘NameOfController@methodName’,[parameters]);
+
+##
+master.blade.php
+<html>
+   <head>
+      <title>DemoLaravel - @yield('title')</title>
+   </head>
+   <body>
+      @yield('content')
+   </body>
+</html>
+
+child.blade.php
+@extends('layouts.app')
+@section('title', 'Page Title')
+@section('sidebar')
+   @parent
+<p>This refers to the master sidebar.</p>
+@endsection
+@section('content')
+<p>This is my body content.</p>
+@endsection
+
+##
+globally sharing data in every view using a share(key,value) method
+app/Providers/AppServiceProvider.php
+public function boot() {
+    view()->share('name', 'Virat Gandhi');
+}
+
+
+##
+json(string|array $data = array(), int $status = 200, array $headers = array(), int $options)
+return response("Hello", 200)->header('Content-Type', 'text/html');
+return response("Hello", 200)->header('Content-Type', 'text/html')->withcookie('name','Virat Gandhi');
+return response()->json(['name' => 'Virat Gandhi', 'state' => 'Gujarat']);
+
+
+##
+$response->withCookie(cookie('name', 'virat', $minutes));
+$value = $request->cookie('name');
+
+##
+Route::resource('my','MyController');
+
+Route::get('profile', [
+   'middleware' => 'auth',
+   'uses' => 'UserController@showProfile'
+]);
+
+
+public function __construct() {
+      $this->middleware('auth');
+   }
+
+Route::get('role',[
+   'middleware' => 'Role:editor',
+   'uses' => 'TestController@index',
+]);
+
+
+class TerminateMiddleware {
+   public function handle($request, Closure $next) {
+      echo "Executing statements of handle method of TerminateMiddleware.";
+      return $next($request);
+   }
+   
+   public function terminate($request, $response) {
+      echo "<br>Executing statements of terminate method of TerminateMiddleware.";
+   }
+}
+
+class RoleMiddleware {
+   public function handle($request, Closure $next, $role) {
+      echo "Role: ".$role;
+      return $next($request);
+   }
+}
+
+##

@@ -1,0 +1,116 @@
+https://github.com/didinj
+https://git-scm.com/docs/git-clean
+
+https://forum.ionicframework.com/t/upload-file-in-ionic3/125253
+https://itnext.io/become-a-git-pro-in-just-one-blog-a-thorough-guide-to-git-architecture-and-command-line-interface-93fbe9bdb395
+
+
+git config --list
+git init
+.git -------- rename if don't want to use by anyone but can be used later if wrongly data should not pulled by master
+git remote add origin repo-urlssssss
+git pull
+
+git clone repo-url [folder] ---- to your directory
+git remote -v
+git remote set-url origin repo-urlsssss
+-----
+blockchain technology -> understand the "commits are the blocks"
+git status
+.gitignore
+git add .
+git add file_name
+git add --all
+git reset add.js
+git reset
+git stash add.js
+git commit -m "initial commit"
+
+git log
+git log --stat
+git reflog
+
+git push -u origin master
+
+git reset --soft 852309  --> remove all commits after 852309
+git reset --mixed 852309  ---> same as "git reset 852309"
+git reset --hard 852309  --->
+git reset --hard 6ad45803ec77e1892ba8797f648731fae568f51d
+git reset --hard HEAD
+git clean -f -d
+
+git diff hash1 hash2
+
+$ git checkout -b [name_of_your_new_branch]
+$ git push origin [name_of_your_new_branch]
+$ git branch -a
+$ git remote add [name_of_your_remote] [name_of_your_new_branch]
+$ git push [name_of_your_new_remote] [url]
+$ git fetch [name_of_your_remote]
+$ git merge [name_of_your_remote]/develop
+$ git branch -d [name_of_your_new_branch]
+$ git branch -D [name_of_your_new_branch]
+$ git push origin :[name_of_your_new_branch]
+$ git branch <name_of_your_new_branch>
+
+
+
+git checkout add.js
+git checkout -- add.js
+
+git merge sraban
+git revert 7d741e
+
+
+git stash list
+git stash apply stash@{0}
+git stash pop entryIndex
+git stash drop entryIndex
+git stash clean
+git stash save subtract-work
+
+git config --global user.email "sraban_pvt@yahoo.com"
+git config --global user.name "Sraban"
+
+https://paiza.cloud/containers
+--------------------------------
+If you don't see your public key in GitHub, you'll need to add your SSH key to GitHub to associate it with your computer.
+cd ~/.ssh
+ssh-keygen -o     // ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+cat ~/.ssh/git_rsa.pub
+ADD it to github setting -> ssh/GPG keys -> save
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/git_rsa
+
+
+
+
+
+## SVN ###########################################################
+
+svn admincreate
+svn import
+svn checkout / svn co.
+svn add <file>
+svn commit
+svn delete <file>
+svn list
+svn diff <file>
+svn status
+svn info
+svn log
+svn move
+svn merge
+svn revert <file or directory>
+svn update
+svn shelve
+svn help
+
+## examples
+svn add foo.c
+svn add * --force
+svn add --depth=empty
+svn add testdir
+svn add file1 file2...
+svn commit
+svn commit -m "text about changes..."

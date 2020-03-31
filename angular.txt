@@ -1,0 +1,215 @@
+=> V2
+# Commands
+============================
+Install npm, or node package manager.
+Set up the Angular 2 application
+```sh
+ng lint
+npm run lint
+ng build --aot / ng b --aot
+ng serve --aot / ng s --aot
+
+ng g c pageNotFound --spec false -is -it
+ng g s guards/authGuard --spec false
+ng g m guards/authGuard --spec false
+compiler options are avaialbe in tsconfig.json
+
+
+
+
+```
+
+
+# Thoughts
+============================
+- "Observable, Subject" to check the state of session
+- Through Event Emiiter / @output data can be passed to parent componet ; @output() somethingChanged = new EventEmitter(); somethingChanged.emit(value)
+- All life cycles events of angular
+- https://github.com/yeoman/insight & http://yeoman.io
+
+
+# Links
+============================
+https://www.onlineinterviewquestions.com/angular2-interview-questions/
+https://www.bestinterviewquestion.com/angular-2-interview-questions
+https://www.simplilearn.com/angular2-interview-questions-and-answers-article
+https://www.wisdomjobs.com/e-university/angular-2-interview-questions.html -- Done
+
+https://codeburst.io/using-angular-route-guard-for-securing-routes-eabf5b86b4d1
+https://blog.thoughtram.io/angular/2017/02/27/three-things-you-didnt-know-about-the-async-pipe.html
+https://medium.com/@zeljkoradic/custom-form-validators-in-angular-6-using-regular-expressions-d421a5655adf
+# Fundamentals
+============================
+- TypeScript is a typed super set of JavaScript which has been built and maintained by Microsoft
+- ECMAScript is a subset of JavaScript. is the core 
+- There is no Type checking in JavaScript
+- Angular2 supports ES6 and higher versions
+- Codelyzer is an open source tool to run and check whether the pre-defined coding guidelines has been followed or not
+- Codelyzer does only static code analysis for angular and typescript project.
+- Codelyzer runs on top of tslint and its coding conventions are usually defined in tslint.json file
+- Define Custom Typings To Avoid Editor Warnings:  extend the types by creating our own “.d.ts” file.
+- Shadow DOM provides better separation of concern along with lesser conflict of styles and scripts with other HTML DOM elements./ it is like component selector / it is not accessible to developer / it is cached and load faster
+
+
+# Optimisation
+============================
+- Optimization depends on the type and size of application and many other factors. 
+*- Consider AOT compilation.
+- Make sure the application is bundled, uglified, and tree shaking is done.
+- Make sure the application doesn’t have un-necessary import statements
+- Make sure that any 3rd party library, which is not used, is removed from the application.
+- Have all dependencies and dev-dependencies are clearly separated
+- I would consider lazy loading instead of fully bundled app if the app size is more.
+
+
+
+# Concepts in Program
+============================
+  require('!!html-loader!./file.txt')
+  require('!!raw-loader!./connect-charts.component.ts');
+
+----------------------
+property binding [items] as  @input items:[];
+Event Binding  [changedValue] as @output changedValue: any = new EventEmitter();
+pipe - It is a tool called directly from template which takes input from previous function and return the data. ex- <*ngFor="let rows of list$ | async; let i=index">
+derective
+customDirective
+----------------------
+transformations (e.g. map(...).filter(...)) ]
+<tr *ngFor="let docType of tempDocType | paginate: { itemsPerPage: paginationSize, currentPage: pageActual}">
+<tr *ngFor="let keyValue of saveForm.value | keyvalue">
+<tr *ngFor="let rows of saveForm.value">
+<tr *ngFor="let rows of [].constructor(10)">
+<ul *ngFor="let song of songs$ | async"></ul>
+(keydown)="appComponent.removeSpaces($event)"
+(keydown.space)="remarks.value == '' ? $event.preventDefault() : null;"
+
+for(value in formData) { }
+return formData.pipe(map((value, key) => { return value; }));
+
+
+# Tips & Tricks
+============================
+
+
+
+
+# Security Threat
+============================
+ The Security Threats Should We Be Aware Of In Angular 2 Application?
+- Avoid using/injecting dynamic Html content to your component.
+- sanitize it.If Html is coming from database
+- not to put external urls in app, avoid url redirection unless it is trusted
+- use AOT compilation:(The compiled Html and JavaScript is deployed to the web server so that the compilation and render time can be saved by the browser)
+- try to prevent XSRF attack by restricting the API
+*- Route Guards is simply an interface method that router runs to check the route authorization. After guard runs, it will resolve the route data and activate the router state
+-  . What Are The Advantages And Disadvantages Of Aot Compilation?
+
+# Programs 
+============================
+
+1.
+import {Directive, Input, Output, EventEmitter} from '@angular/core';
+@Directive({
+  selector: '[valueChanged]'
+})
+@Input() isLast: boolean;
+@Output('valueChanged') initEvent: EventEmitter<any> = new EventEmitter();
+-------
+(valueChanged)="app.select2Changed($event, f.ATTRIBUTEGROUP_CODE, attributegroups, 'id' ,'attributegroup')"
+
+
+<div *ngFor="let quetionnaireData of questionnairelist ; let $last = last" [isLast]='$last' (valueChanged)="doSomething('Hello')"></div>
+
+
+2.
+
+@Component({
+  selector: 'my-seq',
+  template: `
+    <ul>
+      <li [style.background-color]="item.color" 
+          *ngFor="let item of items">{{item.num}}</li>
+    </ul>`
+})
+export class SeqComponent {
+  @Input() items: Array<any>;
+}
+
+~~~ How to use the selector in component
+<my-seq *ngFor="let seq of seqs" [items]="seq | async"></my-seq>
+
+
+
+# ANGULAR RESEARCH QUESTIONS
+============================
+
+1. How to create veriable in angular HTML page not in componet.tspage
+Ans: example1 - <div *ngif="123 as sraban"> {{ sraban }} </div>
+     example2 - <input type="hidden" value="12121117756" #sraban>{{ sraban.value }}
+     
+     
+2. How to assign/change vale on event click
+   Ans: (click)="(srabanVar='My name is sraban Kumar')"
+   
+3. How to declare javascript veriable and functions
+		Ans- declare function timeStampFormat(dateValue, dateFormat): any; 
+    		 declare var $:any;
+
+4. How to create custom attribute and events in angular HTML like. <select2 [data]="inputArray" (changedValue)="sraban()"></select2>
+   Ans:- @input data: any = ''; 
+   			 @output changedValue: any = new EventEmitter()
+
+5. if else if condition in HTML angular
+   Ans:-
+       <div *ngIf="true; else elseCond11">This is first if-else() condition</div>
+       <ng-template #elseCond11>
+       	<div *ngIf="true; else elseCond22">This is first else-if() Condition</div>
+       </ng-template>
+       <ng-template #elseCond22>This is second else information</ng-template>
+
+6.
+  customObs() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+    let color = '#' + Math.random().toString(16).slice(-6);
+    this.subscription = Observable
+    											.interval(1000)
+                          .scan((acc, num)=>[{num, color }, ...acc].slice(0, 5), [])
+                          .subscribe(items => this.items = items);
+  }
+  when <li *ngFor="let item of items">{{item.num}}</li>
+
+or
+
+  customObsAlt() {
+    let color = '#' + Math.random().toString(16).slice(-6);
+    this.items = Observable
+    									.interval(1000)
+                    	.scan((acc, num)=>[{num, color }, ...acc].slice(0, 5), []);
+  }
+  when <li *ngFor="let item of items | async">{{item.num}}</li>
+
+
+7.
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  
+  })
+
+
+
+
+
+
+# NG ERRORS
+============================
+1. ERROR Error: ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked. Previous value: 'ng-valid: false'. 
+   Current value: 'ng-valid: true'
+   Ans: This should be defined inside ngAfterContentChecked() { $(document1).off().on(); $(document2).off().on(); } with different container
+   
+2. ERROR RangeError: Maximum call stack size exceeded
+   ans- DURING RECURSSIVE CALL, so avoid direct recursive calls to stack, rather convert all the calls into queue and break the stack
+   
+3. 

@@ -1,0 +1,260 @@
+# Commands
+============================
+```
+$ mysqldump -u book_admin -p books > ~/backup/database/books. sql 
+$ mysql -u root -p draban_db < ./mysql.sql
+$ head -n 5 data-dump.sql
+
+mysql -h 127.0.0.1 -P 3306 -u root -p 
+select @@datadir;
+SET TRANSACTION;
+SAVEPOINT SP1;
+SAVEPOINT SP2;
+SAVEPOINT SP3;
+COMMIT;
+ROLLBACK TO SP1;
+
+SHOW PRIVILEGES;
+SHOW CREATE TABLE
+SHOW FULL PROCESS
+SHOW DATABASES;
+use databse_name;
+show tables;
+DROP TABLE SALESSUMMARY
+select * from information_schema.tables
+SELECT id, name INTO OUTFILE '/tmp/smiths.txt' FROM person WHERE name like '%smith%';
+
+SELECT order_id,product_name,qty FROM orders
+INTO OUTFILE '/tmp/orders.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+
+SELECT SYSDATE(), UNIX_TIMESTAMP(), UTC_TIMESTAMP(), 
+SELECT CURDATE(), CURTIME() , NOW()
+SELECT DATE('2003-12-31 01:02:03');
+SELECT DATEDIFF('1997-12-31 23:59:59','1997-12-30');
+SELECT ADDTIME('unix timestamp', '1 1:1:1.0000002')
+SELECT ADDDATE('1972-01-01', 31) / SELECT DATE_ADD('1999-01-01', INTERVAL 1 HOUR)
+SELECT DATE_FORMAT('1997-10-04 22:23:00', '%W %M %Y')
+SELECT STR_TO_DATE('04/31/2004', '%m/%d/%Y')
+SELECT DAYNAME('1998-02-05')
+SELECT CONVERT_TZ('2004-01-01 12:00:00','GMT','MET')  // SELECT CONVERT_TZ('2004-01-01 12:00:00','+00:00','+10:00')
+
+WHERE SALARY LIKE '_00%'
+WHERE SALARY LIKE '2_%_%'
+
+Constraints are the rules enforced on the data columns of a table
+
+EXPLAIN CUSTOMERS;
+
+DESC CUSTOMERS;
+
+USE DatabaseName;
+
+DROP DATABASE DatabaseName;
+
+DROP {PROCEDURE | FUNCTION} [IF EXISTS] sp_name;
+DROP PROCEDURE new_procedure;
+
+CREATE DATABASE testDB;
+
+CREATE VIEW view_name AS select * from Table;
+DROP VIEW view_name;
+TRUNCATE TABLE  table_name;
+ALTER TABLE table_name ADD column_name datatype;
+ALTER TABLE table_name DROP COLUMN column_name;
+ALTER TABLE table_name MODIFY COLUMN column_name datatype;
+
+ALTER TABLE table_name {ADD|DROP|MODIFY} column_name {data_ype};
+ALTER TABLE table_name RENAME TO new_table_name;
+
+
+ALTER TABLE table_name 
+ADD CONSTRAINT MyUniqueConstraint UNIQUE(column1, column2...);
+
+ALTER TABLE table_name 
+ADD CONSTRAINT MyUniqueConstraint CHECK (CONDITION);
+
+ALTER TABLE table_name 
+ADD CONSTRAINT MyPrimaryKey PRIMARY KEY (column1, column2...);
+
+ALTER TABLE table_name 
+DROP CONSTRAINT MyUniqueConstraint;
+
+ALTER TABLE table_name 
+DROP INDEX MyUniqueConstraint;
+
+ALTER TABLE table_name 
+DROP CONSTRAINT MyPrimaryKey;
+
+ALTER TABLE table_name 
+DROP PRIMARY KEY;
+
+ALTER TABLE CUSTOMERS ADD SEX char(1);
+
+ALTER TABLE CUSTOMERS DROP SEX;
+
+CREATE INDEX index_name ON table_name (column_name);
+
+CREATE UNIQUE INDEX index_name on table_name (column_name);
+
+CREATE INDEX index_name on table_name (column1, column2);
+
+
+
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'secret';
+GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+FLUSH PRIVILEGES;
+SHOW GRANTS username;
+DROP USER ‘username’@‘localhost’;
+
+
+```
+
+
+# Thoughts
+============================
+- sql queries
+   - case when
+   - if() then
+   - having clause
+   - aggreate function
+   - subquerys
+     - Subqueries can be used with the SELECT, INSERT, UPDATE, and DELETE
+     - veriety of mysql subquieries along with tables for exam 
+   - group by   
+   - infile, outfile
+- orders:  SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY.
+- Plan to defragment the database on a regular basis, even if doing so means developing a weekly routine
+
+
+# Links
+============================
+https://www.onlineinterviewquestions.com/dbms-interview-questions/
+https://www.techbeamers.com/sql-query-questions-answers-for-practice/
+https://www.edureka.co/blog/interview-questions/sql-query-interview-questions
+https://www.edureka.co/blog/interview-questions/sql-interview-questions
+https://www.softwaretestinghelp.com/50-popular-sql-interview-questions-for-testers/
+https://www.acewebacademy.com/blog/top-10-toughest-sql-interview-questions-answers-guide-2018/
+https://www.indeed.com/career-advice/interviewing/sql-interview-questions-for-testers
+https://learning.naukri.com/articles/top-20-sql-interview-questions-answers/
+https://www.interviewbit.com/sql-interview-questions/
+
+
+
+https://codeshare.io/sraban-mysql2
+https://codeshare.io/sraban-mysql3
+
+
+
+# Fundamentals
+============================
+ - Q. Copy One table to another table ---> insert into tttt(c1,c2,c3)(select c1,c2,c3 from table)
+ - Q. select/update/delete ttttt where x in(select x from ttttt where y > 100)
+
+
+
+# Concepts in Program
+============================
+select student.name, sum(marks.value) from student inner join marks on student.id = marks.student_id groub by student.id having ( sum(marks.value) > 700 )
+
+
+
+# Tips & Tricks
+============================
+Q. All Limitation in Mysql, maximum value
+Q. Maximum number of column
+Q. Maximum number of indexes
+Q. batch update queries
+Q. Union to add the rows having same coulmns with the first table
+Q. SELECT * FROM actor LIMIT 3
+Q. Delete all duplicate records
+Q. Foreign Key Constraint
+Q. Triggers
+Q. Functiosn
+Q. Procedure
+
+
+----------------
+
+Indexes are special lookup tables that the database search engine can use to speed up data retrieval, 
+An index helps to speed up SELECT queries and WHERE clauses, but it slows down data input, with the UPDATE and the INSERT statements.
+
+----------------
+NOT NULL Constraint − Ensures that a column cannot have NULL value.
+
+DEFAULT Constraint − Provides a default value for a column when none is specified.
+
+UNIQUE Constraint − Ensures that all values in a column are different.
+
+PRIMARY Key − Uniquely identifies each row/record in a database table.
+
+FOREIGN Key − Uniquely identifies a row/record in any of the given database table.
+
+CHECK Constraint − The CHECK constraint ensures that all the values in a column satisfies certain conditions.
+
+INDEX − Used to create and retrieve data from the database very quickly.
+
+Data integrity is handled in a relational database through the concept of referential integrity.
+
+----------------
+CREATE TABLE CUSTOMERS(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25) ,
+   SALARY   DECIMAL (18, 2),       
+   PRIMARY KEY (ID)
+);
+
+WHERE SALARY IS NOT NULL;
+WHERE SALARY IS NULL;
+
+------------------------
+
+SELECT * FROM CUSTOMERS
+   ORDER BY (CASE ADDRESS
+   WHEN 'DELHI'    THEN 1
+   WHEN 'BHOPAL'   THEN 2
+   WHEN 'KOTA'   THEN 3
+   WHEN 'AHMADABAD' THEN 4
+   WHEN 'MP'  THEN 5
+   ELSE 100 END) ASC, ADDRESS DESC;
+
+------------------------
+SQL ~ NO-SQL
+#############
+- Allows users to create view, stored procedure, functions in a database.
+- Allows users to set permissions on tables, procedures and views
+- 
+
+These components are −
+ - Query Dispatcher
+ - Optimization Engines
+ - Classic Query Engine
+ - SQL Query Engine, etc.
+
+
+CREATE, SELECT, INSERT, UPDATE, DELETE and DROP
+
+==========================================================
+Tutorails Point
+1. Laravel
+2. Mysql
+3. MongoDB
+4. Node
+
+
+
+# Programs 
+============================
+
+
+
+# Core Concept 
+============================
+Q. Second lowest salary or third lowest salary - nth salary
+Q. Mysql Tuning
+Q. Optimisation Techniques
+Q. Normalisation with detailed example

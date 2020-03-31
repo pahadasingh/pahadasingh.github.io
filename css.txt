@@ -1,0 +1,61 @@
+# Commands
+============================
+
+
+
+
+
+# Thoughts
+============================
+- viewport gives the width of device and @media screen and (width:10000){} query manages it
+- Animation, Transfroms
+- all containers - article, section, header, footer
+- audio, video, camera api
+
+
+
+# Links
+============================
+- https://www.w3schools.com/css/css_rwd_viewport.asp
+
+
+
+
+
+# Fundamentals
+============================
+
+
+
+
+
+# Concepts in Program
+============================
+
+
+
+
+
+# Tips & Tricks
+============================
+
+
+
+
+
+# Programs 
+============================
+1.
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+
+}
+
+2.
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}
+

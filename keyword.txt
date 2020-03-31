@@ -1,0 +1,43 @@
+# C - PROGRAM
+============================================
+auto	else	long	switch
+break	enum	register	typedef
+case	extern	return	union
+char	float	short	unsigned
+const	for	signed	void
+continue	goto	sizeof	volatile
+default	if	static	while
+do	int	struct	_Packed
+double function
+(){}
+
+
+
+
+# SQL
+=============================================
+create, primary key, insert, database, view, table, 
+select, from, alter, add, distinct, update, set, delete, truncate, as, 
+order by, asc, desc, between, where, and, or, not, limit, 
+is null, drop, column, group by, having, in, like, 
+join, union, union all, exists, 
+like, case when then else end, into, values, [*,%, _, !, @]
+
+
+
+
+
+# Technical Sentences
+=============================================
+How your Laravel application can get hacked, and how to prevent that from happening by Antti Rössi
+
+
+
+
+
+
+
+
+
+
+

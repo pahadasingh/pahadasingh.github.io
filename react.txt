@@ -1,0 +1,152 @@
+https://pasteboard.co/IX5vmvz.png
+https://stormpath.com/blog/build-a-react-app-with-user-authentication
+https://scotch.io/starters/react/getting-started-with-react-2019-edition?utm_content=in-content
+https://daveceddia.com/react-practice-projects/
+npm install react-router
+https://reacttraining.com/react-router/web/guides/quick-start
+Why can't AngularJS support server side rendering if React can do it?
+
+If you’re new to React, don’t try to learn Firebase until you’ve built a couple apps with plain React
+
+- version of React.JS is V16.8.6
+- Create-react-app version 2.0 supports Babel 7, webpack 4, and Jest23.
+##############
+$npm install -g create-react-app@latest
+$npm install -g generate-react-component
+$npx create-react-app myfirstreact
+$cd myfirstreact
+$npm start
+!$npm cache clean --force
+
+rcmp <ComponentName>
+rcmp <ComponentName> -p
+rcmp <ComponentName> -p -c
+rcmp <ComponentName> --pure --css
+
+npm start
+  Starts the development server.
+
+npm run build
+  Bundles the app into static files for production.
+
+npm test
+  Starts the test runner.
+
+npm run eject
+  Removes this tool and copies build dependencies, configuration files
+  and scripts into the app directory. If you do this, you can’t go back!
+
+------- ELSE ------------
+npm install -g yarn
+yarn global add create-react-app
+create-react-app my-app
+
+------------------------
+- ES6 is the 6th version of ECMAScript, it was published in 2015
+Classes
+Arrow Functions
+Variables (let, const, var)
+
+
+~var has a function scope, not a block scope.
+~let has a block scope.
+~const is a variable that once it has been created, its value can never change. const has a block scope.
+~JSX stands for JavaScript XML.
+~JSX converts HTML tags into react elements.
+~JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.
+~Components are like functions that return HTML elements. Class components and Function components
+~Props are like function arguments, and you send them into the component as attributes.
+~
+~
+~
+~
+~
+~
+~
+@Hooks: useState(), useEffect(),
+https://www.contentful.com/r/knowledgebase/contentful-101/
+https://codeburst.io/building-your-first-react-app-c1f6eb814205
+node --print 'process.env'
+
+###### Interview in React ########
+https://towardsdatascience.com/passing-data-between-react-components-parent-children-siblings-a64f89e24ecf
+https://jasonwatmore.com/post/2018/09/11/react-basic-http-authentication-tutorial-example
+https://github.com/benawad/react-hooks-tutorial[ https://www.youtube.com/watch?v=j1ZRyw7OtZs ]
+https://react-bootstrap.github.io/components/
+https://github.com/brillout/awesome-react-components.git
+https://medium.com/@baphemot/intro-to-debugging-reactjs-applications-67cf7a50b3dd
+
+- login and insert data with file server json Api
+
+1. How to use jquery and bootstrap in react
+2. Interaction of services to different compoents
+3. CURD & Login in react
+4. Shopping Cart in React JS
+5. File Uploading
+6. Form Validation using react of empty/dirty/touch/respective-validation
+7. Datepicker example to select the data
+8. Authentication and authorization
+
+
+You don't understand react component lifecycle
+https://reactjs.org/docs/react-component.html#the-component-lifecycle
+// [Mount]: just Once called. similar constructor.
+// constructor -> componentWillMount -> getDerivedStateFromProps -> render -> componentDidMount
+
+// [Update]: calling after mount
+// getDerivedStateFromProps -> shouldComponentUpdate -> getDerivedStateFromProps -> getSnapshotBeforeUpdate -> componentDidUpdate
+
+
+
+Books
+https://github.com/fullstackreact
+
+
+Stackblitz Examples
+https://stackblitz.com/edit/react-pjejwp?file=Hello.js
+https://stackblitz.com/edit/react-github-navbar
+https://stackblitz.com/edit/js-react-form?file=index.js
+https://stackblitz.com/edit/teacher-google-map-react-example?file=style.css
+https://stackblitz.com/edit/react-json-fetching-using-fetch
+https://stackblitz.com/edit/react-fetch-api?file=index.js
+https://stackblitz.com/edit/react-server-side-rendering?file=src%2Fserver.js
+https://stackblitz.com/edit/reactjs-file-upload
+*https://stackblitz.com/edit/react-async-query
+https://stackblitz.com/edit/react-dcwtsg?file=socket.js
+https://stackblitz.com/edit/react-chat-app-mary
+****https://stackblitz.com/edit/react-code-sample
+https://stackblitz.com/edit/react-pass-data-between-components
+https://github.com/creativetimofficial/material-dashboard-react
+
+
+#### https://stackblitz.com/edit/svelte-wtvhav ######## import data from './data.json' #################
+let request = new Request("/data.json");
+// **do not** mention url as/public/data.json
+fetch(request)
+.then((data)=>{
+console.log(data);
+// your code
+});
+##############################
+
+
+https://json-schema-faker-gpogjoq02ui9.runkit.sh/
+https://obniz.io/lessons/server_side/lessons_runkit02_endpoint
+
+===============================================
+Babel is a library for transpiling ES6 to ES5.
+ReactDOM.render(<what>, <where>)
+
+- How to create multiple pages in react
+- For multiple pages in react js, how data communication happens in stackblitz
+- Debugs and all possible Errors of large scale application 
+    a. Maximum call stack size exceeded when recursive call: -Solution: recursive call using a setTimeOut() with binding the parameters to called method
+    b. this.props can not be modified in child component which is passed from parent componet as properties in html. -Solution: State can be modified inside child component 
+    c. Whenever the state changes (via the this.setState() function), the component will rerender.
+    d. componentWillUnmount() callback. This is the time to handle any clean-up events we might need, such as clearing timeouts, clearing data, disconnecting websockets, etc
+    e. 
+- what is ... in react
+
+
+
+

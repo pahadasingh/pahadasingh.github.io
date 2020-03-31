@@ -1,0 +1,221 @@
+git clone https://github.com/laravel/laravel.git meraRank
+cd meraRank
+mkdir local --> keep all config files
+touch docker-compose.yml
+touch local/Dockerfile
+cp .env.example .env
+ - change the .env files
+sudo chown -R $USER:$USER $(pwd)
+
+
+````Before docker-compose up -d````
+
+php artisan clear:cache
+php artisan config:cache
+
+
+docker-compose config
+docker-compose ps
+docker-compose up --build
+docker-compose build --no-cache --pull
+docker build --no-cache -t u12_core -f u12_core .
+
+$ docker-compose run --rm --no-deps merarank composer config -g repo.packagist composer https://packagist.phpcomposer.com
+$ docker-compose run --rm --no-deps merarank composer install
+$ docker-compose run --rm --no-deps merarank composer require laravel/horizon
+$ docker-compose run --rm --no-deps merarank php artisan horizon:install
+$ docker-compose run --rm --no-deps merarank composer require laravel/telescope
+$ docker-compose run --rm --no-deps merarank php artisan telescope:install
+
+update the official packages
+php artisan horizon:publish
+php artisan telescope:publish
+
+$ docker-compose run --rm --no-deps merarank php artisan key:generate
+$ docker-compose run --rm --no-deps merarank php artisan storage:link
+$ docker run --rm -it -v $(pwd):/app -w /app node npm
+$ docker run --rm -it -v $(pwd):/app -w /app node npm -v
+$ docker run --rm -it -v $(pwd):/app -w /app node npm install
+$ docker run --rm -it -v $(pwd):/app -w /app node npm run dev
+$ docker-compose up -d
+
+docker-compose start/stop/up/down merarank dbms queueWatch chachedb
+docker start/stop/kill merarank dbms queueWatch chachedb
+
+````After docker-compose up -d````
+docker-compose exec dbms bash
+mysql -u root -p
+show databases;
+GRANT ALL PRIVILEGES  ON laravel.* TO 'laraveluser'@'%' IDENTIFIED BY 'your_laravel_db_password';
+GRANT ALL PRIVILEGES  ON merarank.* TO 'root'@'localhost' IDENTIFIED BY 'your_laravel_db_password';
+FLUSH PRIVILEGES;
+EXIT;
+
+docker-compose exec merarank vi .env
+docker-compose exec merarank bash
+docker-compose exec merarank php artisan key:generate
+docker-compose exec merarank php artisan config:cache
+docker-compose exec merarank php artisan migrate
+docker-compose exec merarank php artisan tinker
+
+$ docker-compose run --rm merarank php artisan migrate --seed
+
+$ docker run --rm -it -v $(pwd):/app -w /app node npm dev
+
+
+$ docker-compose run merarank  
+> PrepareNewsletterSubscriptionEmail::dispatch();
+$ docker-compose run --rm merarank php artisan db:seed
+
+
+$ docker-compose run --rm merarank ./vendor/bin/phpunit --cache-result --order-by=defects --stop-on-defect
+$ docker-compose run --rm --no-deps merarank ./vendor/bin/php-cs-fixer fix --config=.php_cs --verbose --dry-run --diff
+
+
+$ docker-compose run --rm merarank php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
+$ docker-compose run --rm merarank php artisan backup:run
+
+
+$ docker-compose run --rm merarank php artisan db:seed --class=DevDatabaseSeeder
+
+
+$ docker-compose run --rm --no-deps merarank php artisan package:discover
+
+
+$ docker-compose run --rm merarank php artisan migrate:fresh --seed
+
+############################################################
+docker run --rm -v $(pwd):/application php -v
+docker run --rm -v $(pwd):/application composer -v
+
+docker rmi $(docker images -q) -f
+docker image ls -a > out
+
+
+
+cp .env.example .env
+docker-compose up -d
+docker ps
+docker-compose exec merarank nano .env
+docker-compose exec merarank php artisan key:generate
+docker-compose exec merarank php artisan config:cache
+
+##########################################
+
+docker exec -it app php artisan queue:work
+
+docker rmi $(docker images -q) -f
+
+docker logs --tail 50 --follow --timestamps merarank
+docker logs --tail 50 --follow --timestamps db
+
+docker kill CONTAINER_ID
+docker stop -t 1 CONTAINER_ID
+docker container rm CONTAINER_ID
+
+------------------------------
+# docker exec -it redis sh
+# redis-cli
+ping
+set name Sraban
+get name
+incr counter
+exit
+----------------------------
+$ docker run --detach --name=test-mysql --env="MYSQL_ROOT_PASSWORD=mypassword" --publish 6603:3306 mysql
+
+$ docker run \
+--detach \
+--name=test-mysql \
+--env="MYSQL_ROOT_PASSWORD=mypassword" \
+--publish 6603:3306 \
+--volume=/root/docker/test-mysql/conf.d:/etc/mysql/conf.d \
+mysql
+--
+docker exec -it test-mysql bash
+docker logs test-mysql
+docker inspect test-mysql
+docker ps -a | grep mysql
+---------------------------
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker container start -a my_container
+ExecStop=/usr/bin/docker container stop -t 2 my_container
+
+
+https://pasteboard.co/IUQ9CtfL.png
+https://pasteboard.co/IUQ9c0U.png
+https://pasteboard.co/IUPWQ0k.png
+https://pasteboard.co/IUPZnTo.png
+https://pasteboard.co/IUQ03s8.png
+https://pasteboard.co/IUQ2fxjy.png
+https://pasteboard.co/IUQ351V.png
+https://pasteboard.co/IUQ4dzd.png
+https://pasteboard.co/IUQ4YQA.png
+
+
+
+help             Show a list of commands. Type `help [foo]` for information about [foo].      Aliases: ?                     
+ls               List local, instance or class variables, methods and constants.              Aliases: list, dir             
+dump             Dump an object or primitive.                                                                                
+doc              Read the documentation for an object, class, constant, method or property.   Aliases: rtfm, man             
+show             Show the code for an object, class, constant, method or property.                                           
+wtf              Show the backtrace of the most recent exception.                             Aliases: last-exception, wtf?  
+whereami         Show where you are in the code.                                                                             
+throw-up         Throw an exception or error out of the Psy Shell.                                                           
+timeit           Profiles with a timer.                                                                                      
+trace            Show the current call stack.                                                                                
+buffer           Show (or clear) the contents of the code input buffer.                       Aliases: buf                   
+clear            Clear the Psy Shell screen.                                                                                 
+edit             Open an external editor. Afterwards, get produced code in input buffer.                                     
+sudo             Evaluate PHP code, bypassing visibility restrictions.                                                       
+history          Show the Psy Shell history.                                                  Aliases: hist                  
+exit             End the current session and return to caller.                                Aliases: quit, q               
+clear-compiled   Remove the compiled class file                                                                              
+down             Put the application into maintenance mode                                                                   
+env              Display the current framework environment                                                                   
+optimize         Cache the framework bootstrap files                                                                         
+up               Bring the application out of maintenance mode                                                               
+migrate          Run the database migrations                                                                                 
+inspire          Display an inspiring quote                                       
+
+
+###################################
+docker-compose build mysql
+docker-compose down -v
+docker-compose up --build -d
+docker-compose exec meararank bash
+php artisan config:clear
+php artisan cache:clear
+php artisan config:cache
+php artisan migrate:fresh
+
+#####################################
+php artisan make:auth
+
+composer require laravel/ui
+
+php artisan ui bootstrap
+php artisan ui vue
+php artisan ui react
+
+php artisan ui bootstrap --auth
+php artisan ui vue --auth
+php artisan ui react --auth
+
+php artisan ui:auth
+php artisan ui:auth --views
+php artisan migrate
+
+-------------------------------
+laravel new project --auth
+cd project
+php artisan migrate
+npm install
+npm run dev
+
+---------------------------------
+docker-compose restart mysql
+
+docker exec -it test ps aux

@@ -1,0 +1,46 @@
+# Commands
+============================
+```sh
+curl -H "Authorization: Bearer uk4MElNm_5BeMi66LX__TP_0XMtEpp7he_H_uqZw03M" "https://api.us-west-1.starter.openshift-online.com:6443/apis/user.openshift.io/v1/users/~"
+
+```
+
+
+
+# Thoughts
+============================
+Using Curl()
+Using SimpleXMLObject();
+
+
+
+# Links
+============================
+
+
+
+
+# Fundamentals
+============================
+Q. What are the Coding Standard to follow
+Q. What are the optimisation technique
+
+
+
+# Concepts in Program
+============================
+
+
+
+
+# Tips & Tricks
+============================
+
+
+
+
+# Programs 
+============================
+
+
+

