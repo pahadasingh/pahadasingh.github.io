@@ -1,0 +1,142 @@
+Data Structure and Algorithms Tutorial
+--------------------------------------
+ *Space complexity of an algorithm represents the amount of memory space required by the algorithm in its life cycle.
+ 
+ *Time complexity of an algorithm represents the amount of time required by the algorithm to run to completion.
+ 
+ *A variable part is a space required by variables, whose size depends on the size of the problem. For example, dynamic memory allocation, recursion stack space
+ 
+ *Dynamic programming can be used in both top-down and bottom-up manner. And of course, most of the times, 
+ referring to the previous solution output is cheaper than recomputing in terms of CPU cycles.
+ 
+ *`push` to stack and `pop` from the stack
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ 
+ ===========================================
+ #Hashing DS -> {key->value = HashIndex} collioson resolution -> openaddressing -> linear probing -> plus 3 rehash -> quadratic probing -> Double hashing
+
+#Bubble sort is an example of in-place sorting
+https://js.do/srabann/insertion-sort
+
+
+https://github.com/amilajack/reading/tree/master/JavaScript
+
+```````````
+https://github.com/sohamkamani/javascript-design-patterns-for-humans
+https://github.com/amilajack/js-algorithms
+https://github.com/ivkalita/python-design-patterns
+````````````````
+
+
+======== Youtube Videos =====================
+Programs DS
+https://www.youtube.com/watch?v=RUezU6R4JVI
+
+Insertion Sort
+https://www.youtube.com/watch?v=4MU_yl6957E
+
+2.4.1 Masters Theorem in Algorithms for Dividing 
+https://www.youtube.com/watch?v=OynWkEj0S-s
+
+Quick Sort
+https://www.youtube.com/watch?v=7h1s2SojIRw
+
+Heap Sort
+https://www.youtube.com/watch?v=HqPJF2L5h9U
+https://www.youtube.com/watch?v=RZCFhlT1UQs
+https://www.youtube.com/watch?v=yAlOKmgq8do
+https://www.youtube.com/watch?v=51JGP4VVlDc
+
+Fibonacci heap memory representation. how Fibonacci 
+https://www.youtube.com/watch?v=bedFIrmPHNQ
+
+Knapsack Sort
+https://www.youtube.com/watch?v=nLmhmB6NzcM
+
+Bucket Sort
+https://www.youtube.com/watch?v=vfIoJMsqJ74
+
+Shell Sort
+https://www.youtube.com/watch?v=9crZRd8GPWM
+
+Priority Queue Deletion Algorith(Data Structure and 
+https://www.youtube.com/watch?v=zasUeVy_UXY
+
+Graph Traversal
+https://www.youtube.com/watch?v=pcKY4hjDrxk
+
+Algorithims
+https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O
+
+KMP String Matching Algorithim
+https://www.youtube.com/watch?v=V5-7GzOfADQ
+
+10.2 B Trees and B+ Trees. How they are useful in Databases
+https://www.youtube.com/watch?v=aZjYr87r1b8
+
+3.6 Dijkstra Algorithm - Single Source Shortest Path - Greedy 
+https://www.youtube.com/watch?v=XB4MIexjvY0
+
+Topological Sorting (with Examples) | How to find all 
+https://www.youtube.com/watch?v=dis_c84ejhQ
+
+Construct Binary Tree from Postorder and Inorder with 
+https://www.youtube.com/watch?v=s5XRtcud35E
+
+
+
+===========================================================================
+
+- 
+- GRAPH(geeksforgeeks) - BFS(queue), DFS(stack) https://www.youtube.com/watch?v=AfYqN3fGapc
+- All Sorting
+- Binary Searching
+* MEGRGE SORT
+* HEAP SORT
+- Binary Tree Search(geeksforgeeks) https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/
+  http://www.manojagarwal.co.in/binary-search-tree/
+- Linked List, double, circular
+- Priority Queue
+- Implemetion of stack and queue(infix, postfix calculation, validation of parentesis)
+- Mtree understanding - https://www.youtube.com/watch?v=aZjYr87r1b8
+
+https://www.geeksforgeeks.org/why-is-binary-heap-preferred-over-bst-for-priority-queue/
+https://www.geeksforgeeks.org/implement-stack-using-priority-queue-or-heap/
+https://www.geeksforgeeks.org/priority-queue-using-doubly-linked-list/
+https://www.geeksforgeeks.org/binary-heap/
+https://www.geeksforgeeks.org/array-representation-of-binary-heap/
+https://www.geeksforgeeks.org/javascript-course-understanding-code-structure-in-javascript/
+#################### DS IMPLEMENTATION ###################################
+
+https://js.do/srabann/array-class
+https://js.do/srabann/linked-list
+https://js.do/srabann/stack
+https://js.do/srabann/queue
+https://js.do/srabann/priority-queue
+https://js.do/srabann/graph
+
+
+https://js.do/srabann/binary-tree-search-using-class
+https://js.do/srabann/binary-search-using-sorted-integer-list-using-while
+https://js.do/srabann/binary-search-using-sorted-integer-list-using-recursion
+
+
+https://js.do/srabann/bubble-sort
+https://js.do/srabann/quick-sort
+https://js.do/srabann/merge-sort
+
+
+https://js.do/srabann/string-reverse
+https://js.do/srabann/second-highest-number-in-an-array
+https://js.do/srabann/duplicate-char-in-a-string
+https://js.do/srabann/remove-spaces-from-text
+https://js.do/srabann/check-amnstrong-number
+https://js.do/srabann/foibbonaci-using-loop
+https://js.do/srabann/balancing-brackets-stack-implementation
