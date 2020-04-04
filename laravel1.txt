@@ -1,0 +1,33 @@
+dispatch()
+boardcast()
+service container
+
+
+
+-------------------------------
+Using Laravel, developers can save hours of development time and cut thousands of lines of code as compared to raw PHP. Because Laravel reuses the existing components of different frameworks in designing web applications, the outcome is more structured and pragmatic.
+
+-------------------------------
+# Features of Laravel
+Eloquent ORM
+Query builder available
+Reverse routing
+Restful controllers
+Migrations
+Database Seeding
+Automatic pagination
+Unit testing
+Homestead
+-------------------------------
+# New Features in Laravel 7
+Custom Eloquent Casts
+Route Caching Speed Improvements
+HTTP Client
+Query Time Casts
+Blade Component Tags & Improvements
+Laravel Airlock
+CORS Support
+Fluent string operations
+Multiple Mail Drivers
+New Artisan Commands etc
+--------------------------------

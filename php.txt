@@ -12,10 +12,17 @@ curl -H "Authorization: Bearer uk4MElNm_5BeMi66LX__TP_0XMtEpp7he_H_uqZw03M" "htt
 Using Curl()
 Using SimpleXMLObject();
 
+	$xmlDoc = new DOMDocument();
+	$xmlDoc->load("note.xml");
+	print $xmlDoc->saveXML();
+
+$soap = new SoapClient(url, headers);
 
 
 # Links
 ============================
+
+
 
 
 
@@ -25,10 +32,25 @@ Using SimpleXMLObject();
 Q. What are the Coding Standard to follow
 Q. What are the optimisation technique
 
+array_map()
+array_walk()
+array_filter()
+array_reduce()
+array_keys()
+
+
+
+
+
 
 
 # Concepts in Program
 ============================
+In PHP 
+arrays are assigned by deepily copy, $arr2 = $arr1,both are two diff array by default in php -- otherwise $arr2 = &$arr1;
+while objects are assigned by reference by default, to deep copy to another object "clone" keyword is used 
+so PHP will copy the array by default. References in PHP have to be explicit:
+
 
 
 
@@ -39,8 +61,257 @@ Q. What are the optimisation technique
 
 
 
+
+
 # Programs 
 ============================
 
 
 
+
+
+##############################################################
+
+0. best way of handling errors
+   ~ Errors are  handled by the envirnment
+   ~ Expections are handled by application using try{} catch(Expection $e){} catch(DevidedByZero $x){} finally{}
+   ~ all type of codes like DB::transaction(); DB::commit(); DB::rollback() are mannaged in try block
+
+1. core php pre fundamentals
+   ~ 
+
+
+2. achieving patterns possiblities examples when insttiating, implementing abstract-interfaces : WAY TO ORGANISE CODE
+	~ singleton pattern: object created once through out the project
+	~ Facade pattern: 
+	~ Factory Pattern:
+	~ Observer Pattern: 
+	~ 
+3. mysql optimisation
+	~ indexing should be followed
+	~ operator{<>, =} need to be used rather "where column in()", "not in()", "whereExits()", "whereNotExits()"
+	~ Explain Command to check the errors
+	~ spcific column should be used rather generic form where soft has to identify( ex. select * from Employee)
+	~ rewriting the sql queries
+
+4. secuities
+   ~ session & cookie hijacking
+   ~ 																																																																																																																																																																																																																																																																																										
+
+
+5. mysql queries with employee and dept.
+	~ employee having highest salary 
+	  select * from Employee where salary = select max(salary) from Employee
+	~ Employee having second highest salary
+	  select max(salary) from Employee where salary not in( select max(salary) from Employee )
+	~ emp, max salary, by department form both the table
+	  select e.name, e.phone, max(e.salary) as high_salary, d.name from Employee e inner join Dept d on(e.dept_id = d.id) group by d.name
+
+
+6. innodb and myisam
+
+
+7. what is the logic behind require and require_once()
+   ~ require once check the url already included else it require will be ignored
+
+8. can interface be static
+
+
+9. const PROJECT = 'Lila Travel'; which is written inside a class not in global concept at compile time
+   define(PROJECT, 'Jilibi Travel'); in GLobal concept at run time
+
+
+10. 
+
+array_key_exists('key', $array);
+isset(null) =====> false otherwise always true
+isempty(0)  =====> true otherwise always return false
+
+11.
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
+12.
+
+
+13. PDO stands for PHP Data Object.
+It provides a vendor-neutral, lightweight, data-access abstraction layer. Thus, no matter what database we use, the function to issue queries and fetch data will be same. 
+It focuses on data access abstraction rather than database abstraction.
+
+14.
+try {
+    print "this is our try block n";
+    throw new Exception();
+} catch (Exception1 $e1) {
+    print "something went wrong, caught yah! n";
+} catch (Exception2 $e2) {
+    print "something went wrong, caught yah! n";
+} catch (Exception $e) {
+    print "something went wrong, caught yah! n";
+} finally {
+    print "this part is always executed n";
+}
+
+---------------------------------------------------------------------------------
+"echo" and "print" are more or less the same. They are both used to output data to the screen.
+---------------------------------------------------------------------------------
+function has_string_keys(array $array) {
+  return count(array_filter(array_keys($array), 'is_string')) > 0;
+}
+---------------------------------------------------------------------------------
+$b = clone $a; two seprate object copied by value
+$c = $a; two same object copied by ref
+
+---------------------------------------------------------------------------------
+$something = 0;
+echo ('password123' == $something) ? 'true' : 'false';
+Ans: true - implicitily type cast to float value
+
+'1e3' == '1000' // true
+
+---------------------------------------------------------------------------------
+What is use of Null Coalesce Operator?
+Ans: always return first operand if not null
+$name = $firstName ?? $username ?? $placeholder ?? "Guest"; 
+
+---------------------------------------------------------------------------------
+   All component and new componet should be ready for development in framework usages, and possible test suits
+ - All Task to be defined in Sprint with timeline and discussion
+ - Framework should be ready and tested with deployment of initial project
+ - logging
+ - Error handling to be manged from begining
+ - data base table to be ready using migration step by step
+ - modular basis codes
+ - updated to bitbucket or github from branch
+ - then to be fetched to production server from git/svn
+---------------------------------------------------------------------------------
+Q.explain what is a closure in PHP and why does it use the “use” identifier?
+public function getTotal($tax)
+{
+    $total = 0.00;
+
+    $callback = function ($quantity, $product) use ($tax, &$total)
+        {
+            $pricePerItem = constant( __CLASS__ . "::PRICE_" .strtoupper($product) );
+            $total += ($pricePerItem * $quantity) * ($tax + 1.0);
+        };
+
+    array_walk($this->products, $callback);
+    return round($total, 2);
+}
+---------------------------------------------------------------------------------
+How to measure execution times of PHP scripts?
+means bench marking of of codes
+---------------------------------------------------------------------------------
+Rest: POST ~ PUT ~ PATCH
+
+
+POST: 
+  ~ Not idempotent method, used to create records in DB
+  ~ Since record does not exits before, save url and return url is different. 
+
+
+PUT :
+  ~ This method is idempotent. means client and server urls are same.
+  ~ Used for updating a resource by using the primary key.
+  ~ The method specifiy to full update of record.
+
+
+PATCH : 
+  ~ This is same as PUT, only difffernce is partially the records are updated 
+
+---------------------------------------------------------------------------------
+Soap ~ Rest
+
+Rest:
+ ~ Rest can be feched from cahced storage instead of always heating to Server
+ ~ Rest is Stateless
+ ~ Soap needs heavy nbandwidth Rest can work in very low bandwidth
+ ~ SOAP only works with XML formats whereas REST work with plain text, XML, HTML and JSON.
+ - SOAP is a protocol whereas REST is an architectural pattern.
+ - SOAP cannot make use of REST whereas REST can make use of SOAP.
+ ~ Challenges in Rest - Lack of Security & Lack of state.
+ ~ SOAP has its own documentation WSDL format, where endopint and operation methods are defined 
+
+
+
+Array Transformation using following methods
+---------------------------------------------------------------------------------
+array_map($callback, array1, array2,...) 
+returns a new array
+
+array_filter($array, $callback)
+picks only a subset of the elements of the array according to a filtering function.It does preserve the keys.
+
+array_walk($array, $callback)
+only returns true
+
+array_reduce($array, $callback, $accumulator)
+returns the accumulator
+
+<?php //php 7.0.8
+$origarray1 = array(2.4, 2.6, 3.5);
+$origarray2 = array(2.4, 2.6, 3.5, 4, 9, 'a');
+print_r(array_map(function (&$row1, $row2) { return $row1 + $row2; }, $origarray1, $origarray2));
+//returned a new array
+
+print_r(array_map(function (&$row) { return ceil($row); }, $origarray1)); // returned new array
+print_r($origarray1); // no changes to array
+
+
+
+print_r(array_walk($origarray2, function (&$row, $key) { $row = floor($row); })); // returned 1
+//print_r($origarray2); // modified in same array no third array print_r
+ 
+
+print_r(array_filter($origarray1, function ($a) { return $a > 2.5; })); // subset of new array
+
+
+function array_reduce($array, $function, $accumulator) {
+  foreach ($array as $element) {
+    $accumulator = $function($accumulator, $element);
+  }
+  return $accumulator;
+}
+
+array_reduce($inputs,
+             function($accumulator, $element) {
+               if (valid($element)) $accumulator[] = transform($element);
+               return $accumulator;
+             },
+             array());
+?>
+---------------------------------------------------------------------------------
+ORM: Object Relational Mapping
+
+
+---------------------------------------------------------------------------------
+about callback in php ? 
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+
+highlight_file(__file__);
+print_r($GLOBALS);

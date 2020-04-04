@@ -1,0 +1,8 @@
+Mysql Query Optimisation steps:
+
+
+
+
+
+
+1 - having clause and where clause

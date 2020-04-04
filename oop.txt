@@ -1,0 +1,156 @@
+1.  class is final means ?
+	
+
+
+
+2.  About static $variable in registered memory ? 
+
+when a $variable declared & initialized with keyword static, will not go to the same line again when it is recalled inside method. => means whenever method is recalled everything got re-initialized but not static veriables which is created in memory directly and so the flag is now with registered memory which is created only once for the variable not everytime.
+
+  - This is flag which is once registered can able to create a singleton object.
+
+    protected static $instance = null;
+	
+	public static function getInstance()
+	{
+	    if (!isset(static::$instance)) {
+	        static::$instance = new static;
+	    }
+	    return static::$instance;
+	}
+
+	public static function getInstance(){
+
+        if( !(self::$instance instanceof self) ){
+            self::$instance = new self();           
+        }
+         return self::$instance;
+    }
+
+    public static function singleton(){
+
+        if (!isset(self::$instance)) {
+            self::$instance = new Singleton;
+        }
+        return self::$instance;
+    }
+
+   ---------------------------------------------------------------------------------------------
+   /**
+	 * Singleton Pattern.
+	 * 
+	 * Modern implementation.
+	 */
+	class Singleton
+	{
+	    /**
+	     * Call this method to get singleton
+	     */
+	    public static function instance()
+	    {
+	      static $instance = false;
+	      if( $instance === false )
+	      {
+	        // Late static binding (PHP 5.3+)
+	        $instance = new static();
+	      }
+
+	      return $instance;
+	    }
+
+	    /**
+	     * Make constructor private, so nobody can call "new Class".
+	     */
+	    private function __construct() {}
+	    abstract protected function __construct();
+
+	    /**
+	     * Make clone magic method private, so nobody can clone instance.
+	     */
+	    private function __clone() {}
+
+	    /**
+	     * Make sleep magic method private, so nobody can serialize instance.
+	     */
+	    private function __sleep() {}
+
+	    /**
+	     * Make wakeup magic method private, so nobody can unserialize instance.
+	     */
+	    private function __wakeup() {}
+
+	}
+
+   ---------------------------------------------------------------------------------------------
+  
+  a. if __construct() is private -> object can not be instantiated
+  b. since object can not be created, methods should be static which can be called by class using ::
+  c. 
+
+
+4. How to achieve a Facade pattern in php ?
+
+
+# https://github.com/domnikl/DesignPatternsPHP
+5. Factory Pattern: https://pasteboard.co/J2hZrf1.png
+   	 
+   Decator Pattern: 
+   	 
+   Adaptor Pattern: 
+     
+   Proxy Patten: 
+   	 The object is called indirectly through another object
+   Facade Pattern: 
+   	 It is high level interface which interact with multiple complex interfaces
+   SingleTon Pattern: 
+     Only object can be instatiated once through out the system.
+   Decorator Pattern
+   	 
+
+
+
+   Creational
+	*AbstractFactory notebook
+	*Builder notebook
+	*FactoryMethod notebook
+	Pool notebook
+	*Prototype notebook
+	SimpleFactory
+	*Singleton notebook (is considered an anti-pattern! no_entry)
+	StaticFactory
+
+   Structural
+	*Adapter notebook
+	*Bridge notebook
+	*Composite notebook
+	*DataMapper notebook
+	*Decorator notebook
+	*DependencyInjection notebook
+	*Facade notebook
+	*FluentInterface notebook
+	*Flyweight notebook
+	*Proxy notebook
+	*Registry notebook
+   
+   Behavioral
+	ChainOfResponsibilities notebook
+	*Command notebook
+	*Iterator notebook
+	*Mediator notebook
+	Memento notebook
+	*NullObject notebook
+	*Observer notebook
+	Specification notebook
+	State notebook
+	*Strategy notebook
+	TemplateMethod notebook
+	*Visitor notebook
+   
+   More
+	EAV notebook
+	*Repository
+	ServiceLocator notebook (is considered an anti-pattern! no_entry)
+
+
+
+

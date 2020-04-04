@@ -27,10 +27,18 @@ php artisan db:seed
 php artisan db:seed --class=DevDatabaseSeeder
 php artisan package:discover
 php artisan migrate:fresh --seed
+php artisan migrate:rollback --step=1
 php artisan route:list --path=api
 php artisan queue:work --tries=1 --queue="data-ingestion-default" --daemon
+php artisan queue:work --tries=3 OR --once --queue=JobQueueName
 php artisan schedule run: used to run scheduled jobs in Laravel.
+
+
+php artisan make:controller FooCommand
 php artisan make:console FooCommand
+php artisan make: provider ClientsServiceProvider
+
+
 composer create-project laravel/laravel your-project-name version
 composer create-project laravel/lumen your-project-name version
 composer create-project laravel/vapour your-project-name version
@@ -101,7 +109,7 @@ structural - composition between object / usages of interface and abstract class
 behavioural - communication between object
 
 3. 
-what is core "->make()"" funtion in laravel
+what is core "$app->make()"" funtion in laravel
 
 4.
 Provider Pattern let you extentds the framework by registering new classes 

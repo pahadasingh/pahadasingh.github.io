@@ -1,0 +1,161 @@
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+$.ajaxSetup({
+   headers: {
+     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+   }
+});
+
+----------------------------------------------------------------------------------
+data between two date
+Blog::whereBetween('created_at', [$dateOne, $dateTwo])->get();
+----------------------------------------------------------------------------------
+class VerifyCsrfToken extends BaseVerifier {
+      protected $except = [
+            'Pass here your URL',
+      ];
+}
+----------------------------------------------------------------------------------
+DROP PROCEDURE IF EXISTS `get_subcategory_by_catid`;
+delimiter ;;
+CREATE PROCEDURE `get_subcategory_by_catid` (IN idx int)
+BEGIN
+SELECT id, parent_id, title, slug, created_at FROM category WHERE parent_id = idx AND status = 1 ORDER BY title;
+END
+;;
+delimiter ;
+
+
+$getSubCategories = DB::select(
+   'CALL get_subcategory_by_catid('.$item->category_id.')'
+);
+----------------------------------------------------------------------------------
+
+"files": [
+    "app/helpers.php"
+]
+in "autoload" variable.
+Now update your composer.json with composer dump-autoload or composer update
+
+----------------------------------------------------------------------------------
+
+php artisan list;
+php artisan –version
+php artisan down;
+php artisan help;
+php artisan up;
+php artisan make:controller;
+php artisan make:mail;
+php artisan make:model;
+php artisan make:migration;
+php artisan make:middleware;
+php artisan make:auth;
+php artisan make:provider;
+php artisan make:rule OlympicYear
+
+----------------------------------------------------------------------------------
+{{ $username }} - text contents 
+{!! $username !!} - html content
+----------------------------------------------------------------------------------
+session()->get('key');
+session()->all();
+session()->forget('key'); or session()->flush();
+session()->put('key', 'value');
+----------------------------------------------------------------------------------
+$insertGetId = DB::table(‘blogs’)->insertGetId([‘title’ => ‘Best Interview Questions’]);
+----------------------------------------------------------------------------------
+public function sendEmail(Request $request, $id)
+    {
+        $user = Admin::find($id);
+
+        Mail::send('emails.reminder', ['user' => $user], function ($m) use ($user) {
+            $m->from('info@bestinterviewquestion.com', 'Reminder');
+
+            $m->to($user->email, $user->name)->subject('Your Reminder!');
+        });
+    }
+----------------------------------------------------------------------------------
+Config::get('constants.VaribleName');
+----------------------------------------------------------------------------------
+with() --- for eager loading
+
+
+----------------------------------------------------------------------------------
+# Inner Join
+DB::table('admin') ->join('contacts', 'admin.id', '=', 'contacts.user_id') ->join('orders', 'admin.id', '=', 'orders.user_id') ->select('users.id', 'contacts.phone', 'orders.price') ->get();
+
+# Left Join / Right Join
+$users = DB::table('admin') ->leftJoin('posts', 'admin.id', '=', 'posts.admin_id') ->get();
+$users = DB::table('admin') ->rightJoin('posts', 'admin.id', '=', 'posts.admin_id') ->get();
+
+# Cross Join
+$user = DB::table('sizes') ->crossJoin('colours') ->get();
+
+# Advanced Join
+DB::table('admin') ->join('contacts', function ($join) { $join->on('admin.id', '=', 'contacts.admin_id')->orOn(...); }) ->get();
+
+# Sub-Query Joins
+$admin = DB::table('admin') ->joinSub($latestPosts, 'latest_posts', function ($join) { $join->on('admin.id', '=', 'latest_posts.admin_id'); })->get();
+
+----------------------------------------------------------------------------------
+Below is list of some Aggregates methods provided by Laravel query builder.
+count()
+Usage:$products = DB::table(‘products’)->count();
+max()
+Usage:$price = DB::table(‘orders’)->max(‘price’);
+min()
+Usage:$price = DB::table(‘orders’)->min(‘price’);
+avg()
+Usage:$price = DB::table(‘orders’)->avg(‘price’);
+sum()
+Usage: $price = DB::table(‘orders’)->sum(‘price’);
+----------------------------------------------------------------------------------
+Our first step should be
+DB::connection()->enableQueryLog();
+After our query, it should be placed
+$querieslog = DB::getQueryLog();
+After that, it should be placed
+dd($querieslog)
+----------------------------------------------------------------------------------
+DB::connection()->enableQueryLog();
+$result = User:where(['status' => 1])->get();
+$log = DB::getQueryLog();
+dd($log);
+----------------------------------------------------------------------------------
+if($request->hasFile(file_name')) {
+
+      $file = Storage::putFile('YOUR FOLDER PATH', $request->file('file_name'));
+
+}
+----------------------------------------------------------------------------------
+It has many types of relationships.
+One To One relationships
+One To Many relationships
+Many To Many relationships
+Has Many Through relationships
+Polymorphic relationships
+Many To Many Polymorphic relationships
+----------------------------------------------------------------------------------
+Route::get('profile',);
+HTML::link_to_action('login@index')
+----------------------------------------------------------------------------------
+<meta name="csrf-token" content="{{ csrf_token() }}">
+$.ajaxSetup({
+	headers: { 'X-CSRF-TOEKN': $('meta[name="csrf-token"]').attr('content'); }
+});
+----------------------------------------------------------------------------------\
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------

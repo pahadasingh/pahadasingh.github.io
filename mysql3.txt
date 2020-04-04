@@ -1,0 +1,5 @@
+insert into sraban(a,b,c) values(1,2,3), (4,5,6), (6,7,8) on duplicate key update c = values(a) + values(b)
+
+
+insert ignore into
+
