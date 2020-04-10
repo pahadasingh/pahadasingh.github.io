@@ -76,7 +76,8 @@ cal
 
 -------------------------------------
 # Read git Dir
-ls > files.db && echo '' > README.md && cat files.db | while read string; do echo "- [$string]($string)" >> README.md; done
+git ls-files > files.db && echo '' > README.md && cat files.db | while read string; do echo "- [$string]($string)" >> README.md; done
+: > README.md && ls | while read string; do echo "- [$string]($string)" >> README.md; done
 
 -------------------------------------
 
