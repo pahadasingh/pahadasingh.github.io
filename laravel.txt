@@ -29,14 +29,17 @@ php artisan package:discover
 php artisan migrate:fresh --seed
 php artisan migrate:rollback --step=1
 php artisan route:list --path=api
+
+php artisan make:job PrepareNewsletterSubscriptionEmail
+
 php artisan queue:work --tries=1 --queue="data-ingestion-default" --daemon
 php artisan queue:work --tries=3 OR --once --queue=JobQueueName
-php artisan schedule run: used to run scheduled jobs in Laravel.
+php artisan schedule:run: used to run scheduled jobs in Laravel. if it is
 
 
 php artisan make:controller FooCommand
 php artisan make:console FooCommand
-php artisan make: provider ClientsServiceProvider
+php artisan make:provider ClientsServiceProvider
 
 
 composer create-project laravel/laravel your-project-name version
@@ -45,10 +48,21 @@ composer create-project laravel/vapour your-project-name version
 
 
 php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
+
+
+php artisan schedule:run
 php artisan backup:run
 php artisan tinker
 > PrepareNewsletterSubscriptionEmail::dispatch();
 ```
+php artisan make:test sraban
+
+For Development
+php artisan queue:work &
+
+For Production
+1. cronjobs
+2. supervisor
 
 # Latest RND/Study/Preparation
 ===========================

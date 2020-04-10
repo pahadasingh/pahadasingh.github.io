@@ -1,0 +1,164 @@
+# Databases
+1. understanding of SQL (mySQL, postgres or similar. including clustering)
+2. understanding of one no-SQL
+
+
+
+
+
+
+# Code Optimisation
+1. Comfortable producing and refactoring code without assistance
+
+
+
+
+
+
+# Type of programming
+1. Understands different major language paradigms (object oriented / functional /reactive)
+
+
+
+
+
+
+
+# Algorithim
+1. Can reason about complexity of algorithms (time and space)
+
+
+
+
+
+
+# Linux
+1. Basic CI/CD and DevOps
+
+
+
+
+
+
+
+
+# Quality Analysis Testing
+1. Design, QA and Infrastructure
+
+
+
+
+
+
+
+# Resuable Sollution for common occuring Problem
+1. Knowledge of design patterns and cloud scaling Ocean or even Open Stack
+
+
+
+
+
+
+
+
+
+# Server Controls
+1. AWS experience, but we are fine with any Cloud stack provider such as Azure, GCP, Digital
+
+
+
+
+
+
+
+
+# Management Tools
+1. Comfortable with agile practices, user stories and task breakdown
+2. Zira /Pivotal
+
+
+
+
+
+
+
+# Development Skill
+1. Understands BDD/TDD/Performance/Security/Smoke testing
+
+
+
+
+
+
+# Webservices
+1. Understands REST principles and Microservices
+
+
+
+
+
+
+
+
+# Versioning the codes
+1. Understands version control & branching strategies
+
+
+
+
+
+
+
+# Security
+1. Understands application security fundamentals and potential security risks
+
+
+
+
+
+
+
+
+# Scripting for automating the Task
+1. Can script (shell, curl, gattling etc) and automate within relevant environments
+We'd love to see ?
+
+
+
+
+
+
+# Frameworks
+1. design and implementation of of WebApps and APIs using a PHP
+based framework (such as Laravel, Code Igniter, Cake or similar)
+2. In addition to PHP, hands-on with a Python or node.js based framework
+
+
+
+
+
+
+
+# Cloud Platforms / Tools
+
+
+
+
+
+
+
+# Thinking SkILL
+1. Proven ability to work creatively and analytically in a problem-solving environment
+
+
+
+
+
+
+# General 
+
+1. A detail-oriented lead, who is eager to learn and is passionate about developing software
+2. Proven success in contributing to a team-oriented environment
+3. Excellent leadership, communication (written and oral) and interpersonal skills
+
+

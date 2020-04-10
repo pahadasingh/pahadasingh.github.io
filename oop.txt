@@ -1,6 +1,6 @@
-1.  class is final means ?
+1.  final keyword in Oops means ?
 	
-
+    The class which can be extended, the method which can not be over ridden
 
 
 2.  About static $variable in registered memory ? 
@@ -90,22 +90,26 @@ when a $variable declared & initialized with keyword static, will not go to the 
 
 4. How to achieve a Facade pattern in php ?
 
+In software engineering, a design pattern is a general reusable solution to a commonly occurring problem 
+within a given context in software design.
 
 # https://github.com/domnikl/DesignPatternsPHP
-5. Factory Pattern: https://pasteboard.co/J2hZrf1.png
-   	 
-   Decator Pattern: 
-   	 
+5. 
+   Factory Pattern: https://pasteboard.co/J2hZrf1.png
+   	 uses the parameter to give the full output in a method	 
    Adaptor Pattern: 
-     
+	 The adapter pattern is a design pattern that translates one interface for a class into a compatible interface.
+  
    Proxy Patten: 
-   	 The object is called indirectly through another object
+   	 The object is called indirectly through another object, so that is why the proxy
    Facade Pattern: 
    	 It is high level interface which interact with multiple complex interfaces
    SingleTon Pattern: 
      Only object can be instatiated once through out the system.
    Decorator Pattern
-   	 
+   	 A decorator which is an abstract class that implements the interface.
+   Strategy Pattern
+   	 FIlE, DATAbASE, EMAIl, SMS loGGER use a Common Interface to write to the log
 
 
 

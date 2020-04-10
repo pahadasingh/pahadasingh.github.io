@@ -1,0 +1,188 @@
+MySQL
+-------------------------------------------------------------
+Q. Innodb Vs MyIsam
+   - innodb is transaction safe
+   - innodb suports row level locking so insert/update is faster
+   - innodb supports referential integrity
+   - MyIsam support faster searching of data due indexing
+   - MyIsam stored in three file -for index, data, format
+
+Q. Inner Join, Outer Join, Left Join, Full Left Join
+   Increasing the columns in result set using join
+   Inner Join - Common data generated when foreign keyValue exits in child table
+   Left (Outer) Join - Full left is table as output and the joined column are filled empty if foreign key data exits
+   Right (Outer) Join - Full right table  as output and the joined column are filled empty if foreign key data is not available
+   Outer Join - returns all records from both table if matching else assign null to column if not matching
+
+
+Q. Union / Union All / Minus / Intersection
+   Collecting of rows from multiple tables
+   Union - duplicate record will not stored
+   Union All - Duplicte records added
+   Minus - Records already exit in second table will be removed from the collection
+   Intersection - Only the common records exit in both the table 
+
+
+Q. having and where clause
+   - where condition does not use aggreate funtion
+   - having uses the aggregate function
+   - select max(sal) from emp 
+   - select * from emp where 1 group by department having max(sal) = 5k
+
+
+Q. three type of sub querys
+   scalar: single row and single column
+   row: single row have multiple column
+   table: return multiple column and rows
+   Note: Subqueries should only used as a fallback solution when join operation is complex
+
+
+Q. Query Optimisation Steps
+   - Using Explain select query , slowness is checked from the row traversal, so indexing are addded if found all
+   - Columns should be specific in query instead of generic 'Select * '
+   - operators like in() and not in() must be replaced with =, <>
+   - limit statement should be added rather calling all records from table
+   - use joins instead of subqueries when getting data
+   - unnecessary order by clause in the query
+
+
+Laravel
+-------------------------------------------------------------
+Q. Service Container
+   - All class dependencies are handled through dependecy injection inside a object holder
+   - Using service provider classes are added into the container object. config/app.php have key 'provider'
+   - basically a container object have methods like 
+      bind(), make(), resolve(), instance(), singleton() where $app = app(); 
+   - 
+   
+
+Q. Oops Patterns
+    - Singleton pattern: single object of a class through out the project. ex. db connection object
+    - Factory pattern: object will took some input parameter in return will give the output using input arg
+    - Facade pattern: Objects are interdependent and create a chain
+    - Adpater pattern: converting one object to another object using a third object
+    - Observer pattern:
+    - Strategy pattern: 
+    - Proxy Pattern:
+
+Q. ORM Relations
+
+   $this->belongsTo('Model','key');
+   $this->hasMany('Model','key');
+   $this->oneToMany('Model','key');
+   $this->ManyToMany('Model','key');
+
+Q. Unit Test
+   
+
+PHP
+--------------------------------------------------------------
+Q. INI Settings
+   memory_limit(0);
+   ini_set('track_errors',1);
+   ini_set('log_errors',1);
+   ini_set('display_errors', 1);
+   error_reporting(E_ALL);
+   ini_set('error_log','/tmp/path/log');
+   ini_set('max_upload_size',100Mb);
+   /var/log/apache2/error.log , /var/log/nginx/error.log
+
+Q. Session & Cookie
+   $_SESSION[key] = value;
+   setCookie(key, value, domain, expire);
+
+Q. String Functions
+   abs(), str_split(), explode(), implode(), str_length(), strstr(), strpos(), compact(), extract()
+   strtotime(), filter_var($email, FILTER_VALIDATE_EMAIL)
+
+Q. Array Functions
+    array_map(), array_walk(), array_reduce(), array_filter(), array_combine(), array_merge(), in_array(), array_search()
+
+Q. File functions
+    file_exits(), file_put_contents(), file_get_contents(), file_open('','a'), fwrite(), file_close()
+    ob_start(), ob_get_content(), ob_clean()
+    ob = output buffering
+
+Q. Validate functions
+   if($obj instanceOf someClass)
+   is_function('nameOfFunction')
+   is_array($array)
+   is_object($array)
+   method_exists($this, $method)
+   property_exists($this, $property)
+   isset(null) -- false
+   empty(0) -- true
+
+
+Q. Closures
+
+
+Q. Global variables
+   __LINE__, __FILE__ , __CLASS__ , $_SESSION, $_SERVER, $_FILES, $_POST, $_GET, $_REQUEST
+
+Q. How magic method helps
+   __construct(), __desctruct(), __call(), __callStatic(), __sleep(), __wakeup(), __get(), __set()
+
+Q. Oop concepts Trick with Patterns
+   - final keyword: where class cannot be extended, method can not be overridden
+   - self::staticMethod(), 
+     static::staticMethod() for child classes where static method is over ridden, 
+     parent::parentMethod() in same chidlMethod() name. 
+     className::staicMethod() outside of class
+     $this->methodVariable() for all other inside the class. 
+   - 
+
+HTML & CSS
+---------------------------------------------------------------
+Q. Scematic elemets
+    - implementing semantic HTML5 on your pages will improve your communication with Google and Bing
+    - non-semantic elements: <div> and <span> - Tells nothing about its content.
+    - A semantic element clearly describes its meaning to both the browser and the developer.
+    - <form>, <table>, <h1>, <p>, <blockquote>
+    - <header>, <nav>, <main>, <article>, <section>, <aside>, <footer>
+
+Q. Some css property
+   box
+   position
+
+Q. media query for browser specific
+
+Q. Css3 features
+   
+
+Q. Html5 api
+   - WebSocket API
+   - getUserMedia API
+   - Fullscreen API
+   - Page Visibility API
+   - Battery Status API
+   - Vibration API
+   - Network Information API
+   - Navigation Timing API
+   - User Timing API
+   - High Resolution Time API
+
+Javascript
+---------------------------------------------------------------
+Q. Promises
+
+Q. Closures
+
+Q. String Functions
+
+Q. Array Functions
+
+Q. Type of Data Storage
+
+
+Angular
+----------------------------------------------------------------
+Q. component and directive lifecycle
+
+Q. type of pipes
+
+Q. type of filters
+
+Q. Observables
+
+Q. Boardcasting

@@ -1,0 +1,262 @@
+--------------------------------------
+Q. Template reference variable and how would you use it in Angular 6?
+<input #mobile placeholder="mobile number">
+<button (click)="callmobile(mobile.value)">Call</button>
+--------------------------------------
+Q. Safe navigation operator in Angular 6 ?
+   {{ phone?.number }}
+
+   @Input() elvisTest?: PageTest;
+   {{ elvisTest?.key }}
+--------------------------------------
+angular8 filters
+Number, Currency, Date, Uppercase, Lowercase, orderBy, JSON, limitTo
+--------------------------------------
+export class HelloComponent {
+   @Input() myContacts: string
+   @Output() onClick = new EventEmitter()
+}
+<h3 (click)="onClick.emit('Yes')"></h3>
+--------------------------------------
+double curly braces, {{ }}
+template expression produces a value
+--------------------------------------
+Route Guards in Angular 6? Also, explain its types.
+Ans:
+Route Guards are interfaces that tell the router whether or not it should allow navigation to a specifically requested route.
+
+Type:
+CanActivate
+CanActivateChild
+CanDeactivate
+CanLoad
+Resolve
+--------------------------------------
+What is property binding? Explain with a syntax.
+<button [disabled]="buttonDisabled"></button>
+--------------------------------------
+* What is feature Modules and also explain types of feature Modules in Angular?
+- feature modules are NgModules
+There are five types of feature modules:
+	Routed feature modules
+	Domain feature modules
+	Routing modules
+	Widget feature modules
+	Service feature modules
+
+
+--------------------------------------
+bazel and closure compiler in angular 6?
+ -  The tool can be used by developers to optimize their Angular applications bette
+--------------------------------------
+Q. TemplateRef and ViewContainerRef in Angular 6?
+ - TemplateRef represents an embedded template that can be used to instantiate embedded.
+ - ViewContainerRef represents a container where one or more than one views can be attached.
+--------------------------------------
+Q.Explain the difference between Promise and Observable in Angular?
+- A Promise operates a single event when an async operation fails or completes
+- The Observable allows passing zero or more events where the callback is received for each event.
+--------------------------------------
+Q. What are the decorators and how do you create this?
+Decorators are actually just functions that are called as per the component they are handling
+class decorator
+method decorator
+--------------------------------------
+Q. Traceur compiler
+includes generators, classes and compile to regular javascript
+--------------------------------------
+Q. ngzone service in angular?
+developers to start change detection resulted by async operations automatically.
+It gives us back control of our code’s execution.
+It can be used to subscribe to an Observable that is present outside of the angular zone
+
+
+--------------------------------------
+Q. angular service and factory?
+- Angular service is a function dedicated to the business layer of the application. It worked as a constructor function and invoked at runtime with new. Public methods can be added to it.
+~ The factory is a design pattern to create objects, return functions and closures, return Object literals, return a simply String and more
+--------------------------------------
+Q. injector in AngularJS?
+Dependency Injection software design pattern which deals how components hold of their dependencies
+--------------------------------------
+Q. Angular 6 Elements?
+ - Angular elements also allow users to create custom elements in a framework-agnostic way
+--------------------------------------
+Q. Zone in angular 6?
+   - API used by Angular 6 update the application view when any change occurred.
+
+--------------------------------------
+Q. package.json file in angular?
+This file can also contain other metadata of project such as license information, configuration data, project description, project version, etc. which are crucial for both for the end-users of the package as well as npm.
+
+--------------------------------------
+AOT in Angular 6?
+ - The AOT compiler converts HTML and TypeScript code into an environment-friendly JavaScript code during the build section earlier than the browser downloads.
+
+--------------------------------------
+Q. lazy loading and why is it used for Angular?
+Lazy loading is a method in Angular that permits you to load JavaScript elements asynchronously when a unique route is activated.
+--------------------------------------
+Q. detect a route change in Angular 6?
+To detect router change in Angular 6, the $on() method is used
+--------------------------------------
+Q. What is JIT compiler and its types in Angular 6?
+The JIT ( Just-in-Time) compiler is used to dynamically compile applications during continuous loads.
+--------------------------------------
+Q. What is NgUpgrade in Angular 6?
+NgUpgrade in Angular 6 is actually a library which is used to integrate both Angular and AngularJS components in an application and also help in bridging the dependency injection systems in both Angular & AngularJS.
+--------------------------------------
+What is angular material design?
+Material Design in Angular 6 is actually an open-source framework. It helps in developing mich material designs to be used in mobile and commercial applications
+--------------------------------------
+Q. What is the use of Async pipe in Angular 6?
+The async pipe in Angular 6 is a special kind of impure pipe which either waits for a promise to resolve, display the data or subscribe to an observable displaying the emitted values. The Async pipe saves the boilerplate into the component model.
+--------------------------------------
+What is the use of subscribe in Angular 6?
+In Angular 6, the subscribe() is used as a method in the Observable type. This is a type that is used as a utility for asynchronously and synchronously streaming data to a variety of components that have been subscribed to the observable.
+--------------------------------------
+What is data binding and its different types?
+There are four different types of Data BIding in Angular 6:
+String Interpolation binding
+Property Data Binding
+Event Data Binding
+Two-way Data binding
+--------------------------------------
+What are pipes in Angular 6?
+A pipe usually takes the original data as input and transforms it into the desired output format.
+--------------------------------------
+HttpClient and its benefits in Angular 6?
+
+The HTTPClient in Angular 6 offers a simplified version of client HTTP API for applications in Agular resting on the XMLHttpRequests interface exposed by the end-user in the browser.
+
+Benefits of HTTPClient:
+Included Testability Features
+Typed Requests and Response Objects
+Requests and Response Interception
+Observable APIs and a method of streamlined and efficient error handling
+--------------------------------------
+What is the use of observable in Angular 6?  Observer pattern,
+Observables are things/components you wish to observe and take action in the future
+--------------------------------------
+RxJS in Angular 6?
+RxJS or Reactive Extensions for JavaScript is used in Angular 6 as a reactive streams library which allows you to work upon asynchronous data streams. It can be used both on the browser and server-side.
+--------------------------------------
+Q. multicasting in Angular 6?
+In Angular 6, Multicasting is the method of broadcasting multiple subscribers within a single execution to send values out to reach each subscriber.
+--------------------------------------
+Q.router outlet in Angular?
+a router-outlet is used to function as a placeholder that loads the different components dynamically based on the current route state and activated component.
+--------------------------------------
+Why we need compilation process in Angular?
+Due to a mix of code in the components ad the templates, integrating them needs a compiler. Hence, in Angular 6, a compiler is used.
+--------------------------------------
+What is the use of Codelyzer in Angular?
+In Angular 6, Codelyzer is an open-source tool to run and also check if the pre-defined guidelines of coding procedures are followed or not. It only does a static code analysis for both Angular and Typescript code. It analyses and runs on tslint
+--------------------------------------
+Q. What is Linting in Angular?
+ Linting is a tool that is used to check the Typescript code for programmatic and styling errors. A JSON file is a configuration for linting and this file contains all the default guidelines for linting.
+--------------------------------------
+Q. style function in Angular 6?
+a style function is used to declare a key or valuable object which contains CSS properties and or styles that shall be used in an animation state or sequence. It can be used within styling data for calls to animate and keyframes.
+--------------------------------------
+What is ElementRef in Angular 6?
+In Agular 6, ElementRef is a class and a security function that is used as a wrapper around a native element inside the view.
+--------------------------------------
+HostListener in Angular?
+HostListener in Angular 6 is basically a decorator which declares a DOM event to listen for and also provide a handler method to run if and when that specific event occurs. Host Listener is a set of arguments that is used to pass the handler method when an event occurs.
+--------------------------------------
+the case types in Angular 6?
+There are three case types in Angular 6:
+
+Upper case Pipe
+Lower Case Pipe
+Title Case Pipe
+--------------------------------------
+D! token in Angular 6?
+In Angular 6, a DI token means a Dependency Injection Token. It is basically a lookup token associated with a dependency provider, to be used in the Dependency Injection system.
+--------------------------------------
+What is the difference between component and directive in Angular 6?
+
+--------------------------------------
+Features of Angular 6
+Bazel compiler
+Ivy renderer
+Addition of elements
+Component Development Kit with stable Angular material
+The support for TypeScript 2.7+
+NgModelChange event
+Addition of multiple validators for FormBuilder’s array method
+CLI 1.7 support and its feature addition
+Update for ng
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+
+--------------------------------------
+

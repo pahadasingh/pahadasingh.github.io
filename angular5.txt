@@ -1,0 +1,11 @@
+Q. What is the life cycle of directive.
+ngOnchanges(change:SimpleChanges)
+ngOnit()
+ngDoCheck()
+ngDestroy()
+
+https://github.com/lyraddigital/angulardirectiveshooks
+
+Q. Event Boardcasting
+
+Q. Observable and Subject , Behavioural Subject

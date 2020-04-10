@@ -1,1 +1,32 @@
 https://ebiz.licindia.in/D2CPM/#Payment/0300/31618919/31-03-2020/17:22:30/01
+
+# Controller post data
+
+$post = request()->only(['name','dob']); // other reuest veriable are ignored during form post
+Author::create($post);
+
+# Testing
+
+php artisan make:test SrabanTest;
+php artisan SrabanTest;
+
+Classs SrabanTest {
+	
+	use refreshDatabase;
+
+	public function author_can_create() {
+		
+		$this->withoutExceptionHandling();
+
+		$this->post('/author', [
+			'name'  => 'XXXXXXXXXX',
+			'email' => 'sraban307@gmail.com'
+		]);
+
+		$author = Author::all();
+		$this->assertCount(1 ,  $author );
+		$this->assertInstanceOf(Carbon::class, $author->first()->dob );
+		$this->assertEquals('1988/14/05', $author->first()->dob->format('Y/m/d') );
+	}
+
+}

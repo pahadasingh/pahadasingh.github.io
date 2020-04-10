@@ -1,2 +1,401 @@
-All Design Patterns
---------------------------------
+Chains of Laravel Development
+------------------------------------------------------------------------------------------------
+1. Installation - Steps to create project in laravel
+   
+   $composer global require laravel/installer
+   $composer create-project --prefer-dist laravel/laravel mlm-sraban "5.7.*"
+   $composer create-project --prefer-dist laravel/lumen ipm-sraban "5.7.*"
+   inside ".env" file all db-connection, mail-connection need to set up
+   $php artisan clear:cache
+   $php artisan config:cache 
+   $php artisan key:generate 
+
+2. Writing Routing, Reverse writing, Wild Card Routing, location 
+   
+   Folder: ./routes
+   Files: web.php, admin.php, api.php
+   Contents: 
+     Route::group(['prefix'=>'admin', 'middleware' => 'admin', 'namespace' => 'Admin', 'domain' => '{account}.myapp.com')], function(){
+     	Route::get('url', 'Controller@index')->name('sraban-get');
+     	Route::post('url', 'Controller@index')->name('sraban-get');
+     });
+
+     Route::pattern('id', '[0-9]+');
+     Route::match(array('GET', 'POST'), '/', function() {});
+     Route::any('foo/{id?}', function($id = '10') { return ; } )->where('id', '[0-9]+'); // ->where('name', '[A-Za-z]+'); // -> ->where(array('id' => '[0-9]+', 'name' => '[a-z]+'))
+     Route::get('foo', array('https', function(){}));
+     Route::get('user/profile', array('as' => 'profile', 'uses' => 'UserController@showProfile'));
+	 $url = URL::route('profile');
+	 $redirect = Redirect::route('profile');
+	
+	Inside Lumen
+	$app->get('/{any:.*}', function ($any) use ($app) {
+	  //
+	});
+
+   Reverse: $url = Html::link_to_action('Controller@index');
+   WildCard: 
+
+3. Steps for middleware creation and its throtting of requests and what is its use.
+	
+	 Y- How Login Attempts Work | How to Handle Throttle with Middleware
+
+
+
+
+
+4. Steps for database migration why it is required, where it is stored
+
+5. Eloquent ORM, active record, whay ORM is required
+
+6. Service Provider , Benefits, how to create, location 
+
+7. Validation , own dynamic validation with field, override error messages, create own rule
+	
+	$rules = [
+				'name' => 'required|unique:users|max:100',
+				'airline_id' => 'nullable|numeric|digits_between:1,10',
+				'email'=>'required|email|unique:users,email,'.$id,
+				'age' => 'required',
+				'password'=>'nullable|min:6|confirmed'
+			];
+
+    $messsages = [
+				    'name.required' => 'User name must not be empty!',
+				    'name.max' => 'The maximun length of The User name must not exceed :max',
+				    'name.regex' => 'Use name can not contain space',
+				    'email.required' => 'Email must not be empty!',
+				    'email.email' => 'Incorrect email address!',
+				    'email.unique' => 'The email has already been used',
+				    'password.min' => 'Password must contain at least 6 characters',
+				    'password.confirmed' => 'Failed to confirm password'
+				];
+
+	$v = Validator::make($request->all() , $rules, $messages ); //->validate(); automatic redirect
+
+	$v->fails();
+	$v->passes();
+	$v->errors(); // array
+
+	return redirect('post/create')
+                        ->withErrors($v)
+                        ->withInput();
+
+8. Artisan Commands, generate env veriable, clear cache
+
+9. How to call ajax, csrf token passed in ajax
+	$.ajaxSetup({
+		headers:{'X-XSRF-TOKEN': '<?php echo csrf_token(); ?>'}
+	}); 
+
+10. Facade, declaration, uses, benefits
+
+11. Uses of Auth, commands, how authentication works, get value of autentication
+
+12. Packages, How to create
+
+13. CSRF Protection, how to use it in form , how to exclude csrf() froma form
+
+14. Error Handles, 404, 403, where is mentioned, where is this view file stored
+
+    App::abort(404);
+    App::abort(403);
+    Log::error($exception);
+
+15. How to create CURD application, about route metods
+
+
+
+
+16. Task Scheduling, when it is fired from queues - Steps for Job Scheduling emailing / sms / subscriber
+	Laravel has a built-in throttle feature for rate-limited jobs
+
+	0. Set the cron Job in every minute
+
+	$php artisan schedule:run
+
+	-----
+	1. Create a custom commands which will be stored in Kernel.php
+	$php artisan make:command DeleteOldMsg
+	/app/console/DeleteOldMsg.php
+	$signature = 'command:delMsg';
+	public function handle() {
+		$messages = Message::whereDate('created_at', '<', Carbon::now()->subMinutes(10) )->delete();
+	}
+
+	2. App\Console\Kernel.php
+	protected function schedule(Schedule $schedule)
+	{
+		$schedule->command('command:delMsg')->everyMinute();
+
+		$schedule->command('queue:work')->hourly(); 
+		//$schedule->job( new SendReminderEmail($users) )->hourly();
+	} 
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	$php artisan queue:table
+	$php artisan migrate
+
+	1. Create a custom job
+	$php artisan make:job SendEmail
+	/app/jobs/SendEmail.php
+	protected $users;
+	public function __construct(Users $u) {
+		$this->users = $u;
+	}
+
+	public function handle() {
+		//dd($this->users);	
+		Mail::send('email.reminder',['user' => $this->users], function($m) use ($this->users) {
+			$m->from('email','name');
+			$m->to('email','name');
+			$m->subject('Hello Reminder Email');
+		});
+	}
+
+	2. Real Time Ordering: Inside controller when realtime booking happens pushing/dispatching into the queue table
+	public function checkout() {
+		SendEmail::dispatch($users);
+	}
+
+	-OR-
+
+	https://stackoverflow.com/questions/53117876/laravel-send-1000-emails-every-hour-using-queue
+	*2. Event for Old users in hour basis when nobody uses the application
+	class SendReminderEmail implements ShouldQueue
+	{
+		    public function __construct()
+		    {
+		        $this->users = User::all();
+
+		        $this->event = (object)['content' => "Hello Laravel fans",'subject' => 'Test Email'];;
+		    }
+
+		    public function handle()
+		    {   
+		        foreach ($this->users as $user) {
+		            Mail::to($user->email)->queue(new Reminder($this->event));
+		        }
+		    }
+
+	}
+
+	3. change the .env
+	QueDriver = database
+
+	4. $php artisan queue:work ----> on Kernel scheduler()
+
+
+16. How to use redis throttle
+
+	Redis::throttle('key')->allow(10)->every(60)->then(function () {
+	    // Job logic...
+	}, function () {
+	    // Could not obtain lock...
+
+	    return $this->release(10);
+	});
+
+
+17. Laravel's build in date package
+    Carbon::now()->subMinutes(10);
+
+18. What is event and listners
+	 ~ inside provider/EventLsitenProvider.php
+	 - for each EventClass, there can be multiple listenerClass can be added as "key => [velues]"
+	 ~ php artisan event:generate
+
+18. Real-time event broadcasting. using Pusher driver as Saas manages the messages, 
+	https://www.youtube.com/watch?v=2PTgJwxf6UI
+	Laravel Echo works as websocket for client side
+	Pusher Driver works as webscoket for server side 
+	Pusher Driver: https://dashboard.pusher.com/accounts/sign_in
+	Desc: 
+	   - for example chat application in real time, if a user is triggering the event, if any user has opened the listener at the same will get the fired notificcation
+       - using websocket
+	$php artisan make:event eventTrigger
+	$php artisan make:listener popupBox --event eventTrigger
+	$composer require pusher/pusher-php-server
+	/config/boardcaster.php
+	/app/providers/boardcastserviceprovider.php
+	/resource/assets/js/bootstrap.js
+	$npm install 
+	$npm install --save laravel-echo pusher-js
+	$npm run watch
+	/resource/assets/js/app.js
+	/resource/views/eventListener.blade.php
+	----
+	routes.php
+	Route::get('/alertBox', function() {
+		return view(view.'eventListener');
+	});
+
+	Route::get('/fireEvemt', function() {
+		event( new eventTrigger() );
+	});
+	---
+
+
+19. Self-Host Your Own Websockets with Laravel - It's This Easy and Fast
+    https://www.youtube.com/watch?v=pIGy7-7gGXI
+    ~ create own socket server
+    ~ configure laravel-echo with own socket server
+    1. composer require beyondcode/laravel-websockets
+    2. php artisan vendor --publish --provider="Beyondcode/Laravelwebsockets/WebsocketsServiceProvider" --tag="migration"
+    3. php artisan migrate
+    4. php artisan vendor --publish --provider="Beyondcode/Laravelwebsockets/WebsocketsServiceProvider" --tag="config"
+    5.
+    	config/websocket.php
+    	database/migration/createWebsocketStatics.php
+    6. .env set ups for boardcast driver = pusher
+ 	7. php artisan websocker:serve
+ 	8. composer require pusher/pusher-php-server "~3.0"
+ 	9. boarsting.php --> host, port, scheme
+ 	10. php artisan make:event NewMessage
+ 	11. php artisan make:listener 
+ 	12. php artisan websocker:serve
+ 	13. php artisan tinker
+ 	    >>> event( new App\Events\NewMessage('Hellow World') )
+ 	14. npm install
+ 	15. npm install laravel-echo pusher-js
+ 	16. resources/js/bootstrap.js ------- enalbe clinet lravel-echo 
+ 	17. 
+
+
+18. Steps to write test suites
+	$php artisan make:test SrabanTest
+	$php artisan SrabanTest
+
+19. recent new features in laravel
+
+
+20. Steps to deploy a Laravel Project
+
+
+Prepare with example.
+
+Top 10
+----------------
+Q. How pagination works
+   Users::where('votes', '>', 100)->paginate(10);
+   $users = DB::table('users')->paginate(10);
+   return view('user.index', ['users' => $users]);
+
+   {{ $users->links() }}
+
+Q. Event and Listeners
+   Events are like observer kept for listening in later stage
+
+
+Q. migration
+
+   $php artisan make:migration create_questions
+   /database/migrations/create_questions_timestamp.php
+   up(){
+     Schema::create();
+     Schema::table();
+   }
+
+   $php artisan migrate
+   $php artisan rollback --take=1
+
+Q. middleware steps
+	- $php artisan make:middleware Sraban
+	app/http/middleware/SrabanMiddleware.php
+
+	public function handle($request, $next, $guard = null ){
+		if( Auth::guard('api')->check() ) {
+		   return '';
+		}
+		// Some checking should happen to prevent to next reuest
+		return $next($request);
+	}
+
+    - registering middleware in app/Http/Kernel.php - routemiddleware, groupmiddleware, commonmiddleware
+      'Sraban' => \App\Http\Middleware\SrabanMiddleware::class,
+
+    - usages
+    	public function __construct() {
+			$this->middleware('Users');
+		}
+		-OR-
+		Route::group(['middleware' => 'Users'], function () {
+			Route::get('/', 'HomeController@index');
+		});
+
+Q. how to create helper file
+   
+   app/helper.php
+   in composer.json - files key updated
+   "files":[
+   		"app/helper.php"
+   ]
+   $composer dump-upload
+   $composer update
+
+Q. softdelete
+   use softDelete;
+   protected $deleted_at;
+   - records are not deleted from db, rather deleted_at is filled with some value which will not visible while retrieving the record
+
+Q. new features in laravel 6
+    - speed: route caching
+    - blade templete tags updated
+    - ORM updated to use subqueries
+
+Q. dispaly query in laravel
+   DB::enableQueryLog();
+   DB::table('questions')->select('c1','c2')->get();
+   $lastQuery = DB::getQueryLog();
+
+Q. how to use procedure in laravel
+   DB::select('Call sraban()');
+
+Q. Eager loading & Lazy loading in laravel
+   - Eager: all items with its related data at a time.
+   - Lazy: all items at one go and related data only when required
+
+
+	class Question extends Model{
+	   public function options(){
+	      return $this->hasMany(Option::class);
+	   }
+
+	   public function category(){
+		 return $this->belongsTo(Category::class);
+	   }
+	}
+
+
+
+   class Option extends Model{
+	   public function question(){
+	      return $this->belongsTo(Question::class);
+	   }
+	}
+
+case 1: 21 queries = 1 + 20 detail query
+		$questions = Question::all();
+
+case 2: 2 Queries
+
+	$questions = Question::with('options')->get();
+	$questions = Question::with(['options', 'category'])->get();
+	- we want to eager load a relationship of the relationship
+	$questions = Question::with('category.author')->get();
+
+
+------------------------------------------------------------------
+https://pasteboard.co/J2H1ctk.png
+https://www.cloudways.com/blog/laravel-and-api-rate-limiting/
+
+
+Hash
+----------------
+Hash::check('secret', $hashedPassword);
+
+$hashed = Hash::make('secret');
+$password = bcrypt('secret');
+
+Hash::needsRehash($hashed)

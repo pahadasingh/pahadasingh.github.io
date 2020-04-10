@@ -1,9 +1,11 @@
+PS1='[$(whoami)@\W]#'
+
+
+
 chrome://settings/clearBrowserData
 
 htop, atop, iotop
 
-free --human
-free -s 5 --human
 
 
 ps aux
@@ -15,8 +17,74 @@ watch "dmesg | tail -20"
 
 cat /var/log/syslog
 
-sudo sync; echo 3 > /proc/sys/vm/drop_caches
 
+-------------------------------------
+# Check The memory(RAM) usage
+
+watch free --human
+free -s 5 --human
+
+# Clean The memory usage in Root
+
+sudo sync; 
+echo 1 > /proc/sys/vm/drop_caches
+echo 2 > /proc/sys/vm/drop_caches
+echo 3 > /proc/sys/vm/drop_caches
+
+-------------------------------------
+# Apache SSL integration
+
+
+
+-------------------------------------
+# About Linux Trotting of requests
+
+
+
+
+-------------------------------------
+# About Linux Supervisor
+
+
+
+
+-------------------------------------
+# About Linux Cron Tabs
+
+
+-------------------------------------
+# Watch / Loop the command
+  Ex. Screen capture in interval
+  
+  Ex. Image capture in interval
+
+  Ex. Cleaning the memory in interval
+	  for i in {1..10}; do echo -n "This is a test in loop $i "; date ; sleep 5; done
+	  while true; do echo -n "This is a test of while loop";date ; sleep 5; done
+	  for i in {1..3}; do echo $i > /proc/sys/vm/drop_caches; sleep 5; done
+
+  Ex. watch free --human
+  Ex. while true; do echo 3 > /proc/sys/vm/drop_caches; sleep 5; done
+  Ex. while true; do for i in {1..3}; do echo $i > /proc/sys/vm/drop_caches; sleep 30; done; done;
+-------------------------------------
+# Normal Global variables
+watch date
+watch uptime
+watch free --human
+cal
+-------------------------------------
+
+-------------------------------------
+# Read git Dir
+ls > files.db && echo '' > README.md && cat files.db | while read string; do echo "- [$string]($string)" >> README.md; done
+
+-------------------------------------
+
+-------------------------------------
+
+-------------------------------------
+
+-------------------------------------
 
 
 
@@ -25,53 +93,4 @@ sudo sync; echo 3 > /proc/sys/vm/drop_caches
 Running Process in Ubuntu start up
 ==================================
 sudo service docker stop; sudo service mysql stop;  sudo service apache2 stop; sudo service mongod stop; sudo service redis-server stop;
-
-
-
-Homestead
-------------------------
-https://overallheuristic.com/installing-homestead-on-ubuntu/
-
-1. https://www.virtualbox.org/wiki/Linux_Downloads
-2. https://www.vagrantup.com/downloads.html
-3. $vagrant box add laravel/homestead
-4. $git clone https://github.com/laravel/homestead.git ~/Homestead
-5. $cd ~/Homestead
-6. https://github.com/laravel/homestead/releases ---------- clone the required release
-7. $git checkout v7.12.0
-8. $bash init.sh
-9. sudo nano Homestead.yaml -------- #provider: virtualbox
-10. 
-
-folders:
-– map: ~/websites
-to: /home/vagrant/websites
-
-sites:
-– map: dev.local
-to: /home/vagrant/websites/mylaravelproject/public
-
-11.
-$ sudo nano /etc/hosts
-#192.168.10.10   homestead.dev
-
-12.
-$ touch ~/.ssh/id_rsa
-
-13.
-$ vagrant up
-
-# if you are getting error after running vagrant up , restart you pc , when its coming up press  f10 or f12 depending on your pc  to get to the bios setup
-
-# locate the virtualization and enable it, save and let the system boot
-
-#go to your homestead folder in the home dir after the system has booted
-
-#then run
-
-$ vagrant up
-
-$ vagrant ssh
-
-$ vagrant reload --provision
 

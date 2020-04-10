@@ -26,9 +26,11 @@ git reset
 git stash add.js
 git commit -m "initial commit"
 
+git ls-files
 git log
 git log --stat
 git reflog
+
 
 git push -u origin master
 
@@ -83,6 +85,10 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/git_rsa
 
 
+
+/home/sk/.ssh
+ssh-keygen -o
+ssh-add ~/.ssh/git_sraban
 
 
 

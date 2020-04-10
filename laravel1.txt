@@ -31,3 +31,6 @@ Fluent string operations
 Multiple Mail Drivers
 New Artisan Commands etc
 --------------------------------
+ORM Relations:
+
+https://pasteboard.co/J2wJ1PO.png
