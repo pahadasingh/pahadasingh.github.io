@@ -30,3 +30,10 @@ Classs SrabanTest {
 	}
 
 }
+
+
+------------------------
+1. Laravel Auth
+Auto: https://pasteboard.co/J3tFU9S.png
+
+2. Laravel Debugger

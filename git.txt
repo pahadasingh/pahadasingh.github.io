@@ -45,7 +45,8 @@ git diff hash1 hash2
 
 $ git checkout -b [name_of_your_new_branch]
 $ git push origin [name_of_your_new_branch]
-$ git branch -a
+$ 
+
 $ git remote add [name_of_your_remote] [name_of_your_new_branch]
 $ git push [name_of_your_new_remote] [url]
 $ git fetch [name_of_your_remote]
@@ -70,6 +71,40 @@ git stash pop entryIndex
 git stash drop entryIndex
 git stash clean
 git stash save subtract-work
+
+
+============================
+git branch
+git branch -b your_new_branch_from_prev_rwpo
+git branch -D your_new_branch_from_prev_rwpo
+git diff
+git bisect good 8989
+git bisect bad 8989
+
+
+LOG
+git log --stat
+git log --graph
+git log --online --decorate --all --graph
+git log stylesheet/
+git log --since=8am --author=sraban 
+git log --before={2019-10-10} --author=sraban 
+git log --after={2019-10-10} --author=sraban 
+git log --before={2019-10-10} --after={2019-10-10} --grep=sraban 
+git log --before={2019-10-10} --after={2019-10-10} --grep=sraban -p 
+git log --since=2.weeks
+
+MERGE
+master > git merge mybranch
+master > git merge --squash mybranch
+master > git merge --abort ~~~~~> undo a conflict merge
+master > git reset --hard sb3434~~~~~> undo a merge
+mybranch > git rebase master --------------> branch is now rebased from which commit of master it came to the latest commit
+
+
+
+============================
+
 
 git config --global user.email "sraban_pvt@yahoo.com"
 git config --global user.name "Sraban"

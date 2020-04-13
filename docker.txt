@@ -48,9 +48,20 @@ mysql -u root -p
 show databases;
 GRANT ALL PRIVILEGES  ON laravel.* TO 'laraveluser'@'%' IDENTIFIED BY 'your_laravel_db_password';
 GRANT ALL PRIVILEGES  ON merarank.* TO 'root'@'localhost' IDENTIFIED BY 'your_laravel_db_password';
+GRANT ALL PRIVILEGES  ON laravel_sraban.* TO 'root'@'%' IDENTIFIED BY 'secret';
 FLUSH PRIVILEGES;
 EXIT;
 
+DROP USER 'user'@'localhost'
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
+CREATE USER 'sraban'@'%' IDENTIFIED BY 'secret';
+GRANT ALL PRIVILEGES ON *.* TO 'sraban'@'%';
+FLUSH PRIVILEGES;
+select host, user from mysql.user\G
+show create table laravel_sraban.users;
+
+
+----------------------------------------------------------
 docker-compose exec merarank vi .env
 docker-compose exec merarank bash
 docker-compose exec merarank php artisan key:generate
@@ -62,8 +73,11 @@ $ docker-compose run --rm merarank php artisan migrate --seed
 
 $ docker run --rm -it -v $(pwd):/app -w /app node npm dev
 
+docker-compose rm -fv; 
+sudo rm -rf docktest_dbdata
+docker volume ls
 
-$ docker-compose run merarank  
+$ docker-compose run merarank
 > PrepareNewsletterSubscriptionEmail::dispatch();
 $ docker-compose run --rm merarank php artisan db:seed
 
@@ -87,11 +101,7 @@ $ docker-compose run --rm merarank php artisan migrate:fresh --seed
 ############################################################
 docker run --rm -v $(pwd):/application php -v
 docker run --rm -v $(pwd):/application composer -v
-
-docker rmi $(docker images -q) -f
 docker image ls -a > out
-
-
 
 cp .env.example .env
 docker-compose up -d
@@ -142,17 +152,6 @@ docker ps -a | grep mysql
 Restart=always
 ExecStart=/usr/bin/docker container start -a my_container
 ExecStop=/usr/bin/docker container stop -t 2 my_container
-
-
-https://pasteboard.co/IUQ9CtfL.png
-https://pasteboard.co/IUQ9c0U.png
-https://pasteboard.co/IUPWQ0k.png
-https://pasteboard.co/IUPZnTo.png
-https://pasteboard.co/IUQ03s8.png
-https://pasteboard.co/IUQ2fxjy.png
-https://pasteboard.co/IUQ351V.png
-https://pasteboard.co/IUQ4dzd.png
-https://pasteboard.co/IUQ4YQA.png
 
 
 
@@ -219,3 +218,107 @@ npm run dev
 docker-compose restart mysql
 
 docker exec -it test ps aux
+
+
+Server Version: 18.06.3-ce
+17.06 CE
+##################Laravel-docker Fresh Set up##################
+Before need to install docker-compose
+https://medium.com/@gerrysabar/set-up-laravel-project-with-docker-85b41ea5669
+
+1. composer create-project --prefer-dist laravel/laravel laravel-docker
+
+2. ./Dockerfile
+contents...
+
+3. ./docker-compose.yml
+contents...
+
+4. ./php/local.ini
+-------------------
+upload_max_filesize=40M
+post_max_size=40M
+
+
+5. ./mysql/my.cnf
+-------------------
+[mysqld]
+general_log = 1
+general_log_file = /var/lib/mysql/general.log
+
+6. ./nginx/conf.d
+---------------------
+server {
+    listen 80;
+    index index.php index.html;
+    error_log  /var/log/nginx/error.log;
+    access_log /var/log/nginx/access.log;
+    root /var/www/public;
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass app:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    }
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+        gzip_static on;
+    }
+}
+---------------------
+
+7. $cp .env.example .env
+
+8. $sudo docker-compose up -d
+
+9. $sudo docker-compose exec app php artisan key:generate
+9. $sudo docker-compose exec app php artisan storage:link
+9. $sudo docker-compose exec app composer install
+ -OR- docker-compose run --rm --no-deps merarank composer install
+
+10. $sudo docker inspect YOUR_MYSQL_DOCKER_ID | grep "IPAddress"
+
+11. $docker-compose exec app php artisan migrate
+
+###############################
+docker -v
+service docker start
+docker-compose config
+docker-compose ps
+*docker-compose up --build
+*docker-compose build --no-cache --pull
+*docker rmi $(docker images -q | grep laraveldocker_app-network) -f
+docker image ls -a > out
+docker container ls -a > out
+
+docker-compose up -d
+docker-compose down
+docker exec -it mysql_instance mysql -uroot -p 
+docker-compose exec db bash
+docker-compose port db 3306
+mysql -h172.24.0.4 -uroot -p
+
+docker run --rm -d -e MYSQL_ROOT_PASSWORD=pass --name db mysql:5.7.22
+docker run -d -e MYSQL_ROOT_PASSWORD=root mysql:8 --character-set-server=utf8mb4 [more-mysqld-flags]
+
+docker container stop IDDDDDDDDDDDDDDD
+docker logs db | tail -n 2
+
+docker network rm NETWORK
+
+---------------Installation------------------------
+sudo apt-get remove docker docker-engine
+sudo apt-get install docker-ce=18.06.1~ce~3-0~ubuntu
+sudo apt-get update
+docker --version
+sudo service apache2 stop
+sudo service nginx stop
+
+//docker run -p 3307:3306 --name db -e MYSQL_ROOT_PASSWORD=secret -d mysql:5.7.22
+
+
+If I mount the volume on run it works 
+"docker run -d -p 80:80 -v $PWD:/usr/share/nginx/html nginx"

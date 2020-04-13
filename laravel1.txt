@@ -3,6 +3,15 @@ boardcast()
 service container
 
 
+https://pasteboard.co/IUQ9CtfL.png
+https://pasteboard.co/IUQ9c0U.png
+https://pasteboard.co/IUPWQ0k.png
+https://pasteboard.co/IUPZnTo.png
+https://pasteboard.co/IUQ03s8.png
+https://pasteboard.co/IUQ2fxjy.png
+https://pasteboard.co/IUQ351V.png
+https://pasteboard.co/IUQ4dzd.png
+https://pasteboard.co/IUQ4YQA.png
 
 -------------------------------
 Using Laravel, developers can save hours of development time and cut thousands of lines of code as compared to raw PHP. Because Laravel reuses the existing components of different frameworks in designing web applications, the outcome is more structured and pragmatic.

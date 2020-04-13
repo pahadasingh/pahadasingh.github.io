@@ -1,5 +1,27 @@
-PS1='[$(whoami)@\W]#'
+uname -m
+lsb_release -a
+df -h
+free --human
 
+PS1='[$(whoami)@\W]#'
+------------------------------------
+netstat -tlnp
+ps -ef | grep mysql
+lsof -n | grep 'mysql.*TCP'
+telnet localhost 3306
+
+
+------------------------------------
+To Learn from youtube 
+groupadd
+useradd
+chown
+chmod
+passwd
+
+
+------------------------------------
+sudo cat /etc/group | grep django
 
 
 chrome://settings/clearBrowserData
@@ -80,10 +102,15 @@ git ls-files > files.db && echo '' > README.md && cat files.db | while read stri
 : > README.md && ls | while read string; do echo "- [$string]($string)" >> README.md; done
 
 -------------------------------------
-
+sudo apt-get install libmagickwand-dev libmagickcore-dev
+sudo apt-get install -f
 -------------------------------------
-
+cd /var/lib/dpkg/updates
+rm -r ./*
 -------------------------------------
+ps aux | grep docker
+ps aux | grep -i apt
+sudo killall apt apt-get
 
 -------------------------------------
 
