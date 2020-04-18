@@ -42,13 +42,16 @@ $ docker-compose up -d
 docker-compose start/stop/up/down merarank dbms queueWatch chachedb
 docker start/stop/kill merarank dbms queueWatch chachedb
 
+
+docker run --restart always --name mysql8.0 -v /usr/local/opt/mysql/8.0:/var/lib/mysql -v /usr/local/opt/mysql/config:/etc/mysql/conf.d -p 3306:3306 -d -e MYSQL_ROOT_PASSWORD=your_password mysql:8.0
+
 ````After docker-compose up -d````
 docker-compose exec dbms bash
 mysql -u root -p
 show databases;
 GRANT ALL PRIVILEGES  ON laravel.* TO 'laraveluser'@'%' IDENTIFIED BY 'your_laravel_db_password';
 GRANT ALL PRIVILEGES  ON merarank.* TO 'root'@'localhost' IDENTIFIED BY 'your_laravel_db_password';
-GRANT ALL PRIVILEGES  ON laravel_sraban.* TO 'root'@'%' IDENTIFIED BY 'secret';
+GRANT ALL PRIVILEGES  ON booking_core.* TO 'root'@'%' IDENTIFIED BY 'secret';
 FLUSH PRIVILEGES;
 EXIT;
 
@@ -59,6 +62,16 @@ GRANT ALL PRIVILEGES ON *.* TO 'sraban'@'%';
 FLUSH PRIVILEGES;
 select host, user from mysql.user\G
 show create table laravel_sraban.users;
+
+UPDATE user SET password = PASSWORD("secret");
+UPDATE mysql.user SET Password=PASSWORD('new password') WHERE User='root';
+FLUSH PRIVILEGES;
+quit;
+
+sudo cat /etc/mysql/debian.conf | grep -i password
+sudo mysql --defaults-file=/etc/mysql/debian.cnf -e 'use mysql;UPDATE user SET password=PASSWORD("secret") WHERE user="root"; FLUSH PRIVILEGES;'
+
+SHOW VARIABLES LIKE '%max%';
 
 
 ----------------------------------------------------------
@@ -105,7 +118,7 @@ docker image ls -a > out
 
 cp .env.example .env
 docker-compose up -d
-docker ps
+docker ps --no-trunc
 docker-compose exec merarank nano .env
 docker-compose exec merarank php artisan key:generate
 docker-compose exec merarank php artisan config:cache
@@ -132,14 +145,14 @@ get name
 incr counter
 exit
 ----------------------------
-$ docker run --detach --name=test-mysql --env="MYSQL_ROOT_PASSWORD=mypassword" --publish 6603:3306 mysql
+$ docker run --detach --name=db_travel --env="MYSQL_ROOT_PASSWORD=root" --publish 3307:3306 mysql:8
 
 $ docker run \
 --detach \
---name=test-mysql \
---env="MYSQL_ROOT_PASSWORD=mypassword" \
---publish 6603:3306 \
---volume=/root/docker/test-mysql/conf.d:/etc/mysql/conf.d \
+--name=db_travel \
+--env="MYSQL_ROOT_PASSWORD=root" \
+--publish 3307:3306 \
+--volume=/root/docker/db_travel/conf.d:/etc/mysql/conf.d \
 mysql
 --
 docker exec -it test-mysql bash
@@ -301,8 +314,6 @@ docker-compose exec db bash
 docker-compose port db 3306
 mysql -h172.24.0.4 -uroot -p
 
-docker run --rm -d -e MYSQL_ROOT_PASSWORD=pass --name db mysql:5.7.22
-docker run -d -e MYSQL_ROOT_PASSWORD=root mysql:8 --character-set-server=utf8mb4 [more-mysqld-flags]
 
 docker container stop IDDDDDDDDDDDDDDD
 docker logs db | tail -n 2
@@ -322,3 +333,17 @@ sudo service nginx stop
 
 If I mount the volume on run it works 
 "docker run -d -p 80:80 -v $PWD:/usr/share/nginx/html nginx"
+
+-------------------------------------------
+
+docker exec CONTAINER ps -1
+docker exec CONTAINER cat /proc/1/cmdline | sed -e "s/\x00/ /g"; echo    
+docker ps   --no-trunc  --format "table{{.Names}}\t{{.CreatedAt}}\t{{.Command}}"
+
+
+---------------------------------------------
+
+
+docker volume rm $(docker volume ls -f dangling=true -q)
+# Or using 1.13.x
+docker volume prune

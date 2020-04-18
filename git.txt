@@ -57,7 +57,6 @@ $ git push origin :[name_of_your_new_branch]
 $ git branch <name_of_your_new_branch>
 
 
-
 git checkout add.js
 git checkout -- add.js
 
@@ -83,6 +82,9 @@ git bisect bad 8989
 
 
 LOG
+git log --pretty=oneline --decorate
+git log -n 1
+git rev-parse HEAD
 git log --stat
 git log --graph
 git log --online --decorate --all --graph
@@ -100,6 +102,20 @@ master > git merge --squash mybranch
 master > git merge --abort ~~~~~> undo a conflict merge
 master > git reset --hard sb3434~~~~~> undo a merge
 mybranch > git rebase master --------------> branch is now rebased from which commit of master it came to the latest commit
+
+git checkout -b new_branch 6e559cb
+git checkout -b new_branch HEAD~4
+git checkout <commit_hash>
+git reset --hard 6e559cb
+git reset --hard HEAD^^^^
+
+
+git commit -m "....."
+git branch my-temporary-work
+git checkout master
+git merge my-temporary-work
+
+
 
 
 

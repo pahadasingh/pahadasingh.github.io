@@ -182,11 +182,29 @@ in composer.json
     It is possible to pass parameters into a Closure. 
     It can be done by changing the Closure function call in the handle() method to provide parameters to it. 
 
-# 
+# Perfomance
+  Database Chunking - Quick Laravel Performance Tips
+  App\Post::all() --> App\Post::chunk()
 
-# 
+  Optimize API Return Kilobytes, not only Eloquent
 
-# 
+
+# Relation(ORM)
+  
+  $request->all() ------> $request->only(['name','age']);
+
+  User::with('relation','project')->get(); --->
+
+  return [
+    id => $this->id,
+    name => $this->name,
+    created_at => $this->created_at,
+    project => [
+      name => this->project->name
+    ]
+  ];
+
+# how-to-structure-laravel-project
 
 # 
 

@@ -32,3 +32,34 @@ Part 28 - Observable methods part 3: https://www.youtube.com/watch?v=Y14IG...
 Part 29 - Observable methods part 4: https://www.youtube.com/watch?v=7BbFd...
 Part 30 - Observable methods part 5: https://www.youtube.com/watch?v=d1HjR...
 Part 31 - Attribute Directives: https://www.youtube.com/watch?v=d1HjR...
+
+
+
+
+1. How to achieve Dynamic Component Allocation in Angular instead of routing, by which 2 places component are not written ?
+
+assingComponent(name){
+	if(name == "cow"){
+		this.dummyComponent = ComponentName;
+	}
+}
+
+<button (click)="assingComponent('cow')"><button>
+<button (click)="assingComponent('bullock')"><button>
+<button (click)="assingComponent('dog')"><button>
+
+<ng-container *ngComponentOutlet="dummyComponent"></ng-container>
+
+------------------------------------------------------------
+
+2. factory resolution
+
+   Logger -> different logger
+
+3. factory / service / provider
+   https://www.youtube.com/watch?v=gWg6OKjwu-s
+   https://www.youtube.com/watch?v=oUXku28ex-M
+
+4. Event Bubbling
+
+	

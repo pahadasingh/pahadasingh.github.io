@@ -267,3 +267,113 @@ Q. Second lowest salary or third lowest salary - nth salary
 Q. Mysql Tuning
 Q. Optimisation Techniques
 Q. Normalisation with detailed example
+
+
+
+=============================
+Replace();
+PAD()
+strpos()
+lower()
+upper()
+date()
+ucwords("hello world");
+sub_string()
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+create table, trigger, functio, stored procedure : https://rextester.com/l/mysql_online_compiler
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+select version() as 'mysql version';
+
+create database company;
+
+
+create table department(
+        id int(10) unsigned not null auto_increment,
+        dept_no char(10) not null,
+        name varchar(30) not null,
+        created_at date,
+        unique key dept_no_unique_index(`dept_no`)
+        primary key(id)
+    ) Engine Innodb default charset=utf8;
+
+create index name_idx on department(name);
+Alter table department drop created_at;
+alter table department drop primary key;
+alter table department drop index dept_no_unique_index;
+alter table department drop constraint id;
+
+
+
+alter table department add deleted_at;
+
+create table employee(
+        id bigint(20)  unsigned not null auto_increment,
+        dept_id int(10) unsigned  not null,
+        id_card_no char(20) not null,
+        name varchar(100) default null,
+        salary double(18,4) default null,
+        constraint fk_dept_id_index foreign key(dept_id) references department(dept_id) on delete cascade on update cascade, 
+        primary key(id,dept_id)
+    ) Engine Innodb Auto_increment default charset=utf8;
+    
+ALTER TABLE employee ADD CONSTRAINT id PRIMARY KEY (id, dept_id); 
+ 
+ 
+ 
+ 
+ 
+ 
+ create trigger employee_id_card
+   before insert on employee
+   for each row
+   begin
+       SELECT dept_no INTO @`dept_no` FROM department WHERE `id` = NEW.`dept_id`;
+       set new.id_card_no = concat('ID', new.id_card_no, '-', @dept_no)
+   end
+   
+ 
+ 
+ Drop procedure sraban;
+ Drop function sraban;
+ 
+ Delimiter $$
+    create function rectangle(x1 decimal, y1 decimal) returns decimal
+    Deterministic
+    Begin
+       declare area decimal;
+       set area = x1 * y1;
+       return area;
+    End$$
+Delimiter;
+
+DELIMITER //
+CREATE FUNCTION GETFULLNAME(fname CHAR(250),lname CHAR(250))
+    RETURNS CHAR(250)
+    BEGIN
+        DECLARE fullname CHAR(250);
+        SET fullname=CONCAT(fname,' ',lname);
+        RETURN fullname;
+    END //
+DELIMITER ;
+
+SELECT a.*,GETFULLNAME(a.fname,a.lname) as full_name FROM namedbtbl;
+
+-- ------------------------ --
+DELIMITER $$
+CREATE PROCEDURE `new_routine`(
+    IN idx int,
+    OUT namex varchar(100)
+)
+BEGIN
+    select name into namex from table1 where id = idx;
+END
+DELIMITER ;
+
+call new_routine(7, @name);
+select @name;

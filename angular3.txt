@@ -11,6 +11,14 @@ Q. Safe navigation operator in Angular 6 ?
 --------------------------------------
 angular8 filters
 Number, Currency, Date, Uppercase, Lowercase, orderBy, JSON, limitTo
+{{student.name | uppercase}}
+{{ price | currency }}
+{{ number | currency : symbol : fractionsize }}
+{{todayDate | date}}
+{{todayDate | date:'short':'+0530'}}
+{{todayDate | date:'short':'+0000'}}
+{{todayDate | date:'short':'UTC'}}
+{{today | date:'EEEE d MMMM y GGGG'}}
 --------------------------------------
 export class HelloComponent {
    @Input() myContacts: string

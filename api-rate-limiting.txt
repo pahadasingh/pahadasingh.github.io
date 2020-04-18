@@ -1,0 +1,52 @@
+
+We’ll showcase effective rate limiting libraries and frameworks, and demonstrate sample code needed to implement request queues, throttling, algorithmic-based rate limiting.
+
+API owners typically measure processing limits in Transactions Per Second (TPS).
+
+
+If a user sends too many requests, API rate limiting can throttle client connections instead of disconnecting them immediately. Throttling lets clients still use your services while still protecting your API.
+
+However, keep that in mind there is always the risk of API requests timing out, and the open connections also raise the risk of DoS attacks.
+
+Are requests throttled when they exceed the limit?
+Do new calls and requests receive a particular error code and, if so, which one?
+
+API features three different kinds of rate limiting: application throttle, user throttle, and developer throttle. The documentation also specifies the time zone used to define the beginning and end of the day.
+
+------Rate limiting is an essential skill for developers of all traditions-----
+
+Three Methods Of Implementing API Rate-Limiting
+
+How To Throttle API Calls ?
+
+There are also various ways you can throttle API traffic.
+
+* Say your API only allows 20 requests per second. You can set up a process that only allows 20 requests a second to pass through. If all of those requests are happening synchronously, it might not make a difference, but you can quickly see a difference when it comes to asynchronous tasks.
+
+Every programming language will have its own version of throttling or rate-limiting.
+
+Setting a timeout is the easiest way to limit API requests
+
+Many services that use REST APIs feature API limiting as a defense against DoS attacks and overloaded servers. Some APIs feature soft limits, which allow users to exceed the limits for a short period. Others have a more hardline approach, immediately returning an HTTP 429 error and timing out, forcing the user to send a brand new query.
+
+
+Implementing API Rate-Limiting
+
+1. Request Queues:
+	- Ex. ASQS(Amazon Simple Queue Service) is a readymade request queue library maintianed regularly.
+	- Some library take 2 request per resecond from the queue and remaining kept in the queue for processing.
+	- Many custom "request-rate-limiter" library are avaialbe in package manager
+	- 
+
+2. Throttling
+	
+	- API is used by setting up a temporary state, allowing the API to assess each request. When the throttle is triggered, a user may either be disconnected or simply have their bandwidth reduced.
+	- Possible at the application, API, or user level, throttling is a popular method to rate-limit APIs
+
+
+3. Rate-limiting Algorithms
+   
+	- "Leaky Bucket" is a algorithim which translate requests into FIFO format and processing the items on the queue on a regular rate.
+	- "Sliding Log" is time stampped algorithim, the sum of the logs are calculated to determine the request rate. if the request exceeds the limit threshold, they are simply queued.
+
+

@@ -1,0 +1,35 @@
+1. [Auth] (https://pasteboard.co/J41Ph7t.png)
+
+2. [Migration] (https://pasteboard.co/J422xN5.png)
+	
+	php artisan make:migration create_permissions_table --create=permissions
+	php artisan make:migration add_roles_2_user_table
+
+3. 	Database seeding and factory
+	From Artisan
+	
+	> factory('App\User', 10)->create();  // 10 users
+	> $roles = factory('App\Role', 10)->create();  // 10 roles
+	
+	> $roles->each(function($roles){
+		factory('App\User', 10)->create(['role_id' => $roles->id]);
+	});   // each role has 5 users
+	----------------------------
+	> factory('App\Menu', 50)->create();  // 50 pages
+
+	> factory('App\Permission', 100)->create();
+
+
+4. 
+
+DB::delete('delete from sites');
+DB::statement('alter table sites auto_increment = 1');
+DB::statement('alter table sites auto_increment = 10000');
+
+
+5.
+
+return $this->morphMany('App\Contact','contactable');
+
+6.
+App\Role::with('users')->where('id',2)->get();

@@ -1,0 +1,7 @@
+# Sublime 3 - PHP Companion
+==================================
+ctrl + `    <------------->   sublime.log_commands(True)
+ctrl + shift + p  <-------------> php companion:find use ---> get the command name
+
+------
+

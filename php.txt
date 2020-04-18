@@ -371,21 +371,167 @@ ORM: Object Relational Mapping
 
 
 ---------------------------------------------------------------------------------
-about callback in php ? 
+about callback, closure & lambada function in php ? 
+
+---------------------------------------------------------------------------------
+https://pasteboard.co/J3J4BU5.png
+
+---------------------------------------------------------------------------------
+Curl:
+$handle = curl_init();
+curl_setopt($handle, CURLOPT_URL, $url);
+$data = curl_exec($handle);
+curl_close($handle);
+---------------------------------------------------------------------------------
+File:
+$handle = fopen('/tmp.txt','a+'); r, w
+fwrite($handle, 'data.....');
+fwrite($handle, 'data.....');
+fclose($handle);
+---------------------------------------------------------------------------------
+copy($_FILES['name']['tmp_file_name'], 'sraban.jpg');
+move_uplodaed_file($_FILES['name']['tmp_file_name'], 'sraban.jpg');
+---------------------------------------------------------------------------------
+How to upload a huge file to Server using php?
+array_chunck(); --> devides array into sub arrays
+configure chunck size in javascript y deviding the emory into small parts
+upload_max_filesize and post_max_size a not affected
+
+
+
+---------------------------------------------------------------------------------
+How to handle huge http request in apache;
 
 ---------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------
+# math functions
+max($arr)
+min($arr)
+floor()
+ceil()
+abs()
+round()
+sqrt()
+pi()
+mt_rand(10,100);
+log()
+sin()
+cos()
 
----------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------
+# Array functions
+--------------------------------------------
+each(), current(), next(), prev(), pos()
+key()
+end()
+count()
+compact() ---- extract()
+in_array() ----- array_search()
+array_pad()
+array_slice()
+array_splice()
+array_sum()
+array_reverse()
+array_keys()
+array_values()
+array_chunk()
+array_merge()
+array_combine()
+array_push()
+array_pop()
+array_shift()
+array_unshift()
+array_diff()
+array_fill()
+*array_column()
+*array_flip()
+*array_intersect()
+*array_filter($a, $callback)
+array_walk($a, $callback)
+*array_map($callback,$a)
 
----------------------------------------------------------------------------------
+list()
+shuffle()
+reset()
+range()
+usort()
+sort()
+rsort()
+asort()
+arsort()
+ksort()
+krsort()
+natsort()
+natcasesort()
+array_multisort()
+
+
+# String Functions
+----------------------------
+strrev('noon')
+explode() / str_split()
+implode() / join()
+echo()
+htmlentities()
+ucwords("hello world");
+lcfirst()
+ucfirst()
+trim() / ltrim() / rtrim()
+crypt()
+sh1()
+md5()
+md5_file()
+htmlentities()
+nl2br()
+number_format()
+
+str_replace(find,string,paragraph);
+str_repeat("Wow",13);
+str_pad($str,20,".");
+str_shuffle("Hello World")
+str_word_count("Hello world! wew wewe"); // 4
+strlen("Hello world! wew wewe"); // 21
+strcasecmp("Hello world!","HELLO WORLD!"); 0
+strcmp("Hello world!","HELLO WORLD!"); 1
+stripos("php I love","PHP");  // position of first ocurance with case insensitive
+strrpos("I love php, I love php too!","php"); // postion of last occurence
+stristr("Hello world!3123123123","WORLD"); // from first occurance
+strrchr("world Hello world!111111111111","world"); // from last maching of sum of chars
+stotolower()
+strtoupper()
+strtr("Hilla Warld","ia","eo");
+substr(sentence,0,100)
+substr_replace("Hello  world sraban","earth",6);
+substr_count("Hello world. The world is nice","world");
+wordwrap($str,15,"<br>\n");
+filter_input(http_type, variable, filter, options)
+
+
+# Useful Functions
+----------------------
+phpinfo()
+json_encode()
+json_decode($str,true);
+hrtime();
+mktime()
+strtotime()
+define()
+constant()
+die()
+eval()
+exit()
+uniqid()
+sleep()
+highlight_file(__FILE__);
+highlight_string("<?php phpinfo(); ?>");
+register_shutdown_function("check_abort");
+get_browser()
+php_strip_whitespace ("test.php")
+show_source("test.php")
+sleep()
+usleep()
 
 ---------------------------------------------------------------------------------
 

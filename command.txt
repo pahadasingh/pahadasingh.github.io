@@ -2,10 +2,14 @@ uname -m
 lsb_release -a
 df -h
 free --human
+grep -iRl "your-text-to-find" ./
+
 
 PS1='[$(whoami)@\W]#'
 ------------------------------------
 netstat -tlnp
+sudo lsof -P -i -n -sTCP:LISTEN
+
 ps -ef | grep mysql
 lsof -n | grep 'mysql.*TCP'
 telnet localhost 3306
@@ -102,8 +106,8 @@ git ls-files > files.db && echo '' > README.md && cat files.db | while read stri
 : > README.md && ls | while read string; do echo "- [$string]($string)" >> README.md; done
 
 -------------------------------------
-sudo apt-get install libmagickwand-dev libmagickcore-dev
-sudo apt-get install -f
+
+
 -------------------------------------
 cd /var/lib/dpkg/updates
 rm -r ./*
@@ -121,4 +125,5 @@ sudo killall apt apt-get
 Running Process in Ubuntu start up
 ==================================
 sudo service docker stop; sudo service mysql stop;  sudo service apache2 stop; sudo service mongod stop; sudo service redis-server stop;
+
 
