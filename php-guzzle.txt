@@ -1,0 +1,87 @@
+About PHP Guzzle for API Rest
+
+
+0. Initialize th instance
+   $this->client = new \GuzzleHttp\Client();
+
+
+1. Get Method
+
+	$params = Array(
+		    'key1' => $id, 
+		    'key2' => $value,
+		   );
+	$promise = $this->client->request('GET',  route('statement'), [
+		'query' => $params,
+		'debug' => false
+	]);
+
+	$promise->getBody()->rewind();
+	$output = $promise->getBody()->getContents();
+	$httpStatusCode = $promise->getStatusCode();
+
+
+2. Post Method: Raw data posting in form like posting json in payload
+    
+    $rawInput = json_encode($array); // string
+
+    -OR-
+
+    $rawInput = <<<EOF
+            SET empdata 2 ‘Jack Petter’ ‘192.168.11.11’
+            GET empdata ‘192.168.11.11’
+            SET empwebhistory 192.168.11.11 ‘http://google.com’
+            SET empwebhistory 192.168.11.11 ‘http://facebook.com’
+            GET empwebhistory  192.168.11.11
+            UNSET empwebhistory  192.168.11.11
+            GET empwebhistory 192.168.11.11
+            END
+		EOF;
+
+    $promise = $this->client->request('POST',  route('statement'), [
+	    'body' => $rawInput,
+	    'debug' => false
+	]);
+
+	$promise->getBody()->rewind();
+	$output = $promise->getBody()->getContents();
+	$httpStatusCode = $promise->getStatusCode();
+
+3. Post Form Fields
+
+    $filedInputs = Array(
+    	'email' => 'test@gmail.com',
+        'name' => 'Test user',
+        'password' => 'testpassword',
+    );
+
+    $promise = $this->client->request('POST',  route('statement'), [
+	    'form_params' => $rawInput,
+	    'debug' => false
+	]);
+
+	$promise->getBody()->rewind();
+	$output = $promise->getBody()->getContents();
+	$httpStatusCode = $promise->getStatusCode();
+
+
+4. File Upload in Guzzle
+
+
+	$promise = $this->client->request('POST', 'http://www.example.com/files/post', [
+	    'multipart' => [
+	        [
+	            'name'     => 'file_name',
+	            'contents' => fopen('/path/to/file', 'r')
+	        ],
+	        [
+	            'name'     => 'csv_header',
+	            'contents' => 'First Name, Last Name, Username',
+	            'filename' => 'csv_header.csv'
+	        ]
+	    ]
+	]);
+
+	$promise->getBody()->rewind();
+	$output = $promise->getBody()->getContents();
+	$httpStatusCode = $promise->getStatusCode();

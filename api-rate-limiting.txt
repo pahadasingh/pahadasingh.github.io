@@ -1,3 +1,8 @@
+# Links
+https://nordicapis.com/everything-you-need-to-know-about-api-rate-limiting/
+
+
+# Details
 
 We’ll showcase effective rate limiting libraries and frameworks, and demonstrate sample code needed to implement request queues, throttling, algorithmic-based rate limiting.
 

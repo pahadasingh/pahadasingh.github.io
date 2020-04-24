@@ -1,4 +1,5 @@
 sraban_pvt@moc.ohay|11may1972g!i@t#h$u%b
+pahadasingh(sraban307@gmail.com)|imagesk(sraban.pvt@live.com)
 
 `Happyeasygo`
 skp.pvt@moc.liamg(8328848690)|chrn@lt
@@ -25,8 +26,18 @@ sraban.pvt@moc.evil|chrn@lt
 `angel.co`
 sraban307@moc.liamg|30p^t29.23ltd21=3
 
+`app.jobvite.com`
+01-sraban.pvt@moc.evil|Kmr@123...9
+
 `MS-live`
-01-sraban.pvt@moc.evil|K...r@1...79
+01-sraban.pvt@moc.evil|K...r@1....5789
+02-sraban-pvt@hotmail.com|chrn@lt
+
+
+`Skype`
+- sraban.pvt@moc.evil|QW@1..68
+- sraban.edkal@moc.liamg|chrn@lt
+
 
 `tweet`
 srabann|chrn@lt
@@ -54,10 +65,8 @@ sraban_pvt@ymail.com|30p^t29.23ltd21=3
 - puspatalk|chrn@lt
 - sraban307|chrn@lt
 
-
-`Skype`
-- sraban.pvt@moc.evil|QW@1..89
-- sraban.edkal@moc.liamg|chrn@lt
+`rediff`
+ - srbn_pvt@rediffmail.com|chrn@lt
 
 `Myntra`
 

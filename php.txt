@@ -6,6 +6,11 @@ php --ini
 sudo cp -a /etc/php/7.0/ /etc/php/7.0.backup
 php -m
 php -m > /tmp/7.1.modulelist.txt
+php -i | grep -i --color gd
+php -i | grep -i --color curl
+
+php -r "echo ini_get('memory_limit').PHP_EOL;"
+php -d memory_limit=-1
 
 
 ls /var/lib/apt/lists/*
@@ -309,9 +314,9 @@ PATCH :
 Soap ~ Rest
 
 Rest:
- ~ Rest can be feched from cahced storage instead of always heating to Server
+ ~ Rest can be fetched from cahced storage instead of always heating to Server
  ~ Rest is Stateless
- ~ Soap needs heavy nbandwidth Rest can work in very low bandwidth
+ ~ Soap needs heavy bandwidth, Rest can work in very low bandwidth
  ~ SOAP only works with XML formats whereas REST work with plain text, XML, HTML and JSON.
  - SOAP is a protocol whereas REST is an architectural pattern.
  - SOAP cannot make use of REST whereas REST can make use of SOAP.
@@ -524,6 +529,8 @@ eval()
 exit()
 uniqid()
 sleep()
+debug_print_backtrace()
+spl_register_autoload()
 highlight_file(__FILE__);
 highlight_string("<?php phpinfo(); ?>");
 register_shutdown_function("check_abort");

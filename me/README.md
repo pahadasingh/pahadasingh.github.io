@@ -23,6 +23,8 @@
 * https://jsonplaceholder.typicode.com/
 * https://github.com/alcor/itty-bitty "itty-bitty generate html from URl"
 
+* https://imgur.com
+
 ### Radio
 http://prasarbharati.gov.in/playersource.php?channel=15
 

@@ -106,6 +106,10 @@ git ls-files > files.db && echo '' > README.md && cat files.db | while read stri
 : > README.md && ls | while read string; do echo "- [$string]($string)" >> README.md; done
 
 -------------------------------------
+sudo tail -f /var/log/apache2/access.log
+sudo tail -f /var/log/apache2/error.log
+php --info | grep error 
+
 
 
 -------------------------------------
@@ -127,3 +131,15 @@ Running Process in Ubuntu start up
 sudo service docker stop; sudo service mysql stop;  sudo service apache2 stop; sudo service mongod stop; sudo service redis-server stop;
 
 
+
+
+============= Redis Cli======================
+$docker-compose exec cachedb sh
+$redis-cli
+>ping
+>exit
+>keys *
+>keys *horizon*
+>get *laravel_horizon:job*
+>SET title:1 "The Hobbit"
+>SET author:1 "J.R.R. Tolkien"

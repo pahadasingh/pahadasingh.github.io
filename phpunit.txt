@@ -1,0 +1,36 @@
+https://andy-carter.com/blog/phpunit-what-why-how
+
+
+where
+$result = 'From your coding';
+$expected = 'statically expecting';
+
+
+assertEmpty($result)
+assertEquals($expected, $result)
+assertEquals(1.0, 1.1, '', 0.1);
+assertFileEquals('/home/sb/expected', '/home/sb/actual');
+assertFileExists('/path/to/file');
+assertFileIsReadable('/path/to/file');
+assertGreaterThan(2, 1);
+assertJsonFileEqualsJsonFile('path/to/fixture/file', 'path/to/actual/file');
+assertSame('2204', 2204);
+assertTrue($result)
+assertFalse($result)
+assertContains(4, [1, 2, 3]);
+assertContainsOnly('string', ['1', '2', 3]);
+assertCount(0, ['foo']);
+assertDirectoryExists('/path/to/directory');
+assertDirectoryIsReadable('/path/to/directory');
+assertEqualXMLStructure($expected, $actual);
+assertInstanceOf($expected, $result)
+assertClassHasStaticAttribute('foo', stdClass::class);
+assertArraySubset(['config' => ['key-a', 'key-b']], ['config' => ['key-a']]);
+
+
+
+
+
+./vendor/bin/phpunit
+./vendor/bin/phpunit tests/AverageTest.php
+./vendor/bin/phpunit tests/ --filter testCalculationOfMean

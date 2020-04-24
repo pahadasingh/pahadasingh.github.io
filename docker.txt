@@ -347,3 +347,9 @@ docker ps   --no-trunc  --format "table{{.Names}}\t{{.CreatedAt}}\t{{.Command}}"
 docker volume rm $(docker volume ls -f dangling=true -q)
 # Or using 1.13.x
 docker volume prune
+
+
+------------------------------------------------
+docker logs -f app
+docker build -t app:1.0 docking/.
+docker run --name app -p 8888:80 app:1.0

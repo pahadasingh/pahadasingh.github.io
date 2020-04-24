@@ -1,0 +1,60 @@
+php artisan make:model Employee -a
+php artisan make:model EmployeeWebHistory -a
+
+$model = Contents::find( $id );
+$model->delete();
+
+User::find($id)->delete();
+User::where('email', 'youremail@example.com')->softDeletes();
+
+
+-------------------------------
+git@github.com:sraban/online-visitor.git
+
+https://fetzi.dev/developing-composer-packages-locally/
+https://wisdmlabs.com/blog/create-package-laravel/
+
+1. composer init
+2. composer install
+3. composer update
+4. composer remove sraban/online-visitor
+5. composer require sraban/online-visitor:dev-master
+6. composer require --dev sraban/online-visitor:dev-master
+7. composer dump-autoload
+
+In main project
+1. inside composer.json autoload = {}
+ "Sraban\\OnlineVisitor\\": "packages/sraban/online-visitor/src/"
+2. Add for auto discovery
+ Sraban\OnlineVisitor\OnlineVisitorServiceProvider::class,
+
+- or - 
+
+composer require sraban/online-visitor @dev
+
+
+
+
+
+-==================================
+
+https://ourcodeworld.com/articles/read/248/how-to-create-a-custom-console-command-artisan-for-laravel-5-3
+https://devdojo.com/course/create-a-laravel-package
+
+  Console - https://www.youtube.com/watch?v=3jvPSOLKbNY
+  Controller - 
+
+
+1. Kernel.php
+2. php artisan ov
+
+
+SET empdata 111 ‘Sraban Kumar’ ‘190.160.10.10’
+GET empdata ‘190.160.10.10’
+UNSET empdata ‘190.160.10.10’
+GET empdata ‘190.160.10.10’
+SET empwebhistory 190.160.10.10 ‘http://google.com’
+GET empwebhistory  190.160.10.10
+UNSET empwebhistory  190.160.10.10
+GET empwebhistory 190.160.10.10
+END
