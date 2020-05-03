@@ -52,6 +52,7 @@ show databases;
 GRANT ALL PRIVILEGES  ON laravel.* TO 'laraveluser'@'%' IDENTIFIED BY 'your_laravel_db_password';
 GRANT ALL PRIVILEGES  ON merarank.* TO 'root'@'localhost' IDENTIFIED BY 'your_laravel_db_password';
 GRANT ALL PRIVILEGES  ON booking_core.* TO 'root'@'%' IDENTIFIED BY 'secret';
+GRANT ALL PRIVILEGES  ON booking_core.* TO 'sraban'@'%' IDENTIFIED BY 'secret';
 FLUSH PRIVILEGES;
 EXIT;
 

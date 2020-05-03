@@ -38,5 +38,78 @@ How your Laravel application can get hacked, and how to prevent that from happen
 callable, class, trait, extends, implements, static, abstract, final, public, protected, private, const, enddeclare, endfor, endforeach, endif, endwhile, and, global, goto, instanceof, insteadof, interface, namespace, new, or, xor, try, use, var, exit, list, clone, include, include_once, throw, array, print, echo, require, require_once, return, else, elseif, default, break, continue, switch, yield, function, if, endswitch, finally, for, foreach, declare, case, do, while, as, catch, die, self, parent
 
   
-# TTT
+# Jira
 ===============================================
+
+Create issue
+Project
+Issue Type: Task, Story, Bug, Epic
+Epic Name
+Summary
+Components - attachment
+Description
+Link Isssues
+Issue
+Assigne
+Priority - Highest, High , Low, Lowest
+Levels
+Epic Link
+Sprint
+------Assignee
+Attachment
+Components
+Description
+Epic Link
+Epic Name
+Fix versions
+Labels
+Linked Issues
+Priority
+Sprint
+Summary
+
+-----------------------
+Status
+Assignee
+Reporter
+Development
+Releases panel
+Labels
+HIDE WHEN EMPTY
+Story Points
+Original Estimate
+Time tracking
+Epic Link
+Components
+Sprint
+Fix versions
+Priority
+Epic Name
+
+Summary
+
+Description
+
+Assignee
+
+Environment
+
+Priority
+
+Issue Type
+
+Security
+
+Component
+
+Reporter
+
+Affects Version
+
+Fix Version
+
+Attachment
+
+Projects
+
+Content of custom fields are also cloned

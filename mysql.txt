@@ -14,6 +14,8 @@ $ mysqldump -u book_admin -p books > ~/backup/database/books. sql
 $ mysql -u root -p draban_db < ./mysql.sql
 $ head -n 5 data-dump.sql
 
+mysql -h $host -e "SHOW GLOBAL STATUS"
+
 mysql -h 127.0.0.1 -P 3306 -u root -p 
 select @@datadir;
 SET TRANSACTION;
@@ -67,6 +69,8 @@ DROP {PROCEDURE | FUNCTION} [IF EXISTS] sp_name;
 DROP PROCEDURE new_procedure;
 
 CREATE DATABASE testDB;
+
+ALTER DATABASE dbname CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE VIEW view_name AS select * from Table;
 DROP VIEW view_name;
@@ -136,6 +140,7 @@ DROP USER ‘username’@‘localhost’;
    - infile, outfile
 - orders:  SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY.
 - Plan to defragment the database on a regular basis, even if doing so means developing a weekly routine
+- character set is the encoded format of contentTypes inside columns, collation is the rule for the character set for comparison or sorting while working with multiple langulage in database
 
 
 # Links

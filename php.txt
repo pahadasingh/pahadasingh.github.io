@@ -12,6 +12,9 @@ php -i | grep -i --color curl
 php -r "echo ini_get('memory_limit').PHP_EOL;"
 php -d memory_limit=-1
 
+Built in server
+php -S localhost:8080 -t public public/index.php
+
 
 ls /var/lib/apt/lists/*
 sudo apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -137,7 +140,8 @@ array_keys()
 # Concepts in Program
 ============================
 In PHP 
-arrays are assigned by deepily copy, $arr2 = $arr1,both are two diff array by default in php -- otherwise $arr2 = &$arr1;
+arrays are assigned by deepily copy, $arr2 = $arr1,
+both are two diff array by default in php -- otherwise $arr2 = &$arr1;
 while objects are assigned by reference by default, to deep copy to another object "clone" keyword is used 
 so PHP will copy the array by default. References in PHP have to be explicit:
 
@@ -186,7 +190,8 @@ so PHP will copy the array by default. References in PHP have to be explicit:
 
 4. secuities
    ~ session & cookie hijacking
-   ~ 																																																																																																																																																																																																																																																																																										
+   ~ 					
+
 
 
 5. mysql queries with employee and dept.
@@ -436,14 +441,13 @@ compact() ---- extract()
 in_array() ----- array_search()
 array_pad()
 array_slice()
-array_splice()
+array_splice()  --- deleting the elements from some index to length means getting the rows
 array_sum()
 array_reverse()
 array_keys()
 array_values()
 array_chunk()
-array_merge()
-array_combine()
+array_merge() ---- array_combine()
 array_push()
 array_pop()
 array_shift()
@@ -553,3 +557,26 @@ usleep()
 
 highlight_file(__file__);
 print_r($GLOBALS);
+
+
+
+
+-----------------------------------------------------------------------------------
+# PHP-CS-FIXER
+https://cs.symfony.com/
+https://github.com/FriendsOfPHP/PHP-CS-Fixer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+vendor/bin/php-cs-fixer fix --config=.php_cs.dist
+vendor/bin/php-cs-fixer fix --config=.php_cs.dist -v --dry-run --stop-on-violation --using-cache=no
+vendor/bin/php-cs-fixer fix /path/to/dir --rules=line_ending,full_opening_tag,indentation_type
+vendor/bin/php-cs-fixer fix /path/to/project --rules=@Symfony,-@PSR1,-blank_line_before_statement,strict_comparison
+
+vendor/bin/php-cs-fixer fix /path/to/project --rules=@PSR2
+vendor/bin/php-cs-fixer fix /path/to/project --rules=@Symfony,-@PSR1,-blank_line_before_statement,strict_comparison
+php-cs-fixer fix /path/to/dir --rules=line_ending,full_opening_tag,indentation_type
+php-cs-fixer fix /path/to/dir --rules='{"concat_space": {"spacing": "none"}}'
+php-cs-fixer fix /path/to/dir --diff -
+php-cs-fixer fix -v --diff
+php-cs-fixer fix list
+php-cs-fixer fix -V
+-----------------------------------------------------------------------------------

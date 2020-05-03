@@ -1,0 +1,14 @@
+
+Create Project:
+	-> [story, bug,task, subtask] - Attachement, Summary, Desc, Belong to Sprint, Belong to Link
+	    -> [Watch, Estimated Time, Time Taken, Assignee, Assigned To]
+
+
+==========================================================
+
+Start a Sprint 
+  --> [date From - To] 
+    --> Add to sprint from back log 
+      --> [To Do, In Progress, Completed]
+
+==========================================================

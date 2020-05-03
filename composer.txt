@@ -1,15 +1,4 @@
-php artisan make:model Employee -a
-php artisan make:model EmployeeWebHistory -a
-
-$model = Contents::find( $id );
-$model->delete();
-
-User::find($id)->delete();
-User::where('email', 'youremail@example.com')->softDeletes();
-
-
 -------------------------------
-git@github.com:sraban/online-visitor.git
 
 https://fetzi.dev/developing-composer-packages-locally/
 https://wisdmlabs.com/blog/create-package-laravel/
@@ -21,6 +10,11 @@ https://wisdmlabs.com/blog/create-package-laravel/
 5. composer require sraban/online-visitor:dev-master
 6. composer require --dev sraban/online-visitor:dev-master
 7. composer dump-autoload
+8. composer create-project -n -s dev sarfraznawaz2005/bloggercms
+9. composer global require friendsofphp/php-cs-fixer
+10. export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+
 
 In main project
 1. inside composer.json autoload = {}

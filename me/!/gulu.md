@@ -91,6 +91,13 @@ pvt.puspa@moc.liamg|chrn@lt
 - skp.pvt@moc.liamg|
 - sraban_pvt@moc.oohay|11may1972000webhost
 
+- sraban307@liamg.moc
+https://files.000webhost.com/
+https://out-hangars.000webhostapp.com/
+websiteName: out-hangars
+pwd: chrn@lt
+
+
 `4shared`
 march.skp@moc.liamg|chrn@lt
 
@@ -205,6 +212,8 @@ sxmettdanqcjcjtl
 `codeshare.io`
 skp.pvt|chrn@lt
 
+
+
 ##########Some Basics-Fundamentals##################
 Alaram wake up at 4 AM
 - Keep alarm half an hour early
@@ -234,11 +243,6 @@ march.skp1@23
 protalOnline
 SRABANKUMARPAHADASINGH|sraban123@
 sraban.kumar@..kal.com
-
------------------ Company2ictgroup --------------------------------
-365 login
-sraban.pahadasingh@org.ind.in
-K@m@rSr@b@n123
 
 
 -------------------------------------------------------------------

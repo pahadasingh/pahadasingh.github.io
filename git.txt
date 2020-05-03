@@ -4,6 +4,7 @@ https://git-scm.com/docs/git-clean
 https://forum.ionicframework.com/t/upload-file-in-ionic3/125253
 https://itnext.io/become-a-git-pro-in-just-one-blog-a-thorough-guide-to-git-architecture-and-command-line-interface-93fbe9bdb395
 
+git remote set-url origin git@github.com:sraban/online-visitor.git
 
 git config --list
 git init
@@ -115,9 +116,26 @@ git branch my-temporary-work
 git checkout master
 git merge my-temporary-work
 
+============================
+
+v<major>.<minor>.<patch>
+version = v1.0.1
+commit_sha = commit_id, HEAD, HEAD~1, HEAD~2
 
 
+git tag
+git tag <version> <commit_sha>
+git tag -a <version> <commit_sha> -m "description"
+git tag -a v1.0.2 HEAD -m "test case for api added"
+git tag -a v1.0.2 d80c38b -m "test case for api added"
+git push --tag
+git tag -n
+git log --oneline
 
+
+$ git tag <tag_name> HEAD   (for the last commit)
+$ git tag <tag_name> HEAD~1  (for the commit before HEAD)
+$ git tag <tag_name> HEAD~1  (for two commits before HEAD)
 
 ============================
 

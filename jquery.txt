@@ -1,0 +1,24 @@
+$.animate(params, [ duration, easing, callback ] );
+$.fadeIn(speed, $callback);
+$.fadeOut(speed, $callback );
+$.fadeTo(speed, opacity, $callback );
+$.stop(clearQueue, gotoEnd);
+
+-----------------------------------------
+$.ajax({
+  data: $.param(object),
+  url: '',
+  type: '',
+  dataType: '',
+  processed: '',
+  sync: '',
+  success: function(output) {
+
+  },
+  error: function(output) {
+
+  }
+})
+
+
+

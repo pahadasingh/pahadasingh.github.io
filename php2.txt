@@ -1,0 +1,55 @@
+Top 10 vunerability identified by OWASP
+
+1- SQL Injection
+   Soln: Query Binding, Active Records, custom escaping special character function, mysql_real_escape_string() , USE ORM API
+
+2- CSRF
+   - using a csrf-token passed between the vunerable website and suffering website
+
+3- XSS
+   - Using snitazation of input variables using various filtering mechanisim, available Filter methods from PHP
+
+4- Using Components with Known Vulnerabilities
+	components should be downloaded from official link
+	correct patching or key should be given for the write software
+	componet should be updated/upgraded timely manner 
+
+
+8- Broken Access Control Authentication
+	- Audit your servers and websites – who is doing what, when, and why.
+	- Along with last modification and creation time, create the log what is modifed from what before saving to database
+    - Rate limit API and controller access to minimize the harm from automated attack tooling.
+    - JWT tokens should be invalidated on the server after logout.
+    - Developers and QA staff should include functional access control units and integration tests.
+    - Two factor authentication
+
+5- XML External Entities (XXE) Preventation
+	- Attack happen when using xml based inputs in API
+	- Validate, Sanitze the input, filter
+	- use Virtual patching, api security gateways
+
+4- Insufficient logging and monitoring
+	https://sucuri.net/
+   - Implementing the middleware to the logger panel, no access privileges to the folders and files
+   - 
+
+5- Sensitive Data Exposure
+	- use of SSL integration
+    - good encyption and decryption technology
+    - cipher usages
+    - pasword hasing technology using salt
+
+
+6- Insecure Deserialization
+	Sometime cookie contain sensitive user information in serialized form
+    Soln:- Don't accept serialized object from untrusted sources
+           Implement a digital signature to identify the request in serialized form
+
+
+
+
+
+7- Brute Force attack
+DDOS attack
+What is a prepared statement in mysql
+

@@ -148,3 +148,48 @@ composer require filp/whoops --dev
 ##########
 errors
  - predis/predis suggests installing ext-phpiredis (Allows faster serialization and deserialization of the Redis protocol)
+
+
+
+
+
+
+
+
+======================================================
+
+
+1. composer require beyondcode/laravel-websockets
+2. php artisan vendor:publish —provider=“BeyondCode\LaravelWebSockets\WebSocketsServiceProvider” —tag=“config”
+3. php artisan vendor:publish —provider=“BeyondCode\LaravelWebSockets\WebSocketsServiceProvider” —tag=“migrations”
+4. php artisan migrate
+*5. php artisan websockets:serve
+6. composer require pusher/pusher-php-server "~3.0"
+7. >> event(new App\Events\BankToken('Sraban Kumar') );
+8. check in http://myapp/laravel-websockets
+9. docker run --rm -it -v $(pwd):/app -w /app node npm install --save laravel-echo pusher-js
+*10. docker run --rm -it -v $(pwd):/app -w /app node npm run dev
+
+
+------------------ Supervisor ------------------------
+laradock/php-worker/supervisord.d/websockets.conf
+
+[program:websockets]
+process_name=%(program_name)s_%(process_num)02d
+command=php /var/www/PATH_TO_YOUR_PROJECT websockets:serve
+autostart=true
+autorestart=true
+numprocs=1
+user=laradock
+redirect_stderr=true
+
+
+-------------------------------------------------------
+
+>>>> Events are triggered
+event( new NewCommentEvent($comment=[]) );
+boardcast( new NewCommentEvent($comment=[]) )->toOthers();
+only the boardcasting commetns in are triggered to other users
+
+>>>> Emails are dispatched using
+dispatch( new MailalbaleQueue($users) )

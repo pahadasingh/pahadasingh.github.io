@@ -1,0 +1,46 @@
+# Session:
+	session_start();  should appear before html
+	$_SESSION['key']
+	unset($_SESSION['counter']);
+	session_destroy();
+	session.save_path in php ini
+	- Server generate a file stored in server with serialized data, data has no limit, secure 
+    - incookie sessionid is stored as [key:value] to track the server file
+    - incookie csrf_token is stored as [key:value] to track the server file
+
+# Cookie:
+	setcookie(key,value,exipre,path,domain,security,httpOnly); appear before html 
+	setcookie(key,value, NeagiveValueExipreTime, path,domain,security,httpOnly);
+
+	$_COOKIE['key'];
+
+	Server create a cookie in text file format in browser
+
+
+# Storages Mechanisim in Browsers:
+
+- localStorage : 10MB - 
+	Only the same origin scripts can access Local Storage data, manullay deleted to remove from browser
+	Not send to the server. Used for client-side reading purposes.
+    ex. localStorage.setItem("name", "John");
+
+- sesionStorage : 10MB
+    stays only until the tab/window is closed.
+    follows the same-origin policy just like Local Storage
+    Not send to the server. Used for client-side reading purposes.
+    ex. sessionStorage.setItem("name", "John");
+
+- indexedDb : 250 MB for Internet Explorer. FireFox has 10% of free space and Chrome has 6% of free space
+   like nosql in browser
+   storing a large amount of structured data in the client-side
+   IndexedDB does not have a specific expiration time which means that it is persistent like Local Storage
+
+- WebSQL: 5MB, deprecated
+- Cookies:
+  key - value -expire -path -domain
+  ex. document.cookie="name=John"
+
+--------------------------------------------------------------------------------------
+
+
+sessionjacking & cookiejacking

@@ -1,0 +1,59 @@
+-----------------------------------------------
+str.split()
+str.join()
+str.charAt()
+str.charCodeAt(i);
+
+arr.splice(maxIndex,1); no of element = 1, starting from index = maxIndex
+arr.push(element);
+arr.pop();
+arr.unshift(element);
+arr.shift();
+
+const hash = new Map();
+hash.get(arr[i]);
+hash.set(arr[i], value + 1);
+
+arr.map(funtion(row) {
+	return row;
+})
+
+arr.filter(function(row) {
+	return row;
+});
+
+arr.reduce(function(row, accumulator) {
+	if(row) ...row;
+	return accumulator;
+})
+
+arr.forEach((v, k) => {
+
+})
+
+--------------------------------------
+
+y = y.replace(/(Y+|D+)/g, function(v) {
+}
+
+y.replace(/(Y+|D+)/g, function(v) {
+    if(v == "Y") return 'y';
+    if(v == "D") return 'd';
+});
+
+
+y = y.replace(/(y+)/g, function(v) {
+    return x.getFullYear().toString().slice(-v.length)
+});
+
+String.replace(/<TERM>/g, '');
+
+phrase.replace(/dog/gi, '')
+
+phrase.split('dog').join('')
+
+
+-----------------------------------------
+
+
+

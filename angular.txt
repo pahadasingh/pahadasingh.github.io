@@ -23,7 +23,7 @@ compiler options are avaialbe in tsconfig.json
 # Thoughts
 ============================
 - "Observable, Subject" to check the state of session
-- Through Event Emiiter / @output data can be passed to parent componet ; @output() somethingChanged = new EventEmitter(); somethingChanged.emit(value)
+- Through Event Emittiter / @output data can be passed to parent componet ; @output() somethingChanged = new EventEmitter(); somethingChanged.emit(value)
 - All life cycles events of angular
 - https://github.com/yeoman/insight & http://yeoman.io
 

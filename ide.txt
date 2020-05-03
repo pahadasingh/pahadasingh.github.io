@@ -1,0 +1,46 @@
+# Sublime 3 - PHP Companion
+==================================
+ctrl + `    <------------->   sublime.log_commands(True)
+ctrl + shift + p  <-------------> php companion:find use ---> get the command name = find_use
+
+then in Key Binding
+{"keys":"ctrl+alt+i", "command": "find_use"}
+
+#multi-line select: ctrl + shift + l
+
+#copy line / duplicate : ctrl + shift +d
+
+
+#################### For Visual Studio Code Editor ##########################
+
+
+https://git-scm.com/
+
+#Open: code .
+
+#Install Extension : ctrl +shift + x
+
+#Find Command : ctrl + shift + p
+
+#Toggle Console: ctrl + `
+#New Console: ctrl +shift + `
+
+
+#comment code and uncoment
+ctrl + k +c / ctrl + k + u
+
+# Block Comment Toggle
+ctrl = shift + a
+
+#Fullscreen console command
+
+
+#select multiple line with cursor
+Ctrl + Shift + up/down
+
+#Moving lines in code
+Alt + up/down
+
+#Import namespace
+Alt + Ctrl + i
+

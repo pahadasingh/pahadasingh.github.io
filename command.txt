@@ -3,6 +3,7 @@ lsb_release -a
 df -h
 free --human
 grep -iRl "your-text-to-find" ./
+`cat ${tmpfile} | sort -nr | head -1`
 
 
 PS1='[$(whoami)@\W]#'

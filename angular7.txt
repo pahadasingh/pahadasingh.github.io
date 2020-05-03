@@ -1,0 +1,36 @@
+https://www.concretepage.com/angular-2/angular-2-viewchild-example
+https://itnext.io/angular-effective-component-patterns-f5f7f08e2072
+https://netbasal.com/understanding-viewchildren-contentchildren-and-querylist-in-angular-896b0c689f6e
+http://www.eduforbetterment.com/sharing-data-via-viewchild-in-angular/
+https://devdactic.com/dynamic-components-ionic/
+
+
+Q. What is the difference between decorator and annotation in angular @Component(), @input(), @output(), @viewChild(), @contentChild()
+
+
+Q. How pollyfill takes it role for different browser
+
+
+Q. How @viewChild() works for element, template and Component reference
+
+
+Q. Factory resolution examples iun angular
+
+
+Q. JIT and AOT compilation in angular
+
+
+Q. Karma & Jasmine Testing Tool
+
+
+Q. Code Linting Tool
+
+Q. <ng-container></ng-container>
+
+Q. How to load component dynamically instead of defining everything in ngModel and routing.ts
+   using factory resolution
+
+   	- generate components dynamically using the factory pattern
+   	- https://devdactic.com/dynamic-components-ionic/
+
+Q. 

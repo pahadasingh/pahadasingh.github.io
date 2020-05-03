@@ -1,0 +1,79 @@
+# PHP
+----------------------------------------------
+php4: Zend Engine 1
+ 	- core functionality like c 
+
+php5: Zend Engine 2
+    - oops added / given
+    - highly difficult to manage fatal errors
+    - does not support 64 bit integer
+
+php6: Stable version not able to release kept in testing mode
+
+php7: PHP NG(next generation) model
+    - imporoves the performances as much as twice with optimized memory usage
+    - argument type and return type are added to the function for type hinting
+    - null coalescing operator added a??b??c??d??e??null used to find something exists or not at end
+    - spaceship operator ( <==> ) called as combined three way comparison operator  
+      ex. ascending and descending in  ternary operator
+    - many funcationality has been depreceated
+    - many major errors have been replaced to exceptions, exception object has been introduced
+    - supoort 64 bit integer as well as larage files
+    - Anonymous class is introduced which no need to execute more than once to increase the execution time
+    - group use declaration added
+
+
+
+# MYSQL
+-----------------------------------------------
+Mysql5.7: 
+	- Native Json Support
+	- InnoDB support tablespaces
+	- Innodb support mysql supportted special data type
+	- 
+	- 
+
+mysql8: 
+   - physical existance of the file has been changed. ex: .frm, .trg, .trn, .par
+   - security has been added "caching_sha2_password" replaced with "mysql_native_password".
+   - invisible index: hiding the indexes without dropping it.reactivate later
+   - Default character set and collation changed for multi-lingual support
+       The default character set will be utf8mb4 and the collation will be utf8mb4_800_ci_ai.
+   - UUID enhancement done, data type changed to varbinary(16) from char(36) --> beter storage usases
+   - 
+   - 
+
+
+
+# LARAVEL
+-----------------------------------------------
+laravel 7:
+
+
+
+
+
+# ANGULAR
+-----------------------------------------------
+ng1: 
+ng8:
+
+
+
+
+
+# HTML
+-----------------------------------------------
+
+
+
+
+
+
+# CSS
+-----------------------------------------------
+
+
+
+
+
