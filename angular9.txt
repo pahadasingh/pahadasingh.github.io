@@ -1,0 +1,187 @@
+On Success Round & Javascript Code
+
+https://medium.com/@Rahulx1/understanding-event-loop-call-stack-event-job-queue-in-javascript-63dcd2c71ecd
+
+
+0. NgModule -> component, directive, pipe, service
+
+
+1. What is call stack, event looping, event bubbling( event.stopPropagation ), event catching
+   concepts functions are pushed into the stack one after other
+   - Heap
+   - Main Stack
+   - Stack. All Synchronous lines of codes
+   - Job Queue. ex# new Promise().then( new Promise().then() )
+   - Callback Queue from Event table setTimeOut(callback,1000);
+   - Event Loop Keeps running continiously checks Main Stack(MS) if nothing is pending to execute move to callback queue, if Callback queue has anything to execute it pops to main stack for the executions of codes.
+
+
+2. Difference between component and directive
+   Ans: Component creates UI, where as directive gives the behaviour to UI
+   		Both are different in their lifecycle hooks
+
+
+3. How DI works in angular.
+   Single Services of angular is passed to the constructor, to access the various properties.
+
+
+
+4. Diff between promise() and observable()
+    Ans:
+    How promises work parallely in multiple request
+    Promises work in one go, while Observerable works with multiple operator which are bounce, delay, map, filter, pipe to anoher observable.
+    Promise.all() for parralle request
+    Observable.forkJoin() for parralle request
+
+
+
+5. How you handle multiple request in angular parallely
+    using ForkJoin of rxjs library 
+    HttpClientModule handle ajax calls
+
+
+
+6. Change Dectection works
+
+   @component({
+     ChangeDetection: ChangeDetrtctionStrategy.push()
+   })
+   ngOnChanges -> gives previous and nextvalue of a @input() member of various type
+   using Output changes 
+   using Subject observable
+
+
+7. Input/Output, Services, Behavioural Subject Observable
+
+
+
+
+8. How to filter the Array if page is refreshed
+   Ans:- using a localStorage
+
+
+
+9. How to stop linking the modules using route structure
+   
+   using canActive, Resolve segment in routing
+
+
+
+10. In which life cycle hooks, does an infinite call should fire to the server.
+	ngOnChanges()
+	ngContentChecked()
+
+
+
+11. errors
+~browser can not be clicked during heavy computation, Script is taking too much time to execute
+~maximum call stack exceeded
+~statck trace errors- error inside a function when it is in stack
+~
+
+
+
+10. How do you handle CORS issue
+	- handling the cors using a browser plugin
+
+
+
+
+11. New in Angular 8
+
+    IVR Rendering
+    Bazel Supported
+    Differntail loading where bundles are generated for legacy as well as mordern browser
+    ngZoneModule --> removed
+    angular/http --> is removed
+    new commands created
+    web worker added
+    Lazy loading on basis of component
+
+
+
+12. How inheritance work in Javascript
+    using prototypical inheritance
+
+
+
+
+13. scope, closures, OOP, this, new, apply/call/bind, asynchronous code, array and object manipulation, and ES2015+
+
+
+
+
+
+14. is it good use jquery in angular
+
+
+
+
+
+15. How to check the memory usages by angular in browser profiling.
+-give pointer and refresh the page and check the profiling memory
+
+
+====================================================
+
+Dear Sraban Kumar Pahadasingh,
+
+
+Congratulations! This is to let you know that your profile has been shortlisted for Lead Frontend Developer @ Talent500, null
+
+Here are the next steps:
+
+Please click on the "Apply" button in this email
+Within 24-48 hrs of your application - you'll receive a personalised assessment link
+Within 24 hrs of you qualifying this assessment - our TA team will get in touch with you and orient you for the F2F round
+
+All the best! You're only a few steps away from your next big career move.
+
+About the Job
+
+
+Talent500 is redefining talent acquisition for leading enterprises in the world by making the process of identifying great talent faster, more efficient and data-driven. We do this by allowing professionals to discover the best opportunities to grow their careers, identify opportunities that match their career aspirations and making the recruiting process simpler and easier with dynamic assessments and conversational interfaces.
+
+
+Talent500 is a part of ANSR, an Accel-backed global leader helping Fortune 500 companies transform their business through technology and innovation. ANSR helps establishing and operating Global Capability Centers (GCCs) and ANSR has successfully led the setting up of over 40+ Fortune 500 companies in India, hiring 50,000 employees and managing 5 Million Sq. Ft of work space.
+
+
+We are a great place to work -
+
+
+We have a great and mostly young team comprised of entrepreneurs, technologists, football fanatics, philosophers and party animals.
+
+We work on cutting edge technologies like AI and Deep Learning.
+
+We an amazing culture, we offer free food and other awesome perks.
+
+
+Responsibilities:
+
+Handle the complete frontend architecture for Talent500.
+
+Work on setting up tools and frameworks in the repository to make sure of best development and deployment practices.
+
+Regularly review code of the fellow teammates.
+
+Monitor the user experience and application performance on a daily basis and rectify the issues which are holding us back to deliver a work class user experience.
+
+
+Required Skills
+
+
+5+ years of Experience in building responsive web UI which works flawlessly on web & mobile.
+
+Self-confidence, go-getter attitude and a great team player.
+
+Expertise in javascript concepts and knowledge of React, Redux.
+
+Thorough understanding of modern browser features such as 
+service workers, web workers, HTTP 2.0 and HTML 5.
+
+Good communication and collaboration skills.
+
+Fast turn around in feature developments.
+
+Performance debugging & benchmarking of the web using modern web auditing tool and unit test cases via open source frameworks.
+

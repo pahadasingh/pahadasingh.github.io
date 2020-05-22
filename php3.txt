@@ -1,0 +1,45 @@
+JWT:
+  - header
+  - payload
+  - signature
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+
+JOB DESCRIPTION:- 
+Strong PHP, 
+Javascript, 
+OOPS Concepts, 
+HTML5, 
+CSS, 
+Javascript 
+with working experience in common libraries and frameworks
+
+=>  Working knowledge on Database (MYSQL, SQL, ORACLE, RDBMS, NoSQL, MongoDB, ElasticSearch)
+=>  Design and development experience building a reusable REST API model/framework to consume data from and/or push data into MongoDB (or similar technology)
+=>  In depth knowledge of modeling/architectural patterns, governance methodologies, and potential limitations within MongoDB
+=>  Assist detecting performance problems and provide quick solutions within MongoDB
+=>  Experience with evaluating existing Elastic clusters, configuration parameters, indexing, search and query performance tuning, security and administration within ElasticSearch
+=>  Fair knowledge of AngularJS, ReactJS, Canvas and SVG interactive programming, Responsive web design
+=>  Knowledge of frameworks like Code Igniter, Zend, Data Structures and database concepts
+=>  Has been part of developing and operating highly available, highly reliable systems
+=>  Knowledge of Cloud Platform and services is preferable
+=>  Working knowledge on User Management, Notification Engine, Data Encryption will be an added advantage
+=>  Strong people skills – build and maintain positive relationships with team-members and stakeholders
+
+
+=================================================================
+
+
+

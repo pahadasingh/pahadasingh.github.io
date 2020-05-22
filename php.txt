@@ -1,4 +1,27 @@
 # Commands
+
+https://www.linkedin.com/learning/php-performance-optimization/welcome
+http://blog.nikunjjoshiphpdeveloper.com/category/laravel/
+
+Learning objectives
+General optimization techniques and tools
+PHP and Xdebug
+Opcode cache
+Optimization in PHP
+Upgrading PHP
+Macro vs. Micro optimization
+HTTP caching
+HTTP compression
+HTTP/2
+Skills covered in this course
+
+-----
+PHP 7 New Features
+PHP: Test-Driven Development with PHPUnit
+Consuming RESTful APIs in PHP with Guzzle
+Advanced PHP
+PHP: Managing Persistent Sessions
+
 ============================
 ```sh
 php -v
@@ -18,8 +41,8 @@ php -S localhost:8080 -t public public/index.php
 
 ls /var/lib/apt/lists/*
 sudo apt-get clean && rm -rf /var/lib/apt/lists/*
-sudo apt-get purge 'php*' 
-sudo apt install php7.2-cli 
+sudo apt-get purge 'php*' -
+sudo apt install php7.2-cli
 
 
 Installation
@@ -175,8 +198,9 @@ so PHP will copy the array by default. References in PHP have to be explicit:
    ~ 
 
 
-2. achieving patterns possiblities examples when insttiating, implementing abstract-interfaces : WAY TO ORGANISE CODE
-	~ singleton pattern: object created once through out the project
+2. achieving patterns possiblities examples when instatiating, 
+implementing abstract-interfaces : WAY TO ORGANISE CODE
+	~ Singleton pattern: object created once through out the project
 	~ Facade pattern: 
 	~ Factory Pattern:
 	~ Observer Pattern: 
@@ -190,7 +214,7 @@ so PHP will copy the array by default. References in PHP have to be explicit:
 
 4. secuities
    ~ session & cookie hijacking
-   ~ 					
+   ~ 			
 
 
 
@@ -230,7 +254,8 @@ error_reporting(E_ALL);
 
 
 13. PDO stands for PHP Data Object.
-It provides a vendor-neutral, lightweight, data-access abstraction layer. Thus, no matter what database we use, the function to issue queries and fetch data will be same. 
+It provides a vendor-neutral, lightweight, data-access abstraction layer. 
+Thus, no matter what database we use, the function to issue queries and fetch data will be same. 
 It focuses on data access abstraction rather than database abstraction.
 
 14.
@@ -468,11 +493,11 @@ range()
 usort()
 sort()
 rsort()
-asort()
-arsort()
-ksort()
-krsort()
-natsort()
+asort() --> sort array in 
+arsort() --> sort array in reverse order
+ksort() --> sort on basis of key
+krsort() --> reverse sort on basis of key
+natsort() --> natural sorting of character and integers
 natcasesort()
 array_multisort()
 
@@ -528,9 +553,8 @@ mktime()
 strtotime()
 define()
 constant()
-die()
+  die("#error") used for cli output to stdout  <---> exit(1)
 eval()
-exit()
 uniqid()
 sleep()
 debug_print_backtrace()

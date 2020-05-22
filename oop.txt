@@ -1,6 +1,6 @@
 1.  final keyword in Oops means ?
 	
-    The class which can be extended, the method which can not be over ridden
+    The class which can not be extended, the method which can not be over ridden
 
 
 2.  About static $variable in registered memory ? 

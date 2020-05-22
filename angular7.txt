@@ -3,6 +3,8 @@ https://itnext.io/angular-effective-component-patterns-f5f7f08e2072
 https://netbasal.com/understanding-viewchildren-contentchildren-and-querylist-in-angular-896b0c689f6e
 http://www.eduforbetterment.com/sharing-data-via-viewchild-in-angular/
 https://devdactic.com/dynamic-components-ionic/
+https://medium.com/@esanjiv/complete-beginner-guide-to-publish-an-angular-library-to-npm-d42343801660
+https://blog.angular-university.io/angular2-ngmodule/
 
 
 Q. What is the difference between decorator and annotation in angular @Component(), @input(), @output(), @viewChild(), @contentChild()
@@ -14,7 +16,7 @@ Q. How pollyfill takes it role for different browser
 Q. How @viewChild() works for element, template and Component reference
 
 
-Q. Factory resolution examples iun angular
+Q. Factory resolution examples in angular for routing componets
 
 
 Q. JIT and AOT compilation in angular
@@ -25,7 +27,9 @@ Q. Karma & Jasmine Testing Tool
 
 Q. Code Linting Tool
 
+
 Q. <ng-container></ng-container>
+
 
 Q. How to load component dynamically instead of defining everything in ngModel and routing.ts
    using factory resolution
@@ -33,4 +37,29 @@ Q. How to load component dynamically instead of defining everything in ngModel a
    	- generate components dynamically using the factory pattern
    	- https://devdactic.com/dynamic-components-ionic/
 
-Q. 
+
+Q. https://blog.angular-university.io/angular2-ngmodule/
+
+Q. https://angular.schule/blog/2019-02-third-party-libraries-and-widgets
+
+=====================================
+
+Making modules more readable using the spread operator
+
+Dynamic bootstrapping and Just In Time compilation
+
+Angular module is used to group an inter-related set of Angular primitives.
+
+--------------------------------------------
+"@progress/kendo-angular-buttons": "^5.0.0",
+"@progress/kendo-angular-common": "^1.0.0",
+"@progress/kendo-angular-dropdowns": "^4.0.0",
+"@progress/kendo-angular-inputs": "^6.0.0",
+"@progress/kendo-angular-intl": "^2.0.0",
+"@progress/kendo-angular-l10n": "^2.0.0",
+"@progress/kendo-angular-popup": "^3.0.0",
+"@progress/kendo-drawing": "^1.5.12",
+
+
+Knowledge on JavaScript design patterns, Experience in preparing App and 
+solution design & architecture is a plus.

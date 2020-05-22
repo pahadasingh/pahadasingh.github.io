@@ -129,6 +129,10 @@ docker-compose exec merarank php artisan config:cache
 docker exec -it app php artisan queue:work
 
 docker rmi $(docker images -q) -f
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q -f "status=exited*")
+docker ps --filter 'status=Exited' -a | xargs docker stop docker images --filter "dangling=true" -q | xargs docker rmi
+
 
 docker logs --tail 50 --follow --timestamps merarank
 docker logs --tail 50 --follow --timestamps db
@@ -310,6 +314,7 @@ docker container ls -a > out
 
 docker-compose up -d
 docker-compose down
+docker exec -it gallant_bose bash
 docker exec -it mysql_instance mysql -uroot -p 
 docker-compose exec db bash
 docker-compose port db 3306
@@ -354,3 +359,84 @@ docker volume prune
 docker logs -f app
 docker build -t app:1.0 docking/.
 docker run --name app -p 8888:80 app:1.0
+
+
+======================================
+adding a Dockerfile, building an image, and running a container
+https://medium.com/better-programming/docker-for-front-end-developers-c758a44e622f
+https://github.com/paramsinghvc/react-express-docker
+https://www.slideshare.net/AylaKhan1/docker-slides-178585997
+Docker-compose is used to run multi container in different port of same or different images
+======================================
+- Build an image from docker file
+   $docker build --rm -t sraban-app:latest -f ./client/Dockerfile ./client
+
+
+- Running the container
+   $docker-compose run -p 3000:3000 sraban-app:latest
+   
+   $docker run -it ng-test node -v
+   $docker run -it ng-test npm -v
+   $docker run -it ng-test ng help
+   $docker run -it ng-test ng new sraban-project-name
+   $docker run -p 3000:4200 ng-test
+   
+   $docker-compose run ng9test sh  --------------- $docker-compose exec ng9test sh
+   $docker-compose run --publish 4201:4201 ng9test sh
+   $docker-compose run --name containerName --publish 4201:4201 ng9test sh
+   $ng serve --host 0.0.0.0
+
+   
+
+- view running containers
+   $docker ps
+   $docker ps -a
+   $docker ps -l
+   $docker ps -n=-1
+   $docker ps -s
+
+
+- shell of running container
+  $docker exec -it sraban-app sh
+  $docker exec -it ng-test sh
+
+
+
+- create a shared space or directory for containers
+   $docker run -it -p 3000:3000 -v ${PWD}/src:/app/src sraban
+   $docker run --rm -it -v $(pwd):/app -w /app node npm -v
+
+- Run in Dev/Prod using "docker-compose" to run all containers in their ports
+  .Development - $docker-compose up -f docker-compose.dev.yml --build
+
+                  docker-compose -f docker-compose.dev.yml up --build
+
+  .Production - $docker-compose up --build
+
+-----------------------------------------
+
+FROM node:12.8.0-alpine
+WORKDIR /client
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD npm start
+
+
+FROM node:12.8.0-alpine
+WORKDIR /server
+COPY ./package.json .
+RUN npm install
+COPY ./src ./src
+EXPOSE 5000
+CMD npm start
+
+
+https://github.com/a-y-khan/docker_examples
+
+
+
+npm install -g @angular/cli
+npm uninstall -g @angular/cli
+npm cache clean

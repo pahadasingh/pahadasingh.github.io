@@ -9,3 +9,8 @@ https://github.com/lyraddigital/angulardirectiveshooks
 Q. Event Boardcasting
 
 Q. Observable and Subject , Behavioural Subject
+
+
+Q. How to make sure that all components are fixed included in both angular pages.
+
+Q.  

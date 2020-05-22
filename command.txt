@@ -1,3 +1,6 @@
+chrome://net-internals/
+
+
 uname -m
 lsb_release -a
 df -h
@@ -5,10 +8,19 @@ free --human
 grep -iRl "your-text-to-find" ./
 `cat ${tmpfile} | sort -nr | head -1`
 
+mv  -v ~/Downloads/* ~/Videos/
+cp -r ./dir_1/. ./dir_2/
+rm -r mydir
+
+ufw allow 'Nginx HTTP'
+ufw status
+
 
 PS1='[$(whoami)@\W]#'
 ------------------------------------
 netstat -tlnp
+netstat -tlpn| grep nginx
+ss -tlpn| grep nginx
 sudo lsof -P -i -n -sTCP:LISTEN
 
 ps -ef | grep mysql

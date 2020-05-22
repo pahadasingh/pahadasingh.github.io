@@ -47,7 +47,18 @@ mysql8:
 
 # LARAVEL
 -----------------------------------------------
+laravel 5:
+
+
+
+
+laravel 6:
+
+
+
+
 laravel 7:
+
 
 
 
@@ -55,8 +66,17 @@ laravel 7:
 
 # ANGULAR
 -----------------------------------------------
-ng1: 
+ng6: 
+
+
+
+ng7: 
+
+
 ng8:
+
+
+ng9:
 
 
 
@@ -75,5 +95,13 @@ ng8:
 
 
 
+
+
+JS
+------------------------------------------------
+JS unit testing library (Jest, Mocha)
+CI/CD and DevOps
+Also cloud experience, AWS preferred
+Github and advanced Github features
 
 

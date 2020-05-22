@@ -1,6 +1,10 @@
+Tutotrials
+https://cosmocode.io/category/javascript/
+https://www.educative.io/courses/step-up-your-js-a-comprehensive-guide-to-intermediate-javascript?authorName=Arnav%20Aggarwal
+
 -----------------------------------------------
-str.split()
-str.join()
+str.split("|")
+strArr.join(",")
 str.charAt()
 str.charCodeAt(i);
 
@@ -54,6 +58,7 @@ phrase.split('dog').join('')
 
 
 -----------------------------------------
+...items = 1,2,3,4
 
 
 

@@ -11,7 +11,7 @@ Top 10 vunerability identified by OWASP
 
 4- Using Components with Known Vulnerabilities
 	components should be downloaded from official link
-	correct patching or key should be given for the write software
+	correct patching or key should be given for the right software
 	componet should be updated/upgraded timely manner 
 
 
@@ -37,7 +37,7 @@ Top 10 vunerability identified by OWASP
 	- use of SSL integration
     - good encyption and decryption technology
     - cipher usages
-    - pasword hasing technology using salt
+    - Password hashing technology using salt
 
 
 6- Insecure Deserialization

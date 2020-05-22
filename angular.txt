@@ -9,13 +9,14 @@ npm run lint
 ng build --aot / ng b --aot
 ng serve --aot / ng s --aot
 
+ng g m featureModule/featureModule --flat -m app
+
 ng g c pageNotFound --spec false -is -it
+ng g d pageNotFound --spec false -is -it
+ng g p pageNotFound --spec false -is -it
 ng g s guards/authGuard --spec false
 ng g m guards/authGuard --spec false
 compiler options are avaialbe in tsconfig.json
-
-
-
 
 ```
 

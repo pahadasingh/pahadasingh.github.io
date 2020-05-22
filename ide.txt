@@ -44,3 +44,6 @@ Alt + up/down
 #Import namespace
 Alt + Ctrl + i
 
+# Copy the last line
+Ctrl + C, Ctrl + V
+

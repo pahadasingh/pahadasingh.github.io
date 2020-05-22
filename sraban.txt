@@ -33,7 +33,8 @@ Reg No. - 738432
 
 https://www.json-generator.com/#
 
-l/js_online_compiler
+https://rextester.com/l/php_online_compiler
+http://prose.io/
 https://www.debuggex.com/
 http://playcode.io/
 https://repl.it/languages/nodejs

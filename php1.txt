@@ -10,7 +10,7 @@
 
 # Cookie:
 	setcookie(key,value,exipre,path,domain,security,httpOnly); appear before html 
-	setcookie(key,value, NeagiveValueExipreTime, path,domain,security,httpOnly);
+	setcookie(key,value, NegativeValueExipreTime, path,domain,security,httpOnly);
 
 	$_COOKIE['key'];
 
@@ -27,7 +27,7 @@
 - sesionStorage : 10MB
     stays only until the tab/window is closed.
     follows the same-origin policy just like Local Storage
-    Not send to the server. Used for client-side reading purposes.
+    Not send to the server. Used for client-side reading purposes
     ex. sessionStorage.setItem("name", "John");
 
 - indexedDb : 250 MB for Internet Explorer. FireFox has 10% of free space and Chrome has 6% of free space
