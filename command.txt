@@ -131,6 +131,9 @@ echo 3 > /proc/sys/vm/drop_caches
 	  done
   ----
   
+# Mass File Operation:
+find /project/src/app/front/ -name \*.html -exec sed -i "s/oldText/newText/g" {} \;
+find ./ -type f -readable -writable -exec sed -i "s/oldText/newText/g" {} \;
 -------------------------------------
 # Normal Global variables
 watch date
