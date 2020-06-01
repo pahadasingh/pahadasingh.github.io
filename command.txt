@@ -8,8 +8,8 @@ free --human
 grep -iRl "your-text-to-find" ./
 `cat ${tmpfile} | sort -nr | head -1`
 
-mv  -v ~/Downloads/* ~/Videos/
-mv /project/sraban/* /project
+mv  -v ~/Downloads/{.,}* ~/Videos/
+mv /project/sraban/{.,}* /project
 
 cp -r ./dir_1/. ./dir_2/
 rm -r mydir
@@ -115,9 +115,51 @@ echo 3 > /proc/sys/vm/drop_caches
   for i in {1..50}; do ng g c "page${i}"; done
   
   --- create pages ---
-    for i in 1 2 3 45 6 7 8 9 10
+  	ng g m shared
+    for i in 1 2 3 4 5
 	  do
-	  	ng g c "backend/page${i}"
+	  	ng g c "components/comp${i}"
+	  	ng g d "directives/dir${i}"
+	  	ng g p "pipes/pp${i}"
+	  	ng g s "service/srv${i}"
+	  	ng g e "enum/enm${i}"
+	  	ng g class "class/cls${i}"
+	  	..ng g guard "guard/grd${i}"
+	  	ng g interface "interface/mdl${i}"
+	  	ng g interceptor "interceptor/icpt${i}"
+	  	ng g library "library${i}"
+	  done
+
+	ng g m frontend
+    for i in 1 2 3 4 5
+	  do
+	  	ng g c "components/users/usr${i}"
+	  	ng g c "components/distributor/dst${i}"
+	  	ng g d "directives/dir${i}"
+	  	ng g p "pipes/pp${i}"
+	  	ng g s "service/srv${i}"
+	  	ng g e "enum/enm${i}"
+	  	ng g class "class/cls${i}"
+	  	..ng g guard "guard/grd${i}"
+	  	ng g interface "interface/mdl${i}"
+	  	ng g interceptor "interceptor/icpt${i}"
+	  	ng g library "library${i}"
+	  done
+
+	ng g m backend
+    for i in 1 2 3 4 5
+	  do
+	  	ng g c "components/employees/emp${i}"
+	  	ng g c "components/admin/adm${i}"
+	  	ng g d "directives/dir${i}"
+	  	ng g p "pipes/pp${i}"
+	  	ng g s "service/srv${i}"
+	  	ng g e "enum/enm${i}"
+	  	ng g class "class/cls${i}"
+	  	..ng g guard "guard/grd${i}"
+	  	ng g interface "interface/mdl${i}"
+	  	ng g interceptor "interceptor/icpt${i}"
+	  	ng g library "library${i}"
 	  done
 
   --- replace content pages ---

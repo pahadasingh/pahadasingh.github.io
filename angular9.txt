@@ -1,7 +1,7 @@
 On Success Round & Javascript Code
 
 https://medium.com/@Rahulx1/understanding-event-loop-call-stack-event-job-queue-in-javascript-63dcd2c71ecd
-
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
 0. NgModule -> component, directive, pipe, service
 

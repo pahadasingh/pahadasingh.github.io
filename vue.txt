@@ -1,0 +1,140 @@
+https://auth0.com/blog/beginner-vuejs-tutorial-with-user-login/
+*https://github.com/taniarascia/vue-tutorial
+https://github.com/learncodeacademy/vue-tutorials
+https://github.com/storyblok/vuejs-tutorial-project
+*https://github.com/lijiakof/vuejs-tutorial
+https://learn-vuejs.github.io/vue-patterns/patterns/#composition
+https://github.com/learn-vuejs/vue-as-a-react-developer
+https://github.com/filrak/vuejs-advanced-learning
+https://github.com/PacktPublishing/Learning-Vuejs-2
+
+Funda
+*http://vuejs-templates.github.io/webpack/prerender.html
+*https://reactgo.com/vue-cli3-tutorial-creating-project/
+*https://router.vuejs.org/guide/advanced/lazy-loading.html
+https://vueschool.io/lessons/dynamically-load-components
+
+***https://developer.okta.com/blog/2018/02/15/build-crud-app-vuejs-node
+***https://savvyapps.com/blog/definitive-guide-building-web-app-vuejs-firebase
+
+https://johnpapa.net/a-look-at-angular-alongside-vue-3/
+https://www.educba.com/angular-2-vs-vue-js/
+
+https://github.com/microsoft/typescript-vue-starter
+# Commands
+---------------
+vue-cli to start and build projects.
+npx @vue/cli create events-app
+cd src/views
+touch EventSingle.vue
+mkdir partials
+touch partials/Nav.vue
+npm install bulma --save
+
+npm run serve
+
+--------------
+$npm install --global vue-cli
+$npm install vue-router
+$npm install vue
+$vue init webpack myproject // $vue create myproject // $vue ui
+$mv -v ./myproject/{.,}* ./
+$rm -r myproject
+$cd myproject
+$npm run dev
+$npm run lint -- --fix
+$npm run e2e
+$npm install --save-dev prerender-spa-plugin
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$npm install -g @vue/cli
+$npm install -g @vue/router
+$npm install -g vue-generate-component
+$vue --version
+$vue --help
+$vue create srabanProject
+$vgc --help
+$vgc footer // $vgc -s footer // vgc footer --postfix page
+$vgc -s home --folder
+$vgc employee --folder
+$vgc -d my-directive
+
+
+
+Vee-Validate to Do Form Validation
+# Vue Config
+---------------
+
+
+Adding number vm access - OTP
+
+React needs webpack for the build, whereas VueJS does not.
+
+Both offer two-way data binding, server side rendering, etc.
+
+built-in features needs to depend on third party libraries to work on it.
+
+*Polymer uses web component features and requires polyfills for browsers
+
+Large scale App: It comes with Browserify and Webpack along with other necessary tools, which help with the development
+
+template: 
+props: 
+data: 
+components: 
+computed: 
+methods: 
+watch: 
+filters :
+
+var vm = new Vue(scopeObj);
+Vue.component('selector', scopeObj );
+Vue.directive('selector', scopeObj );
+Vue.extend(mixingObj)
+Vue.use()
+Vue.delete( target, key )
+Vue.config.productionTip = false
+var vr = new VueRouter(scopeObj);
+
+# directives
+----------------------------
+v-show
+<h1 v-if = "show">This is h1 tag</h1>
+<h2 v-else>This is h2 tag</h2>
+<div v-html = "htmlcontent"></div>
+<img v-bind:src="imgsrc" />
+<img :src="imgsrc" />
+<div v-bind:class = "[infoclass, errorclass]">{{title}}</div>
+<div v-bind:class = "[isActive ? infoclass : '', haserror ? errorclass : '']">{{title}}</div>
+<div v-bind:style = "{ color: activeColor, fontSize: fontSize + 'px' }">{{title}}</div>
+<component v-bind:is="view"></component>
+<div v-on:mouseover = "changename()" v-on:mouseout = "originalname();"></div>
+<button v-on:click="displaynumbers">Click ME</button>
+<button @click="displaynumbers">Click ME</button>
+ v-on:click.prevent = 
+ v-on:click.once = 
+ v-on:keyup.enter = 
+<input type = "text" v-model = "firstname" />
+<li v-for = "(item, index) in languages">{{ item }}</li>
+<li v-for = "a in items">{{a}}</li>
+
+{{name | countlettersA, countlettersB}}
+{{name | countletters}} :- countletters is filter transform takes the input
+
+
+---------------------------------------
+# Doubts:
+- export default
+- command for generating component, directive, view
+- build, config, static, test
+---------------------------------------
+- completed the routing of vue js
+
+
+Thoughts
+---------------
+- register/login/logout in view
+- mat designing
+- kendo ui dsigning
+- form validation

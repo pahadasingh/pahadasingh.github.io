@@ -63,3 +63,8 @@ Angular module is used to group an inter-related set of Angular primitives.
 
 Knowledge on JavaScript design patterns, Experience in preparing App and 
 solution design & architecture is a plus.
+
+
+
+
+

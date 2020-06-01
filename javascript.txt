@@ -2,10 +2,12 @@ Tutotrials
 https://cosmocode.io/category/javascript/
 https://www.educative.io/courses/step-up-your-js-a-comprehensive-guide-to-intermediate-javascript?authorName=Arnav%20Aggarwal
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
 -----------------------------------------------
-str.split("|")
-strArr.join(",")
-str.charAt()
+str.split("|");
+strArr.join(",");
+str.charAt();
 str.charCodeAt(i);
 
 arr.splice(maxIndex,1); no of element = 1, starting from index = maxIndex
@@ -35,7 +37,7 @@ arr.forEach((v, k) => {
 
 })
 
---------------------------------------
+------------------------------------------------
 
 y = y.replace(/(Y+|D+)/g, function(v) {
 }
@@ -50,14 +52,15 @@ y = y.replace(/(y+)/g, function(v) {
     return x.getFullYear().toString().slice(-v.length)
 });
 
-String.replace(/<TERM>/g, '');
+String.replace(/<TERM>/g, '')
+;
+phrase.replace(/dog/gi, '');
 
-phrase.replace(/dog/gi, '')
-
-phrase.split('dog').join('')
+phrase.split('dog').join('');
 
 
 -----------------------------------------
+
 ...items = 1,2,3,4
 
 

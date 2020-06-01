@@ -262,6 +262,10 @@ https://appinessinteractive.greythr.com/
 AIPL/20/480
 chrn@lta
 
+---------------------Huawei----------------------------------
+w3m.huawei.swx
+5329450
+Sparkle@123
 
 -------------------------------------------------------------------
 https://ebiz.licindia.in/D2CPM/#Payment/0300/31618919/31-03-2020/17:22:30/01
