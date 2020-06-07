@@ -21,6 +21,13 @@ https://johnpapa.net/a-look-at-angular-alongside-vue-3/
 https://www.educba.com/angular-2-vs-vue-js/
 
 https://github.com/microsoft/typescript-vue-starter
+https://github.com/ooade/vuex-examples
+https://github.com/ye-will/vue-factory
+https://github.com/jayway/vue-js-workshop
+https://scrimba.com/p/pnyzgAP/cMPa2Uk
+
+https://cli.vuejs.org/config/#vue-config-js
+https://github.com/lian-yue/vue-upload-component
 # Commands
 ---------------
 vue-cli to start and build projects.
@@ -31,8 +38,9 @@ mkdir partials
 touch partials/Nav.vue
 npm install bulma --save
 
-npm run serve
-
+npm --prefix <project> install <project>
+npm --prefix <project> run dev
+npm --prefix <project> run build
 --------------
 $npm install --global vue-cli
 $npm install vue-router
@@ -45,21 +53,27 @@ $npm run dev
 $npm run lint -- --fix
 $npm run e2e
 $npm install --save-dev prerender-spa-plugin
+$npm install vuex --save
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $npm install -g @vue/cli
 $npm install -g @vue/router
 $npm install -g vue-generate-component
+$npm install -g vuex
+$npm install vuelidate --save
 $vue --version
 $vue --help
 $vue create srabanProject
+
 $vgc --help
 $vgc footer // $vgc -s footer // vgc footer --postfix page
 $vgc -s home --folder
 $vgc employee --folder
 $vgc -d my-directive
 
+
+npm run serve
 
 
 Vee-Validate to Do Form Validation
@@ -133,8 +147,87 @@ v-show
 
 
 Thoughts
----------------
+------------------------------------
 - register/login/logout in view
 - mat designing
 - kendo ui dsigning
 - form validation
+- vue-factory
+- vue-resource
+- module based project
+- getting the router path in component to redirect to the page
+
+import { Vuex, mapState, mapGetters, mapMutations } from 'vuex';
+state, mutations, actions, getters, and even nested modules
+
+store: store,
+store.commit('increment')
+this.$store.commit('increment')
+console.log(this.$store.state.count)
+
+
+
+this.$root.log(this.pigeons)
+https://vuejs.org/v2/cookbook/debugging-in-vscode.html
+https://www.youtube.com/watch?v=lyGt1TmleoU
+
+
+Debugging
+JSON.parse(JSON.stringify(obj))
+JSON.parse(JSON.stringify(vm.$data)) // not good because date object converted to string
+Object.assign({}, vueObj)
+Object.assign ({}, vm.$data)
+const newObj = { ...vueObj }
+
+https://journal.highlandsolutions.com/advanced-javascript-debugging-with-vue-js-in-chrome-a60fc7538e67
+
+Q. How to set a global function in Vue
+/*
+  Convert vue object
+*/
+global.getVueObject = obj => {
+  return JSON.parse(JSON.stringify( obj ));
+};
+
+
+Q.
+- vulidate is a plugin
+  validationMixin
+
+- jquery plugin
+bootstrap
+npm i bootstrap jquery popper.js
+
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import 'jquery/src/jquery.js';
+import 'popper.js/dist/popper.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
+
+----------
+https://github.com/wxs77577/rest-admin
+https://github.com/creativetimofficial/vue-light-bootstrap-dashboard
+https://demos.creative-tim.com/vue-light-bootstrap-dashboard/documentation/#/getting-started
+
+
+https://css-tricks.com/form-validation-in-under-an-hour-with-vuelidate/
+https://cli.vuejs.org/guide/deployment.html#docker-nginx
+
+
+
+Project
+https://github.com/lian-yue/lianyue-server/blob/master/package.json
+
+
+==================
+
+//Rhino 1.7.7.1
+
+let str = '2019-03-14';
+let obj = new Date(str);
+let m = 1 + parseInt(obj.getMonth());
+let d = 1 + parseInt(obj.getDate());
+var o = ( m < 10 ? '0'+m : m) + '/' + ( d < 10 ? '0'+d : d) + '/' + obj.getFullYear();
+print( o );
