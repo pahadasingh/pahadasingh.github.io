@@ -199,7 +199,7 @@ srabann|p^t!td
 
 `TradeJini`
 User: AS0444
-pwd: lt@34543
+pwd: lt@3456543
 
 http://sharetipstoday.com/
 Equity and commodity trading tips
