@@ -1,0 +1,45 @@
+- What Is Package.json? Explain its Purpose
+- Design pattern(examples of singleton, factory pattern)
+- Dependency Injection(both in ng and ng-js)
+- AOT compilation , JIT COmpilation
+- service() and a factory() :::::: factory() are design patterns
+- Lazy loading on basis of component
+- IVR Rendering
+- Bootstrapping Module in Angular?
+- handle CORS issue
+- @input, @output
+- filters in Angular?currency, date,
+- ForkJoin of rxjs library
+- HttpClientModule handle ajax calls
+- Diff between promise() and observable() 
+   ex. Promises work in one go, while Observerable works with multiple operator which are bounce, delay, map, filter, pipe to anoher observable.
+- Difference between component and directive
+- NgModule -> component, directive, pipe, service
+- Digest Cycle?
+- Change Detection
+- ngZoneModule
+- If your data model is updated outside the ‘Zone’, explain the process how will you the view?
+- describe how will you set, get and clear cookies?
+- inserting an embedded view from a prepared TemplateRef
+- @ViewChild()
+- unit tests using Karma
+- routing, state management, rxjs library, and HTTP services
+- Write a Sample Code to Create a Library
+    $ng new my-workspace --create-application=false cd my-workspace
+    $ng generate library my-lib
+
+
+Q. Use object within template itself
+Q. javascript global window object ~ local object of component
+Q. how to get the cursor position and selected text in javascript inside a textarea.(selectionStart, selectionEnd)
+Q. What are the different types of filters in Angular?currency, date,
+
+=====================
+
+Annotations  ~ Decorators
+MVVM Structure
+- Scope in Angular is an object that refers to the application model. like a tree structure format
+
+https://dzone.com/articles/50-top-angular-interview-questions-amp-answers
+https://hackr.io/blog/angular-interview-questions
+https://www.edureka.co/blog/interview-questions/top-angularjs-interview-questions-2016/
