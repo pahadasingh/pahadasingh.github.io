@@ -150,6 +150,9 @@ skp.pvt@gmail.com|K...r@...6
 `paypal`
 01-skp.pvt@moc.liamg|Lata2Charan
 
+pahadsingh.idfcbank
+K...r@...6
+
 `pahadasingh.onlinesbi`
 K...r@...6
 
@@ -286,3 +289,30 @@ Rashamita Samantaray
 https://openwho.org/
 rashmita.jun1996@gmail.com
 welcome@1234
+
+
+https://openwho.org/
+==============================================
+rashmita.pvt@gmail.com
+welcome@123
+###
+rashmita.pvt@gmail.com
+welcome@123
+======================
+rashmita.jun1996@gmail.com
+welcome@1234
+==============================================
+
+
+- Standard precautions: Hand hygiene
+- Infection Prevention and Control (IPC)for COVID-19 Virus
+- COVID-19: How to put on and remove personal protective equipment (PPE)
+- Introduction to Go.Data – Field data collection, chains of transmission and contact follow-up
+- Severe Acute Respiratory Infection (SARI) Treatment Facility Design
+- COVID-19: Operational Planning Guidelines and COVID-19 Partners Platform to support country preparedness and response
+- ePROTECT Respiratory Infections (EN)
+- WHO Clinical Care Severe Acute Respiratory Infection Training
+- Introduction to COVID-19 video in Indian Sign Language
+- Emerging respiratory viruses, including COVID-19: methods for detection, prevention, response and control
+- Competency-Based Learning: Introduction
+
