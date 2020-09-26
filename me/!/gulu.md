@@ -158,9 +158,13 @@ K...r@...6
 
 `881666890.onlineaxis`
 K...r1...6
+MPIN75..91
 
 `523403650.onlineicici`
 charan@...6
+
+`5285186742.onlineidfcbank`
+pahadsingh-Kmr@1..6
 
 `51505811.onlinehdfcbank`
 Charan@...8
@@ -199,7 +203,7 @@ srabann|p^t!td
 
 `TradeJini`
 User: AS0444
-pwd: lt@34543
+pwd: lt@3456543
 
 http://sharetipstoday.com/
 Equity and commodity trading tips
@@ -289,6 +293,7 @@ Rashamita Samantaray
 https://openwho.org/
 rashmita.jun1996@gmail.com
 welcome@1234
+<<<<<<< HEAD
 
 
 https://openwho.org/
@@ -316,3 +321,5 @@ welcome@1234
 - Emerging respiratory viruses, including COVID-19: methods for detection, prevention, response and control
 - Competency-Based Learning: Introduction
 
+=======
+>>>>>>> 7542188ba4921df189e1cae28eb8b38c745c6688
