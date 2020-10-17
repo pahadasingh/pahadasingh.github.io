@@ -1,0 +1,69 @@
+Ref: https://share.io/ng
+
+https://docs.google.com/document/d/1_p82mibzbu_Cq45JhU8Db1j_-Ks6MrDo4qC4yNTBA50/edit?usp=sharing
+https://docs.google.com/document/d/1gTv5JfLdgs0OHAWDPBBDGeIkf7yiXcM8CM5hiOjYeyM/edit?usp=sharing
+-----------------------------------------------------------------------------
+
+NG
+https://preview.redd.it/0shfv7fedci21.png?width=960&crop=smart&auto=webp&s=c2af6e2e00c6a245eaac73049f4cf1b052df1c2b
+
+https://malcoded.com/angular-cheat-sheet/
+https://www.dotnetcurry.com/angular/1385/angular-4-cheat-sheet
+Javascript Design patterns?
+What are the features of angular that is different from other framework ?
+NG Life cycles in details ?
+NG Change Detection details ?
+NG Type of Errors ?
+Es6 ~ Es5 difference. ?
+Eslint ~ Babel? Which one you use for project and why ?
+How do you write UT for angular components/directives ?
+What are the css frameworks do you know and which one used ?
+What are the difficulties do you know in integration of different libraries ?
+How angular works in terms of polyfills ?
+What do you start an angular project ?
+Explain the steps of creating your own package ?
+
+
+Do service methods usually return Observables?
+Dynamically load js file
+Complex observable chain async only subscribes once
+
+----------------------------------------------------------------------------
+https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/17a96d53-1d41-4495-8189-24223fbffa02/preview.gif
+
+HTML5
+- how to include a txt file in html? Ans. <object>
+- 
+
+CSS3
+In CSS3, Transforms (matrix, translate, rotate, scale) module can be used to achieve tweening.
+
+
+
+https://medium.com/@devexpert/25-best-javascript-courses-to-learn-2020-caf08f019a4f
+######################################################################################################################################
+https://www.udemy.com/cart/success/435062515/
+sraban307@gmail.com
+chrn@lt
+https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PythonForDataScience.pdf
+
+Discussion Form:
+https://discord.com/channels/423464391791476747/445660911693201419
+sraban-chrn@lt
+
+
+
+Tool
+https://repl.it/repls/SimplisticSimpleScientist#index.js
+https://astexplorer.net/
+http://latentflip.com/loupe/?code=ZnVuY3Rpb24gcHJpbnRIZWxsbygpIHsNCiAgICBjb25zb2xlLmxvZygnSGVsbG8gZnJvbSBiYXonKTsNCn0NCg0KZnVuY3Rpb24gYmF6KCkgew0KICAgIHNldFRpbWVvdXQocHJpbnRIZWxsbywgMzAwMCk7DQp9DQoNCmZ1bmN0aW9uIGJhcigpIHsNCiAgICBiYXooKTsNCn0NCg0KZnVuY3Rpb24gZm9vKCkgew0KICAgIGJhcigpOw0KfQ0KDQpmb28oKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+https://zerotomastery.io/cheatsheets/javascript-cheatsheet-the-advanced-concepts
+
+
+
+
+
+
+
+
+
