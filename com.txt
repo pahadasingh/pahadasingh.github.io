@@ -1,5 +1,14 @@
 Vue JS Crash Course
-
 https://www.youtube.com/watch?v=Wy9q22isx3U
 
+
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp
+debugger // eslint-disable-line
+\\ eslint-disable-next <rule-name>
+\\ eslint-disable-next complexity/max-lines
+
+complexity-report
+$cr -cC jquery.filedrop.js > /c/inetpub/wwwroot/cr/index.txt
+$jshint ./jquery.filedrop.js
+$uglifyjs trac.js search.js folding.js jquery.simplePagination.js -o trac.min.js -c -m --source-map "url='trac.min.js.map'" 
 
