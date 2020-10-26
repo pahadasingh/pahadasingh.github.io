@@ -205,6 +205,12 @@ srabann|p^t!td
 User: AS0444
 pwd: lt@3456543
 
+`udemy.com`
+sraban307@liagm.moc|liamg
+
+`discord.com`
+sraban307@liagm.moc|liamg
+
 http://sharetipstoday.com/
 Equity and commodity trading tips
 - Intraday trading tips, Nifty Future tips, MCX tips, NCDEX tips
@@ -228,25 +234,6 @@ sxmettdanqcjcjtl
 skp.pvt|chrn@lt
 
 
-
-##########Some Basics-Fundamentals##################
-Alaram wake up at 4 AM
-- Keep alarm half an hour early
-- Keep the alarm some distance away from you
-- Prepare 'TO DO LIST" before going to bed to do in the morning
-- Wet kerchief and put it on your face
-----------------------------------------------------
-SLEEP IMMIDIATELY
-
-
-----------------------------------------------------
-TODO Basic List
- - Don't waste on thoughts
- - Yoga & Exercises
- - Meditaion
- - Manifastation
- - ReadBooks
- - List for today and tomorrow day tasks on priority
 
 
 ----------------- Company1 --------------------------------
