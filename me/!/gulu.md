@@ -18,6 +18,9 @@ sraban307|mailg
 `dribbble.com`
 sraban307@mailg|Ku...@1..6
 
+`figma.com`
+sraban307|mailg
+
 `Linkedin`
 sraban.pvt@moc.evil|chrn@lt
 
