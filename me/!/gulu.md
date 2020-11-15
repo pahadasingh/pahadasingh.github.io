@@ -12,6 +12,12 @@ sraban307@gmail.com
 `Happyeasygo`
 skp.pvt@moc.liamg(8328848690)|chrn@lt
 
+`Pinterest`
+sraban307|mailg
+
+`dribbble.com`
+sraban307@mailg|Ku...@1..6
+
 `Linkedin`
 sraban.pvt@moc.evil|chrn@lt
 
