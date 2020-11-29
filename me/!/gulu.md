@@ -33,6 +33,9 @@ skp.pvt@gmail.com|chrn@lt
 `hub.docker.com`
 sraban-skp.pvt|chrn@lt
 
+`pypi.org`
+sraban-sraban307|chrn@lt@1.3
+
 `Gaana`
 sraban.pvt@moc.evil|chrn@lt
 
