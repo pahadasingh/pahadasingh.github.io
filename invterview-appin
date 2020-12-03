@@ -1,0 +1,268 @@
+------------------ Selection Criteria/Process ------------------
+Minumum to score 7 to pass the exam
+1. Zoom Pic Attached
+2. CSS -  x/10
+3. JS - x/10
+4. VueJs - x/10 
+5. Task - Any New Framework, Quality of the code - x/10
+6. Weightage - hire / not hire
+7. Remarks: if any
+
+What should have a candidate
+1. knows all basics
+2. Technically sound
+3. Way of working
+4. way of thinking before writing code
+5. confident while writing code
+===============================================================
+
+
+https://www.youtube.com/watch?v=7_pzUSKI42E
+https://github.com/skewcode/webinars/tree/master/18-javascript-tricky-questions
+
+
+
+
+
+Interview - 1
+#####################
+https://medium.com/@vigowebs/frequently-asked-vue-js-interview-questions-and-answers-3e8b97da8d5d#:~:text=Each%20Vue%20instance%20goes%20through,a%20Vue%20instance%20goes%20through
+
+https://www.javatpoint.com/vue-js-interview-questions
+
+
+
+HTML & CSS
+---------------------------------------------------------------
+Q. Scematic elemets
+    - implementing semantic HTML5 on your pages will improve your communication with Google and Bing
+    - non-semantic elements: <div> and <span> - Tells nothing about its content.
+    - A semantic element clearly describes its meaning to both the browser and the developer.
+    - <form>, <table>, <h1>, <p>, <blockquote>
+    - <header>, <nav>, <main>, <article>, <section>, <aside>, <footer>
+
+Q. Some css property
+   box
+   display: block, flex-box
+   position: sticky, fixed, absolute, relative
+   difference between height & line-height
+
+Q. media query for browser specific
+
+Q. Css3 features
+
+Q. viewport gives the width of device and @media screen and (width:10000){} query manages it
+   100vh, 100vw
+
+Q.  seleting the nth element
+    :eq()
+    .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+
+    }
+
+Q. How to change the opacity of any color using css
+   - rgba(255,255,255,0.1)
+
+Q. What is the use of filter(), tranform(), display-flex in css and its syntax
+
+Q. How does svg works?
+
+Q. Html5 api
+   - WebSocket API
+   - getUserMedia API
+   - Fullscreen API
+   - Page Visibility API
+   - Battery Status API
+   - Vibration API
+   - Network Information API
+   - Navigation Timing API
+   - User Timing API
+   - High Resolution Time API
+
+Q. Difference between <article> , <section>
+
+Javascript
+---------------------------------------------------------------
+Q7. What’s javascripts Prototype & Prototype Chain?
+
+Q11. How does inheritance works in javascript. tell me steps.
+
+Q. document.cookie = "key1 = value1; key2 = value2; expires = date";
+   how to delete a cookie using JavaScript?
+
+Q. callbacks and promises, closure
+
+Q. What is the difference between function.Call() & function.Apply()?
+
+Q. What is the difference between null & undefined?
+
+
+Q3. String Functions, built-in methods
+    length()  , indexOf(), CharAt(), Concat(), forEach(), pop() , push()  , reverse()
+
+
+Q4. Array Functions
+fun.call(thisArg[, arg1[, arg2[, ...]]]) -- parameters are not array individual
+fun.apply(this, ArrayofPameters[] )
+
+
+Q5. Type of Data Storage
+
+
+
+Q6. What is the ‘Strict’ mode in JavaScript and how can it be enabled?
+
+Q6. What is Event looping and event bubbling
+    Call Stack, Event Table and Event Queue
+    setTimeout , async Operation
+    setTimeout(() => recursion(), 0)
+
+Q8. prototype chain to Object.prototype
+
+Q9. Differnt type of design patterns, explain one
+
+Q. The data types supported by JavaScript are:
+
+Undefined
+Null
+Boolean
+String
+Symbol
+Number
+Object
+
+Q6. Difference between let and var, const
+
+Q7. How to immidiately invoke a function in javascript, without using a function name.
+
+Q1. Promises, why we need if normal ajax call can handle
+
+Q2. Closures, self closing functions
+
+Q8. Scope of variables while inside the functions
+
+Q9. Asynchronous Functions and the Event Looping, Event Bubbling
+
+Q10. How is the function to check the number or not? NaN / isNaN() --- how to check the dataType of a variable
+
+Q12. some of the predefined methods are not supported in browser - How do you handle it.
+
+Q13. How do u debug ur code, line by line
+
+Q11. hOW DO YOU  HANDLE THE UNIT TEST IN JS which library you suggest, WHAT ARE THE TESTING LIBRARY do you know.
+
+Q12. Tools for writing test cases 
+
+
+Angular
+----------------------------------------------------------------
+Q. component and directive lifecycle
+
+Q. type of pipes
+
+Q. type of filters
+
+Q. Observables
+
+Q. Boardcasting
+
+
+Vue JS
+----------------------------------
+Q0. What is vue js and what you prefered for frontend dev. what version you use and what are the feature available
+
+Q0. How pollyfill takes it role for different browser using a javascript frame work
+
+Q1. What is the folder/file structure of a vue component, when the pages are executed sequentailly(component, directive, filters )
+
+Q1. What are the life cycle hook of a Vue Component/directive in execution order
+
+Q1. how do you operate some code after the dom changes in vue
+    DOM will changed by async call , then you some of code going to execute.
+    what is $nextTick() in vue js
+
+Q1. How to request a server for json response in vue js
+    What are the methods available to operate the json, how do you handle error
+
+Q1. For complex form validation, are you using any library instead of writing evey field
+
+Q1. How you can dectect a member variable is changed from one old value to new value
+
+Q2. How do you handle the multiple http calls and get the response using vue library
+     - what is the function name
+
+Q3. Various Steps to communicate data between different componets
+
+Q4. What are the steps you follow to optimize your code if build fails, when loading the app take long time
+    How do you test the loading time of a component, if initial load time is more due to huge routings 
+
+Q5. What are the default filters are available in vue js
+    steps to create a filter/directive
+
+Q6. Differece between directive and component
+    
+Q7. what are the directives available in vuejs, can you tell the lists
+
+Q8. How can you declare and modify object within the HTML itself instead of passing from component as member veriable. 
+
+Q9. How multiple browsers handle the page in vue js build`
+
+Q10. Some memory is consumed by the chart library, in which life-cycle-hook to destory instance of the library so that before componet destoryed to release the occupupied memory.
+beforeDestroy() {  
+  this.chart.destroy();  
+}
+
+Discussion:
+
+Q1. If you want to add localization any vue js project what would be your steps.
+
+Q5. About autosuggestion throattling of request to server, you have to send it to server.
+
+
+Q2. Error happened in some other browser. 
+    Think about an error happened in javascript, after you build. Code is working on one browser, not in other. shows some predifined fuction is supoorted in browser
+    what would be your solution. what will be your steps
+
+
+Q4. How can you create a directive/filter and how-where to use it in vue component.
+
+
+Q3. Form Validating complex form what is the prefered library.
+
+
+Q7. Payment gateway Integration.
+    How do you solve the routing issue when one inside page is directly opened from browser for an example while payment is redirecting to you order sucuuess page.
+    what kind of server respose you have to add. so that the page should not take long time.
+
+
+Q8. Email Application
+If I will assign you a project in vue js, you need to use some kind dataTable from server, where you need to filter, you need to do batch oepration of the list of records like email inbox. How will you start the project and what kind of library you will use.
+
+Q9. Explain what have you used in your task. After build if you are getting some issue in diffenet browser.
+
+Q10. When memory issues appear because of Memory OR infanite iteration/recursion, Stack is exceeding the allocated length.
+
+Q11. Can you explain Cross-browser compatibility is done in framework like Vue. what is tool makes it work.
+     what is the concept that different browsers are able to handle it.
+
+
+Q12. Test your complex funtions are correct ?
+     what framework you use for testing...
+
+Q16. Where do you deploy the nuxt build and how do you run it
+
+Q18. if any component having load time is more how do you check it. How do you find the time of every componets to load.
+
+Q19. you are going to integrate a core javascript library, how you gonna do it
+
+Q20. What are the javascript good libraries have you integrated in vue application
+
+Q21. Long time in development envirnment, what would be ur solutions
+
+Q22. Debug the code & Test
+
+Q13. Optimising Steps to reduce any complexity
+
+Q14. For validation, which library you use, how do you handle the html elements for every validation
+
+Q15. After build if your code doesnot work, how do you deploy the code.
