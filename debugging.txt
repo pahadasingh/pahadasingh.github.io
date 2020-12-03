@@ -1,0 +1,27 @@
+Javascript 2020
+-----------------------------------------------------------------------
+
+chrome://flags/#cookies-without-same-site-must-be-secure
+chrome://flags/#form-controls-refresh
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp
+//# sourceURL=skp.js
+debugger // eslint-disable-line
+\\ eslint-disable-next <rule-name>
+\\ eslint-disable-next complexity/max-lines
+
+complexity-report
+$cr -cC jquery.filedrop.js > /c/inetpub/wwwroot/cr/index.txt
+$jshint ./jquery.filedrop.js
+$uglifyjs trac.js search.js folding.js jquery.simplePagination.js -o trac.min.js -c -m --source-map "url='trac.min.js.map'" 
+uglifyjs popper.js -o popper.min.js -c -m --source-map "url='popper.min.js.map'" 
+
+2. Super Easy Auto Refresh 1.3.6
+3. CSS Used 2.4.2
+4. Google Dictionary(By Google)
+5. Color by Fardos - Color Picker
+6. What Font 1.1
+8. Vue.js devtools 5.3.3
+1. Outline It 1.0
+7. Web Developer 0.5.4
+9. Clear Cache Shortcut - https://chrome.google.com/webstore/detail/clear-cache-shortcut/jnajhcakejgchhbjlchkfmdidgjefleg
+10. Vue Developer
