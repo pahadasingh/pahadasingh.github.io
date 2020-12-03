@@ -1,0 +1,29 @@
+Tool
+-------------------------
+
+https://webuniverse.io/cyclomatic-complexity-refactoring-tips/
+1. method metrics:- cyclomatic complexity reducing < 15
+2. code duplicacy < 10
+3. file duplicacy = 0
+4. security fixes
+
+
+
+
+https://demo.dashboardpack.com/architectui-html-pro/
+Tools
+http://linterrors.com/
+https://jshint.com/
+https://codebeautify.org/base64-to-image-converter
+https://www.rapidtables.com/web/tools/svg-viewer-editor.html
+https://html-online.com/editor/
+https://www.textcompare.org/text/extract-text-from-html
+https://www.textcompare.org/text/remove-line-breaks-and-extra-spaces
+* canvas designing
+* svg designging
+* GraphQL
+https://javascript.info/code-quality
+
+https://interactjs.io/
+https://www.w3.org/TR/pointerevents2/#examples
+https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events
