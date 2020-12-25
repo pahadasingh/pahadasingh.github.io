@@ -162,13 +162,17 @@ skp.pvt@gmail.com|K...r@...6
 `paypal`
 01-skp.pvt@moc.liamg|Lata2Charan
 
-pahadsingh.idfcbank
+pahadsingh.idfcbank(IDFB0080156-10055432636)
 K...r@...6
 
-`pahadasingh.onlinesbi`
+
+`pahadasingh.onlinesbi`( 14180246803000000-0753100NIBS )
 K...r@...6
 
-`881666890.onlineaxis`
+`202164529.OGB`( 422800600436700-10BGOR0ABOI )
+pahadsingh
+
+`881666890.onlineaxis`( 819599730010819-4910000BITU )
 K...r1...6
 MPIN75..91
 
