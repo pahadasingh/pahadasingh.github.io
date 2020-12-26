@@ -63,5 +63,242 @@ phrase.split('dog').join('');
 
 ...items = 1,2,3,4
 
+############################################################################################
+Coding Styles Example - Javascript
+
+# Blank line      
+Recommendation : add blank lines between code blocks with relatively independent logic
+1)    In the method body, a blank line is added between code blocks with relatively independent logic, so that relevant information can be obtained at a glance when reading the code, avoiding frequent switching of concepts, thereby improving readability.
+2)  Add a blank line after multi-line variable declaration.
+3)  Add a blank line before the return statement.
+4) use blank lines between class members and code blocks
+5) there      should be no blank lines at the beginning or end of method bodies, block statements and classes
+Do not use continuous blank lines
+
+-----------------------------------------------
+# Spaces
+Add a space between reserved words (such as if , for, or catch ) and the left bracket (
+Add a space between the reserved words (such as else or catch ) and the curly braces } before the line .
+Add spaces on both sides of any binary or ternary operator.
+There should be a space after the comma in the array initialization and multiple parameters in the function.
+In the comma, or semicolon; spaces are not allowed before.
+Colon in the object: add a space after it.
+there should be spaces inside {}
+prohibits multiple consecutive spaces
+-----------------------------------------------
+# Comma
+no semicolon at the end of the code line will cause compression errors
+adding a semicolon sometimes improves the performance of the code
+
+
+-----------------------------------------------
+# Best Practises
+sum of the number of subdirectories and files in a directory should not exceed 50
+Each line of code should be less than 120 characters
+control the length of the file, preferably not more than 2000 lines
+length of  methods does not exceed 50 lines
+complexity cycles does not exceed 20
+maximum nesting depth of statements if(if(if(if()))) should not exceed 4 levels
+nesting level of callback functions function(function(function(function()))) does not exceed 4 levels
+
+-----------------------------------------------
+# variables
+requires the use of const or let instead of var
+declare variables when needed and initialize them as soon as possible
+declare one variable per line
+prohibits continuous assignment (a =b =c = 5)
+Variables do not need to be initialized with undefined
+use literal declarations of object ex. let x = {}, not lex = new Object();
+
+-----------------------------------------------
+# Method design
+Method design should follow the Single Responsibility Principle ( SRP ), one method only completes one function, ex. save and saveAs are not same though can be written in one method
+***Method design should follow the single level of abstraction principle ( SLAP ) --means: flunecy, flow of same sequence in methods
+method number of parameters should not exceed 5
+assign default values ​​to the parameters of the function
+Don't treat method parameters as working variables / temporary variables
+always put the default parameters at the end
+Do not use arguments , you can choose rest syntax instead --- const args = Array.prototype.slice.call(arguments);
+When implementing external APIs , the legality of external parameters should be judged
+use parameter deconstruction - const { firstName, lastName } = user;
+uses arrow functions (or Function#bind ) first when anonymous functions are used , and don’t save references to this
+
+
+-----------------------------------------------
+uses the class keyword to define classes
+uses the extends keyword to implement inheritance
+prohibits the use of this or super before calling super() in the constructor
+set the properties of all objects in the constructor (not including methods)
+Static methods should only be called on the base class itself
+methods can return this to support method chain calls
+
+Use single quotes for strings
+uses template strings ( ` ) to implement string splicing
+do not use string continuation symbols
+Use Arrary#push instead of direct assignment when adding elements to an array
+Do not define or use non-numeric properties on arrays ( except length )
+array traversal prefer the Array object method
+do not forEach elemental cycles in remove / add operations
+Use array destructuring
+Use spread operator ... copy array
+use identifiers for attribute names of 40 object literals
+Try to define all the attributes of an object in one place
+recommend using method abbreviations in object literals
+It is recommended to use attribute shorthand in object literals
+uses dot notation to access the properties of an object, only used when the property is dynamic []
+ Getters and setters should appear in pairs in objects
+ prohibits the direct use of built-in properties of Object.prototypes on object instances
+ requires for-in constraints
+ Do not modify the prototype of the built-in object, or add methods to the prototype
+ Use spread operator ... for object copy
+
+
+
+-----------------------------------------------
+In the conditional judgment, the variable should be first and the literal value should be the second
+It is recommended      to use === and !== when judging equality , instead of == and !=
+recommends the use of shorthand conditional expressions
+simplify conditional expressions
+do not add a negation operator before complex conditional expressions
+  not to use negative expressions
+  prohibits the use of nested ternary expressions
+  Use parentheses to clarify the priority of operations when mixing different operators
+
+
+-----------------------------------------------
+  Every switch statement contains a default statement, even if it does not contain any code
+  in the switch every statement of the content of the case are to place a break statement
+   When the lexical statement needs to be declared in the case statement , the curly braces () cannot be omitted
+   For conditional judgments of if-else if (multiple else if ) types, an else branch must be included at the end
+   Do not use logical operators instead of control statements
+   prohibit multiple spaces in regular expression literals
+   It is      recommended to use named capture groups in regular expressions
+
+
+-----------------------------------------------
+use occasions
+Note : this should only appear in the following occasions:
+1) The function is a constructor:
+	The name of the function starts with a capital letter.
+	The function is assigned to a variable that starts with a capital letter.
+	This function is an ECMAScript 6 class constructor.
+
+2) Function is a method:
+	This function is on the object literal.
+	The function is assigned to an attribute.
+	This function is an ECMAScript 6 class method, getter or setter . ( Except for static methods )
+
+3) This keyword is allowed in the following functions :
+	The call/apply/bind method of the modified function is called .
+	If thisArg is given , the function is a callback of the array method (such as .forEach() ).
+	The function has the @this tag in the JSDoc comment tag.
+	Other situations are considered problematic.
+-----------------------------------------------
+Do not use variable and function declarations in the top-level scope
+is the window plus the namespace attribute on the method
+
+-----------------------------------------------
+code always uses ECMAScript 6 standard module (import/export) method instead of using non-standard modular loader ( except NodeJS code)
+It is recommended that do not import wildcards *
+ Do not import the same module multiple times
+ It is recommended that      the order of import of 60 modules is built-in module (such as Nodejs module), external module, internal module
+ import not include the JavaScript file extension
+  import does not use absolute paths
+  When there is only one export in the module , it is better to use the default export instead of named export
+  The tripartite of rule 54 import needs to be added to package.json dependencies
+  is recommended      if the file only export a function, then the file name, class name, and the name of the default export should be consistent
+  Do not export directly from import
+  The variables that need to be exported must be const or immutable
+  prohibits omitting 0 before and after the decimal point
+  requires calling isNaN() to check NaN
+  The use of exceptions is recommended
+  requires the use of Error objects as the reason for Promise rejection
+   prohibits control flow statements in a finally block
+   disable unnecessary return await
+   prohibits the use of eval()
+   prohibits the use of implicit eval()
+   prohibits the use of implicit eval()
+   prohibits the use of with() {}
+   do not use continue
+   disable console
+   disable alert
+   disable debugger
+   prohibits the use of shorter symbols for type conversion
+   prohibits redundant return statements
+   Do not write a lot of JavaScript or CSS code in HTML
+     Don't use non-standard features
+
+-----------------------------------------------
+Variables in a block cannot have the same name as other variables in a function, and functions in a block should be declared using function expressions
+var declarations will be promoted to the top of the scope, so variable declarations should be at the top of the scope
+in ECMAscript 5 , it is recommended to use "use strict" inside the function
+Note: Note that in many cases, the compilation tool compresses multiple files together, so when a file uses strict mode, it may affect other codes that do not follow the strict mode (such as some third-party libraries).
+
+"Use strict" as ECMAscript 5 A new added JavaScrip t run way, mainly in the following benefits:
+
+1) eliminate JavaScrip t unreasonable grammar, imprecise place, reducing some of the bizarre behavior;
+
+2) Eliminate some unsafe aspects of code operation and ensure the safety of code operation;
+
+3) Improve the efficiency of the compiler and increase the running speed;
+
+4) for future new version of JavaScrip t pave the way.
+
+ 
+
+"Use strict" on JavaScrip t made more stringent syntax, if the code used in the "use strict" turn on strict mode , the following case will be thrown before the script runs SyntaxError exception:
+
+1) Octal syntax: const n = 023 and const s = "\047"
+
+2) with statement
+
+3) Use delete to delete a variable name (not a property name): delete myVariable
+
+4) Use eval or arguments as variable name or function name
+
+5) Use future reserved words: implements, interface, package, private, protected, public as variable names or function names
+
+6) Use function declaration in statement block: if (a<b) {function f() {}}
+
+7) Two identical attribute names are used in object subfaces: {a: 1, b: 3, a: 7}
+
+8) Two identical parameter names are used in function parameters: function f(a, b, b) {}
+-----------------------------------------------
+Performance Programming Specifications   
+ - cache jQuery query results
+ - avoid all element selectors (*)
+ - precedence ID selected filter (#) , try to select the context to specify context
+ - reduces DOM operations in the loop
+ -  uses event proxy ( bubbling ) mechanism
+ - Try not to use synchronous requests
+ - 
+-----------------------------------------------
+Reduce the dynamic creation and deletion of DOM objects while meeting the needs of business characteristics
+prohibit the use of text + variable splicing in loops and event callbacks to use jQuery to create DOM
+  try not to use iframe
+
+-----------------------------------------------
+Event monitoring 
+
+ correctly use the DOM Event Level 2/3 standard for event binding and cancellation
+ to log off the bound event listener first when the DOM object of the 74 page is uninstalled or dynamically deleted
+ Do not embed JavaScript event callback code on HTML tags
+ destroy timers and delayers that are no longer in use
+
+
+-----------------------------------------------
+1. ESLint rules
+https://cn.eslint.org/docs/rules/
+
+2. Airbnb JavaScript Style Guide
+https://github.com/airbnb/javascript
+
+3. Google JavaScript Style Guide
+https://google.github.io/styleguide/jsguide.html
+
+-----------------------------------------------
+
+
+
 
 
