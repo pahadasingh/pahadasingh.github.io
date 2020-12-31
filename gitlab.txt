@@ -1,0 +1,62 @@
+https://www.atlassian.com/git/tutorials/syncing
+
+
+1. install git
+
+2. run as admistrator from C:\Program Files\Git\git-cmd.exe
+
+
+3. create public key to access the remote git
+   ssh-keygen -t rsa -C "sraban.kumar@pahadasingh.com"
+
+4. copy the public key from id_rsa.pub and paste it in gitlab setting
+
+
+5. fork the project from admin repository to your account in gitlab
+
+
+6. clone your forked-project to your local
+$git clone ssh://git@git.xxxxxxxxxxxxxxxxxxx.git
+
+
+7. create a remote upstream/heroku for admin-project
+   $git remote add upstream ssh://git@git.xxxxxxxxxxupstream.git
+   $~git remote remove upstream
+   
+
+8. pull any changes in admin-project(upstream) from remote to your forked project
+   $git pull upstream master
+
+
+9. update the changes in your forked-project by using a "Beyond Comparator" in your local system
+   change the code from trial project to forked project by using a comparator to sync with the [trial~forked]
+
+9. push forked project to remote
+   $git status
+   $git add .
+   $git commit
+   $git show -s --format='%h %s'
+   
+    $:wq!
+   $git push origin master
+   
+
+10. go to gitlab -> click on forked project -> Create MR(Merge Request) after modifying the commit message to the assignee(admin/upstream owner)
+
+11. repeat step-8 to step-10 for each changes in the code, update to remote gitlab
+
+12. you can remove the repository
+=====================================Live=============================================
+1. git pull upstream master ----------------------------------------- (manager update)
+2. git push origin master --------------------------------------- (local repository update)
+3. compare with the running project with "Beyond Compare" -------------------------- (project folder update)
+4. 
+
+
+
+==============================================
+git diff --name-only <commit1> <commit2>
+git diff --name-only --staged
+git status -s | grep '^ M'
+To get the last modified date for each file:
+   while read filename; do  echo -n "$(stat -c%y -- $filename 2> /dev/null) "; echo $filename;  done
