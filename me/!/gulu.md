@@ -46,6 +46,10 @@ sraban.pvt@moc.evil|chrn@lt
 `angel.co`
 sraban307@moc.liamg|30p^t29.23ltd21=3
 
+`letsfreelance.com`
+sraban307@mailg.com|chrn@lt
+
+
 `app.jobvite.com`
 01-sraban.pvt@moc.evil|Kmr@123...9
 
