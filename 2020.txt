@@ -223,3 +223,24 @@ ctrl + shift + p -----> capture screenshot / theme / appearance ------> change
 Copy xhr as fetch/curl/cmd/bash
 
 Open Frame  - Plugin Download
+
+
+------------------------------------------------------
+https://codepen.io/gungorbudak/pen/ooKNpz
+
+
+what is bulma.css
+
+
+
+https://rawgit.com/Grafikart/JS-Markdown-Editor/master/dist/demo.html
+http://inacho.github.io/bootstrap-markdown-editor/
+https://github.com/agusmakmun/django-markdown-editor
+https://pypi.org/project/martor/
+
+
+http://www.taufanaditya.com/bootstrap-markdown/
+
+https://stackoverflow.com/questions/25004007/how-to-call-getcontent-and-parsecontent-from-bootstrap-markdown-js
+http://embed.plnkr.co/atyuBnVNktl8YSfdfPJT/preview
+https://codepen.io/adriansuter/pen/yOZRwX
