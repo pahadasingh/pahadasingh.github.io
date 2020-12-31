@@ -47,3 +47,18 @@ Alt + Ctrl + i
 # Copy the last line
 Ctrl + C, Ctrl + V
 
+# more
+
+- Shortcuts
+    code folding: Ctrl + Shift + [
+    copy immidiate line : Alt + Shift + up/down
+    copy line : Alt + Shift + up/down
+    opening/closing side bar: ctrl + b
+    jump to line number: ctrl + g
+    delete the line: ctrl + x
+    move the line: alt + up/down
+    ctrl + shift + o
+    ctrl + shift + p
+    open the file: ctrl +  p
+    ctrl + shift + left/right
+    The Trac Environment needs to be upgraded
