@@ -1,0 +1,118 @@
+pip list
+python setup.py install
+pip uninstall setuptools
+pip install setuptools
+python -V ; pip -V ; pip -h | grep disable-pip-version-check
+python -m pip --disable-pip-version-check -V
+python -m pip install --upgrade pip
+==============================================
+# printiing serialized data
+for k, v in data.items():
+  print [k, v]
+==============================================
+### Python ###
+if widget_type != 'markdown' and (query is None or query == ''):
+return None, json.dumps({});
+--------------------------------------------------------
+if widget_type != 'markdown' and (not str(query).isdigit()):
+--------------------------------------------------------
+widget_type = widget if graph_type is None or graph_type == '' else widget + "/" + req.args.get('graph_type')
+--------------------------------------------------------
+xPosition = req.args.get('xPosition')
+--------------------------------------------------------
+def sraban(self, req):
+--------------------------------------------------------
+result = self.env.db_query("SELECT count(1) from dashboard where name=%s", title)
+--------------------------------------------------------
+self.env.db_transaction("INSERT INTO dashboard (name) VALUES (%s)", (name))
+--------------------------------------------------------
+for i in query:
+result.append()
+--------------------------------------------------------
+    def match_request(self, req):
+        if req.path_info == '/dashboard':
+            return True
+
+    def process_request(self, req):
+        if req.path_info == '/dashboard':
+            return self._dashboard_request(req)
+
+    def _dashboard_request(self, req):
+        #data = []
+        return 'dashboard.html', None
+
+--------------------------------------------------------
+if 'DASHBOARD' in req.perm:
+    yield ('dashboard', _("Dashboard"))
+--------------------------------------------------------
+Docker
+https://stackabuse.com/dockerizing-python-applications/
+https://runnable.com/docker/python/docker-compose-with-flask-apps
+https://realpython.com/dockerizing-flask-with-compose-and-machine-from-localhost-to-the-cloud/
+--------------------------------------------------------
+Flask Template
+https://www.webforefront.com/django/usebuiltinjinjastatements.html
+https://pythonhow.com/flask-navigation-menu/
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates
+https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/
+https://subscription.packtpub.com/book/web_development/9781838983994/9/ch09lvl1sec73/flask-limiter
+https://stackoverflow.com/questions/62587410/can-i-perform-a-dos-attack-on-a-localhost-using-a-flask-server-and-a-python-scri
+https://laracasts.com/discuss/channels/laravel/using-redis-for-csrf-finding-the-right-key
+--------------------------------------------------------
+
+
+python -m tabnanny yourfile.py
+-or-
+python
+>>> help("yourFile.py")
+--------------------------------------------------------
+user_roles = [str(k).lower() for k, v in caller.get_user_role_country(req).items() if v]
+--------------------------------------------------------
+print txt.split('"')[1] if len(txt.split('"')) > 1 else 'None'
+(link.split('"')[1] if len(link.split('"')) > 1 else ''),
+--------------------------------------------------------
+{% with item.label|split:'"' as link %}
+   {% for skill in link %}
+        {{ skill }}<br>
+    {% endfor %}
+{% endwith %}
+--------------------------------------------------------
+no hang up = nohup
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
