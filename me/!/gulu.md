@@ -98,6 +98,7 @@ sraban_pvt@ymail.com|30p^t29.23ltd21=3
 - sraban_pvt@moc.oohay|chrn@lt
 - 8328848690-skp.pvt@moc.liamg|chrn@lt
 - pradeptakumar0707@moc.liamg|160120
+- sraban307@moc.liamg|chrn@lt(8328848690)
 
 `Ebay`
 
@@ -178,6 +179,9 @@ pahadsingh
 `881666890.onlineaxis`(819599730010819-4910000BITU)
 K...r1...6
 MPIN75..91
+
+`cc.9183288486904852@axisbank`
+rr.2584763120265035|080
 
 `523403650.onlineicici`
 charan@...6
