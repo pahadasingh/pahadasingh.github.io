@@ -304,7 +304,6 @@ Rashamita Samantaray
 https://openwho.org/
 rashmita.jun1996@gmail.com
 welcome@1234
-<<<<<<< HEAD
 
 
 https://openwho.org/
@@ -333,4 +332,23 @@ welcome@1234
 - Competency-Based Learning: Introduction
 
 =======
->>>>>>> 7542188ba4921df189e1cae28eb8b38c745c6688
+ADHAR - 799415803502
+PAN - BDVPP4897H
+
+Address - 1:
+246/128, 24th Main, 3rd cross 3rd floor
+Agara, HSR Layout, Bengaluru, Karnataka
+BENGALURU, KARNATAKA 560102 India
+Land Mark - Near To Mangal Jewellery
+
+
+Address - 2:
+At - Tainlo, Po- Bhatapada,
+Via - Nirakarpur, Block - Kanas
+Dist - Puri, Odisha, 752019, India
+Land Mark - Near to Sahupada UP School
+
+
+Office:
+#406, 24th Cross Rd, Siddanna Layout, 
+Banashankari Stage II, Banashankari, Bengaluru, Karnataka 560070
