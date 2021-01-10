@@ -260,15 +260,10 @@ skp.pvt|chrn@lt
 
 
 
------------------ Company1 --------------------------------
-365 login
-sraban.kumar@company.com
-march.skp1@23
-
-***
-protalOnline
-SRABANKUMARPAHADASINGH|sraban123@
-sraban.kumar@..kal.com
+----------------- Study --------------------------------
+morioh.com/courses(gmail307)
+newline.com(github)
+eduonix.com(gmail307)
 
 
 -----------------AppinessWorld------------------------------
