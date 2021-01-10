@@ -1,3 +1,29 @@
+https://www.telerik.com/blogs/10-good-practices-building-maintaining-large-vuejs-projects
+https://www.telerik.com/blogs/author/nada-rifki
+
+
+https://github.com/stivenramireza/vuejs-fundamentals
+https://github.com/fmosquera0101/vuejs_fundamentals
+https://vueschool.io/lessons/
+https://stackblitz.com/edit/vuejs-lynda?file=index.js
+
+My Questions
+1. How to check any memory leak is happeing in vue - page
+2. avoiding circular ref in javascript(a -> b- > a)
+3. How to optimize a library which takes very long time
+4. How to add a javascript library to a specific component ex. like graphs which should not be loaded in other component
+5. Complex form validation in Vue JS, where multiple form inside a big form to handle
+6. Verious touch events with exmples in javascript
+7. How to check infanite operation and memory consumed variable-object in javascript chrome
+8.
+
+import cost package
+npm install lodash.clonedeep
+import cloneDeep from "lodash.clonedeep";
+##########################################################################
+
+
+
 https://auth0.com/blog/beginner-vuejs-tutorial-with-user-login/
 *https://github.com/taniarascia/vue-tutorial
 https://github.com/learncodeacademy/vue-tutorials
