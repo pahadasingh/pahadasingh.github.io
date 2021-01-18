@@ -262,7 +262,7 @@ skp.pvt|chrn@lt
 
 ----------------- Study --------------------------------
 morioh.com/courses(gmail307)
-newline.com(github)
+newline.com(github-sraban)
 eduonix.com(gmail307)
 
 
@@ -275,8 +275,8 @@ https://appinessinteractive.greythr.com/
 AIPL/20/480
 chrn@lta
 
----------------------Huawei----------------------------------
-w3m.huawei.swx
+---------------------WHY----------------------------------
+w3m.WHY.swx
 5329450
 Sparkle@123
 
@@ -338,12 +338,12 @@ Land Mark - Near To Mangal Jewellery
 
 
 Address - 2:
-At - Tainlo, Po- Bhatapada,
+At - Tainlo, Po - Bhatapada,
 Via - Nirakarpur, Block - Kanas
 Dist - Puri, Odisha, 752019, India
 Land Mark - Near to Sahupada UP School
 
 
-Office:
+Office Appiness:
 #406, 24th Cross Rd, Siddanna Layout, 
 Banashankari Stage II, Banashankari, Bengaluru, Karnataka 560070
