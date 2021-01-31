@@ -163,6 +163,8 @@ skp.pvt@gmail.com|chrn@lt
 skp.pvt@gmail.com|K...r@...6
 
 --------------------------------------------------------------
+`bajajfinserv.in`
+8328848690|K...r@...6
 
 `paypal`
 01-skp.pvt@moc.liamg|Lata2Charan
