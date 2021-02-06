@@ -169,9 +169,6 @@ skp.pvt@gmail.com|K...r@...6
 `paypal`
 01-skp.pvt@moc.liamg|Lata2Charan
 
-pahadsingh.idfcbank(63623455001-6510800BFDI)
-K...r@...6
-
 `pahadasingh.onlinesbi`(14180246803000000-0753100NIBS)
 K...r@...6
 
@@ -188,8 +185,11 @@ rr.2584763120265035|080
 `523403650.onlineicici`
 charan@...6
 
+pahadsingh.idfcbank(63623455001-6510800BFDI)
+K...r@...8
+
 `5285186742.onlineidfcbank`
-pahadsingh-Kmr@1..6
+pahadsingh-Kmr@1..8
 
 `51505811.onlinehdfcbank`
 Charan@...8
