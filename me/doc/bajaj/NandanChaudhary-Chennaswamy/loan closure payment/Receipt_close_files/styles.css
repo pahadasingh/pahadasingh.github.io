@@ -1,0 +1,2374 @@
+﻿@font-face {
+    font-family: 'DaxOT-Regular';
+    src: url('../fonts/DaxOT_gdi.eot');
+    src: url('../fonts/DaxOT_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/DaxOT_gdi.woff') format('woff'), url('../fonts/DaxOT_gdi.ttf') format('truetype'), url('../fonts/DaxOT_gdi.svg#DaxOT-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+
+@font-face {
+    font-family: 'DaxOT-Bold';
+    src: url('../fonts/DaxOT-Bold_gdi.eot');
+    src: url('../fonts/DaxOT-Bold_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/DaxOT-Bold_gdi.woff') format('woff'), url('../fonts/DaxOT-Bold_gdi.ttf') format('truetype'), url('../fonts/DaxOT-Bold_gdi.svg#DaxOT-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+
+@font-face {
+    font-family: 'DaxOT-Medium';
+    src: url('../fonts/DaxOT-Medium_gdi.eot');
+    src: url('../fonts/DaxOT-Medium_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/DaxOT-Medium_gdi.woff') format('woff'), url('../fonts/DaxOT-Medium_gdi.ttf') format('truetype'), url('../fonts/DaxOT-Medium_gdi.svg#DaxOT-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+
+@font-face {
+    font-family: 'DaxOT-Light';
+    src: url('../fonts/DaxOT-Light_gdi.eot');
+    src: url('../fonts/DaxOT-Light_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/DaxOT-Light_gdi.woff') format('woff'), url('../fonts/DaxOT-Light_gdi.ttf') format('truetype'), url('../fonts/DaxOT-Light_gdi.svg#DaxOT-Light') format('svg');
+    font-weight: 350;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-25CA;
+}
+
+@font-face {
+    font-family: 'RupeeForadianRegular';
+    src: url('/_layouts/images/Experia/css/rupee_foradian-webfont.eot');
+    src: url('/_layouts/images/Experia/css/rupee_foradian-webfont.eot?#iefix') format('embedded-opentype'), url('/_layouts/images/Experia/css/rupee_foradian-webfont.woff') format('woff'), url('/_layouts/images/Experia/css/rupee_foradian-webfont.ttf') format('truetype'), url('/_layouts/images/Experia/css/rupee_foradian-webfont.svg#RupeeForadianRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ms-backgroundImage{background:none !important;overflow:hidden;}
+#s4-workspace.ms-core-overlay{background-color:transparent !important;}
+#s4-titlerow,#sideNavBox{display:none !important;}
+#s4-bodyContainer {padding-bottom:0;background:url('../images-2013/background-pattern.png')#EFEFEF !important;}
+#contentRow{padding-top:0;}
+#contentBox {margin-right: 0;margin-left: 0;min-width: 0;}
+.ms-fullscreenmode #contentBox{margin-left:0 !important;}
+.ms-webpart-zone,.ms-webpart-cell-vertical{display:inline-block;}
+.ms-webpart-chrome-vertical{display:inline;}
+@media screen and (max-width: 768px) {
+    .ms-siteSettings-root *,.propertysheet *,.ms-viewlsts *{font-size:12px;}
+    .ms-linksection-columnBox{padding-right:10px;}
+    /*.ms-formdescriptioncolumn-wide,.ms-authoringcontrols{width:100%;float:left;}*/
+    .ms-authoringcontrols input[type="radio"], .ms-authoringcontrols label {margin-top: 0;margin-right: 5px;margin-bottom: 0;}
+    .propertysheet{float:left;}
+    .ms-authoringcontrols td{min-width:0 !important;margin-right:5px;}
+    .ms-vl-sectionHeaderRow td,.ms-alignRight a{width:100%;float:left;text-align:left;margin-left:0;}
+    .ms-dialog #s4-bodyContainer{background:none !important;}
+}
+
+
+/********************/
+html, body{font-family:'DaxOT-Regular';background:url('../images-2013/background-pattern.png');-webkit-font-smoothing:antialiased;color:#6b6b6b;}
+body{background-size:initial;}
+a, a:hover, a:visited, a:active, a:focus{text-decoration:none;outline:0;}
+ a:visited{color:#0071BC;}
+.medial-shift{padding-right:5px;}
+.mediar-shift{padding-left:5px;}
+.ms-backgroundImage{padding-right:0 !important;}
+.padding0{padding:0 !important;}
+.paddingTB10{padding:10px 0;}
+.padding5{padding:5px;}
+.mrgbtm20{margin-bottom:20px;}
+.mrgbtm10{margin-bottom:10px;}
+.mrgtop10{margin-top:10px;}
+.mrgtop20{margin-top:20px;}
+.mrgleft0{margin-left:0 !important;}
+.mrgright10{margin-right:10px;}
+.mrgright15{margin-right:15px;}
+.wid100{width:100%;}
+.wid50{width:50%;}
+.Text-Blue{color:#0071bc;}
+.font-bold{font-weight:bold;}
+.updated{color:#fe4801;}
+.approved{color:#48ca3b;}
+.received{color:#0056f4;}
+.rs{font-family:'RupeeForadianRegular', Arial;}
+.search_here{position:relative;margin-bottom:15px;display:none;}
+#searchInputBox .main-search img{display:none;}
+#searchInputBox .main-search{position:absolute;right:5px;top:7px;height:16px;padding:4px 5px;border-radius:25px;line-height:23px;background-image:url('../images-2013/search.png');background-repeat:no-repeat;}
+ #searchInputBox .main-search:hover{position:absolute;right:5px;top:7px;height:16px;padding:4px 5px;border-radius:25px;line-height:23px;background-image:url('../images-2013/search.png');background-repeat:no-repeat;}
+#searchInputBox .search_inpage{width:100% !important;border:1px solid #ccc !important;background:#fff !important;padding:5px 25px 5px 10px !important;border-radius:25px !important;height:30px;}
+.search_here #searchInputBox{width:100%;}
+textarea.form-control{resize:none;}
+.search_here .ms-srch-sb{float:left;width:100%;border:none;}
+*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+.mt20{margin-top:20px;}
+.mr{margin-right:0;}
+.mb{margin-bottom:5px;}
+.skillset{margin-top:100px;}
+.skill-lockup{width:100%;float:left;}
+.left-cont{float:left;}
+.right-cont{float:right;}
+.skill-info{display:block;margin-bottom:20px;}
+.skill-name{float:left;color:#666;border-radius:4px;}
+.skill-status{float:right;color:#c4c4c4;font-size:1em;}
+.skill-bar{display:block;width:100%;height:8px;background:#e3e3e5;clear:both;margin:0;border-radius:15px;}
+.skill-level{display:table;height:8px;}
+.communication, .planning, .learning, .programming, .visual-design, .ux-design{background:#48ca3b;}
+.communication{-webkit-animation:communication 3s linear;animation:communication 3s linear;border-radius:15px;}
+.learning{-webkit-animation:learning 3s linear;animation:learning 3s linear;border-radius:15px;}
+#tenor > .ui-progressbar-value{background:#48CA3B;}
+#tenorPercent > .ui-progressbar-value{background:#48CA3B;}
+#tenor.ui-widget-content, #tenorPercent.ui-widget-content{background:#E3E3E5;border:none;}
+#tenor.ui-progressbar, #tenorPercent.ui-progressbar{height:10px;border-radius:10px;}
+.slider{width:220px;background:#e2e2e2 !important;pointer-events:none;height:10px !important;border-color:#e2e2e2 !important;}
+.slider.ui-slider-horizontal .ui-slider-handle{top:-0.15em !important;}
+.slider.ui-slider .ui-slider-handle{width:15px !important;height:12px !important;}
+.customer_welcome h3{font-size:18px;font-weight:bolder;font-family:'DaxOT-Bold';color:#494949;padding:0 0 14px;border-bottom:1px solid #d6d7d9;margin:20px 0;}
+.customer_welcome h3 span.LoginInfoLbl{font-size:14px;color:#adadad;font-family:'DaxOT-Light';}
+/*-----------------------
+	  	Animations 
+-------------------------*/
+
+/*@-webkit-keyframes communication {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes communication {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%;
+  }
+}*/
+
+/*-----------------------
+	Learning Animation 
+-------------------------*/
+
+/*@-webkit-keyframes learning {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 62%;
+  }
+}
+
+@keyframes learning {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 62%;
+  }
+}*/
+
+/*PROGRESSBAR STYLES*/
+
+/*SELECTION DROPDOWN STYLES*/
+.select2-container--default .select2-selection--single .select2-selection__arrow b{background:url(../images-2013/select-dropdown.png)no-repeat;background-color:transparent;border-color:transparent !important;width:7px !important;height:7px !important;background-position:-4px -4px;}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{background:url(../images-2013/select-dropdown-up.png)no-repeat;width:7px;background-color:transparent;border-color:transparent !important;height:7px;background-position:-4px 1px;}
+.select2-selection__clear{display:none;}
+.desktop-menu li.dropdown a ul li:hover > .destop-menu li a:hover, .destop-menu li a.active{text-decoration:none;color:#fff;}
+/********Input**********/
+div.searchbox input.searchbox-input{width:100%;border:1px solid #ccc;background:#fff;padding:5px 20px 5px 7px;border-radius:25px;}
+div.searchbox.searchbox1 input.searchbox-input{border:1px solid #737A84;}
+div:hover.searchbox input.searchbox-input{border:1px solid #737A84;}
+/******Header******/
+header{display:block;padding:15px 0;background:#fff;-webkit-box-shadow:0px 4px 10px rgba(0, 0, 0, 0.2);box-shadow:0px 4px 10px rgba(0, 0, 0, 0.2);}
+.logo-main{width:123px;padding:5px 0;}
+.userinfo-corner{display:block;margin:5px 0 0;float:right;}
+.userinfo-corner li{padding:0px 15px;float:left;height:auto;position:relative;}
+.userinfo-corner li:last-child{border:none;}
+li.mobile_menu_toggle{float:right;line-height:30px;}
+ul.relation_dropdown li{width:100%;padding:10px 15px;border-bottom:1px solid #e4e4e4;font-family:'DaxOT-Regular';}
+ul.relation_dropdown{min-width:260px;margin:17px 0 0;padding:0;border-radius:0;right:0;left:initial;right:0;left:initial;}
+ul.relation_dropdown li:hover{background:#F1F0F0;}
+ul.relation_dropdown li a{padding:0;font-family:'DaxOT-Regular';display:inline-block;}
+ul.relation_dropdown li a:hover{background-color:transparent;}
+ul.relation_dropdown:before{position:absolute;content:'';width:0;top:-8px;right:23px;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:8px solid #B8BEC0;}
+ul.relation_dropdown:before{border-color:rgba(194, 225, 245, 0);border-bottom-color:#B9C0C2;border-width:8px;margin-left:-32px;border-bottom:8px solid rgba(0, 0, 0, 0.2);border-left:8px solid transparent;border-right:8px solid transparent;content:"";display:inline-block;position:absolute;right:20px;top:-16px;}
+ul.relation_dropdown:after{border-color:rgba(136, 183, 213, 0);border-bottom-color:#FFFFFF;border-width:6px;margin-left:-30px;}
+.relation_dropdown:after, .relation_dropdown:before{bottom:100%;right:21.1px;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}
+ul.profile_dropdown li{width:100%;padding:0;border-bottom:1px solid #e4e4e4;position:relative;}
+ul.profile_dropdown{min-width:240px;margin:22px 0 0;padding:0;border-radius:0;right:0;left:initial;right:0;left:initial;}
+ul.profile_dropdown li:hover{background:#F1F0F0;}
+ul.profile_dropdown li a, ul.profile_dropdown li.LogOutLi{padding:10px 25px;font-family:'DaxOT-Regular';}
+ul.profile_dropdown li a div{padding:0 10px 0 0;display:inline-block;min-width:30px;text-align:center;float:left;}
+ul.profile_dropdown li a:hover{background-color:transparent;}
+ul.profile_dropdown li span{float:right;background:#cbced2;position:absolute;right:0;top:0;border-bottom:1px solid #FFFFFF;color:#ffffff;min-width:34px;}
+ul.profile_dropdown li span.count{max-height:41px;}
+ul.profile_dropdown li:hover span{background:#0071BC;}
+ul.profile_dropdown li span.profile_name{float:left;background:transparent;position:relative;padding:10px 25px;}
+ul.profile_dropdown li:hover a{color:#0071BC;}
+ul.profile_dropdown:before{border-color:rgba(194, 225, 245, 0);border-bottom-color:#B9C0C2;border-width:8px;margin-left:-32px;border-bottom:8px solid rgba(0, 0, 0, 0.2);border-left:8px solid transparent;border-right:8px solid transparent;content:"";display:inline-block;position:absolute;right:10px;top:-16px;}
+ul.profile_dropdown:after{border-color:rgba(136, 183, 213, 0);border-bottom-color:#FFFFFF;border-width:6px;margin-left:-30px;}
+.profile_dropdown:after, .profile_dropdown:before{bottom:100%;right:11.1px;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}
+a.profileUser_name, a.profileUser_name:hover{float:left;width:100%;text-decoration:none;}
+a.profileUser_name, .profileUser_name .profile_name{color:#0071bc !important;font-size:16px !important;border-bottom:none;}
+ul.notification_dropdown li{width:100%;padding:15px 10px;border-bottom:1px solid #e4e4e4;cursor:pointer;}
+ul.notification_dropdown{min-width:260px;margin:17px 0 0;padding:0;border-radius:0;left:initial;right:-30px;left:initial;font-family:'DaxOT-Regular';}
+ul.notification_dropdown li:hover{background:#F1F0F0;}
+ul.notification_dropdown li a{padding:0;font-family:'DaxOT-Regular';color:#0070c0;font-size:12px;}
+ul.notification_dropdown li a div{padding:0 10px 0 0;display:inline-block;min-width:30px;text-align:center;}
+ul.notification_dropdown li a:hover{background-color:transparent;color:#0070c0;}
+.notification_dropdown li div p{margin:0;max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-block;}
+.notification_dropdown li div span{vertical-align:top;padding-left:10px;}
+.notification_dropdown li div a{float:right;line-height:22px;}
+.notification_dropdown:after, .notification_dropdown:before{bottom:100%;right:31.5px;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}
+.notification_dropdown:after{border-color:rgba(136, 183, 213, 0);border-bottom-color:#FFFFFF;border-width:7px;margin-left:-30px;}
+.notification_dropdown:before{border-color:rgba(194, 225, 245, 0);border-bottom-color:#B9C0C2;border-width:8px;margin-left:-32px;border-bottom:9px solid rgba(0, 0, 0, 0.2);border-left:9px solid transparent;border-right:9px solid transparent;content:"";display:inline-block;position:absolute;right:30px;top:-17px;}
+#alertdropdwn{background:url('../images-2013/alerts.png');width:30px;height:30px;display:inline-block;}
+.bell-postioning #alertdropdwn:hover, .bell-postioning.open #alertdropdwn{background:url('../images-2013/alerts-hover.png');}
+#user-relation{background:url('../images-2013/relation.png');width:30px;height:30px;display:inline-block;}
+.user_main #user-relation:hover, .user_main.open #user-relation{background:url('../images-2013/relation-hover.png');}
+.view_all_notif{width:100%;border:0;border-radius:0;background:#0071bc;color:#ffffff;}
+.view_all_notif:hover{color:#E6E6E6;}
+.user-img a#profile-icon{background:url('../images-2013/profile.png')no-repeat;width:30px;height:30px;display:block;}
+.user-img a#profile-icon:hover, .user-img.open a#profile-icon, .user-img.active a#profile-icon{background:url('../images-2013/profile-active.png')no-repeat;}
+/*********************************
+******MY PROFILE ICOS STYLES******
+**********************************/
+.mypro_personaldet{background:url(../images-2013/sprite-profile.png)no-repeat;width:20px;height:20px;background-position:0px 2px;}
+ul.profile_dropdown li:hover a .mypro_personaldet{background-position:-40px 2px;}
+.mypro_aadhar{background:url(../images-2013/sprite-profile.png)no-repeat;width:20px;height:20px;background-position:0px -35px;}
+ul.profile_dropdown li:hover a .mypro_aadhar{background-position:-40px -35px;}
+.mypro_docvault{background:url(../images-2013/sprite-profile.png)no-repeat;width:20px;height:20px;background-position:0px -70px;}
+ul.profile_dropdown li:hover a .mypro_docvault{background-position:-41px -70px;}
+.mypro_message{background:url(../images-2013/sprite-profile.png)no-repeat;width:20px;height:20px;background-position:0px -105px;}
+ul.profile_dropdown li:hover a .mypro_message{background-position:-40px -105px;}
+.mypro_scheduler{background:url(../images-2013/sprite-profile.png)no-repeat;width:20px;height:20px;background-position:2px -139px;}
+ul.profile_dropdown li:hover a .mypro_scheduler{background-position:-38px -139px;}
+.this_page{background:#0071BD !important;}
+.this_page h4 a{color:#ffffff;}
+.mypro_changepass{background:url(../images-2013/sprite-profile.png)no-repeat;width:20px;height:20px;background-position:4px -179px;}
+ul.profile_dropdown li:hover a .mypro_changepass{background-position:-36px -179px;}
+.mypro_tranhistory{background:url(../images-2013/sprite-profile.png)no-repeat;width:20px;height:20px;background-position:4px -214px;}
+ul.profile_dropdown li:hover a .mypro_tranhistory{background-position:-36px -214px;}
+.mypro_logout{background:url(../images-2013/sprite-profile.png)no-repeat;width:20px;height:22px;background-position:4px -250px;}
+ul.profile_dropdown li:hover a .mypro_logout{background-position:-36px -250px;}
+/******Search Box Function********/
+.def-search{float:left;width:240px;}
+.searchbox{position:relative;width:10.5%;float:right;transition:0.2s ease-in 1s;-webkit-transition:0.2s ease-in 1s;}
+.searchbox input{font-size:12px;}
+.searchbox1{width:100%;transition:0.2s ease-in 1s;-webkit-transition:0.2s ease-in 1s;}
+.homesearch-button{position:absolute;top:6px;padding:4px 5px;border-radius:25px;background-image:url('../images-2013/search.png');background-repeat:no-repeat;right:-2px;}
+.homesearch-button:hover{position:absolute;top:6px;padding:4px 5px;border-radius:25px;background-image:url('../images-2013/search.png');background-repeat:no-repeat;right:-2px;}
+.homesearch-button img{display:none;}
+/*************Notification****************/
+.notification-box{display:block;float:left;}
+.bell-postioning{position:relative;}
+.bell-postioning sup{position:absolute;left:48%;top:-25%;background:#fe8e33;color:#fff;padding:5px;font-size:9px;}
+/*************user info **********/
+.userinfo-corner .desktop-border{border:none;}
+.userinfo-corner .user-profile{border:none;}
+.user-logininfo{position:relative;}
+.user-log{display:inline-block;margin-left:15px;}
+.user-log p{margin:0;font-size:12px;color:#b0b0b0;}
+.user-log p span{color:#333;}
+/*********Home screen Content Left slidable Loan Information *******/
+.main-container{display:block;margin:0 0 0;}
+.offer-slider{display:block;}
+.relations-header h3{font-size:24px;color:#666;margin:0 0 10px;text-transform:uppercase;font-family:'DaxOT-Regular';}
+.relations-header a{color:#0070C0;line-height:36px;font-size:12px;text-transform:uppercase;font-family:'DaxOT-Medium';}
+/**** 29-08-2017 experia changes start****/
+.offer-header{padding:0px 0 0;}
+.offer-header h3{font-size:24px;color:#666;margin:0px 0 10px;text-transform:uppercase;font-family:'DaxOT-Regular';}
+/**** 29-08-2017 experia changes end****/
+.offer-header a{color:#0070C0;line-height:36px;font-size:12px;text-transform:uppercase;font-family:'DaxOT-Medium';}
+.loan-item{background:#FFF;border:1px solid #CCC;border-radius:3px;margin-bottom:5px;margin-right:10px;webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+/**** 29-08-2017 experia changes start****/
+.loan-offer{width:100%;padding:15px 15px 10px;border-bottom:1px solid #ccc;min-height:145px;}
+.loan-offer .media-heading{font-size:18px;color:#485569;font-family:'DaxOT-Bold';margin-bottom:10px;min-height:30px;}
+.loan-offer img{margin-bottom:10px;}
+.loan-offer p{color:#999;margin-bottom:0px;font-family:'DaxOT-Regular';}
+/**** 29-08-2017 experia changes end****/ 
+.loan-offer div{padding:0;}
+.loan-itemdesc{display:block;background:#485569;border-radius:0 0 3px 3px;clear:both;}
+.loan-options{padding:12px 0;margin:0 auto;text-align:center;}
+.loan-options li{border-right:1px dotted #ccc;padding:0 25px;}
+.loan-options li:last-child{border:none;}
+.loan-options li a{font-size:14px;text-transform:uppercase;}
+.loan-options li a:hover{color:#fff;}
+.view-details, .view-details:visited{color:#C6D4E8;}
+.pay-now, .pay-now:visited{color:#C6D4E8;}
+.home_tesitomonials{margin-top:50px;}
+.my_relation_stat{display:block;margin:0 0 7px;}
+.my_relation_stat p{border-right:1px solid #bfbfbf;color:#6c6b6b;margin:0;font-family:'DaxOT-Regular';display:inline-block;min-width:130px;font-size:12px;}
+.my_relation_stat span{padding:0 0 0 10px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;font-size:12px;}
+/**** 29-08-2017 experia changes start****/
+.myrelation_slide_stats{margin:10px 0;min-height:110px;}
+/**** 29-08-2017 experia changes end****/
+.txt-red{color:#e82c2c;}
+.home_tesitomonials a{display:block;text-align:right;font-family:'DaxOT-Medium';margin-bottom:10px;font-size:12px;}
+.tesitmonial_content{background:#ffffff;border-radius:4px;font-family:'DaxOT-Regular';margin:0 8px;width:31.5%;text-align:center;padding:20px 15px;color:#707782;webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.all_testimonials div.tesitmonial_content:first-child{margin-left:0;}
+.all_testimonials div.tesitmonial_content:last-child{margin-right:0;}
+.all_testimonials{}
+.media-carousel{margin-bottom:0;padding:0;}
+.media-carousel .carousel-control.left{left:-28px;background-image:none;height:36px;width:24px;position:absolute;top:41%;}
+.media-carousel .carousel-control.right{right:-28px !important;background-image:none;height:36px;width:24px;position:absolute;top:41%;z-index:100;}
+.media-carousel .carousel-indicators{right:50%;top:auto;bottom:0px;margin-right:-19px;}
+/*****Progressive Slider*******/.repaid-amount{font-size:12px;color:#999;position:absolute;z-index:10;top:55%;left:0;width:100%;text-align:center;}
+.loan-offer .progress-bar{position:relative;height:100px;width:100px;background:none;box-shadow:none;}
+.progress-bar div{position:absolute;height:101px;width:101px;border-radius:50%;}
+.progress-bar div span{position:absolute;font-size:28px;font-family:'DaxOT-Medium';line-height:70px;height:95px;width:95px;left:4px;top:3px;text-align:center;border-radius:50%;background-color:#FFF;color:#485569;}
+.progress-bar .background{background-color:#b3cef6;}
+.progress-bar .rotate{clip:rect(0 45px 100px 0);background-color:#4b86db;}
+.progress-bar .left{clip:rect(0 45px 100px 0);opacity:1;background-color:#b3cef6;}
+.progress-bar .right{clip:rect(0 45px 100px 0);transform:rotate(180deg);opacity:0;background-color:#4b86db;}
+@keyframes toggle {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/****Offer Banner****/
+.offer-banner{display:block;}
+.content-offer{display:block;webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.content-offer img{width:100%;}
+/****Different Offers ranges **/
+.latest-offer{margin-top:35px;}
+.offer-listings{padding:0 0 0 10px;}
+/*****Offer Ads*******/
+.offer-ad{display:block;border:1px solid #ccc;background:#fff;padding:25px 20px 20px;border-radius:3px;}
+.ad-head{position:relative;}
+.ad-head p{position:absolute;font-size:13px;color:#ffffff;padding:5px 25px;top:-15px;background:#3284be;border:1px solid #1d6aa2;left:-27px;border-radius:0 3px 3px 0;margin:0;z-index:10;font-family:'DaxOT-Medium';}
+.ad-head p::before{position:absolute;content:"";width:8px;height:8px;background:url("../images-2013/my-offers.png") no-repeat;bottom:26px;left:-1px;z-index:0;}
+.ad-head a{float:right;color:#37383a;font-size:12px;font-family:'DaxOT-Medium';}
+.ad-banner{display:block;}
+.ad-banner img{margin:15px 0 0;border:1px solid #ccc;width:100%;}
+.ad-content h4{font-size:14px;color:#1f689b;font-family:'DaxOT-Medium';}
+.ad-content p{font-size:12px;color:#ffffff;font-family:'DaxOT-Medium';}
+.view-ad{font-size:12px;color:#1f689b;font-family:'DaxOT-Medium';}
+.vas-ad{margin-bottom:16px;}
+.home_sidebar{margin-bottom:15px;}
+.myoffers-main{background:#6cb9f1;border:1px solid #4291c9;}
+.vas-main{background:#ffeaeb;border:1px solid #ffbfc3;margin-bottom:10px;}
+.vas-main .ad-head p{background:#ffbfc3;border:1px solid #faa2a7;}
+.vas-main .ad-head p::before{background:url(../images-2013/vas-bg.png) no-repeat;}
+.ourblog-main{background:#fdf1de;border:1px solid #ebb35c;}
+.ourblog-main .ad-head p{background:#f8c981;border:1px solid #ebb35c;}
+.ourblog-main .ad-head p::before{background:url(../images-2013/blog-before.png) no-repeat;}
+.mf_stats h1{font-family:'DaxOT-Bold';color:#49B17E;font-size:30px;margin:0;}
+.insurance_stats h3{color:#49B17E;font-family:'DaxOT-Bold';}
+/******Footer******/
+footer{display:inline-block;margin:60px 0 0;background:#181c23 url(../images-2013/footer-bg.png) repeat;position:static;width:100%;}
+.footer-mainlinks{padding:25px 0;}
+.footer-header{display:block;}
+.footer-header p{color:#778497;}
+.footer-header p span{vertical-align:middle;padding-left:10px;font-family:'DaxOT-Bold';}
+.footer-links{list-style:none;margin:0;padding:0;padding-left:32px;}
+.footer-links li{list-style:none;color:#424e5f;font-size:12px;line-height:20px;font-family:'DaxOT-Medium';}
+.footer-links li a{color:#424e5f;font-size:12px;line-height:20px;font-family:'DaxOT-Medium';}
+.footer-links li a:hover{color:#8C9CB5;}
+.footer-bottom{padding:25px 0px;}
+.footer-bottom li{border-right:1px dotted #777;padding:0 10px;color:#778497;font-size:12px;font-family:'DaxOT-Medium';}
+.footer-bottom li:last-child{border:none;}
+.footer-bottom li.powerdLink{border-right:none;}
+.footer-bottom li.Geologo{float:right;position:relative;right:90px;}
+/******INNER PAGES GLOBAL CLASSES******/
+.mfund_background{background:#ffffff;padding:15px 0;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.mrgtp10{margin-top:10px;}
+.mrgtp20{margin-top:20px;}
+/******HOME LOAN PAGE STYLES FROM HERE******/
+.home_loan{padding:15px 0;clear:both;float:left;width:100%;}
+.home_loan.FdFormTabs{padding:15px 0 0 0;}
+input[type="submit"].bajajblue_button{background:#0071BD;color:#ffffff;font-family:'DaxOT-Regular';font-size:12px;padding:7px 37px;transition:.5s;margin-left:0;}
+.payment_confirm_details input[type="submit"].grey_button{margin-left:0;}
+input[type="submit"].bajajblue_button[disabled]{cursor:not-allowed;opacity:0.65;filter:alpha(opacity=65);-webkit-box-shadow:none;box-shadow:none;}
+input[type="submit"].grey_button, .grey_button, input[type="button"].grey_button, .grey_button:visited, .grey_button:hover,.grey-button, .grey-button:visited, .grey-button:hover{background:#8396a0;color:#fff !important;font-family:'DaxOT-Regular';font-size:12px;padding:7px 37px;transition:.5s;}
+.MFview:hover{color:#fff !important;}
+input[type="submit"].grey_button:hover, .grey_button:hover, input[type="button"].grey_button:hover,.grey-button:hover{background:#0681d3;color:#ffffff;}
+#home-content-slide .owl-buttons .owl-prev, #whatsnew-slide .owl-buttons .owl-prev, #quickoffers .owl-buttons .owl-prev, #Tabs-slide .owl-buttons .owl-prev, .owl-carousel .owl-buttons .owl-prev{width:11px;height:18px;background:url('../images-2013/left-carosuel.png')no-repeat center;position:absolute;left:-25px;top:38%;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+#home-content-slide .owl-buttons .owl-next, #whatsnew-slide .owl-buttons .owl-next, #quickoffers .owl-buttons .owl-next, #Tabs-slide .owl-buttons .owl-next, .owl-carousel .owl-buttons .owl-next{width:11px;height:18px;background:url('../images-2013/right-carosuel.png')no-repeat center;z-index:100;position:absolute;right:-20px;top:38%;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+#quickoffers{margin-top:20px;}
+.vd_div{margin-top:5px;}
+.personal_loan_missed{text-align:center;}
+.personal_loan_missed h1{color:#49b17e;font-size:42px;}
+.personal_loan_missed p{color:#666666;}
+.home_loan_missed{text-align:center;}
+.home_loan_missed h1{font-size:21px;color:#fd8888;margin:0;}
+.home_loan_missed p{color:#666666;}
+.hl_page_title h3{font-family:'DaxOT-Medium';font-size:20px;margin:0;}
+.quick_links{border-top:1px solid #d9d9d9;padding:10px 0 0;}
+.quick_links p{display:block;}
+.loan_applicant_details{margin-top:20px;}
+.loan_stats{background:#ffffff;padding:20px 5px;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.loan_stats h3{font-family:'DaxOT-Regular';color:#fea8a8;font-size:18px;padding:0 15px 10px;margin:0;}
+.loan_stats h3 strong{color:#fd8888;-webkit-font-smoothing:antialiased;}
+.loan_status{border-left:1px dotted #a6a6a6;}
+.loan_overview p{display:inline-block;min-width:140px;border-right:1px solid #d9d9d9;font-family:'DaxOT-Regular';color:#999999;font-size:16px;}
+.loan_overview.mf_overview p{min-width:150px;font-size:15px;}
+.loan_overview span{display:block;}
+.loan_overview h4{display:inline-block;font-family:'DaxOT-Bold';padding:0 10px;}
+.loan_overview.mf_overview h4{font-size:16px;}
+.loan_details{background:#ffffff;padding:0 0 20px 0;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.loan_details_stats{padding:20px 20px 0;}
+.refer_n_win_main .loan_details_stats{padding:20px 20px;}
+.loan_details_stats > p{font-family:'DaxOT-Regular';display:inline-block;min-width:205px;color:#6c6b6b;}
+.loan_details_stats .table-responsive{border:none;color:#6c6c6c;}
+.loan_details_stats .table-responsive thead, .table-responsive tbody tr th, .table-responsive thead tr th{background:#e4e5e7;}
+.table-responsive thead tr th{border-bottom:none !important;}
+.loan_details_stats .table-responsive table{margin:0;border:1px solid #cccccc;border-radius:0;}
+.panel-body ul{margin-left:20px;}
+.details_user_know p{border-right:1px solid #bfbfbf;color:#6c6b6b;margin:0;display:inline-block;min-width:135px;}
+#chargesTab .details_user_know p{min-width:235px;max-width:235px;}
+/***04-08-2017 loan details experia charges***/
+.details_user_know span{padding:0 15px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;}
+p.loan_detals_uk{color:#999999;font-size:12px;font-family:'DaxOT-Regular';}
+.details_user_know{display:block;margin:0 0 10px;}
+.loan_status p{color:#231f20;font-family:'DaxOT-Regular';margin-bottom:6px;}
+p.progress_detail{font-size:10px;text-align:right;color:#474747;}
+ul.home_loan_tabs{text-transform:uppercase;}
+.home_loan_tabs li{list-style:none;float:left;width:14.28%;text-align:Center;margin:0;font-family:'DaxOT-Medium';font-size:12px;color:#6c6b6b;cursor:pointer;}
+.home_loan_tabs li:hover, li.active{color:#0071bc;}
+.hl-tab-content, .closed-tab-content{display:none;}
+.hl-tab-content.active, .closed-tab-content.active{display:block;}
+.options{display:none;}
+.form-group .select2-container{width:100% !important;}
+/****** FIXED DEPOSIT DETAILS PAGE STYLES FROME HERE ******/
+.more_tabs{}
+.more_tabs .home_loan_tabs{padding:0 15px;}
+.more_tabs .home_loan_tabs li{width:auto;min-width:80px;float:none;}
+li.downloadform_tab{background:url('../images-2013/fdd/dwnforms.png') no-repeat top center;padding-top:60px;}
+li.downloadform_tab:hover, li.downloadform_tab.active{background:url('../images-2013/fdd/dwnforms-hover.png') no-repeat top center;padding-top:60px;}
+li.calculator_tab{background:url('../images-2013/fdd/calculators.png') no-repeat top center;padding-top:60px;}
+li.calculator_tab:hover, li.calculator_tab.active{background:url('../images-2013/fdd/calculators-hover.png') no-repeat top center;padding-top:60px;}
+li.DocVault_tab{background:url('../images-2013/home-loan/document-icon.png') no-repeat top center;padding-top:60px;}
+li.DocVault_tab:hover, li.DocVault_tab.active{background:url('../images-2013/home-loan/document-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.courier_tab{background:url('../images-2013/fdd/courier.png') no-repeat top center;padding-top:60px;}
+li.courier_tab:hover, li.courier_tab.active{background:url('../images-2013/fdd/courier-hover.png') no-repeat top center;padding-top:60px;}
+li.bank_tab{background:url('../images-2013/fdd/bankdet.png') no-repeat top center;padding-top:60px;}
+li.Form15gh_tab{background:url('../images-2013/fdd/form16-icon.png') no-repeat top center;padding-top:60px;}
+li.Form15gh_tab:hover, li.Form15gh_tab.active{background:url('../images-2013/fdd/form16-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.bank_tab:hover, li.bank_tab.active{background:url('../images-2013/fdd/bankdet-hover.png') no-repeat top center;padding-top:60px;}
+li.nom_details_tab{background:url('../images-2013/fdd/nominee.png') no-repeat top center;padding-top:60px;}
+li.nom_details_tab:hover, li.nom_details_tab.active{background:url('../images-2013/fdd/nominee-hover.png') no-repeat top center;padding-top:60px;}
+li.scheme_details_tab{background:url('../images-2013/fdd/scheme.png') no-repeat top center;padding-top:60px;}
+li.scheme_details_tab:hover, li.scheme_details_tab.active{background:url('../images-2013/fdd/scheme-hover.png') no-repeat top center;padding-top:60px;}
+li.renewdetails_tab{background:url('../images-2013/fdd/fd-Renewal.png') no-repeat top center;padding-top:60px;}
+li.renewdetails_tab:hover, li.renewdetails_tab.active{background:url('../images-2013/fdd/fd-Renewal-hover.png') no-repeat top center;padding-top:60px;}
+/********* CLOSED HOME LOAN STYLES FROM HERE ************/
+.inner_tabs li:hover, .inner_tabs li.active{color:#0071bc;}
+.closedhl_inner_tabs li{list-style:none;float:left;width:14.28%;text-align:Center;margin:0;font-family:'DaxOT-Medium';font-size:12px;color:#6c6b6b;text-transform:uppercase;cursor:pointer;}
+.closedhl_inner_tabs li:hover, li.active{color:#0071bc;}
+#panel1, #panel3{display:none;}
+li.loan_detals_tab{background:url('../images-2013/home-loan/loan-details-icon.png') no-repeat top center;padding-top:60px;}
+li.loan_detals_tab:hover, li.loan_detals_tab.active{background:url('../images-2013/home-loan/loan-details-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.emi_details_tab{background:url('../images-2013/home-loan/emi-details.png') no-repeat top center;padding-top:60px;}
+li.emi_details_tab:hover, li.emi_details_tab.active{background:url('../images-2013/home-loan/emi-details-hover.png') no-repeat top center;padding-top:60px;}
+li.EMICard_Deal_details_tab .new-EMICard_Deal_details_tab{background:url('../images-2013/VAS/emi-card/emideals_icon.png') no-repeat top center;padding-top:60px;height:84px;}
+li.EMICard_Deal_details_tab:hover .new-EMICard_Deal_details_tab, li.EMICard_Deal_details_tab.active .new-EMICard_Deal_details_tab{background:url('../images-2013/VAS/emi-card/emideals_icon-hover.png') no-repeat top center;padding-top:60px;color:#0071BC;}
+.EMICard_Deal_details_tab input[type="submit"]{border:none !important;color:#6C6B6B;min-width:0 !important;font-family:'DaxOT-Medium';font-size:12px;padding-left:0;}
+/*Added on 26-4-17 for emi card*/
+li.EMICard_Deal_details_tab .new-EMICard_Deal_details_tab{background: url('../images-2013/VAS/emi-card/emideals_icon.png') no-repeat top center;padding-top: 60px;height:84px;}
+li.EMICard_Deal_details_tab:hover .new-EMICard_Deal_details_tab, li.EMICard_Deal_details_tab.active .new-EMICard_Deal_details_tab {background: url('../images-2013/VAS/emi-card/emideals_icon-hover.png') no-repeat top center;padding-top: 60px;color:#0071BC;}
+.EMICard_Deal_details_tab input[type="submit"]{border:none !important; color: #6C6B6B; min-width: 0 !important; font-family: 'DaxOT-Medium'; font-size: 12px; padding-left: 0; }
+.PlatinumEmi {background-color: Transparent;background-image: url(/_layouts/15/Images/Experia/images-2013/VAS/EMI-Card_New.jpg);background-repeat: no-repeat;text-align: left;width: 233px;height: 139px;margin-left: 10px;padding: 40px 0 0 10px;}
+.CustName{font-family: Arial;font-size: 11px;font-weight: bold;color: #FFFFFF;padding-top: 0px;height: 20px;}
+.HRuppes{font-family: Arial;font-size: 11px;color: #FFFFFF;font-weight: bold;padding-bottom:5px;}
+.PlatinumEmi,.btn grey_button {margin-left:inherit;}
+/* added on 27-4-17 for emicard*/
+li.charge_details_tab{background:url('../images-2013/home-loan/charge-details-icon.png') no-repeat top center;padding-top:60px;}
+li.charge_details_tab:hover, li.charge_details_tab.active{background:url('../images-2013/home-loan/charge-details-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.loan_statement_tab{background:url('../images-2013/home-loan/loan-statement-icon.png') no-repeat top center;padding-top:60px;}
+li.loan_statement_tab:hover, li.loan_statement_tab.active{background:url('../images-2013/home-loan/loan-statement-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.intrest_cert_tab .new_intrest_cert_tab{background:url('../images-2013/home-loan/loan-statement-icon.png') no-repeat top center;padding-top:60px;height:84px;border:none !important;font-family:'DaxOT-Medium';font-size:12px;color:#6c6b6b;}
+li.intrest_cert_tab:hover .new_intrest_cert_tab, li.intrest_cert_tab.active .new_intrest_cert_tab{background:url('../images-2013/home-loan/loan-statement-icon-hover.png') no-repeat top center;padding-top:60px;height:84px;border:none !important;color:#0071bc;}
+li.repayment_tab{background:url('../images-2013/home-loan/repayment-icon.png') no-repeat top center;padding-top:60px;}
+li.repayment_tab:hover, li.repayment_tab.active{background:url('../images-2013/home-loan/repayment-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.document_vault_tab{background:url('../images-2013/home-loan/document-icon.png') no-repeat top center;padding-top:60px;}
+li.document_vault_tab:hover, li.document_vault_tab.active{background:url('../images-2013/home-loan/document-icon-hover.png') no-repeat top center;padding-top:60px;}
+/**** switchfee styles ****/
+li.drawdown_tab{background:url('../images-2013/home-loan/drawdown-icon.png') no-repeat top center;padding-top:60px;}
+li.drawdown_tab:hover, li.drawdown_tab.active{background:url('../images-2013/home-loan/drawdown-icon-hover.png') no-repeat top center;padding-top:60px;}
+.home_loan_header_style{background:#8199a5;padding:10px 20px;border-radius:4px 4px 0 0;}
+.hl-tab-content .home_loan_header_style{color:#fff;}
+.drawdown_selection .select2-container{min-width:278px;color:#CCC;}
+ul.loan_statements{color:#6c6b6b;font-family:'DaxOT-Regular';margin:0 0 0 20px;}
+.deposit_details{padding:20px 0;clear:both;margin:15px;border:1px solid #e4e4e4;}
+.fixeddeposit_box{border-right:1px solid #d9d9d9;}
+.event_calender{padding:0;}
+.calender_header{padding:10px 0;}
+.calender_body{border-bottom:1px solid #e4e4e4;border-left:1px solid #e4e4e4;border-right:1px solid #e4e4e4;}
+h3.event_title{font-size:14px;display:inline-block;margin:0;font-family:'DaxOT-Regular';}
+.calender_actions li a{background:none !important;width:100% !important;vertical-align:top !important;height:auto !important;}
+.event_add{background:url(../images-2013/home-loan/event-time.png) no-repeat center center;width:16px;height:15px;display:inline-block;vertical-align:middle;}
+.event_add:hover{background:url(../images-2013/home-loan/event-time-hover.png) no-repeat center center;}
+.event_settings li.event_actions a{background:url('../images-2013/home-loan/schedule-event.png')no-repeat center center;width:16px;height:15px;display:inline-block;vertical-align:middle;}
+.event_settings li.event_actions.open a{background:url('../images-2013/home-loan/schedule-event-hover.png')no-repeat center center;}
+.single_event{padding:10px;border-bottom:1px solid #d9d9d9;}
+p.event_date{padding:5px 10px;background:#FD8888;color:#ffffff;display:inline-block;min-width:auto;border-radius:4px;margin:0;}
+.list_events{padding-right:0;}
+.list_events h2{margin:0;text-align:center;color:#fd8888;font-size:20px;line-height:38px;border:1px solid #fd8888;border-radius:4px 4px 0 0;}
+.loan_statements li{list-style-type:decimal;margin:0 0 15px;}
+.event_settings ul{float:left;margin:0;}
+.event_settings li{list-style:none;float:left;padding:0 5px;line-height:30px;border-right:1px solid #e4e4e4;position:relative;}
+.event_settings li:last-child{border-right:0;}
+.event_settings li a{cursor:pointer;}
+.queryupload{border:1px solid #CCCCCC;padding:5px;width:100%;border-radius:4px;}
+.queryupload::-webkit-file-upload-button{visibility:hidden;}
+.queryupload::before{content:'Choose file';display:inline-block;background:#cccccc;padding:3px 8px;outline:none;white-space:nowrap;-webkit-user-select:none;cursor:pointer;}
+.queryupload:hover::before{border-color:black;}
+.drawdown_userknw p{border-bottom:1px solid #d9d9d9;display:block;padding-bottom:10px;}
+.sidebar_widgets{margin-top:50px;padding-left:20px;}
+.sidebar_widget{float:left;width:100%;margin-bottom:7px;}
+.preapproved_off{background:#ffffff;padding:15px 0;webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);border-radius:0 0 4px 4px;}
+.calc_widget{background:#0071bd;padding:10px;border-top:1px solid #e4e4e4;border-right:1px solid #e4e4e4;border-left:1px solid #e4e4e4;border-radius:4px 4px 0 0;}
+.calc_widget h4{margin:0;font-family:'DaxOT-Regular';font-size:16px;color:#ffffff;}
+.calc_widget h4 span{margin-right:5px;}
+.calc_dropdown{padding:20px 5px;border-bottom:1px solid #e4e4e4;border-left:1px solid #e4e4e4;border-right:1px solid #e4e4e4;background:#ffffff;float:left;width:100%;max-height:130px;overflow:auto;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.calc_dropdown ul{float:left;width:100%;}
+.calc_dropdown ul li{list-style:none;width:33.3%;float:left;text-align:Center;min-height:126px;}
+.calc_dropdown ul li a{font-size:12px;color:#474747;font-family:'DaxOT-Regular';}
+.calc_dropdown ul li a img{margin-bottom:5px;display:block;margin:0 auto 10px;}
+.calc_dropdown::-webkit-scrollbar{width:4px;height:8px;}
+.calc_dropdown::-webkit-scrollbar-button:start:decrement, .calc_dropdown::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+.calc_dropdown::-webkit-scrollbar-track-piece{background-color:#FAFAFA;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+.calc_dropdown::-webkit-scrollbar-thumb:vertical{height:20px;background-color:#aab3c2;-webkit-border-radius:8px;}
+.calc_dropdown::-webkit-scrollbar-thumb:horizontal{width:20px;background-color:#aab3c2;-webkit-border-radius:8px;}
+.estatement_widget{background:#ffffff;padding:0;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);border-radius:4px;}
+.estatement_widget a{color:#231f20;padding:13px 10px;display:block;}
+.estatement_widget h4{margin:0;font-family:'DaxOT-Regular';font-size:16px;}
+.estatement_widget h4 span{margin-right:5px;}
+.faq_widget{background:#0071bd;padding:15px 10px;border-top:1px solid #e4e4e4;border-right:1px solid #e4e4e4;border-left:1px solid #e4e4e4;float:left;width:100%;border-radius:4px;}
+.faq_widget.open{border-radius:4px 4px 0 0;}
+.faq_sidebar{float:left;width:100%;margin-bottom:7px;position:relative;cursor:pointer;}
+.faq_widget h4{margin:0;font-family:'DaxOT-Regular';font-size:16px;color:#ffffff;}
+.faq_widget.active.open h4:after{transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);transition:.5s all ease;-webkit-transition:.5s all easze;-moz-transition:.5s all ease;}
+.faq_widget h4:after{content:'';background:url('../images-2013/faq-drop.png')no-repeat;width:11px;height:7px;position:absolute;right:15px;top:25px;transition:.5s all ease;-webkit-transition:.5s all easze;-moz-transition:.5s all ease;}
+.faq_widget h4 span{margin-right:5px;}
+.faq_dropdown{padding:0;border-bottom:1px solid #e4e4e4;border-left:1px solid #e4e4e4;border-right:1px solid #e4e4e4;background:#ffffff;float:left;width:100%;overflow:auto;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);height:205px;display:none;}
+.faq_dropdown ul{margin:0;}
+.faq_dropdown ul li{list-style:none;padding:10px 15px;font-family:'DaxOT-Medium';border-bottom:1px solid #d1d1d1;}
+.faq_dropdown li a{color:#666666;}
+a.view_faq_all{font-size:12px;float:right;font-family:'DaxOT-Medium';padding:10px;}
+.faq_dropdown #custom-search-input{padding:10px;}
+#custom-search-input .input-group{border:1px solid #cccccc;border-radius:4px;}
+.faq_dropdown #custom-search-input input{height:33px;font-size:14px;border:none;box-shadow:none;font-family:'DaxOT-Regular';}
+.faq_dropdown span button, .faq_dropdown span button:hover{padding:2px 13px;height:33px;background:none;border:none;vertical-align:-webkit-baseline-middle;}
+.calender_actions{top:inherit;right:-11px;left:inherit;width:160px;padding:0;font-family:'DaxOT-Regular';}
+.calender_actions li{border:0;border-bottom:1px solid #e1e4e4;width:100%;font-size:12px;padding:0;}
+.calender_actions li:last-child{border-bottom:0;}
+.calender_actions li a{padding:7px;}
+.calender_actions li:hover a{color:#0071bc;}
+.calender_actions li a span{margin-right:5px;}
+ul.calender_actions:before{border-color:rgba(194, 225, 245, 0);border-bottom-color:#B9C0C2;border-width:8px;margin-left:-32px;border-bottom:8px solid rgba(0, 0, 0, 0.2);border-left:8px solid transparent;border-right:8px solid transparent;content:"";display:inline-block;position:absolute;right:9%;top:-16px;}
+ul.calender_actions:after{border-color:rgba(136, 183, 213, 0);border-bottom-color:#FFFFFF;border-width:6px;margin-left:-30px;}
+.calender_actions:after, .calender_actions:before{bottom:100%;right:10%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}
+/*CAR INSURANCE PAGE STYLES*/
+.car_insurance{padding:15px 0;}
+.carinsur_main_card{background:#ffffff;padding:0 0 15px 0;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);border-radius:4px;}
+.carinsur_infograph{padding:0 20px 20px;border-bottom:1px dashed #d9d9d9;}
+.carinsu_stats{margin-top:20px;float:left;width:100%;clear:both;}
+.cinsurance_summary{border:1px solid #d9d9d9;width:48%;margin-right:11px;padding:0;min-height:286px;}
+.cinsurance_summary h4{margin:0;padding:10px 15px;border-bottom:1px solid #e9e9e9;font-family:'DaxOT-Regular';font-size:16px;}
+.cinsurance_details{border:1px solid #d9d9d9;width:48%;margin-left:11px;padding:0;min-height:255px;}
+.cinsurance_details h4{margin:0;padding:10px 15px;border-bottom:1px solid #e9e9e9;font-family:'DaxOT-Regular';font-size:16px;}
+.carinsu_detials{display:block;}
+.carinsu_detials p{font-family:'DaxOT-Regular';display:inline-block;min-width:130px;border-right:1px solid #bfbfbf;color:#6c6b6b;margin-bottom:5px;font-size:12px;}
+.carinsu_detials span{padding:0 0 0 12px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;font-size:12px;}
+.carinsu_box_details{padding:15px;}
+.nominee_section{margin:20px 0;}
+.nominee_details{border:1px solid #d9d9d9;padding:0;}
+.nominee_details h4{margin:0;padding:10px 15px;border-bottom:1px solid #e9e9e9;font-family:'DaxOT-Regular';font-size:16px;}
+/****** MUTUAL FUND PAGE STYLES FROM HERE******/
+.mutual_fund{padding:15px 15px 15px 0;}
+.mutualf_grow h1{margin:0;color:#49b17e;font-family:'DaxOT-Bold';font-size:40px;}
+.mutualf_grow p{color:#999999;font-family:'DaxOT-Regular';}
+.mutualfund_info{padding:5px 0;float:left;width:100%;border-bottom:1px dashed #d9d9d9;}
+.mutfund-type{margin:0 15px;border:1px solid #D9D9D9;padding:20px 0;}
+.mfund_type{width:47%;margin:0 15px 0 0;border-right:1px solid #d9d9d9;}
+.mfund_category{width:47%;margin:0 0 0 15px;}
+.mfund_viewdetails button{margin:20px 0 0 15px;}
+.mutual_fund_graphs{margin-top:20px;clear:both;}
+.mutual_fund_graphs canvas{width:100% !important;}
+/****** E-STATEMENT PAGE STYLES FROM HERE******/
+.estatement_right{background:#ffffff;margin-top:15px;padding:20px 15px;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.estatement_tabs{text-align:center;}
+.estatement_tabs ul{display:inline-block;border:1px solid #adadad;border-radius:4px;margin-bottom:20px;}
+.estatement_tabs ul li a{padding:6px 30px;border:0;margin:0;color:#adadad;border-radius:0;}
+.estatement_tabs ul li{margin:0;}
+.estatement_tabs ul li.active a{background:#adadad;color:#ffffff;border:0;border-radius:4px 0 0 4px;}
+.estatement_tabs ul li.active a:hover{background:#adadad;color:#ffffff;border:0;border-radius:0;}
+.homeloan_statement{border:1px solid #d9d9d9;float:left;width:100%;margin-bottom:20px;}
+.homeloan_statement label{font-family:'DaxOT-Regular';}
+.homeloan_statement h3{font-family:'DaxOT-Medium';font-size:20px;vertical-align:middle;margin:0;line-height:40px;}
+.homeloan_statement p{font-family:'DaxOT-Regular';}
+.tab-content{float:left;width:100%;}
+.tab-pane{float:left;width:100%;}
+.section_block{padding:10px 0;float:left;width:100%;border-bottom:1px solid #e9e9e9;}
+.estatement_pro_details{float:left;width:100%;}
+.estatement_pro_details select.form-control{display:inline-block;height:30px;padding:0;margin-bottom:15px;}
+.statement_details{border-right:1px solid #d9d9d9;}
+.statement_choose{font-family:'DaxOT-Regular';padding:0 5px;}
+.statement_option .radio{display:inline-block;margin-right:10px;}
+/****** MY SCHEDULER PAGE STYLES FROM HERE ******/
+/****** PAYMENTS PAGES STYLES FROM HERE ******/
+.personal_loan_card{background:#ffffff;padding:15px 0;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);border-radius:4px;margin-bottom:20px;}
+.offline_payment_card{background:#ffffff;padding:15px 0;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);border-radius:0 0 4px 4px;margin-bottom:20px;}
+.personal_loan{padding:15px 0;}
+.personal_loan_header{padding:0 15px 15px;border-bottom:1px dashed #d9d9d9;}
+.ploan_sec_header h2{margin:0;font-family:'DaxOT-Medium';font-size:20px;line-height:41px;}
+.personal_details{margin-top:20px;margin-bottom:20px;}
+.personal_loan_stats{border-right:1px solid #d9d9d9;}
+.personal_loan_detials{display:block;}
+.personal_loan_detials p{font-family:'DaxOT-Regular';display:inline-block;min-width:135px;border-right:1px solid #bfbfbf;color:#6c6b6b;font-size:14px;}
+.personal_loan_detials span{padding:0 0 0 12px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;font-size:14px;}
+.choose_payments{text-align:center;color:#999999;margin:5px 0;}
+.ploan_payment_details{font-family:'DaxOT-Regular';padding-left:20px;/* border-left:1px solid #d9d9d9;*/}
+.ploan_payment_details input[type="submit"]{margin-top:20px;margin-left:0 !important;}
+.loan_confirm_details{font-family:'DaxOT-Regular';padding-left:20px;border-left:1px solid #D9D9D9;}
+.payment_after_proceed{padding-top:20px;border-top:1px dashed #d9d9d9;}
+.payment_roi{font-family:'DaxOT-Regular';display:block;}
+.loan_payment_stat{font-family:'DaxOT-Regular';display:block;margin-top:25px;}
+.all_payments{/* margin-top:50px;*/ margin-bottom:50px;}
+.payments_type{background:#ffffff;border-radius:4px;margin:10px;padding:0;/* width:31.4%;*/font-family:'DaxOT-Regular';padding-bottom:30px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+#owl-demo .item{margin:10px;}
+#owl-demo .item img{height:auto;}
+.all_payments div.payments_type:first-child{margin-left:0;}
+.all_payments div.payments_type:last-child{margin-right:0;}
+.payments_type h2{font-family:'DaxOT-Medium';font-size:22px;color:#6c6b6b;margin:0;padding:20px 0;border-bottom:1px dashed #d9d9d9;}
+.types_infograph{padding:30px;border-bottom:1px solid #d9d9d9;}
+.types_infograph h4{color:#6c6b6b;margin-top:30px;}
+.payments_points{padding:30px 30px 0 65px;}
+.payments_points ul{text-align:left;min-height:100px;}
+.payments_points ul li{list-style:url(../images-2013/payments-points.png);margin-bottom:15px;color:#6c6b6b;}
+.offline_pay_header h2{margin:0;font-family:'DaxOT-Medium';font-size:20px;line-height:53px;}
+.offline_pay_info{font-family:'DaxOT-Regular';border-bottom:1px dashed #d9d9d9;color:#6c6b6b;padding:15px;}
+.PaymentDtls{padding:0 30px;}
+.PaymentDtls h3{margin-top:0;}
+.DistanceText{color:#0071BD;font-weight:bold;}
+.select_location{font-family:'DaxOT-Regular';color:#6c6b6b;padding:15px;}
+.select_location div div{padding:0;}
+.offline_locations{background:#ffffff;padding:20px;clear:both;}
+.offline_locations iframe{width:100%;}
+.advance_payment_info{font-family:'DaxOT-Regular';border-bottom:1px dashed #d9d9d9;color:#6c6b6b;padding:0 15px 10px;}
+.select_amount_pay{font-family:'DaxOT-Regular';color:#6c6b6b;padding:15px;border-bottom:1px solid #d9d9d9;}
+.select_contact_pay{font-family:'DaxOT-Regular';color:#6c6b6b;padding:15px;}
+.advance_payment span{display:block;}
+.advance_payment p{display:inline-block;min-width:170px;border-right:1px solid #d9d9d9;font-family:'DaxOT-Regular';color:#999999;font-size:16px;}
+.advance_payment h4{display:inline-block;font-family:'DaxOT-Bold';padding:0 10px;}
+/*.payment_inner{margin-top:50px;}*/
+.all_locations{margin-top:20px;}
+.all_locations div h4{background:#98a6bb;padding:10px 20px;margin:0;color:#ffffff;}
+.all_locations div h4 span{vertical-align:text-top;}
+.all_locations div.single_location{padding-right:0;}
+.all_locations div.single_location:last-child{padding-right:15px;}
+.location_address{padding:20px;border:1px solid #e4e4e4;border-top:0;font-family:'DaxOT-Regular';color:#6c6b6b;}
+.success_status_head h2{color:#707782;font-size:22px;font-family:'DaxOT-Medium';margin-bottom:0;}
+.payement_info{font-family:'DaxOT-Regular';color:#6c6b6b;padding:15px 15px 10px;}
+.transaction_details{font-family:'DaxOT-Regular';color:#6c6b6b;padding:15px;border-top:1px dashed #d9d9d9;}
+.payment_trans_details{display:block;text-align:center;width:100%;float:left;}
+/**** receipt page 7-5-2016 ****/
+.payment_trans_details p{font-family:'DaxOT-Regular';display:inline-block;min-width:120px;border-right:1px solid #bfbfbf;color:#6c6b6b;font-size:14px;text-align:right;}
+/**** receipt page 7-5-2016 ****/
+.payment_trans_details.paymentDtls p{min-width:98px;border-right:none;}
+.payment_trans_details.paymentDtls span{border-left:none;padding-left:6px;}
+.payment_trans_details.paymentDtls span span{border-left:1px solid #bfbfbf;}
+.payement_info h5{font-size:16px;margin-top:0;}
+.payement_info p{font-size:13px;}
+.payment_trans_details span{padding:0 0 0 12px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;font-size:14px;text-align:left;}
+/**** receipt page 7-5-2016 ****/
+.success_text{color:#349b17 !important;}
+.unsuccess_text{color:#fd8888 !important;}
+.payment_offers_section{clear:both;}
+.transaction_details h5{text-align:center;margin-bottom:15px;font-size:16px;}
+.proceed_actions{padding-top:15px;clear:both;}
+.proceed_actions button{margin-right:20px;}
+.payment_offer{background:#ffffff;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.Payment_offer_block{/*float:left;*/ margin-bottom:10px;}
+.payment_offer img{width:100%;padding:10px 10px 0;}
+.payment_offer_info{padding:20px 55px;}
+.payment_offer_info p{font-family:'DaxOT-Regular';color:#6c6b6b;margin-bottom:15px;}
+.payment_offer_info h3{margin-top:0;font-family:'DaxOT-Regular';color:#6c6b6b;margin-bottom:15px;}
+.ApplynowPopup.modal{top:15%;}
+.docVaultFiles{float:left;padding:10px 0;border-top:1px solid #CCC;width:100%;}
+.docVaultFiles .docVaultFilesLeft{float:left;padding:10px 20px 10px 0;}
+.docVaultFiles .docVaultFilesLeft img{vertical-align:middle;text-align:center;}
+.docVaultFilesRight{float:left;}
+.docVaultFilesRight h4{margin:5px 0;color:#0071bc;font-weight:bold;}
+.ApplynowPopup .modal-header{padding-bottom:0px;}
+.ApplynowPopup .modal-header h4{color:#0071BC;border-bottom:1px solid #0071BC;padding-bottom:10px;margin-top:0;font-weight:bold;}
+.ApplynowPopup input[type="checkbox"], .ApplynowPopup input[type="radio"]{margin:0 10px 0 0;}
+.DesignerDetails tr td{margin-bottom:10px;float:left;width:100%;}
+.emi_missed{font-family:'DaxOT-Regular';padding-left:20px;color:#6c6b6b;}
+.emi_missed h2{color:#0071bc;margin-top:10px;}
+.owl-next{background:url('../images-2013/next.png');width:40px;height:40px;position:absolute;right:-40px;top:40%;}
+.owl-prev{background:url('../images-2013/previous.png');width:40px;height:40px;position:absolute;left:-40px;top:40%;}
+.confirm_contact{padding:20px 15px;border-top:1px dashed #e4e4e4;margin-top:20px;font-family:'DaxOT-Regular';color:#6c6b6b;}
+.confirm_contact form .form-group{width:40%;display:inline-block;margin-right:20px;}
+.confirm_contact.abled .form-group{width:40%;display:inline-block;margin-right:20px;}
+.payment_statement_detials{display:block;}
+.payment_statement_detials p{font-family:'DaxOT-Regular';display:inline-block;min-width:170px;border-right:1px solid #bfbfbf;color:#6c6b6b;font-size:14px;margin-bottom:7px;}
+.payment_statement_detials span{padding:0 0 0 12px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;font-size:14px;}
+.statement_type{font-family:'DaxOT-Regular';padding-left:20px;border-left:1px solid #d9d9d9;}
+.payment_progress p{text-align:center;color:#6c6b6b;clear:both;}
+.payment_confirm_details{font-family:'DaxOT-Regular';border-left:1px solid #D9D9D9;}
+/****** OUR PRODUCTS PAGE STYLES FROM HERE ******/
+.bajaj_all_products{margin-top:10px;}
+.bajaj_all_products h3{font-family:'DaxOT-Medium';font-size:20px;margin:20px 0 10px;}
+.featured_product{background:#ffffff;text-align:center;min-height:230px;padding:10px;position:relative;border-right:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;}
+.featured_product span{position:absolute;right:0;top:0;background:url('../images-2013/products/grey-back.png');color:#ffffff;padding:3px 5px;font-family:'DaxOT-Regular';width:46px;height:46px;text-align:right;font-size:16px;}
+.featured_product:hover span{background:url('../images-2013/products/blue-back.png');}
+.featured_product div{margin:20px;}
+ /*.featured_product div img{min-height:60px;}*/
+.featured_product h2{font-size:18px;font-family:'DaxOT-Regular';color:#6c6b6b;margin:15px 0 20px;min-height:35px;}
+.show_less{margin-top:20px;text-align:right;font-family:'DaxOT-Regular';color:#0071bc;font-size:18px;margin-bottom:50px;}
+/****** EMI CARD PAGE STYLES FROME HERE ******/
+.emicard_main_section{margin-top:15px;margin-bottom:15px;}
+ul.emi_card_tabs{text-transform:uppercase;}
+.emi_card_types h3{font-family:'DaxOT-Medium';font-size:20px;}
+.emi_privilege_card{padding:15px 0;}
+.emi_privilege_actions a.btn{margin-right:20px;}
+ul.emi_card_tabs li{list-style:none;float:left;width:16.5%;text-align:Center;margin:0;font-family:'DaxOT-Medium';font-size:12px;color:#6c6b6b;cursor:pointer;}
+.emi_card_tabs li:hover, li.active{color:#0071bc;}
+.emi_card_details{display:block;margin:0 0 6px;}
+.emi_card_details p{border-right:1px solid #bfbfbf;color:#6c6b6b;display:inline-block;margin:0;min-width:130px;}
+.emi_card_details > span{padding:0 0 0 15px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;max-width:135px;}
+.single_card_det{margin-top:20px;}
+p.mycard{margin-top:20px;display:block;}
+.emi_delivery_status{display:block;margin:0 0 7px;}
+.emi_delivery_status p{border-right:1px solid #bfbfbf;color:#6c6b6b;margin:0;display:inline-block;min-width:160px;}
+.emi_delivery_status > span{padding:0 15px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;}
+.dealer_compass_map{padding-left:0;border-right:1px solid #d9d9d9;}
+.dealer_compass_map iframe{width:100%;height:280px;}
+.location_search_results{border-top:1px solid #d9d9d9;margin-top:20px;padding:0 5px;}
+.location_search_results h4{color:#0071bc;font-family:'DaxOT-Medium';}
+.dealer_single_location h5{color:#6c6b6b;font-family:'DaxOT-Medium';}
+.dealer_single_location{margin-bottom:20px;}
+.dealer_single_location p{display:block;}
+.emi_main_banner{background:url('../images-2013/VAS/banner.png')no-repeat left center;min-height:170px;margin-top:15px;}
+.banner_content h4{color:#ffffff;font-size:16px;line-height:18px;}
+.banner_content p{font-size:12px;color:#ffffff;}
+.vas_banner_button{margin:15px 0;}
+.emi_card{/*padding:15px 0;*/}
+.emi_card_dos h4{color:#6c6b6b;}
+.emi_card_dos ul li{list-style:none;width:100%;display:inline-block;float:left;border:1px solid #e4e4e4;margin:10px 10px 10px 0;padding:10px;border-radius:4px;}
+.emi_card_dos ul li:nth-child(even){margin-right:0;}
+.emi_card_dos ul li:nth-child(odd){margin-left:0;}
+.emi_card_donts ul li{list-style:none;width:100%;display:inline-block;float:left;border:1px solid #e4e4e4;margin:10px 10px 10px 0;padding:10px;border-radius:4px;}
+.emi_card_donts ul li:nth-child(even){margin-right:0;}
+.emi_card_donts ul li:nth-child(odd){margin-left:0;}
+.emi_card_donts h4{color:#6c6b6b;margin:20px 0;}
+.emi_pin_change{padding-left:0;}
+.emi_generate_otp{padding-right:0;border-left:1px solid #d9d9d9;}
+li.emi_card_detail_tab{background:url('../images-2013/VAS/emi-card/emi-card-icon.png') no-repeat top center;padding-top:60px;}
+li.emi_card_detail_tab:hover, li.emi_card_detail_tab.active{background:url('../images-2013/VAS/emi-card/emi-card-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.transaction_details_tab{background:url('../images-2013/VAS/emi-card/transaction-details-icon.png') no-repeat top center;padding-top:60px;}
+li.transaction_details_tab:hover, li.transaction_details_tab.active{background:url('../images-2013/VAS/emi-card/transaction-details-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.delivery_status_tab{background:url('../images-2013/VAS/emi-card/delivery-status-icon.png') no-repeat top center;padding-top:60px;}
+li.delivery_status_tab:hover, li.delivery_status_tab.active{background:url('../images-2013/VAS/emi-card/delivery-status-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.change_pin_tab{background:url('../images-2013/VAS/emi-card/change-pin-icon.png') no-repeat top center;padding-top:60px;}
+li.change_pin_tab:hover, li.change_pin_tab.active{background:url('../images-2013/VAS/emi-card/change-pin-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.block_unblock_tab{background:url('../images-2013/VAS/emi-card/block-unblock-icon.png') no-repeat top center;padding-top:60px;}
+li.block_unblock_tab:hover, li.block_unblock_tab.active{background:url('../images-2013/VAS/emi-card/block-unblock-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.dealer_compass_tab{background:url('../images-2013/VAS/emi-card/dealer-compass-icon.png') no-repeat top center;padding-top:60px;}
+li.dealer_compass_tab:hover, li.dealer_compass_tab.active{background:url('../images-2013/VAS/emi-card/dealer-compass-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.dos_donts_tab{background:url('../images-2013/VAS/emi-card/dos-donts-icon.png') no-repeat top center;padding-top:60px;}
+li.dos_donts_tab:hover, li.dos_donts_tab.active{background:url('../images-2013/VAS/emi-card/dos-donts-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.faqs_tab{background:url('../images-2013/VAS/emi-card/emi-faq-icon.png') no-repeat top center;padding-top:60px;}
+li.faqs_tab:hover, li.faqs_tab.active{background:url('../images-2013/VAS/emi-card/emi-faq-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.cards_fees_tab{background:url('../images-2013/VAS/emi-card/cards-fee.png') no-repeat top center;padding-top:60px;}
+li.cards_fees_tab:hover, li.cards_fees_tab.active{background:url('../images-2013/VAS/emi-card/cards-fees-hover.png') no-repeat top center;padding-top:60px;}
+li.cards_apply_tab{background:url('../images-2013/VAS/emi-card/cards-apply.png') no-repeat top center;padding-top:60px;}
+li.cards_apply_tab:hover, li.cards_apply_tab.active{background:url('../images-2013/VAS/emi-card/cards-apply-hover.png') no-repeat top center;padding-top:60px;}
+/*emifetaures*/
+li.EMI_Feature_benifits_tab{background:url('../images-2013/home-loan/loan-details-icon.png') no-repeat top center;padding-top:60px;}
+li.EMI_Feature_benifits_tab:hover, li.EMI_Feature_benifits_tab.active{background:url('../images-2013/home-loan/loan-details-icon-hover.png') no-repeat top center;padding-top:60px;}
+li.EMI_Charges_tab{background:url('../images-2013/home-loan/emi-details.png') no-repeat top center;padding-top:60px;}
+li.EMI_Charges_tab:hover, li.EMI_Charges_tab.active{background:url('../images-2013/home-loan/emi-details-hover.png') no-repeat top center;padding-top:60px;}
+li.EMI_CALLME_tab{background:url('../images-2013/home-loan/callg.png') no-repeat top center;padding-top:60px;}
+li.EMI_CALLME_tab:hover, li.EMI_CALLME_tab.active{background:url('../images-2013/home-loan/callb.png') no-repeat top center;padding-top:60px;}
+/*li.EMI_CALLME_tab .new-EMI_CALLME_tab{background:url('../images-2013/home-loan/callg.png') no-repeat top center;padding-top:60px;height:84px;border:none !important;}
+li.EMI_CALLME_tab:hover .new-EMI_CALLME_tab, li.EMI_CALLME_tab.active .new-EMI_CALLME_tab{background:url('../images-2013/home-loan/callb.png') no-repeat top center;padding-top:60px;color:#0071BC;border:none !important;}
+*/
+li.EMI_ApplyNow_tab .new-EMI_ApplyNow_tab{background:url('../images-2013/home-loan/applyg.png') no-repeat top center;padding-top:60px;height:84px;border:none !important;}
+li.EMI_ApplyNow_tab:hover .new-EMI_ApplyNow_tab, li.EMI_ApplyNow_tab.active .new-EMI_ApplyNow_tab{background:url('../images-2013/home-loan/applyb.png') no-repeat top center;padding-top:60px;color:#0071BC;border:none !important;}
+/*.new-EMI_CALLME_tab*/
+.EMI_ApplyNow_tab input[type="submit"]{border:none !important;/*background:none !important;*/ color:#6C6B6B;min-width:0 !important;font-family:'DaxOT-Medium';font-size:12px;padding-left:0;}
+/*end emi features*/
+.changepin_footer{padding:10px 20px 20px;text-align:center;}
+.changepin_header{padding:10px;}
+.card_confirm_form a.btn{margin-right:20px;}
+.review_details{margin:20px 0;}
+.review_proceed_actions a.btn{margin-right:20px;}
+.panel-heading [data-toggle="collapse"]:after{content:url('../images-2013/select-dropdown-up.png');float:right;-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+.panel-heading [data-toggle="collapse"].collapsed:after{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);}
+.panel-title a{display:block;}
+.con_det_header{margin-bottom:20px;border-bottom:1px solid #e4e4e4;}
+.con_det_header h5{margin:20px 0;}
+.conf_det_osummary{border-bottom:1px solid #e4e4e4;padding-bottom:20px;}
+.order_summary_details{background:#f6f5f5;display:inline-block;padding:10px;border-radius:4px;border:1px solid #c4c4c4;}
+.confirm_address_det{margin:15px 0;}
+/****** FIXED DEPOSIT PAGE STYLES FROME HERE ******/
+.fd_main_banner{background:url('../images-2013/VAS/fixed-deposit-banner.png')no-repeat left center;min-height:176px;margin-top:15px;}
+.fd_banner_content h4{color:#ffffff;font-size:18px;line-height:24px;}
+.vas_fd_banner_button{margin:30px 0 0;}
+.fixed_deposit_tabs{text-transform:uppercase;}
+ul.fixed_deposit_tabs li{list-style:none;float:left;width:16.5%;text-align:Center;margin:0;font-family:'DaxOT-Medium';font-size:12px;color:#6c6b6b;cursor:pointer;min-height:100px;padding-left:5px;padding-right:5px;}
+ul.FDTabs.fixed_deposit_tabs li{width:100%;margin:0 auto;}
+.fd_eligibility li{margin-left:20px;color:#6c6b6b;}
+.fd_features_benfits{margin-left:20px;color:#6c6b6b;}
+/*16-05-2018*/
+/*.vas_fd_callme{background:url('../images-2013/VAS/fixed-deposit/call-me.png') no-repeat top center;padding-top:60px;}
+li.vas_fd_callme:hover, li.vas_fd_callme.active{background:url('../images-2013/VAS/fixed-deposit/call-me hover.png')no-repeat top center;}*/
+/*16-05-2018*/
+.vas_fd_applynow{background:url('../images-2013/VAS/fixed-deposit/fd-apply-now.png') no-repeat top center;padding-top:60px;}
+li.vas_fd_applynow:hover, li.vas_fd_applynow.active{background:url('../images-2013/VAS/fixed-deposit/fd-apply-now-hover.png')no-repeat top center;}
+.vas_fd_features{background:url('../images-2013/VAS/fixed-deposit/fd-features-benefit.png')no-repeat top center;padding-top:60px;}
+li.vas_fd_features:hover, li.vas_fd_features.active{background:url('../images-2013/VAS/fixed-deposit/fd-features-benefit-hover.png')no-repeat top center;}
+.vas_fd_elibile{background:url('../images-2013/VAS/fixed-deposit/fd-eligibility-doc.png')no-repeat top center;padding-top:60px;}
+li.vas_fd_elibile:hover, li.vas_fd_elibile.active{background:url('../images-2013/VAS/fixed-deposit/fd-eligibility-doc-hover.png')no-repeat top center;}
+.vas_fd_fees{background:url('../images-2013/VAS/fixed-deposit/fd-fees.png')no-repeat top center;padding-top:60px;}
+li.vas_fd_fees:hover, li.vas_fd_fees.active{background:url('../images-2013/VAS/fixed-deposit/fd-fees-hover.png')no-repeat top center;}
+.vas_fd_howapply{background:url('../images-2013/VAS/fixed-deposit/fd-how-apply.png')no-repeat top center;padding-top:60px;}
+li.vas_fd_howapply:hover, li.vas_fd_howapply.active{background:url('../images-2013/VAS/fixed-deposit/fd-how-apply-hover.png')no-repeat top center;}
+.vas_fd_terms{background:url('../images-2013/VAS/fixed-deposit/fd-terms.png')no-repeat top center;padding-top:60px;}
+li.vas_fd_terms:hover, li.vas_fd_terms.active{background:url('../images-2013/VAS/fixed-deposit/fd-terms-hover.png')no-repeat top center;}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-right:1px solid #ccc;border-left:none;}
+.table > thead > tr > th:last-child, .table > tbody > tr > th:last-child, .table > tfoot > tr > th:last-child, .table > thead > tr > td:last-child, .table > tbody > tr > td:last-child, .table > tfoot > tr > td:last-child{border-right:none;border-bottom:none;}
+.table-bordered{border:1px solid #ccc;}
+table.table tr.PagerStyle td{border-bottom:0;border-left:0;}
+table.table tr.PagerStyle td table{float:right;}
+table.table tr.PagerStyle td table tr td{padding:2px 0 2px 0;border-bottom:0;color:#fff;margin-right:2px;float:left;}
+table.table tr.PagerStyle td table tr td:first-child{border-left:0;}
+table.table tr.PagerStyle td table tr td span{background-color:#8199a5;padding:5px 8px;color:#fff;}
+table.table tr.PagerStyle td table tr td a{background-color:#e8e8e8;padding:5px 8px;color:#333 !important;text-decoration:none;}
+tr.PagerStyle td table td a, tr.PagerStyle td table td a:link, tr.PagerStyle td table td a:visited{text-decoration:none;color:#fff;}
+/****** GOLD LOAN PAGE STYLES FROME HERE ******/
+.goldln_main_banner{background:url('../images-2013/VAS/goldloan-banner.png')no-repeat left center;min-height:176px;margin-top:15px;}
+.goldln_main_banner h2{color:#ffffff;}
+.goldloan_controlform{margin:20px 0;}
+.goldloan_tabs_content{padding:20px 20px 0;}
+.goldloan_tabs_content ul li{list-style-position:inside;}
+/****** FINANCIAL FITNESS REPORT PAGE STYLES FROME HERE ******/
+/*.ffr_main_banner{background:url('../images-2013/VAS/vas-main-banner1.png')no-repeat left center;min-height:176px;margin-top:15px;}*/
+.ewill_disclaimer{border-top:1px solid #d9d9d9;margin-top:20px;padding-top:15px;}
+.ewill_disclaimer ul li{list-style-type:lower-roman;margin-left:20px;color:#6c6b6b;margin-bottom:15px;font-size:12px;}
+.ffr_testimonials .ffr_testimonial_title h3{font-family:'DaxOT-Medium';font-size:20px;margin:30px 0 20px 0;}
+.ffr_second_level{margin-top:20px;}
+.tab{webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);margin-top:20px;}
+li.what_ffr_tab{background:url('../images-2013/VAS/ffr/what-ffr-icon.png')no-repeat top center;padding-top:60px;}
+li.what_ffr_tab:hover, li.what_ffr_tab.active{background:url('../images-2013/VAS/ffr/what-ffr-icon-hover.png')no-repeat top center;}
+li.ffr_works_tab{background:url('../images-2013/VAS/ffr/ffr-works-icon.png')no-repeat top center;padding-top:60px;}
+li.ffr_works_tab:hover, li.ffr_works_tab.active{background:url('../images-2013/VAS/ffr/ffr-works-icon-hover.png')no-repeat top center;}
+li.ffr_fees_tab{background:url('../images-2013/VAS/ffr/fees-charges-icon.png')no-repeat top center;padding-top:60px;}
+li.ffr_fees_tab:hover, li.ffr_fees_tab.active{background:url('../images-2013/VAS/ffr/fees-charges-icon-hover.png')no-repeat top center;}
+li.ffr_samplerep{background:url('../images-2013/VAS/ffr/sample-report.png')no-repeat top center;padding-top:60px;}
+li.ffr_samplerep:hover, li.ffr_samplerep.active{background:url('../images-2013/VAS/ffr/sample-report-hover.png')no-repeat top center;}
+.ffr_customerdet_note{padding:20px 0;}
+.ffr_section_details{margin-top:20px;}
+.ffr_model_confirm{padding:20px;text-align:justify;line-height:24px;}
+.ffr_model_confirm a.btn{margin-right:20px;}
+.ffr_modelclose{padding:5px 10px;}
+/****** E-WILL PAGE STYLES FROME HERE ******/
+li.ewill_whatis_tab{background:url('../images-2013/VAS/e-will/what-ewill-icon.png')no-repeat top center;padding-top:60px;}
+li.ewill_whatis_tab:hover, li.ewill_whatis_tab.active{background:url('../images-2013/VAS/e-will/what-ewill-icon-hover.png')no-repeat top center;}
+li.ewill_works_tab{background:url('../images-2013/VAS/e-will/ewill-works-icon.png')no-repeat top center;padding-top:60px;}
+li.ewill_works_tab:hover, li.ewill_works_tab.active{background:url('../images-2013/VAS/e-will/ewill-works-icon-hover.png')no-repeat top center;}
+li.ewill_features_tab{background:url('../images-2013/VAS/e-will/ewill-features-icon.png')no-repeat top center;padding-top:60px;}
+li.ewill_features_tab:hover, li.ewill_features_tab.active{background:url('../images-2013/VAS/e-will/ewill-features-icon-hover.png')no-repeat top center;}
+/****** CUSTOMER SERVICE CHANNEL PAGE STYLES FROME HERE ******/
+#upload_csc{border:1px solid #CCCCCC;padding:5px;width:100%;border-radius:4px;}
+.csc_details{padding:10px 0 10px;}
+.csc_product_type{/* border-right:1px solid #d9d9d9;*/}
+.request_title{border-bottom:1px dashed #d9d9d9;margin-bottom:10px;}
+.request_title h4{padding:5px 15px;color:#666666;font-size:16px;}
+.csc_request_desc{margin-top:15px;}
+.csc_Req_type input[type="submit"].grey_button{margin:5px 0 0 0;}
+.csc_request_desc input[type="submit"].grey_button{margin:0;}
+.csc_request_desc input[type="file"]{width:79%;border:1px solid #ccc;border-radius:4px;margin-right:6px;float:left;}
+/****** DIGITAL LOUNGE PAGE STYLES FROME HERE ******/
+.digital_lounge_main{background:#ffffff;margin-top:15px;color:#6c6b6b;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.digital_content_area{margin-top:20px;}
+.dl_tab_list{text-align:center;}
+ul.digital_lounge_tabs{text-align:center;display:inline-block;border:1px solid #adadad;border-radius:4px;}
+ul.digital_lounge_tabs li{list-style:none;float:left;display:inline-block;padding:8px 30px;cursor:pointer;border-left:1px solid #adadad;}
+ul.digital_lounge_tabs li:first-child{border-left:0;}
+ul.digital_lounge_tabs li.active{background:#455a64;color:#ffffff;}
+ul.digital_lounge_features li{list-style:none;width:23%;text-align:center;display:inline-block;float:left;/* margin:0 7px;*/ margin:0 1%;font-size:12px;background:#d5bc9d;}
+ul.digital_lounge_features li p{margin:8px 0;color:#504f4f;}
+ul.digital_lounge_features li img{width:100%;}
+/*ul.digital_lounge_features li:first-child{margin-left:0;}
+ul.digital_lounge_features li:last-child{margin-right:0;}
+*/
+ul.digital_lounge_features.clearfix{margin-right:-1%;margin-left:-1%;}
+/****** OFFERS PAGES STYLES FROME HERE ******/
+.offers_header h2{font-size:24px;border-bottom:1px solid #b3b3b3;margin:0 0 15px;font-family:'DaxOT-Medium';padding-bottom:5px;}
+.offers_details{padding:15px;}
+.offers_details h3{margin:0 0 15px;}
+.offers_details p{color:#6c6b6b;font-size:16px;margin-bottom:20px;}
+.offers_details h1{margin-top:0;}
+.offers_viewall{margin-top:5px;}
+.offers_viewall a{font-family:'DaxOT-Medium';}
+.offer_right{padding-left:10px;}
+.offer_left{padding-right:10px;}
+.offers_page_title h3{font-family:'DaxOT-Medium';font-size:20px;margin:0;}
+.all_deals{background:#ffffff;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.all_deals div.single_deal{border-bottom:1px dashed #d9d9d9;margin:15px 0px 10px;float:left;}
+.all_deals div.single_deal:last-child{border-bottom:0;}
+.single_deal p{color:#6c6b6b;font-size:16px;margin:10px 0;}
+.single_deal a{float:right;margin-bottom:10px;}
+.refer_n_win_main{background:#ffffff;margin-bottom:15px;}
+.refer_details{padding:20px;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.refer_details p{color:#6c6b6b;}
+.referal_tabs{background:#ffffff;margin-top:20px;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);padding-top:20px;}
+.referal_tabs_list{text-align:center;border-bottom:1px dashed #d9d9d9;}
+#referal_address{margin-bottom:10px;}
+.referal_form_area .form-group{width:50%;display:inline-block;padding-right:20px;float:left;}
+.referal_form_area{margin-bottom:20px;}
+.referal_form{border-top:1px solid #d9d9d9;padding-top:20px;}
+.referals_stats{margin-bottom:20px;}
+input.referal_option[type="radio"]{position:inherit;margin:6px 0 0 10px;vertical-align:sub;}
+.referal_loan_type .radio-inline{padding-left:0;border:1px solid #d9d9d9;border-radius:4px;margin-left:5px;font-size:12px;}
+.referal_loan_type .radio-inline input[type="radio"]{bottom:0;margin:7px 5px;}
+.referal_loan_type .radio-inline label{cursor:pointer;padding-left:23px;display:block;}
+.PaymentType label.radio-inline{min-width:85px;}
+.referal_loan_type .radio-inline label img{margin-left:-23px;margin-bottom:5px;}
+.referal_personalloan_icon{background:url('../images-2013/offers/referal-personal-loan.png');width:138px;height:128px;float:left;}
+.referal_type_choose{padding:0;}
+.referal_type_choose label{padding:0;}
+.go_back{margin-bottom:10px;display:block;}
+.radio-box{display:inline-block;width:100%;}
+.radio-box label{margin:10px 0 0;}
+.radio-box input{margin-left:0 !important;}
+.loan_name{margin-left:20px;font-size:12px;}
+.referal_loan_type{margin-bottom:20px;}
+.referal_history_invites{background:#63a6c8;border-radius:5px;text-align:center;color:#ffffff;width:31%;margin-right:20px;}
+.referal_history_success{background:#37aa9f;border-radius:5px;text-align:center;color:#ffffff;width:31%;margin-right:20px;}
+.referal_history_rejected{background:#e86f6d;border-radius:5px;text-align:center;color:#ffffff;width:31%;}
+.referal_log{padding-top:20px;border-top:1px dashed #d9d9d9;padding-bottom:20px;}
+.referal_log .table-responsive{border:1px solid #cccccc;border-radius:4px;color:#6c6c6c;}
+.referal_log .table-responsive table{margin-bottom:0;}
+.pending{color:#e68f0b;}
+.rejected{color:#fd8888;}
+.all_user_referals{padding-bottom:20px;}
+.referer_details{display:block;margin:0 0 10px;}
+.referer_details p{border-right:1px solid #bfbfbf;color:#6c6b6b;margin:0;min-width:100px;display:inline-block;}
+.referer_details span{padding:0 0 0 15px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;}
+.referedto_details{display:block;margin:0 0 10px;}
+.referedto_details p{border-right:1px solid #bfbfbf;color:#6c6b6b;margin:0;min-width:120px;display:inline-block;}
+.referedto_details span{padding:0 0 0 15px;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;}
+.all_user_referals h3{margin:0;padding:20px;position:relative;border-top:1px dashed #d9d9d9;border-bottom:1px dashed #d9d9d9;}
+.all_user_referals h3 span{position:absolute;right:30px;font-size:12px;background:url(../images-2013/offers/referal-history.png) no-repeat;width:61px;height:42px;top:0;text-align:center;color:#fff;padding-top:10px;}
+.referal_refer_to{border-right:1px solid #d9d9d9;padding-left:0;}
+.all_referal_details{margin-top:20px;}
+/****** DOWNLOADS PAGES STYLES FROME HERE ******/
+.download_faq_uknow{font-family:'DaxOT-Regular';color:#6c6b6b;padding:15px 15px 10px;}
+.download_document{padding:15px 0;}
+.documents_list{padding:20px;}
+.documents_list ul li{border:1px solid #c0c0c0;padding:10px;position:relative;border-radius:4px;list-style:none;color:#6c6b6b;background:#f0f0f0;margin-bottom:20px;}
+.documents_list ul li span{background:#8396a0;position:absolute;right:0;min-width:100px;text-align:center;top:0;border-radius:0 4px 4px 0;}
+.documents_list ul li:hover span{background:#0071bc;}
+.documents_list ul li span a{color:#fff;padding:10.5px;display:inline-block;}
+.download_details{background:#ffffff;padding:0;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.single_document_details{padding:20px;}
+.single_document_details .table-responsive{border:1px solid #cccccc;border-radius:4px;}
+.single_document_details .table-responsive table{margin-bottom:0;}
+.single_document_details .table-responsive table tr th{color:#666666;}
+.single_document_details .table-responsive table tbody tr td{border-top:1px dashed #d9d9d9;}
+h2.document_section_head{font-size:20px;font-family:'DaxOT-Medium';padding-top:30px;clear:both;}
+.all_faqs ul li{width:45%;display:inline-block;list-style:none;border:1px solid #d9d9d9;float:left;margin:15px;border-radius:4px;position:relative;}
+.all_faqs ul li h2{font-size:20px;}
+.all_faqs{padding:5px;}
+.category_head{background:#e2e1e1;}
+.category_head p{padding:5px 0;}
+.category_body{padding:0 15px 30px;}
+.detailed_faqs{padding:15px;}
+.faqs_moredetails{background:#ffffff;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);margin-top:30px;padding:15px;display:inline-block;width:100%;}
+.mandate_points{margin-left:20px;}
+.mandate_points li{margin-bottom:15px;}
+/******* faq page styles *******/
+.FaqAccordion ul, .FaqAccordion ol{padding-left:30px;}
+.FaqAccordion .content{margin:0 0 0 10px;width:95%;}
+.FaqAccordion .content img{width:20px;}
+.gridblack{background:#fff;/*border-top:1px solid #000;border-left:1px solid #000;*/}
+.gridblack tr td{border-right:1px solid #ccc;/* border-bottom:1px solid #000;*/ text-align:center;}
+.gridblack tr td:last-child{border-right:none;}
+.content .NachReceiptImg{width:100% !important;}
+/****** MY PROFILE PAGES STYLES FROM HERE ******/
+.messages_card{background:#ffffff;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.aadhar_inner_details{padding:20px 15px;}
+.aadhar_inner_details .form-group input{width:41%;}
+.aadhar_inner_details .AadharDetails .form-group input{width:100%;}
+.password_conditions{/* margin-bottom:0;*/}
+.password_conditions input{display:inline-block;}
+.password_conditions ul{display:inline-block;width:55%;float:right;margin-bottom:0;font-size:13px;}
+.user_profile_picture{border-bottom:1px solid #d9d9d9;}
+.user_profile_picture h2{color:#6c6b6b;}
+.profile_input_form{margin:20px 0;}
+.input_group1{border-right:1px solid #d9d9d9;}
+.profile_input_form{border-bottom:1px solid #d9d9d9;padding-bottom:20px;}
+.address_fields input{margin-bottom:15px;}
+/*.user_address{border-bottom:1px solid #d9d9d9;}
+.user_mobile_email input{margin-bottom:15px;}
+*/
+.user_communication_det{margin-top:20px;}
+.user_address .form-group div, .user_communication_det .form-group div{padding-left:0;}
+.user_address label{display:block;}
+#add{cursor:pointer;font-size:12px;}
+.delete{font-size:12px;cursor:pointer;margin-top:10px;display:inline-block;}
+.add_more_fields input{width:80%;display:inline-block;margin-right:5px;margin-bottom:12px;}
+/**** 28-03-2017 line assignment start****/
+.tran_history_head{position:relative;border-bottom:1px solid #d9d9d9;}
+.tran_history_head h3{margin:15px 0;font-family:'DaxOT-Medium';}
+.tran_history_head span{position:absolute;background:url('../images-2013/profile/special-head.png')no-repeat;width:29px;height:38px;color:#ffffff;top:0;left:30px;text-align:center;font-size:20px;}
+.transaction_history_main{padding:0;background:#ffffff;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);margin-bottom:30px;}
+.tran_quick_history{background:#8f80b0;text-align:center;color:#ffffff;padding:30px 20px;border-radius:0 0 0 4px;}
+.tran_quick_history_Line{background:#8f80b0;text-align:center;color:#ffffff;padding:33px 20px;border-radius:0 0 0 4px;}
+.tran_quick_history2{background:#42b99b;text-align:center;color:#ffffff;padding:30px 20px;border-radius:0 0 0 4px;}
+.tran_history_stats{display:block;margin:0 0 5px;}
+ /*.tran_history_stats .active{color:#49b17e;}
+.tran_history_stats .inactive{color:#f34c4c;}
+*/
+.tran_history_stats p{border-right:1px solid #bfbfbf;color:#6c6b6b;margin:0;font-family:'DaxOT-Regular';display:inline-block;min-width:168px;}
+.th_amount_disbursed{padding:15px 0 10px;border-bottom:1px solid #d9d9d9;}
+.th_emi_amount{padding:15px 0 10px;}
+.tran_history_stats span{padding:0;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;width:80px;word-wrap:break-word;}
+.tran_history_stats span span{padding:0 3px;}
+.tran_history_stats span.RightLabel{position:relative;padding:0 15px;color:#6C6B6B;font-family:DaxOT-Regular;display:inline-block;vertical-align:top;width:50%;}
+.tran_history_stats span.RightLabel span{display:inline;}
+.th_loan_timeline{position:relative;margin:30px 0;padding:0 15px;}
+#DivActivate.modal, #divApply.modal{top:20%;}
+.final_status{font-size:16px;color:#333;text-align:center;}
+.Request_thankyou .icon-thankyou, .final_status .icon-thankyou{width:30px;height:30px;display:inline-block;background-repeat:no-repeat;background-image:url(../images-2013/sprite-icons1.png);background-position:-40px -111px;}
+.Request_thankyou .icon, .final_status .icon{font-size:16px;width:30px;height:30px;display:inline-block;background-repeat:no-repeat;}
+.bajajblue_button{background:#0071BD;color:white;font-family:'DaxOT-Regular';font-size:12px;padding:7px 37px;transition:.5s;}
+/**** 28-03-2017 end ****/
+.timeline_list:after{top:0;bottom:108px;position:absolute;content:" ";width:3px;background-color:#8f80b0;left:31px;height:87%;}
+ul.timeline_list li{background:url('../images-2013/profile/timeline-list.png')no-repeat;z-index:1;position:relative;margin-bottom:20px;list-style:none;padding-left:50px;line-height:35px;}
+.timeline_description p{border:1px solid #cbcbcb;background:#f6f5f5;padding:10px;display:inline-block;border-radius:4px;line-height:22px;position:relative;}
+/*.timeline_description p:before{border-color:rgba(194, 225, 245, 0);border-bottom-color:#B9C0C2;border-width:8px;margin-left:-32px;border-bottom:8px solid rgba(0, 0, 0, 0.2);border-left:8px solid transparent;border-right:8px solid transparent;content:"";display:inline-block;position:absolute;left:35px;top:-9px;}
+.timeline_description p:after{border-color:rgba(136, 183, 213, 0);border-bottom-color:#FFFFFF;border-width:6px;margin-left:-30px;bottom:100%;right:23%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}
+*/
+.request_processing_main{background:#ffffff;padding:15px 0;margin-bottom:30px;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);}
+.request_process_left{border-right:1px solid #d9d9d9;}
+.reject_text{color:#fd8888;}
+.request_processing_stats{display:block;margin:0 0 5px;}
+.request_processing_stats p{border-right:1px solid #bfbfbf;color:#6c6b6b;margin:0;font-family:'DaxOT-Regular';display:inline-block;min-width:145px;}
+.request_processing_stats span{padding:0;color:#6c6b6b;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;}
+.request_processing_stats span span{padding:0 3px;}
+.reqpro_section_one{border-bottom:1px dashed #d9d9d9;padding-bottom:15px;}
+.reqpro_section_two{border-bottom:1px dashed #d9d9d9;padding:20px 0;}
+.reqpro_section_two{color:#707782;}
+.reqpro_section_three{padding:20px 0;border-bottom:1px dashed #d9d9d9;}
+.user_request_details{display:block;margin:0 0 5px;}
+.user_request_details p{border-right:1px solid #bfbfbf;color:#6c6b6b;margin:0;font-size:16px;font-family:'DaxOT-Regular';display:inline-block;min-width:160px;}
+.user_request_details span{padding:0 15px;color:#6c6b6b;font-size:16px;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;}
+.reqpro_section_four{padding:15px;}
+.service_request_left{border-right:1px solid #d9d9d9;padding-left:0;}
+.service_request_right{padding-right:0;}
+.service_request{display:block;margin:0 0 5px;}
+.service_request p{border-right:1px solid #bfbfbf;color:#6c6b6b;margin:0;font-size:13px;font-family:'DaxOT-Regular';display:inline-block;min-width:95px;}
+.service_request span{padding:0 0 0 10px;color:#6c6b6b;font-size:13px;font-family:'DaxOT-Regular';display:inline-block;vertical-align:top;}
+/****** CONTACT INNER PAGES STYLES FROM HERE ******/
+.contact_inner_details{padding:20px 15px;}
+.contact_inner_details .table-responsive{border:1px solid #d9d9d9;border-radius:4px;}
+.contact_inner_details .table-responsive table{margin-bottom:0;}
+.contact_inner_details .table-responsive table tbody{color:#6c6b6b;}
+.contact_inner_details .table-responsive table tbody tr td{border-top:1px dashed #c3c3c3;border-bottom:none;}
+.ivr_call{color:#0071bc;}
+.sms_to{padding:20px 15px;border-top:1px dashed #d9d9d9;border-bottom:1px dashed #d9d9d9;margin-top:20px;}
+.sms_to h4{color:#0071bc;margin:0;font-family:'DaxOT-Medium';}
+.sms_keywords{padding:20px 15px;border-bottom:1px dashed #d9d9d9;}
+.sms_keywords .table-responsive{border:0;}
+.sms_keywords .table > thead > tr > th{border-bottom:0;}
+.sms_keywords .table-responsive table tbody tr td{border-top:0;padding:5px 8px;}
+.sms_no_register{padding:20px 15px 0;}
+/*.cibil_main_banner{background:url('../images-2013/tools/cibil-banner.png')no-repeat left center;min-height:176px;margin-top:15px;}*/
+li.what_cibil_tab{background:url('../images-2013/tools/what-cibil-icon.png')no-repeat top center;padding-top:60px;}
+li.what_cibil_tab:hover, li.what_cibil_tab.active{background:url('../images-2013/tools/what-cibil-icon-hover.png')no-repeat top center;}
+li.cibil_information_tab{background:url('../images-2013/tools/information-icon.png')no-repeat top center;padding-top:60px;}
+li.cibil_works_tab{background:url('../images-2013/tools/how-cibil-icon.png')no-repeat top center;padding-top:60px;}
+li.cibil_works_tab:hover, li.cibil_works_tab.active{background:url('../images-2013/tools/how-cibil-icon-hover.png')no-repeat top center;}
+li.cibil_score_tab{background:url('../images-2013/tools/correct-icon.png')no-repeat top center;padding-top:60px;}
+li.cibil_score_tab:hover, li.cibil_score_tab.active{background:url('../images-2013/tools/correct-icon-hover.png')no-repeat top center;}
+.cibil_Report_tab input[type="submit"]{border:none !important;background:none !important;color:#6C6B6B;min-width:0 !important;font-family:'DaxOT-Medium';font-size:12px;padding-left:0;}
+.cibil_Report_tab:hover input[type="submit"], .cibil_Report_tab:active input[type="submit"]{color:#0071BC;}
+li.cibil_Report_tab input[type="submit"]{background:url('../images-2013/tools/information-icon.png')no-repeat top center !important;padding-top:60px;}
+li.cibil_Report_tab input[type="submit"]:hover, li.cibil_Report_tab.active input[type="submit"]{background:url('../images-2013/tools/information-icon-hover.png')no-repeat top center !important;}
+.calculators_list li{display:inline-block;margin:20px 10px;width:46%;float:left;background:#ffffff;border-radius:4px;padding:20px;text-align:center;}
+.calculators_list li:hover{background:#0071bc;}
+.calculators_list li a h4{color:#666666;}
+.calculators_list li:hover a h4{color:#ffffff;}
+.calculators_list li h4{font-size:20px;}
+li .emi_calc{background:url('../images-2013/tools/emi-calc.png') no-repeat center;width:100%;height:130px;margin-bottom:25px;}
+li:hover .emi_calc{background:url('../images-2013/tools/emi-calc-hover.png') no-repeat center;}
+li .eligibility_calc{background:url('../images-2013/tools/eligibility-calc.png') no-repeat center;width:100%;height:130px;margin-bottom:25px;}
+li:hover .eligibility_calc{background:url('../images-2013/tools/eligibility-calc-hover.png') no-repeat center;}
+li .expense_calc{background:url('../images-2013/tools/expense-calc.png') no-repeat center;width:100%;height:130px;margin-bottom:25px;}
+li:hover .expense_calc{background:url('../images-2013/tools/expense-calc-hover.png') no-repeat center;}
+li .fd_calc{background:url('../images-2013/tools/fd-calc.png') no-repeat center;width:100%;height:130px;margin-bottom:25px;}
+li:hover .fd_calc{background:url('../images-2013/tools/fd-calc-hover.png') no-repeat center;}
+li .flexi_calc{background:url('../images-2013/tools/flexi-drawdown-calc.png') no-repeat center;width:100%;height:130px;margin-bottom:25px;}
+li:hover .flexi_calc{background:url('../images-2013/tools/flexi-drawdown-calc-hover.png') no-repeat center;}
+li .investment_calc{background:url('../images-2013/tools/investment-calc.png') no-repeat center;width:100%;height:130px;margin-bottom:25px;}
+li:hover .investment_calc{background:url('../images-2013/tools/investment-calc-hover.png') no-repeat center;}
+li .part_pre_calc{background:url('../images-2013/tools/part-pre-calc.png') no-repeat center;width:100%;height:130px;margin-bottom:25px;}
+li:hover .part_pre_calc{background:url('../images-2013/tools/part-pre-calc-hover.png') no-repeat center;}
+li .tax_calc{background:url('../images-2013/tools/tac-calc.png') no-repeat center;width:100%;height:130px;margin-bottom:25px;}
+li:hover .tax_calc{background:url('../images-2013/tools/tac-calc-hover.png') no-repeat center;}
+li .insurance_calc{background:url('../images-2013/tools/insurance-calc.png') no-repeat center;width:100%;height:130px;margin-bottom:25px;}
+li:hover .insurance_calc{background:url('../images-2013/tools/insurance-calc-hover.png') no-repeat center;}
+.single_calculator{background:#ffffff;padding:20px 15px;}
+.input_extension{padding:0;margin-top:7px;}
+.total_amount{border:0;border-bottom:1px solid #bfc2c7;color:#0071BD;}
+.total_amount:focus{outline:0;}
+.calc1, .calc2{margin-bottom:60px;}
+.calc3{margin-bottom:50px;}
+.fd_calc_userinput h3{margin:0;}
+.fd_calc_inputs1{margin-bottom:20px;}
+.fd_calc_inputs2{margin-bottom:20px;}
+.fd_calc_submain{border-bottom:1px solid #D9D9D9;margin-bottom:20px;}
+.fd_calc_results{border-top:1px solid #D9D9D9;border-bottom:1px solid #D9D9D9;padding:15px 0;clear:both;}
+.mf_calc_results{border-top:1px solid #D9D9D9;padding:15px 0;clear:both;}
+.fd_calc_result1, .fd_calc_result2{border-right:1px solid #D9D9D9;}
+.fd_calc_result1 h2, .fd_calc_result2 h2, .fd_calc_result3 h2{color:#0071BD;font-size:26px;}
+.fd_calc_result1 h2 span, .fd_calc_result2 h2 span, .fd_calc_result3 h2 span{color:#6c6b6b;font-size:20px;}
+.part_pre_calc_header h3{margin:0;}
+.part_pre_calc_section1{margin-bottom:40px;}
+.read-more-state{display:none;}
+.read-more-target{display:none;max-height:0;font-size:0;transition:.75s ease;-webkit-transition-delay:2s;/* Safari */ transition-delay:2s;}
+.read-more-state:checked ~ .read-more-wrap .read-more-target{display:block;font-size:inherit;max-height:999em;}
+.read-more-state ~ .read-more-trigger:before{content:'Show more';}
+.read-more-state:checked ~ .read-more-trigger:before{content:'Show less';}
+.read-more-trigger{cursor:pointer;display:inline-block;padding:0 .5em;color:#0071BD;font-size:16px;line-height:2;margin-top:20px;float:right;}
+.single_mf_calc{background:#ffffff;border-radius:4px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);padding:15px;margin-bottom:15px;}
+.single_mf_calc h3, .single_mf_calc h4{margin:0;}
+/****************************LOGOUT PAGE *******************************/
+.logout_main h3{text-align:center;color:#0071bc;margin:0;padding-bottom:25px;border-bottom:1px solid #d9d9d9;}
+div[id$=_divoffer].owl-carousel .owl-item{/*margin-right:5px;*/}
+div[id$=_divoffer].owl-carousel .owl-item input[type="image"]{max-width:98%;border:1px solid #ccc;}
+/******************************************* TERMS AND CONDITIONS PAGE *******************************************/
+.termsncond_main h3{color:#0071bc;margin:0;padding-bottom:20px;border-bottom:1px solid #d9d9d9;}
+.terms_actions a.btn{margin-right:20px;}
+.terms_cond_main{background:#ffffff;padding:20px;}
+.all_termsncon{margin-top:20px;}
+/*OPINION POLL STYLES FROM HERE*/
+.poll_container{position:relative;}
+.poll_container .modal-header{border-bottom:0;}
+.poll_main_title{text-align:center;font-size:22px;line-height:50px;background:url('../images-2013/poll/title-back.png');display:inline-block;width:242px;height:64px;top:0;color:#ffffff;position:absolute;left:35%;}
+.poll_questions{margin-top:20px;}
+.user_poll input[type="radio"]:checked + i.yes, .user_poll input[type="radio"]:hover + i.yes{background:url(../images-2013/poll/yes-hovered.png);}
+.user_poll input[type="radio"]:checked + i.no, .user_poll input[type="radio"]:hover + i.no{background:url(../images-2013/poll/no-hovered.png);}
+.input-hidden{position:absolute;left:-9999px;}
+.user_poll i{display:inline-block;width:38px;height:38px;}
+i.yes{background:url(../images-2013/poll/yes.png);}
+i.no{background:url(../images-2013/poll/no.png);}
+.user_poll input[type="radio"]:checked + i.article, .user_poll input[type="radio"]:hover + i.article{background:url(../images-2013/poll/article-hovered.png);}
+.user_poll input[type="radio"]:checked + i.television, .user_poll input[type="radio"]:hover + i.television{background:url(../images-2013/poll/television-hovered.png);}
+.user_poll input[type="radio"]:checked + i.internet, .user_poll input[type="radio"]:hover + i.internet{background:url(../images-2013/poll/internet-hovered.png);}
+.user_poll input[type="radio"]:checked + i.friend, .user_poll input[type="radio"]:hover + i.friend{background:url(../images-2013/poll/friend-hovered.png);}
+.user_poll input[type="radio"]:checked + i.social, .user_poll input[type="radio"]:hover + i.social{background:url(../images-2013/poll/social-hovered.png);}
+i.article{background:url(../images-2013/poll/article.png);}
+i.television{background:url('../images-2013/poll/television.png');}
+i.internet{background:url('../images-2013/poll/internet.png');}
+i.friend{background:url('../images-2013/poll/friend.png');}
+i.social{background:url('../images-2013/poll/social.png');}
+.user_poll, .user_rateings{margin-bottom:20px;}
+.user_rateings .radio-inline{padding-left:10px;}
+.user_rateings input[type="radio"]:checked + i.rate1, .user_rateings input[type="radio"]:hover + i.rate1{background:url(../images-2013/rated1.png);}
+.user_rateings input[type="radio"]:checked + i.rate2, .user_rateings input[type="radio"]:hover + i.rate2{background:url(../images-2013/rated2.png);}
+.user_rateings input[type="radio"]:checked + i.rate3, .user_rateings input[type="radio"]:hover + i.rate3{background:url(../images-2013/rated3.png);}
+.user_rateings input[type="radio"]:checked + i.rate4, .user_rateings input[type="radio"]:hover + i.rate4{background:url(../images-2013/rated4.png);}
+.user_rateings input[type="radio"]:checked + i.rate5, .user_rateings input[type="radio"]:hover + i.rate5{background:url(../images-2013/rated5.png);}
+.input-hidden{position:absolute;left:-9999px;}
+i.rate1{background:url(../images-2013/rate1.png);width:48px;height:48px;display:inline-block;}
+i.rate2{background:url(../images-2013/rate2.png);width:48px;height:48px;display:inline-block;}
+i.rate3{background:url(../images-2013/rate3.png);width:48px;height:48px;display:inline-block;}
+i.rate4{background:url(../images-2013/rate4.png);width:48px;height:48px;display:inline-block;}
+i.rate5{background:url(../images-2013/rate5.png);width:48px;height:48px;display:inline-block;}
+h3#rating{display:inline-block;margin-left:20px;}
+#upload_csc::-webkit-file-upload-button{visibility:hidden;}
+#upload_csc::before{content:'Browse';display:inline-block;background:#cccccc;padding:2px 8px;outline:none;white-space:nowrap;-webkit-user-select:none;cursor:pointer;font-size:14px;}
+#upload_csc:hover::before{border-color:black;}
+#upload_csc:active::before{background:-webkit-linear-gradient(top, #e3e3e3, #f9f9f9);}
+.enter_otp{display:none;}
+/****** SEARCH RESULT PAGE ******/
+.single_result{margin-bottom:20px;}
+/***** 8-3-2016 ******/
+.form-group{float:left;width:100%;}
+.offline_payment_card .select_location .form-group{width:auto !important;}
+.checkbox label{width:100%;}
+.checkbox.TermsCheck label{padding-left:0;}
+.checkbox.TermsCheck{padding-left:20px;}
+.OTP .grey_button{margin-left:0;}
+.errorMobile, .errorMobileValid, .errorEmail, .errorEmailValid, .clsError, .validMobile, .validEmail, .errorPan, .errorPinValid, .errorPin, .errorPanValid{width:100%;float:left;}
+.errorMobile, .errorMobileValid, .errorEmailValid, .errorEmail, .errorRetypeEmail, .errorName, .errorLastName, .errorcheckTerms, .clsError, .clsErrorState, .clsErrorCity, .validMobile, .validEmail{display:none;color:Red;vertical-align:text-top;font-size:12px;}
+.errorPin, .errorPinValid, .erroraddr1, .erroraddr2, .erroraddr3, .errorPanValid, .errorCity, .errorState, .errorPan, .errorMobile, .errorMobileValid, .errorEmailValid, .errorEmail, .error, .error1{display:none;color:Red;vertical-align:text-top;font-size:12px;}
+.modal{/*top:20%;*/}
+.modal-header{border-bottom:none;}
+.modal-header .close, .modal-content .close{margin-top:-2px;width:auto;min-width:0;}
+.modal-content{/*float:left;display:inline-block;*/display: inline-block;width: 100%;}
+.CVPopup .modal-content{float:left;}
+.chkconfirmbox .checkbox input[type='checkbox']{margin-top:4px;}
+.chkconfirmbox input[type="checkbox"]{margin-top:0;margin-right:5px;}
+span[id$=_lblMsg]{font-size:16px;float:left;margin-bottom:10px;}
+.modal-body h3{margin-top:0;}
+.modal-content{-webkit-box-shadow:5px rgba(0, 0, 0,0);box-shadow:5px rgba(0, 0, 0,0);border:6px solid rgba(0, 0, 0, 0.25);border-radius:0;}
+.successpopup .modal-content{width:100%;}
+/**** flexisaver interest certificate ****/
+div[id$=_divflexiintrcert] .modal-dialog{top:30%;}
+.details_user_know.row{margin-left:-15px;margin-right:-15px;}
+/***************************ADD NEW POLICY PAGE****************************/
+.new_policy_details{border-right:1px solid #e4e4e4;}
+.policy_reminders{border-top:1px solid #e4e4e4;}
+.policy_reminders a.btn{margin-right:20px;}
+.allschedules_main{padding:20px 0;}
+/******** bootstrap ribbon fix **********/
+#suiteBar img, #s4-ribbonrow img, .ms-dlgTitleBtns img, img.ms-vl-appadd-img, img.ms-webpart-menuArrowImg, img.ms-list-addnew-img20, img.ms-ellipsis-icon, .ms-vb-icon img, .ms-headerSortTitleLink img, .s4-clust img, .js-callout-actions img, .js-callout-ecbActionDownArrow img, .ms-promlink-button-image img, .ms-cellStyleNonEditable img, .ms-vb-itmcbx ms-vb-imgFirstCell img{max-width:none;}
+#suiteBar *, #s4-ribbonrow *, .ms-dlgTitleBtns *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+#DeltaSuiteLinks, .ms-tableCell.ms-verticalAlignMiddle, #suiteBar, #s4-ribbonrow, #welcomeMenuBox, #suiteBarButtons span#ms-help{display:none;}
+/******* searchbar *********/
+.searchbox .ms-srch-sb-border, .searchbox .ms-srch-sb-borderFocused, .search_here .ms-srch-sb-border, .search_here .ms-srch-sb-borderFocused{border:none !important;}
+.searchbox .ms-srch-sb > input{height:29px;margin:0;}
+.searchbox .ms-srch-sb > .ms-srch-sb-searchLink{height:16px;}
+.searchbox .ms-srch-sb-searchImg{left:-37px;top:-54px;}
+.searchbox.searchbox1 .ms-srch-sb-searchImg{left:-37px;}
+.searchbox .ms-srch-sb{display:inline;}
+a.ms-srch-sb-searchLink.homesearch-button, a.ms-srch-sb-searchLink.main-search{background-color:transparent;}
+.breadcrumb a:visited{color:#0071BC;}
+.sweet-alert h2{font-size:14px;font-weight:normal;}
+.sweet-alert .btn-lg{padding:5px;font-size:14px;min-width:3em;}
+.sweet-alert{width:400px;left:0;margin:0 auto;}
+/***** testing intro js *****/
+#s4-workspace{/*overflow:visible;*/}
+body{overflow:auto;}
+/****** personal details page *******/
+.RadioBtns tr{float:left;margin-right:10px;}
+.RadioBtns tr td input[type="radio"]{margin-top:0;margin-right:5px;}
+.RadioBtns tr td label{margin-bottom:0;}
+.form-group.address_fields{margin-bottom:0;}
+.user_profile_picture img{display:inline-block;width:116px;height:116px;border-radius:50%;background-repeat:no-repeat;background-position:center center;background-size:cover;}
+/****** loan details page *******/
+.details_user_know span span{padding:0;display:inline;}
+.HomeLoanTabs .hl-tab-content:first-child, .more_tabs .hl-tab-content:first-child{display:block;}
+.FDTabs .hl-tab-content:first-child{display:none;}
+.FDTabs .hl-tab-content:first-child.active{display:block;}
+/***********************personal Loan Pgae***********************/
+.ChangeLbl{margin:0 auto;text-align:center;width:52%;}
+.ChangeOfcLbl{margin:0 auto;text-align:center;width:65%;}
+.ChangeRadio table td, .ChangeDetailRadio table td{padding-left:10px;}
+.ChangeRadio{text-align:left;width:auto;float:right;}
+.ChangeRadio table td input[type="radio"], .ChangeDetailRadio table td input[type="radio"], .ChangeRadio input[type="radio"]{margin:0 5px 0 0;}
+.ChangeRadio table td label, .ChangeDetailRadio table td label, .ChangeRadio label{margin:0;}
+/*.loan_details_stats input[type="checkbox"]{margin:0 5px 0 0;}*/
+.loan_details_stats#CustDetails input[type="checkbox"]{margin:3px 5px 0 -20px;}
+.ChangeDetailRadio{text-align:left;width:auto;float:left;}
+ul.personal-loan-tabs li{list-style:none;float:left;width:62px;text-align:Center;margin:0;font-family:'DaxOT-Medium';font-size:12px;color:#6c6b6b;cursor:pointer;margin-right:18px;}
+.Personal_loan .tab{box-shadow:0px 0px 0px rgba(0, 0, 0, 0);}
+.divider-line{border-left:1px solid #d9d9d9;}
+.divider-line-right{border-right:1px solid #d9d9d9;}
+.mtb20{margin:20px 0px;}
+.mb20{margin-bottom:20px;}
+.mb10{margin-bottom:10px;}
+.mt20{margin-top:14px;}
+.mt0{margin-top:0px;}
+.personal-loan-accordion .panel-group{margin:0px;}
+.personal-loan-accordion .panel-heading{background:#8199a5;padding:0px;border-radius:4px 4px 0 0;color:#ffffff;border-color:#8199a5;}
+.personal-loan-accordion .panel-title a{margin-top:0;margin-bottom:0;padding:10px 20px;font-size:14px;line-height:20px;color:#ffffff;}
+#accordion .panel-default{width:100%;float:left;}
+.personal-loan-accordion .TitleHead{float:left;width:100%;}
+.personal-loan-accordion a.TitleLink{margin-top:0;margin-bottom:0;padding:10px 20px;font-size:14px;line-height:20px;color:#ffffff;float:left;width:100%;}
+.personal-loan-accordion .panel-heading [data-toggle="collapse"]:after{content:url('../images-2013/arrow.png');float:right;}
+#tenure_result .ui-slider-handle, #loan_amount_result .ui-slider-handle{width:12px;height:12px;cursor:pointer;}
+#tenure_result .ui-slider-range, #loan_amount_result .ui-slider-range{background-color:#0071bc;}
+#loan_amount_result.ui-widget-content, #tenure_result.ui-widget-content{border:0px solid #0071bc;background:rgba(0, 113, 188, 0.4);color:#333333;height:4px;}
+.terms-cond ol{margin-left:20px;}
+.terms-cond ol li{float:left;}
+.Personal_loan{margin-top:15px;}
+.Personal_loan .panel-body{padding:0px;}
+.personal_loan_msg{background:#ffffff;padding:30px 0 0px;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);box-shadow:2px 2px 2px rgba(0, 0, 0, 0.1);border-radius:4px;margin-bottom:20px;}
+.tab-content .panel-group .panel{float:left;width:100%;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{background:#18ad09 !important;border-radius:6px;border:1px solid #18ad09 !important;}
+/***6-5-2016 FD lead styles***/
+.datepickcontrol{position:relative;z-index:99;background-color:transparent !important;}
+.datepickicon{position:absolute;right:22px;top:7px;}
+.DateBlock{position:relative;}
+.form-group span.details_user_know{float:left;width:100%;}
+/***7-5-2016 logout page***/
+.logout_card{margin-top:50px;}
+.feedback_main p, .feedback_main label{font-size:16px;}
+.experience_rating{margin-bottom:30px;}
+.user_comments{margin-bottom:30px;}
+.user_comments .grey_button{margin-left:0;}
+.QuesSlider{float:left;width:100%;}
+.feedback_single_ques{border:1px solid #D9D9D9;width:99%;float:left;}
+.question_section{padding:20px;border-bottom:1px solid #D9D9D9;}
+.feedback_options{padding:10px 20px 10px;float:left;width:100%;}
+.feedback_options input[type="radio"]{margin:0 10px 0 0;}
+.feedback_options label{margin-bottom:0;}
+/***change password***/
+.input{float:left;width:41%;}
+.input input[type="password"], .valerror{width:100%;}
+.ErrorMsg{font-size:12px !important;color:#f10f00;display:none;}
+.errorUnblock{font-size:12px !important;color:#f10f00 !important;}
+.fcPayment p{float:left;width:100%;}
+.firstLogin input[type="submit"]{margin-left:0;}
+.valerror{/* margin-bottom:10px;*/}
+/***unblock user***/
+.home_loan_header_style h3{margin:0;color:#fff;font-size:16px;}
+.details-flow-marg{margin:30px 5px 10px;}
+.details-flow{font-weight:bold;float:left;padding:5px 0;}
+.details-flow .flow{padding:4px 8px;background:url(/_layouts/images/Experia/gray-blue.png) 0px 1px no-repeat;color:white;font:bold 13px arial;margin-right:20px;}
+.details-flow .flow-arrow{background:url(/_layouts/images/Experia/arrow-gray-blue.png) 0px -2px no-repeat;padding:0px 40px 0 40px;margin-left:20px;}
+.details-flow.active{color:#09C;}
+.details-flow.active .flow-arrow{background:url(/_layouts/images/Experia/arrow-gray-blue.png) 0px -25px no-repeat !important;padding:0px 40px 0 40px;margin-left:20px;}
+.exform{float:left;margin:25px;}
+.exform .userName{margin-right:10px;}
+.exform input[type="text"], .exform input[type="password"]{width:100%;}
+.exform .grey_button{width:auto !important;}
+.valerror{display:none;}
+/***inbox messages***/
+.PagerStyle td td{border:none !important;padding:5px;}
+/***Is first login***/
+#divChangePassword{width:100%;}
+.PopUp.modal{z-index:1050;top:15%;}
+.inputbox.col-sm-8 .input, .inputbox.col-sm-4 .input{width:100%;}
+.changePassBox{border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;padding:7px;float:left;margin-top:30px;}
+.changePassBox ul{margin:0 0 0 20px;padding:0;}
+.valerror{color:red;font-size:12px;}
+.FirstLoginBlck{padding:20px;}
+.FirstLoginBlck h4, .FirstLoginBlck h3, .modal-title.conDelete{color:#0071bc;}
+.modal-title.conDelete img{margin-right:10px;margin-top:-4px;}
+/***Insurance planner***/
+.Ins-Page-Title{float:left;width:100%;}
+.Ins-Page-Title h3{float:left;}
+.Ins-Page-Title .calLink{float:right;}
+table.monthly td table{border:none;width:auto !important;/* height:50px!important;*/ margin-bottom:10px;}
+.calendar .calHeader .wys{position:relative;z-index:999;}
+.calendar .calHeader .grey_button.active{background:#0681d3 !important;}
+table.monthly{margin-top:-50px;float:left;border:none !important;border-bottom:1px solid #D1D1D1 !important;}
+.messages_card.CalendarBlock{float:left;width:100%;}
+.monthly td:first-child.cNextPrev a{background-position:4px top;}
+.monthly td.cNextPrev a{background:url(../images-2013/cal-prev-next.png) -16px top no-repeat;width:20px;height:30px;text-indent:-9999px;float:right;}
+table.monthly td.OtherMonthDayStyle, table.monthly td.calDay{width:102px !important;height:82px !important;float:none;}
+.monthly .OtherMonthDayStyle{background-color:#fafafa;}
+.monthly tr td:first-child .block{border-left:1px solid #d1d1d1;}
+.monthly .block{border-right:1px solid #d1d1d1;border-top:1px solid #d1d1d1;height:82px;position:relative;}
+.monthly .OtherMonthDayStyle .date{color:#e6e6e5;}
+.monthly .date{position:absolute;right:3px;bottom:3px;padding:3px;font-weight:bold;color:#a9a9a7;}
+.monthly .active .data{border:2px solid #69ABD6;color:#0099CC;height:100%;width:100%;overflow:hidden;padding:2px;text-align:center;}
+.monthly .active{color:#0099cc !important;}
+.monthly .active ul{margin:auto !important;list-style:none;padding:0;width:100%;}
+.calLink a{background:url('../images-2013/link-plus.png') left 3px no-repeat;padding-left:13px;color:#2077AC;margin-right:20px;font-size:9pt;}
+.monthly .active .date{background-color:#69abd6;color:#fff;}
+.monthly .date{position:absolute;right:3px;bottom:3px;padding:3px;font-weight:bold;color:#a9a9a7;}
+.calLink a.addNew{background-position:left -29px;}
+.per2col h3{font-size:18px;}
+.per2col .input{width:100%;}
+.stats{float:left;width:100%;}
+.stats .per2col{float:left;min-width:32%;text-align:center;}
+.inputbox.Policy-Started-On .input{position:relative;}
+/*img[id$=_Chart1]{height:200px;Width:400px;}*/
+img[id$=_Chart1]{max-width:100%;height:auto !important;Width:auto !important;}
+/****Loan details page****/
+.lnchPopop{cursor:pointer;}
+.dropdown-menu a.view_all_notif, .dropdown-menu a.view_all_notif:visited{color:#fff;}
+/*.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]{margin-left:0;}
+*/
+.ffr_section_details .radio input[type="radio"], .ffr_section_details .radio-inline input[type="radio"], .ffr_section_details .checkbox input[type="checkbox"], .ffr_section_details .checkbox-inline input[type="checkbox"],#divPayNow.radio input[type="radio"], #divPayNow.radio-inline input[type="radio"], #divOnline .checkbox input[type="checkbox"], #divOnline .checkbox-inline input[type="checkbox"], #divOffline .checkbox-inline input[type="checkbox"], #divOffline .checkbox input[type="checkbox"], .confirm_address_det .radio-inline input[type="radio"], .confirm_address_det .radio input[type="radio"]{margin-left:-20px;}
+.Red{color:#ff0000;}
+@media screen and (min-width: 767px) {
+	.desktop-navigation{display:block;height:42px;background:#0071bc;padding:8px 0;-webkit-box-shadow:inset 0px 4px 10px rgba(0, 0, 0, 0.2);box-shadow:inset 0px 4px 10px rgba(0, 0, 0, 0.2);}
+	.desktop-navigation p{font-size:20px;font-family:'DaxOT-Medium';margin:0;line-height:24px;letter-spacing:1px;color:#fff;}
+	.destop-menu{margin:0;}
+	.destop-menu li{padding:0 3px 10px;}
+	.destop-menu li a{color:#90d0fb;font-size:14px;line-height:23px;-ms-transition:0.1s linear 0s;-webkit-transition:0.1s linear 0s;-moz-transition:0.1s linear 0s;-o-transition:0.1s linear 0s;transition:0.1s linear 0s;font-family:'DaxOT-Regular';}
+	.destop-menu li a:hover, .destop-menu li a.active{text-decoration:none;color:#fff;}
+	/* Effect 1:Brackets */
+	.cl-effect-1 li a::before, .cl-effect-1 li a::after{display:inline-block;opacity:0;-webkit-transition:-webkit-transform 0.3s, opacity 0.2s;-moz-transition:-moz-transform 0.3s, opacity 0.2s;transition:transform 0.3s, opacity 0.2s;}
+	.cl-effect-1 li a::before{margin-right:4px;content:'[';-webkit-transform:translateX(20px);-moz-transform:translateX(20px);-ms-transform:translateX(20px);-o-transform:translateX(20px);transform:translateX(20px);}
+	.cl-effect-1 li a::after{margin-left:4px;content:']';-webkit-transform:translateX(-20px);-moz-transform:translateX(-20px);-ms-transform:translateX(-20px);-o-transform:translateX(-20px);transform:translateX(-20px);}
+	.cl-effect-1 li a.active::before, .cl-effect-1 li a.active::after, .cl-effect-1 li a:hover::before, .cl-effect-1 li a:hover::after, .cl-effect-1 li a:focus::before, .cl-effect-1 li a:focus::after{opacity:1;-webkit-transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);transform:translateX(0px);}
+	.desktopdropdown:hover .dropdown-menu{display:block;}
+	/*MAIN MENU DROPDOWN STYLES*/
+	.myrel_dropdown{padding:0;top:30px;left:0px;min-width:220px;right:auto !important;}
+	.myrel_dropdown li a:after, .myrel_dropdown li a:before, .myrel_dropdown p a:after, .myrel_dropdown p a:before{content:'';}
+	.myrel_dropdown li a{color:#666666;font-family:'DaxOT-Regular';padding:5px;}
+	.myrel_dropdown li a:hover{background:none;color:#0071BC;}
+	.myrel_dropdown li{padding:0;border-bottom:1px solid #e1e4e4;position:relative;}
+	ul.myrel_dropdown:before{border-color:rgba(194, 225, 245, 0);border-bottom-color:#B9C0C2;border-width:8px;margin-left:-32px;border-bottom:8px solid rgba(0, 0, 0, 0.2);border-left:8px solid transparent;border-right:8px solid transparent;content:"";display:inline-block;position:absolute;left:23%;top:-16px;}
+	ul.myrel_dropdown:after{border-color:rgba(136, 183, 213, 0);border-bottom-color:#FFFFFF;border-width:6px;margin-left:-30px;}
+	.myrel_dropdown:after, .myrel_dropdown:before{bottom:100%;left:23%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}
+	.myrel_dropdown p a{color:#0071BC;font-size:12px;font-family:'DaxOT-Regular';line-height:30px;text-transform:uppercase;}
+	.myrel_dropdown p a:hover{color:#0070c0;}
+	/**** 29-08-2017 experia changes start****/
+	.dropdown-menu.dropdown-menuinner, .desktopdropdown:hover .dropdown-menu.dropdown-menuinner{display:none;}
+	.dropdown-submenu:hover > .dropdown-menu.dropdown-menuinner{display:block;}
+	.dropdown-submenu > .dropdown-menuinner{top:0;left:100%;margin-top:0px;margin-left:-1px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;min-width:220px;}
+	/**** 29-08-2017 experia changes end****/
+	.advance_payment_info{font-family:'DaxOT-Regular';border-bottom:1px dashed #d9d9d9;color:#6c6b6b;padding:0 15px 10px;}
+	.select_amount_pay{font-family:'DaxOT-Regular';color:#6c6b6b;padding:15px;border-bottom:1px solid #d9d9d9;}
+	.select_contact_pay{font-family:'DaxOT-Regular';color:#6c6b6b;padding:15px;}
+	.advance_payment span{display:block;}
+	 .advance_payment p{display:inline-block;min-width:170px;border-right:1px solid #d9d9d9;font-family:'DaxOT-Regular';color:#999999;font-size:16px;}
+	 .advance_payment h4{display:inline-block;font-family:'DaxOT-Bold';padding:0 10px;}
+	 .desktopdropdown:first-child .myrel_dropdown{min-width:280px;}
+	 /****** menu last item dropdown styles ******/
+	 .last_menu_item{padding:0;top:30px; right: auto!important;
+    left:auto !important;min-width:220px;}
+	 .last_menu_item li a:after, .last_menu_item li a:before, .last_menu_item p a:after, .last_menu_item p a:before{content:'';}
+	 .last_menu_item li a{color:#666666;font-family:'DaxOT-Regular';padding:5px;}
+	 .last_menu_item li a:hover{background:none;color:#0071BC;}
+	 .last_menu_item li{padding:0;border-bottom:1px solid #e1e4e4;position:relative;}
+	 ul.last_menu_item:before{border-color:rgba(194, 225, 245, 0);border-bottom-color:#B9C0C2;border-width:8px;margin-left:-32px;border-bottom:8px solid rgba(0, 0, 0, 0.2);border-left:8px solid transparent;border-right:8px solid transparent;content:"";display:inline-block;position:absolute;right:auto!important;left:22.4%!important;
+top:-16px;}
+	 ul.last_menu_item:after{border-color:rgba(136, 183, 213, 0);border-bottom-color:#FFFFFF;border-width:6px;margin-left:-30px;}
+	 .last_menu_item:after, .last_menu_item:before{bottom:100%;right:auto;left:23%!important;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}
+	 .last_menu_item p a{color:#0071BC;font-size:12px;font-family:'DaxOT-Regular';line-height:30px;}
+	 .last_menu_item p a:hover{color:#0070c0;}
+}
+.myrel_dropdown li span { float: right; background: #cbced2; position: absolute; padding: 6px 10px;right: 0;top: 0;border-bottom: 1px solid #FFFFFF; color: #ffffff;min-width: 36px;}
+.myrel_dropdown li:hover span { background: #0071bc; color: #ffffff;}
+@media screen and (max-width: 768px) {
+	 .mutual_fund{padding:15px 0;}
+	 .sidebar_widgets{margin-top:5px;padding:0 15px;}
+	 .mobile-collapsedview .destop-menu .desktopdropdown:hover .dropdown-menu{display:none important;}
+	 .sweet-alert{width:200px;left:0;margin:0 auto;}
+	 /****Header Mobile Navigation*******/
+	 .nav-mobileop .navbar{min-height:0;/*margin:0px -5px;*/	 margin:0;background:0;border:0;}
+	 .nav-mobileop .navbar-toggle{margin:0;padding:7px 0;border:none;float:none;vertical-align:middle;border-radius:0;}
+	 .nav-mobileop .navbar .navbar-toggle:focus{background:none;}
+	 .mobile-collapsedview{position:absolute;min-width:220px;right:0px;z-index:9999;background:#FFF none repeat scroll 0% 0%;top:48px;-webkit-box-shadow:0 6px 12px rgba(0, 0, 0, 0.175);box-shadow:0 6px 12px rgba(0, 0, 0, 0.175);}
+	 .mobile-collapsedview li{border:none;}
+	 .mobile-collapsedview li a{padding:0 10px;margin:0;}
+	 .nav-mobileop .navbar-header{width:100%;margin:0 auto;text-align:center;}
+	 /**** 29-08-2017 experia changes start****/
+	 .customer_welcome h3{font-size:18px;font-weight:bolder;font-family:'DaxOT-Bold';color:#494949;padding:0 0 5px;border-bottom:1px solid #d6d7d9;margin:15px 0;}
+	 /**** 29-08-2017 experia changes end****/
+	 /*.customer_welcome h3 span{font-size:14px;color:#adadad;font-family:'DaxOT-Light';}	*/
+	 ul.mobile-nav > li{width:100%;padding:0;border-bottom:1px solid #e4e4e4;}
+	 ul.mobile-nav > li a{padding:5px 15px 5px 25px !important;}
+	 ul.mobile-nav li ul li{display:block;width:100%;}
+	 ul.mobile-nav li ul li a{border-bottom:1px solid #e4e4e4;}
+	 ul.mobile-nav li ul li:last-child a{border-bottom:none;}
+	 /*my relation mobile styles*/
+	 .myrel_mobile_menu li{position:relative;}
+	 .myrel_mobile_menu li span{float:right;background:#cbced2;position:absolute;padding:0px 10px;right:0;top:0;border-bottom:1px solid #FFFFFF;color:#ffffff;min-width:36px;}
+	 .myrel_mobile_menu li:hover span{background:#0071BC;color:#ffffff;}
+	 .destop-menu.navbar-nav{margin:7.5px -15px;}
+	 .userinfo-corner li{padding:0 10px;}
+	 button.navbar-toggle{min-width:0;}
+	 /***Insurance planner***/
+	 table.monthly{margin-top:0;min-width:768px;}
+	 .calHeader .grey_button, .calHeader .grey_button:visited{padding:6px 12px;}
+	 .grey_button,.grey-button{margin-bottom:10px;}
+	 .input_group1{border-right:none;}
+	 .GridWrapper{overflow:auto;}
+	 /*.mobile-collapsedview .destop-menu > li > a{color:#777777;}
+	.mobile-collapsedview ul.destop-menu > li a{padding:5px 15px 5px 25px!important;}*/
+}
+@media screen and (max-width: 480px) {
+	.userinfo-corner li{padding:0 0 0 6px !important;}
+	 #ppChart{/*overflow:auto;width:240px;*/margin-bottom:10px;}
+	 /* 23-6-2016 Start - EMI CARD DETAILS */
+	 .emi_card_details{margin-bottom:10px;}
+	 .emi_card_details p, .emi_card_details > span{display:block;max-width:none;padding:0;border:0;}
+	 .emi_card_details > p{font-weight:600;}
+	 .emi_card_details > span{border-bottom:1px solid #bfbfbf;padding-bottom:10px;}
+	 .personal_loan_detials:first-child span{padding-left:0 !important;}
+	 .ffr_section_details label.radio-inline{display:block;margin-left:0;}
+	 /* 23-6-2016 End - EMI CARD DETAILS */
+}
+/* 20-06-2016 start (Log a request for Drawdown)*/
+/*.custom_check input[type="checkbox"]{top:12px;}
+.custom_check{padding-left:0 !important;}
+*/
+.referal_form_area .form-group{float:none;vertical-align:top;}
+/* 20-06-2016 end */
+/* 23-6-2016 start */
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{background-color:transparent !important;}
+.nominee_section.mrgbtm0{margin-bottom:0px !important;}
+ul.emi_card_tabs li{min-height:95px;}
+/* 23-6-2016 start */
+/*#DeltaPlaceHolderMain > .col-md-12, #DeltaPlaceHolderMain .container{padding:0;}*/
+.slider{background:#48ca3b !important;border:0 !important;}
+.slider.ui-slider-horizontal .ui-slider-handle{top:0 !important;}
+.slider.ui-slider .ui-slider-handle{height:10px !important;}
+.ui-slider-range.ui-widget-header.ui-slider-range-max{background:#e3e3e5;}
+.radio td input[type=radio]{left:20px;}
+.emi_generate_otp .radio td label {padding-left: 20px;}
+.list-unordered{padding-left:30px;}
+.error-start{position:absolute;right:-8px;top:0;}
+.ploan_payment_details .ErrorMsg{position:absolute;}
+.confirm_contact.abled .form-group{position:relative;}
+.userinfo-corner .tooltip-inner{min-width:150px;}
+.tooltip.bottom .tooltip-arrow{border-bottom-color:#181c23;}
+.tooltip-inner{background:#181c23;}
+.sms_keywords .table-responsive table tbody tr td, .sms_keywords .table-responsive table th{border:0;}
+.progress{margin-bottom:0;height:10px;}
+.inner-banner{margin-top:15px;}
+.inner-banner > img{width:100%;}
+.caption{position:absolute;left:35px;top:15px;right:0;margin-top:-2px;}
+.FDbanner .caption{top:110px !important;/* left:0 !important;*/}
+.sendlotp .aspNetDisabled{width:100%;height:34px;border-radius:4px;}
+.enter_mobile a.grey_button{width:100%;padding:7px 0;}
+#PopUpUpdate{top:20%;}
+@media screen and (max-width: 767px) {
+	 .navbar-toggle .icon-bar{width:26px;}
+	 .xs-mrgtop10{margin-top:10px;}
+	 .myrel_dropdown li span{padding:0px 10px;}
+	 .user_rateings .radio-inline{width:31%;display:inline-block;padding:0;margin:0;}
+	 .navbar-nav .open .dropdown-menu{min-width:0px;}
+	 .userinfo-corner .tooltip{display:none !important;}
+	 .mobile-form .form-group{width:100% !important;}
+	 .referal_loan_type .radio-inline label div{margin-right:-23px;}
+	 .payment_roi .form-group{float:none;}
+	 .caption{position:static;padding:15px;background:#71b780;}
+	 .FDbanner .caption{background:#B0A878 !important;}
+	 .banner_content{width:100%;}
+	 .ffr_main_banner .caption{background:#82a074;}
+}
+.rmDetails{text-transform:uppercase;cursor:help;position:relative;text-align:center;-webkit-transform:translateZ(0);-webkit-font-smoothing:antialiased;}
+.rmDetails .rmDetailshow{background:#3399CC;border-radius:4px;bottom:100%;color:#fff;display:none;left:-140px;margin-bottom:15px;opacity:0;padding:20px;pointer-events:none;position:absolute;width:300px;-webkit-transform:translateY(10px);-moz-transform:translateY(10px);-ms-transform:translateY(10px);-o-transform:translateY(10px);transform:translateY(10px);-webkit-transition:all .25s ease-out;-moz-transition:all .25s ease-out;-ms-transition:all .25s ease-out;-o-transition:all .25s ease-out;transition:all .25s ease-out;-webkit-box-shadow:2px 2px 6px rgba(0, 0, 0, 0.28);-moz-box-shadow:2px 2px 6px rgba(0, 0, 0, 0.28);-ms-box-shadow:2px 2px 6px rgba(0, 0, 0, 0.28);-o-box-shadow:2px 2px 6px rgba(0, 0, 0, 0.28);box-shadow:2px 2px 6px rgba(0, 0, 0, 0.28);}
+.rmDetails .rmDetailshow:before{bottom:-20px;content:" ";height:20px;left:0;display:block;position:absolute;width:300px;}
+.rmDetails .rmDetailshow:after{border-left:solid transparent 10px;border-right:solid transparent 10px;border-top:solid #1496bb 10px;bottom:-10px;content:" ";height:0;left:50%;margin-left:-13px;position:absolute;width:0;}
+.rmDetails a:hover + .rmDetailshow{display:block;opacity:1;pointer-events:auto;-webkit-transform:translateY(0px);-moz-transform:translateY(0px);-ms-transform:translateY(0px);-o-transform:translateY(0px);transform:translateY(0px);}
+.payment_after_proceed ul{padding-left:17px;margin-top:5px;}
+.stats .per2col h3{margin-top:5px;margin-bottom:5px;}
+.nm input[type="image"]{vertical-align:middle;}
+/* 11-7-2016 start */
+.GridWrapper{overflow-x:auto;min-height:0.01%;width:100%;display:block;}
+.ms-webpart-zone, .ms-webpart-cell-vertical, .ms-webpart-chrome-vertical{display:block;}
+.calHeader{position:relative;}
+@media (min-width: 768px) {
+	.calendar .calHeader .wys {position: absolute; right: 0;}
+    table.monthly {top: 0;margin-top: 0;position: relative;    }
+}
+.calendar .calHeader .wys a{margin-bottom:0;}
+table.gridblack.text-left td{text-align:left;}
+table.gridblack.text-left td ul{margin-left:0;}
+table.gridblack.text-left td p{min-width:0px;}
+.paddingbtm20{padding-bottom:20px !important;}
+.paddingL5{padding-left:5px;}
+/* 11-7-2016 end */
+span.AmtLbl{display:inline-block;width:100%;}
+.AmtLbl span{width:auto;display:inline;}
+.poll_container .modal-content{float:left;width:100%;}
+.divRbtnOptions{display:inline-block;padding-left:45px;}
+.divRbtnOptions table tr td input[type="radio"]{margin:0 5px 0 0;}
+.divRbtnOptions table tr td label{margin-bottom:0;}
+.divRbtnOptions .spanvisible{width:100%;display:inline-block;}
+.poll_questions .table > thead > tr > td, .poll_questions .table > tbody > tr > td, .poll_questions .table > tfoot > tr > td{border-left:1px solid #ccc;}
+.poll_questions .table > thead > tr > td:last-child, .poll_questions .table > tbody > tr > td:last-child, .poll_questions .table > tfoot > tr > td:last-child{border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+/**** mutual fund ****/
+/* PLCS OFFER MIDDLE PAGE */
+.newoffers .offers_details {min-height:250px;}
+.newoffers p {margin:0px 0 10px;text-align:left}
+.padBot {padding-bottom:20px}
+.payment_header_style{background: #8199a5;padding: 10px 20px;border-radius: 4px 4px 0 0;}
+.payment_header_style img{width:auto;padding:0}
+/* mutual fund details icon */
+.vas_mf_calc{background:url('../images-2013/home-loan/emi-details.png')no-repeat top center;padding-top:60px;}
+li.vas_mf_calc:hover, li.vas_mf_calc.active{background:url('../images-2013/home-loan/emi-details-hover.png')no-repeat top center;}
+li.vas_mf_intro{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfIntro.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_intro.active, li.vas_mf_intro:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfIntro-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_goal{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfGoal.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_goal.active, li.vas_mf_goal:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfGoal-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_how_inv{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfInvest.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_how_inv.active, li.vas_mf_how_inv:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfInvest-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_risk{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfRisk.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_risk.active, li.vas_mf_risk:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfRisk-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_cri_rank{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfRank.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_cri_rank.active, li.vas_mf_cri_rank:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfRank-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_registration{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfRegistration.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_registration.active, li.vas_mf_registration:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfRegistration-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_buy_sell{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfBuy.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_buy_sell.active, li.vas_mf_buy_sell:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfBuy-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_portfolio{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfPortfolio.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_portfolio.active, li.vas_mf_portfolio:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfPortfolio-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_knowledge{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfKnowledge.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_knowledge.active, li.vas_mf_knowledge:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfKnowledge-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_calculator{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfCalculator.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_calculator.active, li.vas_mf_calculator:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfCalculator-hover.png") no-repeat scroll center top;padding-top:60px;}
+.owl-carousel{list-style:none;}
+/***insurance details icon*****/
+li.vas_insurplan_overview{background: rgba(0, 0, 0, 0) url("../images-2013/fdd/mfIntro.png") no-repeat scroll center top;padding-top: 60px;margin:0 8px!important}
+ li.vas_insurplan_overview.active,li.vas_insurplan_overview:hover{background: rgba(0, 0, 0, 0) url("../images-2013/fdd/mfIntro-hover.png") no-repeat scroll center top;padding-top: 60px;margin:0 8px}
+li.vas_insurplan_health{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planHealth.png") no-repeat scroll center top;padding-top:60px;margin:0 8px !important;}
+li.vas_insurplan_health.active, li.vas_insurplan_health:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planHealth-hover.png") no-repeat scroll center top;padding-top:60px;margin:0 8px;}
+li.vas_insurplan_life{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planLife.png") no-repeat scroll center top;padding-top:60px;margin:0 8px !important;}
+li.vas_insurplan_life.active, li.vas_insurplan_life:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planLife-hover.png") no-repeat scroll center top;padding-top:60px;margin:0 8px;}
+li.vas_insurplan_motor{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planMotor.png") no-repeat scroll center top;padding-top:60px;margin:0 8px !important;}
+li.vas_insurplan_motor.active, li.vas_insurplan_motor:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planMotor-hover.png") no-repeat scroll center top;padding-top:60px;margin:0 8px;}
+li.vas_insurplan_personal{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planPersonal.png") no-repeat scroll center top;padding-top:60px;margin:0 8px !important;}
+li.vas_insurplan_personal.active, li.vas_insurplan_personal:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planPersonal-hover.png") no-repeat scroll center top;padding-top:60px;margin:0 8px;}
+li.vas_insurplan_home{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planHome.png") no-repeat scroll center top;padding-top:60px;margin:0 8px !important;}
+li.vas_insurplan_home.active, li.vas_insurplan_home:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planHome-hover.png") no-repeat scroll center top;padding-top:60px;margin:0 8px;}
+li.vas_insurplan_sankat{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planSankat.png") no-repeat scroll center top;padding-top:60px;margin:0 8px !important;}
+li.vas_insurplan_sankat.active, li.vas_insurplan_sankat:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/planSankat-hover.png") no-repeat scroll center top;padding-top:60px;margin:0 8px;}
+.insurance_main_banner{background:url(../images-2013/VAS/protectionplan-banner.png) no-repeat 0% 50%;min-height:176px;margin-top:15px;}
+/* details icon */
+li.vas_mf_children{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfEducation.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_children.active, li.vas_mf_children:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfEducation-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_vacation{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfvacation.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_vacation.active, li.vas_mf_vacation:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfvacation-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_dream{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfHome.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_dream.active, li.vas_mf_dream:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfHome-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_car{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfCar.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_car.active, li.vas_mf_car:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfCar-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_retirement{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfRetirement.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_retirement.active, li.vas_mf_retirement:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfRetirement-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_wedding{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfWedding.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_wedding.active, li.vas_mf_wedding:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfWedding-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_types{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfType.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_types.active, li.vas_mf_types:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfType-hover.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_invest{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfInvest.png") no-repeat scroll center top;padding-top:60px;}
+li.vas_mf_invest.active, li.vas_mf_invest:hover{background:rgba(0, 0, 0, 0) url("../images-2013/fdd/mfInvest-hover.png") no-repeat scroll center top;padding-top:60px;}
+ul.mutual_fund_tabs.fixed_deposit_tabs li{list-style:none;width:100%;}
+.mutual_fund_tabs{float:left;}
+.MF-more-tabs .mutual_fund_tabs{float:none;}
+/*** insurance(protection plan)****/
+.pd-bot{padding-top:20px;padding-bottom:20px;margin:0;margin-bottom:20px;}
+.bor-bot{border-bottom:1px dashed #ccc;}
+.pd-all{position:relative;padding:10px;}
+.popupData_table{border-bottom:1px solid #D9D9D9;border:1px solid #D9D9D9;border-radius:5px;}
+.popupData_table p:first-child{padding:6px 12px !important;border-bottom:1px solid #D9D9D9;}
+.popupData_table p{color:#6c6b6b;padding:5px 10px;margin:0px;}
+.popupData_table p strong{border-radius:5px;color:#0071BD;}
+.EditPos{position:relative;color:#0071BD;cursor:pointer;}
+.EditPos .EditField{position:absolute;right:-8px;top:5px;color:#0071BD;cursor:pointer;}
+.Request_thankyou{font-size:18px;color:#333;text-align:center;}
+.Request_thankyou .icon{font-size:16px;width:30px;height:30px;display:inline-block;background-repeat:no-repeat;}
+.Request_thankyou .icon-thankyou{width:30px;height:30px;display:inline-block;background-repeat:no-repeat;background-image:url(../images-2013/sprite-icons1.png);background-position:-40px -111px;}
+.Request_thankyou .insuracePlanName{background-image:url(../images/sprite-icons1.png);background-position:-40px -111px;height:30px;width:30px;text-transform:capitalize;font-weight:bold;}
+div[id$=_ReqThankUPopup].modal{top:20%;}
+/**** mutual fund details page ****/
+.ol_style{margin-left:20px;}
+.MF-more-tabs{padding:0 20px;}
+.MFDetails{padding:20px;}
+.MFDetails p{width:100%;}
+.more_tabs .mutual_fund_tabs.MF-Innertabs{width:auto;}
+.MF-tabs{float:left;}
+ul.inner_tabs_width.MF-Innertabs li{list-style:none;text-align:Center;margin:0;font-family:'DaxOT-Medium';font-size:12px;color:#6C6B6B;cursor:pointer;text-transform:uppercase;}
+.noShadow{border-bottom:1px dashed #D9D9D9;box-shadow:none;}
+.zeroBorder{color:#0072BC;border:none;}
+.MFDetails .checkbox input[type="checkbox"], .MFDetails .checkbox-inline input[type="checkbox"]{margin-left:0;}
+div[id$=_dvHLTerms] .modal-dialog{width:50%;}
+.mf-tab-content{display:none;}
+.mf-tab-content.active{display:block;}
+.text-blue{margin-bottom:0;color:#0071BC;}
+.blueText{color:#0071BC;}
+.MFDetails .ErrorMsg{display:none;}
+.MFDetails a{cursor:pointer;}
+.MFSlider .loan-item{display:inline-block;margin-top:10px;}
+/**** my wish page****/
+.RBtnNxtwish{float:left;width:100%;}
+.RBtnNxtwish td{padding-bottom:15px;padding-top:8px;}
+.martop43{margin-top:43px;}
+.mrgtop10{margin-top:10px;}
+.RBtnNxtwish input[type="checkbox"]{margin-top:0;margin-right:5px;}
+.RBtnNxtwish label{margin-bottom:0;}
+.borTop{border-top:1px dotted #D9D9D9;padding-top:15px;}
+/* 28-9-2016 start */
+div[id$="RenewOverview"] .tab{margin-top:0 !important;}
+.CatSelect{position:relative;left:-39px;}
+div[id$=_divThankInsert] .modal-dialog{width:492px;}
+/****my wish popup 13-10-2016****/
+.ThankPopup.PopUp.modal{top:28%;}
+/*.details_user_know p{min-width:0;width:35%;}
+.details_user_know span{min-width:0;width:64%;}
+*/
+div[id$="RenewOverview"] table{display:block;}
+div[id$="RenewOverview"] table.monthly{border:0 !important;margin-bottom:0;min-width:0px;float:none;}
+div[id$="RenewOverview"] table tr{display:block;}
+div[id$="RenewOverview"] table td input, div[id$="RenewOverview"] table td label{margin:0 !important;}
+div[id$="RenewOverview"] table td input{margin-right:2px !important;}
+div[id$="RenewOverview"] table td{margin-right:10px !important;display:inline-block;}
+div[id$="RenewOverview"] .details_user_know span{max-width:66%;}
+.confirm-checkbox{display:inline-block;float:left;margin-right:10px;}
+.loan_details_stats_sec1 h3{margin-top:0;}
+.inputText{display:inline-block;position:relative;top:5px;max-width:90%;}
+.request_title p{padding:5px 15px;color:#666;}
+@media(max-width:600px) {
+	div[id$="RenewOverview"] .details_user_know span { max-width: 50%;}
+    /*.CatSelect{left:0% !important;}
+    .modal-dialog {left:13%;}*/
+}
+@media(max-width: 480px) {
+	 div[id$="RenewOverview"] .details_user_know p {border-right: 0;display: block;}
+    div[id$="RenewOverview"] .details_user_know span {display: block;border-bottom: 1px solid #BFBFBF; width: 100% !important;padding: 0 0 10px 0 !important;max-width: none;}
+    div[id$="RenewOverview"] .border-bottom-0 span {border-bottom: 0 !important;padding-bottom: 0 !important;}
+}
+/* 28-9-2016 end */
+/**** 7-10-2016 ****/
+.inputVerify input, .FieldType input[type="radio"]{display:inline-block;margin-right:5px;margin-top:0;}
+.inputVerify label{margin-bottom:0px;display:inline;}
+.fieldDetails label{margin-bottom:0px;margin-right:10px;}
+.update_contact_inner_details{padding:20px 15px;}
+/**** 7-10-2016 mutual funds page ****/
+#txtLoanAmount, #txtTenure, #intrRate{border-bottom-right-radius:4px;border-bottom-left-radius:4px;border-top-right-radius:4px;border-top-left-radius:4px;width:100%;}
+#slider{margin-left:10px;margin-right:0;margin-top:10px;width:96%;height:5px !important;}
+#slider .ui-slider-range{height:5px !important;}
+#slider2{margin-left:10px;margin-right:0;margin-top:10px;width:96% !important;height:5px !important;}
+#slider2 .ui-slider-range{height:5px !important;}
+#slider3{margin-left:10px;margin-right:0;margin-top:10px;width:96%;height:5px !important;}
+#slider3 .ui-slider-range{height:5px !important;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{/* left:0% !important;*/ background-color:#F6F6F6 !important;border:1px solid #CCC !important;}
+.padl10{padding-left:10px;}
+.padl20{padding-left:20px;}
+.paddingLRB10{padding:0 10px 10px 10px;}
+.mf_loan_stats{width:97% !important;padding:20px 0px 0 0px;}
+.mf_home_loan{height:auto;}
+.heading h1{font-size:24px !important;/* margin-left:10px !important;*/}
+#faq-head{margin-bottom:10px;margin-top:10px;}
+.myPortfolio{/*-webkit-transform:translate3d(-488px, 0px, 0px);*/ -webkit-transition-property:all;-webkit-transition-duration:200ms;-webkit-transition-timing-function:ease;-webkit-transition-delay:initial;-webkit-transform:translate3d(-488px, 0px, 0px);}
+.NoMyPortfolio{-webkit-transform:translate3d(0px, 0px, 0px);}
+/*14-10-2016*/
+.mfdetails{margin-top:10px;width:100% !important;}
+.portfoliolabel{width:100% !important;padding:10px !important;background-color:white !important;}
+.KYC{border-right:none !important;}
+.CAN{border-right:none !important;}
+.sliderdiv{width:100% !important;}
+a.view-details:hover, a.view-details:focus, a.view-details:visited{color:white !important;}
+#home-content-slide1 .owl-next{margin:1px !important;}
+#panel2{margin-top:10px;}
+/*17-10-2016*/
+.itemdisplay{width:100% !important;}
+#panel2{width:100% !important;}
+#A10{cursor:pointer;}
+/*.MFDetails a:hover{color:#23527C !important;}*/
+.MFview a{color:white !important;}
+.col-sm-5.col-xs-5.mf_stats.mfgl{width:100% !important;}
+.mcontent{margin-top:16%;}
+.gotp{padding:10px;}
+.loan_details_stats .table-responsive {border: none;color: #6C6C6C;}
+.loan_details_stats .table-responsive table {margin: 0;border: 1px solid #CCC;border-radius: 0;}
+/***** 25-01-2017 logout page slider *****/
+div#Banner_Slider {width: 70%;margin: 0 10px;}
+@media only screen and (max-width:768px) {
+    .CatSelect {left: 0% !important;}
+    div[id$="_divThankInsert"] .modal-dialog {left: 13%;width: 68%;}
+}
+/*.FieldType MobileSupports Fcheck{border-top:1px dotted #D9D9D9;padding-top:15px;border:1px solid #d9d9d9;border-radius:3px;}
+*/
+.Fcheck{border:1px solid #d9d9d9;float:left;width:100%;margin-bottom:10px;border-radius:3px;}
+.RadioContact{padding:10px 15px 0 15px;}
+.EnterDetailsContact{margin-left:0px;}
+@media only screen and (max-width:768px){
+	#panel2.row{margin-left:0px !important;}
+}
+/*asha 21-10-2016*/
+/*.btnsub{width:80.333333%}
+*/
+.col-sm-5.MobNumField .col-sm-8{padding-right:15px;}
+.col-sm-5.MobNumField .col-sm-4{padding:0px;margin-left:-5px;}
+@media only screen and (max-width:990px){
+	.col-sm-5.MobNumField .col-sm-4{margin-left:15px !important;margin-top:15px;}
+}
+/*@media only screen and (min-width:786px) and (max-width:990px){.btnsub{width:91.333333%;max-width:91.333333%;min-width:91.333333%}
+}
+/*@media only screen and (max-width:785px){.btnsub{width:39.333333%;max-width:39.333333%;min-width:39.333333%}
+}
+*/
+.col-sm-offset-3{margin-left:26.5% !important;}
+@media only screen and (min-width:320px) and (max-width:786px){
+	 .col-sm-offset-3{margin-left:0 !important;}
+	 div[id$=_dvHLTerms] .modal-dialog{width:90%;margin:0 auto;}
+	 #panel2{width:96% !important;}
+	 .mf_home_loan{padding:0 0px 0 20px;margin-top:10px;}
+	 .InnerTabs.owl-carousel .owl-buttons .owl-prev{left:-18px;}
+}
+@media only screen and (min-width:786px) and (max-width:1326px){
+	.otp{margin-bottom:26px !important;}
+}
+.detailstab{width:100%;border-top:1px solid #ABABAB;border-bottom:1px solid #ABABAB;padding:10px 0px;display:inline-block;}
+.detailstab td{width:34%;border-right:1px solid #ABABAB;padding:0px 12px;}
+.detailstab td:last-child{border-right:none !important;}
+.assetcol{min-width:87px;max-width:87px;width:87px;}
+.typecol{min-width:130px;max-width:130px;width:130px;}
+.hcostcol{min-width:96px;max-width:96px;width:96px;}
+.cmpcol{min-width:72px;max-width:72px;width:72px;}
+.hvcol{min-width:94px;max-width:94px;width:94px;}
+.hdcol{min-width:80px;max-width:80px;width:80px;}
+.detailscol{min-width:116px;max-width:116px;width:116px;}
+.tabportfolio .grey_button{padding:7px 16px !important;}
+.pagerstyle td{border:1px solid #ccc;padding:3px 5px;margin-left:3px;}
+/* 29-11-2016 FAq style*/
+.FaqAccordion .content .big-img {width: auto;}
+.errorUnblock{font-size: 12px !important;color: #f10f00 !important;}
+/***** 28-01-2017 VAS page *****/
+.container.payment_inner {width: 100% !important;} 
+/*Added for LAS*/
+li.vas_Loan_disbursment{background:url('../images-2013/VAS/fixed-deposit/loan-disbursment.png')no-repeat top center;padding-top:60px;}
+li.vas_Loan_disbursment:hover, li.vas_Loan_disbursment.active{background:url('../images-2013/VAS/fixed-deposit/loan-disbursment-hover.png')no-repeat top center;padding-top:60px;}
+.disbursmentDetailContainer{background:#8199A5 none repeat scroll 0 0;padding:20px 10px;border-radius:5px;}
+.greyBackground{background:#8199a5 none repeat scroll 0 0;}
+.disbursmentDetail{display:block;padding:9px 0;vertical-align:top;}
+.disbursmentDetail p{border-right:1px solid #fff;color:#fff;display:inline-block;margin:0;min-width:133px;vertical-align:top;}
+.disbursmentDetail span{color:#fff;display:inline-block;font-family:"DaxOT-Regular";padding:0 2px;vertical-align:top;}
+.disbursmentForm{padding:30px 0 50px 0;background-color:#fff;}
+.disbursmentForm a.btn{margin-right:10px;}
+b.form15G, b.form15H{font-size:18px;margin-top:0;}
+label.form15G, label.form15H, h3.form15G, h3.form15H{font-size:15px;margin-top:0;}
+/***** fixed deposit accordion styles 28-12-2016*****/
+.Accheading.active a{background-image:url('../images-2013/select-dropdown-up.png');background-repeat:no-repeat;background-position:center right;-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}
+.Accheading a{background-image:url('../images-2013/select-dropdown.png');background-repeat:no-repeat;background-position:center right;}
+div[id$=_divBanner] .item label{position:absolute;bottom:70px;color:#ffffff;left:184px;width:150px;font-size:18px;padding:3px;font-weight:bold;top:112px;}
+div[id$=_divBanner] .item input[type="image"]{max-width:100%;}
+/*--03-feb-2016--*/
+.fl{float:left;}
+.otp-block{position:relative;}
+.otp-block .errorUnblock{position:absolute;top:80px;left:236px;}
+/*** mutual fund radio button label alignment 24-02-2017 ***/
+.RadioLabel .custom-selection input[type="radio"]{margin-top:0;}
+.RadioLabel .control-label{margin-bottom:0;margin-right:10px;}
+.RadioLabel .custom-selection{margin-right:3px;}
+/*---- 3/22/2017 (owlCarousel)*/
+.emi-slide ul.emi_card_tabs li{width:100% !important;}
+div.ad300 label{position:absolute;bottom:70px;color:#ffffff;left:39px;width:150px;font-size:12px;padding:3px;font-weight:bold;top:87px;}
+li.vas_Loan_stock .new-vas_Loan_stock{background:url('../images-2013/tools/information-icon-hover.png') no-repeat top center;padding-top:60px;height:84px;}
+li.vas_Loan_stock:hover .new-vas_Loan_stock, li.vas_Loan_stock.active .new-vas_Loan_stock{background:url('../images-2013/tools/information-icon-hover.png') no-repeat top center;padding-top:60px;color:#0071BC;}
+.vas_Loan_stock input[type="submit"]{border:none !important;/*background:none !important;*/ color:#6C6B6B;min-width:0 !important;font-family:'DaxOT-Medium';font-size:12px;padding-left:0;}
+/*** stock release ***/
+.btnDeletetest{background:url(../images-2013/trash.png) no-repeat;width:16px;height:16px;display:inline-block;cursor:pointer;}
+#myTable td, #myTable th{border-right:none;border-bottom:none;text-align:center;}
+.SNo{min-width:54px;max-width:54px;width:54px;}
+.ScriptISIN{min-width:90px;max-width:90px;width:90px;}
+.ScriptName{min-width:85px;max-width:85px;width:85px;}
+.PledgeQty{min-width:68px;max-width:68px;width:68px;}
+.ReleaseQty{min-width:68px;max-width:68px;width:68px;}
+.RateCol{min-width:65px;max-width:65px;width:65px;}
+.ReleaseAmt{min-width:110px;max-width:110px;width:110px;}
+.stockreleaseform{padding:25px 0;background-color:#fff;}
+.stockreleaseform h4, .stockreleasetabel h4{font-size:17px;font-family:"DaxOT-Medium";}
+.ui-autocomplete{z-index:5000;}
+.stockreleaseform a.btn{margin-right:10px;}
+.stockSuccess{display:none;padding:12px;text-align:center;margin:10px 0 0;background:#f3f2f2;color:#3e9d1a;}
+.stockreleasetabel{padding:0 0 20px 0;background-color:#fff;}
+.stockreleaseform h4, .stockreleasetabel h4{font-size:17px;font-family:"DaxOT-Medium";}
+.stockreleasetabel .table-responsive{border:1px solid #cccccc;border-radius:4px;color:#6c6c6c;}
+.stockreleasetabel .table{margin-bottom:0;}
+.stockreleasetabel .table thead{background:#e4e5e7 none repeat scroll 0 0;}
+.del{background:#e4e5e7 none repeat scroll 0 0;}
+.delete-scrip{left:12px;bottom:12px;}
+.totalAmount{font-family:'DaxOT-Medium';padding:10px;font-size:16px;}
+.DelBtnCol{min-width:40px;max-width:40px;width:40px;}
+.marTop10{margin-top:15px;}
+
+.PlatinumEmi{background-color:Transparent;background-image:url(/_layouts/15/Images/Experia/images-2013/VAS/EMI-Card_New.jpg);background-repeat:no-repeat;text-align:left;width:233px;height:139px;margin-left:10px;padding:40px 0 0 10px;}
+.CustName{font-family:Arial;font-size:11px;font-weight:bold;color:#FFFFFF;padding-top:0px;height:20px;}
+.HRuppes{font-family:Arial;font-size:11px;color:#FFFFFF;font-weight:bold;padding-bottom:5px;}
+.vas_fd_Invest{background:url('../images-2013/VAS/fixed-deposit/fd-apply-now.png')no-repeat top center;padding-top:60px;}
+li.vas_fd_Invest:hover, li.vas_fd_Invest.active{background:url('../images-2013/VAS/fixed-deposit/fd-apply-now-hover.png')no-repeat top center;}
+/**** 16-5-2018 ****/
+.View_Offers{background:url('../images-2013/home-loan/gift.png')no-repeat top center;padding-top:60px;}
+li.View_Offers:hover, li.View_Offers.active{background:url('../images-2013/home-loan/gift-hover.png')no-repeat top center;}
+
+ .btn-invest { margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        background: no-repeat !important;
+        font-size: 12px !important;
+        font-family: daxot-medium !important;
+        color: #6c6b6b !important;
+    }
+ .inner_tabs li:hover .btn-invest, .inner_tabs li.active .btn-invest, .btn-invest:hover { color: #0071bc !important;}
+
+/**** switchfee styles ****/
+.grey_button_space{margin-bottom:20px;width:150px;}
+.bullets .para li p{bottom:20px;margin-left:0px;margin-bottom:10px;margin-top:0px;display:inline;}
+.top_line{background-color:#a5a5a5 !important;color:#FFF;padding:10px;text-align:center;border:1px solid #000;border-bottom:none;}
+.smcfTable{width:100%;}
+.table-responsive tr td{border:1px solid #000;text-align:center;padding:10px;}
+.radio table.RadioBtnList{width:100%;}
+.radio table.RadioBtnList tr{display:inline-block;width:40%;}
+.radio table.RadioBtnList tr td input[type="radio"]{left:inherit;margin-left:0px;}
+div#divEmail, #divMobile, #divValidEmail, #divValidMobile{float:right;width:72%;}
+/*** terms popup - fd-details ***/
+div[id$=_TncPop].modal{overflow:hidden;}
+div[id$=_TncPop] .modal-content{overflow:auto;height:300px;padding:10px;}
+div[id$=_TncPop] .contenttip ul, div[id$=_TncPop] .contenttip ol{padding-left:20px;}
+.PopDetailsTitle h3{padding:0;font-size:16px;}
+.checkboxTnC .fieldDiv{width:100%;display:inline-block;padding:0 20px;}
+.submitbtn{background:#8396a0;color:#fff !important;font-family:'DaxOT-Regular';font-size:12px;padding:7px 37px;transition:.5s;}
+/*** FD Interest Certificate***/
+.fr{float:right;}
+/**GSTIN*/
+.LanPart{width:90%;float:left;padding:15px 0;border:1px solid #cccccc;margin-left:20px;margin-top:2%;border-radius:4px;background-color:#fff;}
+.LanPart .Leftlanpart{width:20%;float:left;padding:0px 20px;}
+.formField{display:inline-block;width:32%;}
+.LanPart .Leftlanpart p{font-size:20px;color:#6b6b6b;text-align:left;}
+.LanPart .Leftlanpart input, .LanPart .Leftlanpart select{width:100%;height:50px;background-color:#eeeeee;border-radius:4px;border:1px solid #cccccc;cursor:not-allowed;color:#555555;text-align:center;user-select:none;}
+.LanPart .select2-container{width:100% !important;}
+.LanPart .select2-container--default .select2-selection--single{min-height:40px;}
+.LanPart .Selectlanpart{width:22%;float:left;}
+.Selectlanpart .applicant{font-size:20px;color:#6b6b6b;width:100%;}
+.Selectlanpart p{width:160px;}
+.Selectlanpart input{float:right;margin-right:10px;}
+.Selectlanpart .GSTINline{width:78%;float:left;}
+.Selectlanpart .GSTINline p{font-size:20px;color:#555555;text-align:left;margin:0;margin-bottom:10px;}
+.Selectlanpart .GSTINline input{width:100%;float:left;height:40px;border-radius:4px;border:1px solid #cccccc;background-color:#fff;color:#555555;}
+.LanPart .registred{width:58%;float:left;padding-right:10px;}
+.registred p{color:#6b6b6b;font-size:20px;text-align:left;padding-left:5px;}
+.LanPart .LINE1 input{width:100%;height:40px;float:left;margin-bottom:10px;border-radius:4px;border:1px solid #cccccc;background-color:#fff;color:#555555;padding-left:10px;margin-left:5px;}
+.LanPart .Address4box{width:100%;float:right;}
+.LanPart .Address4box ul{list-style-type:none;padding-left:0;}
+.LanPart .Address4box li{float:left;width:49.5%;padding:5px;}
+.LanPart .Address4box li.RegLi{min-height:70px;}
+.LanPart .Address4box li input{width:100%;float:left;background-color:#fff;border-radius:4px;border:1px solid #cccccc;color:#555555;height:40px;padding-left:6px;}
+.EditbtnPart{width:6%;float:left;;background:#8396a0;margin:120px auto;height:40px;line-height:38px;border-radius:4px;margin-left:10px;}
+.EditbtnPart:hover{background:#0071bc;text-align:center;text-decoration:none;}
+.EditbtnPart a{width:100%;float:left;display:block;text-align:center;font-size:12px;color:#f1f1f1;text-decoration:none;}
+.breadcrumbNew{background-color:transparent !important;}
+.clearfix .Edit{float:right;margin:5px;color:#0072bc;}
+.LanPart .rdApplicant label{word-break:break-all;float:left;width:230px;}
+.Leftlanpart .media-heading{border:1px solid #CCC;padding:5px;border-radius:5px;min-height:40px;}
+/**** EMI loans styles 19-7-2017****/
+.EMI_overview{width:100%;margin:0 auto;text-align:center;padding-bottom:10px;}
+.EMI_overview img{width:233px;height:140px;}
+.detailsforEmi{width:90%;padding:20px;}
+.detailsforEmi ul{width:100%;list-style-type:none;}
+.detailsforEmi li{width:100%;padding-bottom:15px;}
+.detailsforEmi li p{width:100%;padding-top:10px;font-family:'DaxOT-Regular';color:#6c6b6b;font-size:16px;}
+.detailsforEmi li span img{float:left;width:40px;margin-right:15px;}
+.SecondBtn{width:100%;margin:0 auto;padding:20px;}
+.SecondBtn ul{list-style-type:none;width:100%;}
+.SecondBtn li{width:100%;padding-bottom:15px;}
+.SecondBtn li p{width:100%;padding-top:10px;font-family:'DaxOT-Regular';color:#6c6b6b;font-size:16px;padding-left:55px;}
+.SecondBtn li span img{float:left;width:40px;margin-right:15px;}
+.ThirdBtn{width:100%;margin:0 auto;}
+.ThirdBtn ul{list-style-type:none;width:100%;}
+.ThirdBtn li{width:100%;padding-bottom:15px;}
+.ThirdBtn li p{width:100%;padding-top:10px;font-family:'DaxOT-Regular';color:#6c6b6b;font-size:16px;padding-left:56px;}
+.ThirdBtn li span img{float:left;width:40px;margin-right:15px;}
+.popUpFieldHide{padding-bottom:10px;float:left;width:100%;}
+/***21-07-2017 mutual funds portfolio***/
+div[id$="_dv_Mutual"] .table-responsive{border:1px solid #cccccc;}
+.loan_details_stats .table-responsive table.tabportfolio{border:1px solid transparent;}
+.table.tabportfolio > thead > tr > th, .table.tabportfolio > tbody > tr > th, .table.tabportfolio > tfoot > tr > th,.table.tabportfolio > thead > tr > td, .table.tabportfolio > tbody > tr > td, .table.tabportfolio > tfoot > tr > td{border-top:1px solid transparent;border-bottom:1px solid #ccc;border-right:1px solid transparent;}
+.table-responsive table.tabportfolio tr td{text-align:left;}
+/****update contact details****/
+.chkPaddingTop{margin-top:10px;}
+.chkPaddingTop td input[type="checkbox"]{margin-top:0;margin-right:5px;}
+.chkPaddingTop td label{margin-bottom:0;display:inline;}
+/**** pre approved offers ****/
+.payment_offers_section .offers_details{padding:15px;min-height:171px;}
+.TooltipDiv input[type="checkbox"]{margin:5px !important;}
+.TooltipDiv label{margin:0px;}
+p.content{max-height:200px;overflow:auto;}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:rgba(255,255,255,0.75);}
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{background-color:rgba(255,255,255,0.45);}
+/***** FATCADeclaration *****/
+/*@font-face{font-family:DaxOT-Reg;src:url(../fonts/DaxOT.otf);}
+@font-face{font-family:DaxOT-Med;src:url(../fonts/DaxOT-Medium.otf);}
+@font-face{font-family:DaxOT-Bold;src:url(../fonts/DaxOT-Bold.otf);}
+*{font-family:DaxOT-Reg;}
+*/
+textarea, input, button{outline:none;}
+.mintitleFd{width:100%;float:left;text-align:center;margin-top:10px;}
+.mintitleFd h2{font-size:18px;color:#0072bc;margin-top:0px;font-family:DaxOT-Bold;text-transform:uppercase;}
+.fdfMbox{float:left;width:100%;margin:25px 0px;background-color:#FFF;box-shadow:0 0 1em #d3edff;border-radius:10px;padding:15px;}
+.fdFLineone{float:left;width:100%;font-size:14px;color:#757575;margin-bottom:15px;}
+.fdfSubBox{float:left;width:100%;padding:15px;background-color:#fafafa;border:1px solid #d6d6d6;margin-bottom:25px;position:relative;top:0;left:0;}
+.fdQuestion{color:#4f4f4f;font-size:14px;float:left;width:auto;margin:0px;}
+.fdQuestion span{padding-right:5px;}
+.ansSec{float:left;width:100%;background-color:#FFF;padding:10px;}
+.ansLine{color:#4f4f4f;font-size:14px;float:left;width:auto;margin:0px;padding:5px 10px 0px 5px;}
+.bodBott{border:none !important;border-bottom:1px solid #6f6f6f !important;float:left;padding:5px 0px !important;}
+.fdFsubBtnBdy{text-align:center;}
+.fdFsubBtnone{width:150px;float:none;margin:0 auto;background-color:#0072bc;border-radius:4px;color:#FFF;font-size:16px;font-family:DaxOT-Medium;height:40px;}
+.fdFtcPera{font-size:14px;color:#4f4f4f;float:left;width:100%;text-align:justify;line-height:30px;}
+.bodBottGray{border:none !important;float:left;padding:5px 0px !important;border-bottom:1px solid #d6d6d6 !important;}
+.bodBottNone{border:none !important;float:left;padding:5px 0px 5px 3px !important;}
+.fLeft{float:left;}
+.wFull{width:100%;}
+.ansSecondList{float:left;width:100%;padding:0px 0px 0px 5px;margin:0px;}
+.ansSecondList li{float:left;width:33.33%;display:inline-block;list-style:none;padding:0px 15px;}
+.ansSecondList li .secondListMbox{float:left;width:100%;border:1px solid #d6d6d6;background-color:#FFF;padding:15px 15px 10px 15px;margin-top:20px;}
+.ansSListLeft{float:left;width:20%;}
+.ansSListRight{float:left;width:80%;}
+.srTxt{font-size:14px;color:#757575;float:left;width:100%;text-align:center;margin-top:8px;margin-bottom:0px;}
+.srNo{font-size:14px;color:#757575;float:left;width:100%;text-align:center;margin-top:8px;margin-bottom:0px;}
+.fifFieldList{float:left;width:100%;padding:0;margin:0;}
+.fifFieldList li{float:left;width:20%;display:inline-block;list-style:none;padding:0px 15px;margin-bottom:10px;}
+.addLineHalf{float:left;width:50%;padding:0px 15px;margin-bottom:10px;}
+.addTypeChbRight{float:right;text-align:right;}
+.tcChW{float:left;display:inline-block;padding-right:10px;margin-top:0px !important;margin-bottom:0px !important;height:23px;}
+.tcChW .cr{background-color:#0072bc;border-color:#0072bc !important;}
+.tcChW .cr-icon{color:#FFF !important;}
+.ansLineAddType{padding-bottom:15px;}
+.addTypechW{width:100%;float:left;display:inline-block;}
+.giinNochW{float:left;display:inline-block;padding-right:10px;margin-top:5px !important;}
+.checkbox + .checkbox, .radio + .radio{margin-top:10px;}
+.checkbox label, .radio label{padding-left:5px;}
+.checkbox label{font-size:14px;color:#4f4f4f;}
+.checkbox label:after, .radio label:after{content:'';display:table;clear:both;}
+.checkbox .cr{position:relative;display:inline-block;border:2px solid #757575;border-radius:3px;width:21px;height:21px;float:left;margin-right:5px;}
+.radio .cr{position:relative;display:inline-block;border:1px solid #a9a9a9;border-radius:.25em;width:1.3em;height:1.3em;float:left;margin-right:.5em;}
+.radio .cr{border-radius:50%;}
+.checkbox .cr .cr-icon, .radio .cr .cr-icon{position:absolute;font-size:.8em;line-height:0;top:50%;left:20%;color:#757575;}
+.radio .cr .cr-icon{padding-left:0.04em;}
+.checkbox label input[type="checkbox"], .checkbox label input[type="radio"],.radio label input[type="radio"]{display:none;}
+.checkbox.tcChW label input[type="checkbox"], .checkbox.tcChW label input[type="radio"], .radio.tcChW label input[type="radio"] {display: none;}
+div[id$=_tblForm] .checkbox label input[type="checkbox"], div[id$=_tblForm] label input[type="radio"],div[id$=_tblForm] label input[type="radio"]{display:block;}
+.checkbox label input[type="checkbox"] + .cr > .cr-icon, .radio label input[type="radio"] + .cr > .cr-icon, .checkbox label input[type="radio"] + .cr > .cr-icon{transform:scale(3) rotateZ(-20deg);opacity:0;transition:all .3s ease-in;}
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon, .radio label input[type="radio"]:checked + .cr > .cr-icon, .checkbox label input[type="radio"]:checked + .cr > .cr-icon{transform:scale(1) rotateZ(0deg);opacity:1;}
+.checkbox label input[type="checkbox"]:disabled + .cr, .radio label input[type="radio"]:disabled + .cr, .checkbox label input[type="radio"]:disabled + .cr{opacity:.5;}
+.glyphicon-ok:before{content:"\e013";}
+.fdYNbtnPosition{position:absolute;top:0;right:0px;}
+.fdfSubBox table{width:100%;}
+.fdfSubBox table tr{float:left;}
+.fdfSubBox table tr td input[type="radio"], .fdfSubBox table tr td label{float:left;width:auto;}
+.checkbox.addTypechW table tr{width:25%;}
+.AnsDiv{width:100%;float:left;}
+.ansSec table tr{padding-right:10px;margin-top:4px;float:left;}
+.fdYNbtnPosition label{display:inline-block;width:auto;height:auto;border:none;padding:10px 15px;font-size:16px;color:#d6d6d6;font-family:DaxOT-Medium;font-weight:normal;margin:0px;}
+.fdYNbtnPosition input[type="radio"]{display:none;margin:0px;padding:0px;}
+.fdYNbtnPosition input[type="radio"]:checked + label{color:#0072bc;background-color:#f2f2f2;}
+.fdQueMwidth{width:80%;}
+.conHide{display:none;}
+.outIndRight{float:right;text-align:right;}
+.addFourLine{width:79%;}
+.poaSaLine{width:52%;}
+.fdfSubBox .ErrorMsg.FullErrorMsg, .fdFtcPera .ErrorMsg.FullErrorMsg{float:left;width:100%;}
+.fdfSubBox .ErrorMsg.ErrorMsginline, .fdFtcPera .ErrorMsg.ErrorMsginline{float:left;/* width:100%;*/}
+.addTypeChbRight .checkbox, .addTypeChbRight .giinNochW{margin-top:0 !important;}
+.addTypeChbRight .giinNochW label.checkboxlbl{margin-right:10px;}
+
+/**** Supercard carousel****/
+#rightSlider-slide{position: relative;}
+#rightSlider-slide .owl-pagination{position: absolute;bottom: 0;left: 50%;margin-left: -26px;}
+#rightSlider-slide .owl-pagination .owl-page span{display: block;width: 12px;height: 12px;margin: 5px 7px;filter: Alpha(Opacity=50);/*IE7 fix*/opacity: 0.5;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;background: #3284be;}
+#rightSlider-slide .owl-pagination .owl-page.active span,#rightSlider-slide .owl-pagination .owl-page:hover span{filter: Alpha(Opacity=100);/*IE7 fix*/opacity: 1;}
+
+/*.ansSec table td input[type="radio"]{visibility:hidden;}
+.ansSec table td input[type="radio"]:before{display:inline-block;padding:0px;height:30px;width:30px;background:none;}
+.ansSec table td input[type="radio"]:checked{background:url(http://cdn1.iconfinder.com/data/icons/onebit/PNG/onebit_34.png);background-repeat:no-repeat;background-position:center center;background-size:30px 30px;}
+*/
+@media screen and (min-width:992px) and (max-width:1200px){}
+@media screen and (min-width:768px) and (max-width:991px){
+	 .fifFieldList li{width:33.33%;}
+	 .outIndRight{float:left;text-align:left;width:100%;margin-top:10px;}
+	 .addFourLine{width:100%;}
+	 .poaSaLine{width:100%;}
+      .payment_offer {margin-bottom: 0px !important;}
+     p.content {max-height: 90px;overflow: auto;}
+    .PreApprovedOffer_section .offers_details.View_offer {bottom: -33.8%;width: 92%;}
+    .PreApprovedOffer_section .offers_details.View_offer.OfferBlock{width:92%;}
+    .PreApprovedOffer_section .offers_details.View_offer h3{margin-bottom: 5px;}
+    .PreApprovedOffer_section .offerTxt p { margin-bottom: 5px;margin-top: 5px;}
+    .PreApprovedOffer_section .offers_details.View_offer .ApplyBtn{margin-top: 5px;margin-bottom: 5px;}
+    .PreApprovedOffer_section .TooltipDiv{float:left;}
+}
+@media screen and (min-width:319px) and (max-width:767px){
+	 .ansSecondList li{float:left;width:100%;}
+	 .fifFieldList li{width:100%;}
+	 .addLineHalf{width:100%;}
+	 .addTypechW{width:100%;}
+	 .giinNochW{width:100%;}
+	 .addTypeChbRight{float:left;text-align:left;width:100%;padding:5px 0 0 5px;}
+	 .fdQueMwidth{width:60%;}
+	 .addFourLine{width:100%;}
+	 .poaSaLine{width:100%;}
+	 .outIndRight{float:left;text-align:left;width:100%;margin-top:10px;}
+     .PreApprovedOffer_section .offers_details.View_offer {bottom: -33.8%;width: 92%;}
+    .PreApprovedOffer_section .offers_details.View_offer.OfferBlock{width:92%;}
+    .PreApprovedOffer_section .offers_details.View_offer h3{margin-bottom: 5px;}
+    .PreApprovedOffer_section .offerTxt p { margin-bottom: 5px;margin-top: 5px;}
+    .PreApprovedOffer_section .offers_details.View_offer .ApplyBtn{margin-top: 5px;margin-bottom: 5px;}
+    .PreApprovedOffer_section .TooltipDiv{float:left;}
+}
+a.btn.grey_button.Btn-Center{margin:0 auto;text-align:center;display:block;width:20%;float:none;}
+.text-center{text-align:center;}
+/***** FATCADeclaration *****/
+@media screen and (min-width:768px) and (max-width:991px){
+	 .LanPart{width:87%;margin-left:10px;}
+	 .LanPart .Leftlanpart{width:40%;}
+	 .LanPart .Selectlanpart{width:53%;margin-left:4%;}
+	 .Selectlanpart input{float:right;margin-right:10px;}
+	 .Selectlanpart .GSTINline{width:99%;float:left;}
+	 .LanPart .registred{width:97%;margin-left:14px;}
+	 .LanPart .LINE1 input{margin-left:6px;}
+	 .LanPart .Address4box{width:100%;float:right;}
+	 .EditbtnPart{width:8%;margin:208px auto;margin-left:15px;}
+}
+@media screen and (min-width:319px) and (max-width:767px){
+	 .LanPart{width:98%;margin-left:5px;}
+	 .LanPart .Leftlanpart{width:100%;float:left;padding:10px 20px;}
+	 .formField{width:100%;}
+	 .LanPart .Selectlanpart{width:100%;float:left;margin-left:0%;padding:10px 20px;}
+	 .Selectlanpart p{width:160px;}
+	 .Selectlanpart .GSTINline{width:99%;float:left;}
+	 .LanPart .registred{width:100%;padding:10px 20px;margin-top:20px;}
+	 .LanPart .LINE1 input{width:99%;margin-left:0;}
+	 .LanPart .Address4box{width:100%;float:left;}
+	 .LanPart .Address4box li{float:left;width:100%;padding-left:0;}
+	 .EditbtnPart{width:98%;margin:20px auto;height:40px;line-height:38px;margin-left:5px;}
+	 /**** 29-08-2017 experia changes****/
+	 .desktopdropdown a.dropdown-toggle, .desktopdropdown.dropdown.open a.dropdown-toggle{color:#777777 !important;}
+	 /**** 29-08-2017 experia changes****/
+}
+@media (min-width:768px){
+	.modal-dialog{width:475px;}
+	.custom_modal .modal-dialog{width:50%;}
+	/**** 29-08-2017 experia changes****/
+	.destop-menu.navbar-right{float:left !important;}
+}
+/**** progress bar styles 02-08-2017 *****/
+.progress{overflow:hidden;height:20px;margin-bottom:20px;background-color:#f5f5f5;border-radius:4px;-webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1);box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1);}
+.loan_status .progress{height:10px;margin-bottom:8px;}
+#Tenor_progressbar.progress-bar, #Amount_progressbar.progress-bar{float:left;width:0%;height:100%;font-size:12px;line-height:20px;color:#ffffff;text-align:center;background-color:#337ab7;-webkit-box-shadow:inset 0 -1px 0 rgba(0, 0, 0, 0.15);box-shadow:inset 0 -1px 0 rgba(0, 0, 0, 0.15);-webkit-transition:width 0.6s ease;-o-transition:width 0.6s ease;transition:width 0.6s ease;}
+ .progress.active #Tenor_progressbar.progress-bar, #Tenor_progressbar.progress-bar.active, .progress.active #Amount_progressbar.progress-bar, #Amount_progressbar.progress-bar.active{-webkit-animation:progress-bar-stripes 2s linear infinite;-o-animation:progress-bar-stripes 2s linear infinite;animation:progress-bar-stripes 2s linear infinite;}
+#Tenor_progressbar.progress-bar-success, #Amount_progressbar.progress-bar-success{background-color:#5cb85c;}
+/**** 29-08-2017 experia changes****/
+.breadcrumb{padding:8px 15px 0px 15px;margin-bottom:0;}
+ul.dropdown-menu.myrel_dropdown.dropdown-menuinner:before{border:none;}
+ul.dropdown-menu.myrel_dropdown.dropdown-menuinner:after{border:none;}
+/****pre approved offers****/
+.plcalculatContn #slider{margin-left:0;margin-right:0;margin-top:10px;width:96%;height:7px !important;float:left;cursor:pointer;}
+.plcalculatContn .ui-slider .ui-slider-handle{width:1em;height:1em;border:3px solid #0072bc !important;}
+.leftpaddingromove{width:100%;display:inline-block;}
+.interestatLow .col-lg-8, .interestatLow .col-md-8, .interestatLow .col-sm-8, .interestatLow .col-xs-12{padding:0 5px;}
+input[id$=_salary]{width:1px;padding:0px !important;border:none !important;}
+.leftpaddingromove{width:100%;display:inline-block;padding-right:0;}
+.padingR0{padding-right:5px;}
+.rightsidearrow img{left:0px;right:2px;padding-left:0;}
+.MyRelationsonetwo ul li .RightDtlBlock span{width:70%;text-align:left;}
+.viewoffernewbody .btn{background:#8396a0 !important;}
+.SliderBlock{float:left;width:70%;}
+.myournewsliderHeading{float:left !important;width:30% !important;}
+.ournewsliderHeading span{width:100% !important;}
+.bottompoint{width:95% !important;float:left;}
+.dSpan input[type="checkbox"]{margin-top:0;}
+/*****pre approved offers 18-09-2017*****/
+.mintitle{width:100%;float:left;text-align:center;}
+.newmintitlebody{margin-bottom:20px;}
+.mintitle h2{font-size:20px;color:#0072bc;margin-top:0px;font-weight:700;text-transform:uppercase;}
+.bottomborders{width:100px;border:1px solid #000;margin:0 auto;margin-top:12px;}
+.PreApprovedOffer_section .offers_details{padding:15px;min-height:171px;}
+.PreApprovedOffer_section .TooltipDiv{padding-top:10px;padding-bottom:10px;width:100%;text-align:left;}
+.PreApprovedOffer_section .TooltipDiv input[type="checkbox"]{margin:5px !important;}
+.PreApprovedOffer_section .TooltipDiv label{margin:0px;}
+.PreApprovedOffer_section .imageHover{padding:0 !important;}
+.PreApprovedOffer_section .Payment_offer_block{overflow:hidden;}
+.PreApprovedOffer_section .offers_details.View_offer{position:absolute;bottom:-58.8%;padding:10px;width:94%;background:rgba(0,0,0,0.6);color:#fff !important;transition:0.5s;height:100%;}
+.PreApprovedOffer_section .offers_details.View_offer.OfferBlock{position:absolute;bottom:0;padding:10px;width:94%;color:#fff !important;background:rgba(0,0,0,0.6);height:100%;transition:0.5s;}
+.PreApprovedOffer_section .offers_details.View_offer h3{text-transform:uppercase;font-size:16px;font-weight:700;margin-bottom:12px;}
+.PreApprovedOffer_section .offers_details.View_offer .desc{display:none;}
+.PreApprovedOffer_section .offers_details.View_offer.OfferBlock .desc{display:block;}
+.PreApprovedOffer_section .offers_details *{color:#fff !important;}
+.PreApprovedOffer_section .offers_details.View_offer .offerTxt{text-align:left;float:left;display:inline;}
+.PreApprovedOffer_section .offers_details.View_offer .ApplyBtn{margin-top:18px;margin-bottom:15px;}
+.PreApprovedOffer_section .offers_details.View_offer.OfferBlock .offerTxt{text-align:left;float:left;width:100%;display:inline-block;}
+.PreApprovedOffer_section .offers_details.View_offer.OfferBlock .ApplyBtn{float:left;margin:0 0 10px 5px;}
+.PreApprovedOffer_section .offerTxt p{margin-bottom:10px;margin-top:10px;}
+.PreApprovedOffer_section .borderbottombg{border-bottom:2px solid #fff;width:201px;}
+/****flexi conversion offer****/
+.locBenList{padding:0px;float:left;width:100%;margin-bottom:20px;}
+.locBenList li{list-style:none;width:20%;padding:0px 9px;float:left;}
+.locBenList li img{float:left;width:100%;}
+.locBenList li span{float:left;width:100%;text-align:center;margin-top:5px;}
+/*aadharpop up*/
+div[id$=_divadharp] .modal-dialog {top: 18%;}
+div[id$=_divadharp] .modal-dialog .modal-content {min-height: 135px;}
+/**** 29- 09-2017 emiCardDeals*****/
+.payment_offers_section .payment_offer.payment_offer_block{min-height:408px;}
+.payment_offers_section .payment_offer.payment_offer_block h3{font-size:22px;}
+/****faq grid styles 29-09-2017****/
+table.Grid{font-size:12px;}
+.Grid tr td{padding:0 4px;}
+.FlextLimitsList{padding-left:40px;}
+/**** Money manager PFM styles 04-10-2017 ****/
+.hl-tab-content ul{padding-left:20px;}
+/****Insurance-Plans-three styles 04-10-2017 ****/
+.maindiv .form-group{min-height:80px;margin-bottom:5px;}
+.custom_modal .modal-body{display:inline-block;height:500px;overflow-y:auto;}
+.mytablebody{margin-top:20px;}
+.mytablebody .table > tbody:first-child > tr:first-child > .edit .btn{width:100%;height:40px;border-radius:0;}
+.mytablebody .table > tbody:first-child > tr:first-child > .edit{width:9%;text-align:center;}
+.mytablebody .table > tbody:first-child > tr:first-child > .delete{width:100%;text-align:center;margin-top:0;border-top:none;font-size:14px;}
+.mytablebody .table > tbody:first-child > tr:first-child > .delete .btn{width:100%;height:40px;border-radius:0;}
+.mytablebody .table > tbody:first-child > tr:first-child > .spaceremove{padding-top:0px;line-height:36px;text-align:center;}
+.mytablebody .table-bordered > tbody > tr > td{text-align:center;}
+.mytablebody .table-bordered > tbody > tr > .editimg img{width:20px;}
+.mytablebody .table-bordered > tbody > tr > .deletimg img{width:20px;}
+input::-webkit-input-placeholder{/* WebKit, Blink, Edge */ color:#ababab;}
+input:-moz-placeholder{/* Mozilla Firefox 4 to 18 */ color:#ababab;opacity:1;}
+input::-moz-placeholder{/* Mozilla Firefox 19+ */ color:#ababab;opacity:1;}
+input:-ms-input-placeholder{/* Internet Explorer 10-11 */ color:#ababab;}
+input::-ms-input-placeholder{/* Microsoft Edge */ color:#ababab;}
+/**** hide header and footer in popup****/
+.ms-dialog .HeaderBlock{display:none;}
+/**** Supercard carousel****/
+#rightSlider-slide{position: relative;}
+#rightSlider-slide .owl-pagination{position: absolute;bottom: 0;left: 50%;margin-left: -26px;}
+#rightSlider-slide .owl-pagination .owl-page span{display: block;width: 12px;height: 12px;margin: 5px 7px;filter: Alpha(Opacity=50);/*IE7 fix*/opacity: 0.5;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;background: #3284be;}
+#rightSlider-slide .owl-pagination .owl-page.active span,#rightSlider-slide .owl-pagination .owl-page:hover span{filter: Alpha(Opacity=100);/*IE7 fix*/opacity: 1;}
+
+.MFDetailsTabs .chkconfirmbox label {padding-left: 20px;}
+@media screen and (max-width:1024px){
+.owl-next{right:-20px;}
+.owl-prev{left:-20px;}
+}
+@media screen and (max-width:1023px){
+/****header****/
+.destop-menu{margin:0;}
+.destop-menu > li{padding:5px 1px;}
+.desktop-navigation{padding:5px;}
+/*****Loan Carosuel*****/
+.medial-shift{padding-right:15px;}
+.mediar-shift{padding-left:15px;}
+.loan-options li{border-right:1px dotted #CCC;padding:0px 35px;}
+.media-carousel .carousel-control{background:rgba(1,1,1,0.15);z-index:10;position:absolute;}
+.media-carousel .carousel-control img{position:relative;z-index:12;}
+.media-carousel .carousel-control.left{left:0px;}
+.media-carousel .carousel-control.right{right:0px !important;}
+}
+@media screen and (max-width:991px){
+.sidebar_widgets{padding-left:0;}
+}
+@media screen and (max-width:768px){
+.sidebar_widgets{padding-right:0;padding-left:0;}
+.owl-next{right:0;}
+.owl-prev{left:0;}
+}
+@media screen and (max-width:767px){
+/****header****/ 
+.userinfo-corner li{padding:0 10px;}
+.userinfo-corner .user-profile{}
+.user-img{float:none !important;margin:0px auto;width:100%;text-align:center;}
+.blog-ad{padding:5px;}
+.loan-options li{padding:0px 25px;}
+.loan_status{border-left:0;border-top:1px dotted #a6a6a6;padding-top:15px;}
+.loan_overview{padding-bottom:15px;}
+.cinsurance_summary{width:100%;}
+.cinsurance_details{width:100%;margin-left:0;margin-top:20px;}
+.tesitmonial_content{width:100%;margin:0 0 15px;}
+.list_events{padding:0;margin-top:20px;}
+.sidebar_widgets{padding-left:0;}
+.footer-mainlinks .footer_column .footer-links{border-bottom:1px solid #333539;padding-bottom:10px;}
+.footer-mainlinks .footer_column:last-child .footer-links{border-bottom:0;}
+.footer_column{margin-bottom:15px;}
+.fixeddeposit_box{border-right:0;border-bottom:1px solid #d9d9d9;margin-bottom:10px;}
+.documents_list ul li span{position:inherit;width:100%;display:inline-block;border-radius:4px;margin-top:10px;}
+.documents_list ul li span a{padding:7px;}
+.alert_time{display:block;clear:both;padding:0 15px;}
+/****** Payments page section 767px media styles ******/ 
+.ploan_payment_details{padding-left:15px;margin-top:20px;border-left:0;}
+.personal_loan_stats{border-right:0;border-bottom:1px solid #d9d9d9;padding-bottom:10px;}
+.payments_type{width:100%;margin:15px 0;padding:0 15px;padding-bottom:30px;}
+.mfund_type{width:100%;padding:0 10px;border-right:0;margin:0;border-bottom:1px solid #d9d9d9;margin-bottom:10px;}
+.mfund_category{width:100%;padding:0 10px;margin:0;}
+.carinsu_box_details{padding:7px;}
+.graph_rep1{margin-bottom:15px;}
+.mutual_fund_graphs{padding-top:20px;}
+.all_locations div.single_location{padding-right:15px;margin-bottom:15px;}
+.statement_type{border-left:0;margin-top:20px;padding:0;padding-left:0;}
+.emi_missed{border-left:0;}
+.loan_confirm_details{border:0;padding:15px;padding-top:20px;}
+.payment_offer{margin-bottom:15px;}
+.confirm_contact form .form-group{width:100%;}
+.payment_progress{display:inline-block;}
+.payment_progress p{text-align:left;padding:0 7px;}
+.loan_payment_stat{display:inline-block;width:100%;}
+.payment_confirm_details{border-left:0;border-top:1px solid #D9D9D9;padding-top:20px;}
+.proceed_actions button{margin-bottom:20px;}
+.emi_card_dos ul li{width:100%;}
+.emi_card_donts ul li{width:100%;}
+.emi_card_donts ul li:nth-child(even), .emi_card_dos ul li:nth-child(even){margin:10px 0;margin-right:0;}
+.emi_card_donts ul li:nth-child(odd), .emi_card_dos ul li:nth-child(odd){margin:10px 0;margin-left:0;}
+.mf_stats h1{font-size:28px;}
+.loan-item{margin-right:0;}
+#home-content-slide .owl-buttons .owl-prev, #whatsnew-slide .owl-buttons .owl-prev{/*background:#B5B3B3 url('../images/left-carosuel.png')no-repeat center;*/padding:15px 10px;left:-22px;top:34%;}
+#home-content-slide .owl-buttons .owl-next, #whatsnew-slide .owl-buttons .owl-next{/*background:#B5B3B3 url('../images/right-carosuel.png')no-repeat center;*/right:-22px;top:34%;padding:15px 10px;}
+#divs div img, #homeLoan2 div img, #carLoan div img{width:100%;}
+.emi_generate_otp{border-left:0;padding-right:15px;}
+.emi_pin_change{padding-left:15px;}
+.referal_history_invites{width:100%;margin-right:0;display:inline-block;margin-bottom:10px;}
+.referal_history_success{width:100%;margin-right:0;display:inline-block;margin-bottom:10px;}
+.referal_history_rejected{width:100%;display:inline-block;}
+.referal_form_area .form-group{width:100%;padding-right:0;}
+.referal_loan_type .radio-inline{width:24%;font-size:10px;margin-bottom:10px;margin-left:2px;}
+.referal_loan_type .radio-inline label div img{width:100%;}
+.referal_refer_to{border-right:0;border-bottom:1px solid #d9d9d9;margin-bottom:10px;}
+.referer_details p{min-width:115px;}
+.referal_refer_on{padding-left:0;}
+.referedto_details p{min-width:115px;}
+.all_faqs{padding:15px;}
+.all_faqs ul li{width:100%;margin:0;margin-bottom:15px;}
+.table-image{width:100%;}
+.aadhar_inner_details .form-group input{width:100%;}
+.password_conditions ul{float:none;width:100%;margin-left:20px;}
+.calculators_list li{width:100%;margin:20px 0;}
+.mf_home_loan{padding:0 20px 0 40px;}
+.mf_loan_stats{width:100% !important;}
+#home-content-slide1 .owl-buttons .owl-prev{left:0;}
+}
+ @media screen and (max-width:480px){
+.breadcrumb{padding:8px 10px;font-size:11px;}
+.breadcrumb > li + li:before{padding:0 2px;}
+.userinfo-corner li{padding:0 6px;}
+.more_tabs .home_loan_tabs li{min-height:auto;}
+.home_loan_tabs li, .closedhl_inner_tabs li{width:25%;margin-bottom:10px;min-height:100px;}
+.drawdown_selection .select2-container{min-width:100%;}
+.proceed_btns a.btn{margin-bottom:15px;}
+.footer-bottom li{padding:5px 5px;border-right:0;display:block;}
+.footer_logosec{text-align:center;}
+.loan_overview h4{font-size:14px;padding:0;}
+.loan_overview p{min-width:130px;font-size:14px;}
+.loan_stats h3{font-size:16px;}
+.calendar td{width:13.2%;}
+.navyblue_button{margin-top:10px;}
+.loan_details_stats p{min-width:120px;font-size:14px;}
+p.event_date{min-width:auto;}
+.details_user_know span{padding:0 5px;font-size:12px;width:50%;}
+.carinsu_detials{margin-bottom:7px;}
+.carinsu_detials span{width:50%;}
+.personal_loan_detials p, .personal_loan_detials span{font-size:12px;}
+.payment_progress{padding:0;}
+.loan_payment_stat{padding:0;}
+.payment_statement_detials p{min-width:145px;font-size:12px;}
+.payment_statement_detials span{font-size:12px;}
+.ploan_sec_header h2{font-size:17px;}
+.payment_trans_details p{font-size:12px;min-width:100px;}
+.payment_trans_details span{font-size:12px;}
+.banner_content p{font-size:11px;}
+.banner_content h4{font-size:14px;line-height:16px;}
+.emi_card_details p{min-width:150px;font-size:12px;}
+.emi_card_details span{font-size:12px;}
+ul.fixed_deposit_tabs li{width:25%;}
+.fd_features_benfits{font-size:13px;}
+.panel-title > a{font-size:14px;}
+ul.emi_card_tabs li{width:25%;margin-bottom:10px;}
+.owl-next{right:0px;}
+.owl-prev{left:0px;}
+.my_relation_stat p{font-size:13px;min-width:115px;}
+.my_relation_stat span{font-size:13px;}
+.carinsu_detials p{min-width:110px;}
+.nominee_section{padding:0 10px;}
+ul.digital_lounge_features li{width:100%;margin:0 0 15px;}
+ul.digital_lounge_tabs li{padding:8px 15px;font-size:12px;}
+.referal_loan_type .radio-inline{margin-bottom:10px;width:47%;font-size:11px;}
+.referal_loan_type .radio-inline label div img{width:100%;}
+input.referal_option[type="radio"]{margin:6px 0 0 2px;}
+.referer_details span{padding:0 0 0 5px;}
+.referer_details p{min-width:80px;}
+.details_user_know span{padding:0 5px;font-size:12px;width:40%;}
+.details_user_know .aspNetDisabled{width:100%;}
+.loan_details_stats p{min-width:120px;font-size:14px; width:120px;}
+.emi_delivery_status span a{word-wrap: break-word;
+    float: left;
+    width: 130px;}
+}
+@media screen and (max-width:320px){
+ul.relation_dropdown{right:-65px;}
+.relation_dropdown:after, .relation_dropdown:before{right:79.1px;}
+ul.relation_dropdown:before{right:77px;}
+.mutual_fund_graphs img{width:100%;}
+.emi_card_details p{min-width:130px;}
+}
+
