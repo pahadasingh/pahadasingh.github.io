@@ -22,7 +22,7 @@ sraban307@mailg|Ku...@1..6
 sraban307|mailg
 
 `Linkedin`
-sraban.pvt@moc.evil|chrn@lt
+sraban.pvt@moc.evil|chrn@1.3567
 
 `npmjs`
 skp.pvt@gmail.com|chn@lt1.3
