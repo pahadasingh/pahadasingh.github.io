@@ -91,7 +91,8 @@ return formData.pipe(map((value, key) => { return value; }));
 
 # Tips & Tricks
 ============================
-
+https://www.codegrepper.com/code-examples/javascript/set+variable+inside+div+angular
+https://stackoverflow.com/questions/43126368/how-to-debug-objects-from-angular-template-html-file
 
 
 
