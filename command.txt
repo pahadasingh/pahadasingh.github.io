@@ -80,6 +80,7 @@ echo 3 > /proc/sys/vm/drop_caches
 -------------------------------------
 https://docs.microsoft.com/en-us/windows/wsl/install-win10
 https://docs.microsoft.com/en-us/windows/terminal/get-started
+https://docs.docker.com/docker-for-windows/wsl/
 
 
 
