@@ -82,6 +82,23 @@ https://docs.microsoft.com/en-us/windows/wsl/install-win10
 https://docs.microsoft.com/en-us/windows/terminal/get-started
 https://docs.docker.com/docker-for-windows/wsl/
 
+# WSL
+$winver
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+wsl --install -d <Distribution Name>
+
+wsl --list --verbose
+wsl --set-version <distribution name> <versionNumber>
+
+wsl --shutdown
+
+To Install WSL2
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --set-default-version 2
+install ubntu from windows store
+
 
 
 -------------------------------------
