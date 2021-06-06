@@ -76,6 +76,11 @@ echo 3 > /proc/sys/vm/drop_caches
 -------------------------------------
 # Apache SSL integration
 
+#About Windows Command Shortcuts
+-------------------------------------
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+https://docs.microsoft.com/en-us/windows/terminal/get-started
+
 
 
 -------------------------------------
