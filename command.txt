@@ -102,6 +102,7 @@ install ubntu from windows store
 
 Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 Disable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 -------------------------------------
 # About Linux Trotting of requests
 
