@@ -100,7 +100,8 @@ wsl --set-default-version 2
 install ubntu from windows store
 
 
-
+Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+Disable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 -------------------------------------
 # About Linux Trotting of requests
 
