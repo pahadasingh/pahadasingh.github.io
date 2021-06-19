@@ -267,7 +267,7 @@ skp.pvt|chrn@lt
 morioh.com/courses(gmail307)
 newline.com(github-sraban)
 eduonix.com(gmail307)
-https://www.avishkaar.cc/mycourse/162283140060bb3acb90e836.06830004
+https://www.avishkaar.cc/
 
 -----------------AppinessWorld------------------------------
 gmail.com
