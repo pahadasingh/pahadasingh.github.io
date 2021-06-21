@@ -235,6 +235,9 @@ pwd: lt@3456543
 sraban307@liagm.moc|liamg
 skp.pvt@liagm.moc|Kmr@Mahesh
 
+`academy.zenva.com`
+sraban307@liagm.moc|liamg
+
 `discord.com`
 sraban307@liagm.moc|liamg
 
