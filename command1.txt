@@ -1,0 +1,52 @@
+# 1. status of a service like (apache, mysqld, tracd)
+#=================================================================
+#!/bin/bash
+echo "Hello World!"
+xxx=$(pwd)
+echo $xxx
+
+pid_info=$(ps -ef | pgrep -f "ruby")
+ 
+
+if [ ! $pid_info ]; then
+   echo "Sraban Kumar Pahadasingh. Ruby is not running"
+   exit 0
+else 
+    echo "Santosh Kumar Pahadasingh. Process ID = $pid_info"
+    exit 1
+fi
+
+
+
+#=================================================================
+# 2. start of a service like (wsl, apache, mysqld, tracd)
+#=================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+#=================================================================
+# 3. stop of a service like (wsl, apache, mysqld, tracd)
+#=================================================================
+
+
+
+
+
+
+
+
+
+
+
+#=================================================================
+# 4. restart of a service like (wsl, apache, mysqld, tracd)
+#=================================================================
