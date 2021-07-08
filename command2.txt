@@ -1,0 +1,101 @@
+# 1. status of a service like (apache, mysqld, tracd)
+#=================================================================
+#!/bin/bash
+echo "Hello World!"
+xxx=$(pwd)
+echo $xxx
+
+pid_info=$(ps -ef | pgrep -f "ruby")
+ 
+
+if [ ! $pid_info ]; then
+   echo "Sraban Kumar Pahadasingh. Ruby is not running"
+   exit 0
+else 
+    echo "Santosh Kumar Pahadasingh. Process ID = $pid_info"
+    exit 1
+fi
+
+
+
+#=================================================================
+# 2. start of a service like (wsl, apache, mysqld, tracd)
+#=================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+#=================================================================
+# 3. stop of a service like (wsl, apache, mysqld, tracd)
+#=================================================================
+
+
+
+
+
+
+
+
+
+
+
+#=================================================================
+# 4. restart of a service like (wsl, apache, mysqld, tracd)
+#=================================================================
+https://unix.stackexchange.com/questions/236084/how-do-i-create-a-service-for-a-shell-script-so-i-can-start-and-stop-it-like-a-d
+How To Use
+
+$ ./sraban.sh
+# Actions: [start|stop|restart|status|run|debug|tail(-[log|error])]
+
+$ ./sraban.sh start
+# Starting Example Service service...
+
+$ ./sraban.sh status
+# Serive Example Service is runnig with PID 5599
+
+$ ./sraban.sh stop
+# Stopping Example Service...
+
+$ ./sraban.sh status
+
+
+
+
+----------------------sraban.sh----------------------
+#!/bin/bash
+
+case "$1" in 
+start)
+   /path/to/hit.sh &
+   echo $!>/var/run/hit.pid
+   ;;
+stop)
+   kill `cat /var/run/hit.pid`
+   rm /var/run/hit.pid
+   ;;
+restart)
+   $0 stop
+   $0 start
+   ;;
+status)
+   if [ -e /var/run/hit.pid ]; then
+      echo hit.sh is running, pid=`cat /var/run/hit.pid`
+   else
+      echo hit.sh is NOT running
+      exit 1
+   fi
+   ;;
+*)
+   echo "Usage: $0 {start|stop|status|restart}"
+esac
+
+exit 0

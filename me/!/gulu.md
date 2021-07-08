@@ -36,6 +36,9 @@ sraban-skp.pvt|chrn@lt
 `pypi.org`
 sraban-sraban307|chrn@lt@1.3
 
+`bootsnipp`
+sraban_pvt@yahoo.com|pvt...
+
 `Gaana`
 sraban.pvt@moc.evil|chrn@lt
 
