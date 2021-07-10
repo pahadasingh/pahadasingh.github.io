@@ -170,6 +170,15 @@ skp.pvt@gmail.com|K...r@...6
 `bajajfinserv.in`
 8328848690|K...r@...6
 
+`IPPB`
+CID.6034957218 | AC.039510043511 | CSFI.IPOS0000001
+MPN.8079
+
+`POSA`
+ME.010004354581|CIF.403591265
+PARENT.4603972238|CIF.379976572|CIF.379977161
+FATHER.DOB:15-06-1962
+
 `paypal`
 01-skp.pvt@moc.liamg|Lata2Charan
 
@@ -227,16 +236,22 @@ sraban_pvt@moc.oohay|chrn@lt
 Policy-597171036 | Chrn@1...6
 https://ebiz.licindia.in/D2CPM/#DashBoard
 
-`freechess.gro`
-srabann|p^t!td
 
 `TradeJini`
 User: AS0444
 pwd: lt@3456543
 
+
+
+
 `udemy.com`
 sraban307@liagm.moc|liamg
 skp.pvt@liagm.moc|Kmr@Mahesh
+
+
+`freechess.gro`
+srabann|p^t!td
+
 
 `academy.zenva.com`
 sraban307@liagm.moc|liamg
