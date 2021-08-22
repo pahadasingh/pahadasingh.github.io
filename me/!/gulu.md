@@ -172,6 +172,8 @@ skp.pvt@gmail.com|K...r@...6
 
 `IPPB`
 CID.6034957218 | AC.039510043511 | CSFI.IPOS0000001
+8328848690@postbank
+832884869001@ippb
 MPN.8079
 
 `POSA`
@@ -190,7 +192,7 @@ pahadsingh
 
 `881666890.onlineaxis`(819599730010819-4910000BITU)
 K...r1...6
-MPIN75..91
+MPIN75.109
 
 `cc.9183288486904852@axisbank`
 rr.2584763120265035|080
@@ -239,7 +241,7 @@ https://ebiz.licindia.in/D2CPM/#DashBoard
 
 `TradeJini`
 User: AS0444
-pwd: lt@3456543
+pwd: gl@12343..
 
 
 
@@ -284,13 +286,14 @@ skp.pvt|chrn@lt
 
 
 
+
 ----------------- Study --------------------------------
 morioh.com/courses(gmail307)
 newline.com(github-sraban)
 eduonix.com(gmail307)
 avishkaar.cc|gmail307
 edukemy.com|8328848690@chrn@lt
-
+bkconnection.com|gmail307@chrn@lt
 -----------------AppinessWorld------------------------------
 gmail.com
 sraban@appinessworld.com
@@ -338,19 +341,6 @@ rashmita.jun1996@gmail.com
 welcome@1234
 ==============================================
 
-
-- Standard precautions: Hand hygiene
-- Infection Prevention and Control (IPC)for COVID-19 Virus
-- COVID-19: How to put on and remove personal protective equipment (PPE)
-- Introduction to Go.Data – Field data collection, chains of transmission and contact follow-up
-- Severe Acute Respiratory Infection (SARI) Treatment Facility Design
-- COVID-19: Operational Planning Guidelines and COVID-19 Partners Platform to support country preparedness and response
-- ePROTECT Respiratory Infections (EN)
-- WHO Clinical Care Severe Acute Respiratory Infection Training
-- Introduction to COVID-19 video in Indian Sign Language
-- Emerging respiratory viruses, including COVID-19: methods for detection, prevention, response and control
-- Competency-Based Learning: Introduction
-
 =======
 ADHAR - 799415803502
 PAN - BDVPP4897H
@@ -373,3 +363,12 @@ Land Mark - Near to Sahupada UP School
 Office Appiness:
 #406, 24th Cross Rd, Siddanna Layout, 
 Banashankari Stage II, Banashankari, Bengaluru, Karnataka 560070
+
+
+================================Lipu=====================================
+
+https://cp1.awardspace.net/welcome/
+sraban307@gmail.com|direct
+3922819_pradipta|Kumar@12..6
+http://f33-preview.awardspace.net/pradipta.xyz
+ns5.awardspace.com and ns6.awardspace.com

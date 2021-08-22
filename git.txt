@@ -139,9 +139,27 @@ $ git tag <tag_name> HEAD~1  (for two commits before HEAD)
 
 ============================
 
-
+git config --global --edit
 git config --global user.email "sraban_pvt@yahoo.com"
 git config --global user.name "Sraban"
+git commit --amend --reset-author
+
+ssh-keygen -t rsa -C "sraban307@gmail.com"
+run gitbash  as adminstrator
+1. git repo url
+2. form the project
+3. clone to local
+4. in local add upstream and origin
+git remote add upstream --------------
+git remote remove upstream
+git remote set-url origin  -----------
+git checkout srabna_branch
+git pull upstream sraban_branch
+
+git diff --name-only <commit1> <commit2>
+git commit -F D:/commit_message.txt
+git show -s --format='%h %s'
+
 
 https://paiza.cloud/containers
 --------------------------------

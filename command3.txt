@@ -1,0 +1,75 @@
+##### status.sh
+
+#!/bin/bash
+pid_info=$(ps -ef | pgrep -f "apache2")
+if [ ! $pid_info ];then
+	echo "Apache is not running"
+	exit 1
+then
+	echo "Apache is running.. Process ID = $pid"
+	exit 0
+fi
+
+
+
+-------------------------------------------------------------------------------------
+##### stop.sh
+
+#!/bin/bash
+RED='COLOR1'
+NC='NEWLINE'
+GREEN='COLOR3'
+
+sh ./status.sh
+status=$?
+#echo $status
+
+
+if [ $status == 1 ]
+then
+	echo "Apache is not running"
+then
+	echo "Stopping apache..."
+	pid=$( ps -ef | pgrep -f "apache2")
+	kill $pid
+	echo -e "${RED} Apache service stopped ! Process ID = $pid ${NC}"
+fi
+
+
+----------------------------------------------------------------------------------------
+##### start.sh
+
+#!/bin/bash
+RED='COLOR1'
+NC='NEWLINE'
+GREEN='COLOR3'
+
+sh ./status.sh
+status=$?
+#echo $status
+
+
+if [ $status == 1 ]
+then
+	echo "Starting Service...."
+	cd ..
+	nohup service apache2 start > /opt/lampp/log/access.log 2>&1 & sleep 1
+	app_state=$?
+	pid_info=$!
+	if [ $app_state == 0]
+	then
+		echo -e "${GREEN} Service Started ! Proces ID $pid_info ${NC}"
+	else
+		echo -e "${RED} Error starting apache ${NC}"
+	fi
+else
+	echo -e "${GREEN} Apache is already running... Process ID = $(ps -ef | pgrep apache2) ${NC}"
+fi
+
+----------------------------------------------------------------------------------------------
+##### restart.sh
+
+#!/bin/bash
+# need input host port
+./stop.sh
+./start.sh
