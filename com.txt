@@ -26,9 +26,15 @@ https://chrome.google.com/webstore/detail/clear-cache-shortcut/jnajhcakejgchhbjl
 
 # Javascript Debugging Tips
 
+1.
 setInterval(() => {
 console.log(localStorage.getItem('lock_csrf_call'))
 },1000)
+
+2. own Break points
+window['skp_'+(+ new Date() )+'_position'] = positionObj;
+for( var b in window ) if(window.hasOwnProperty(b) && b.indexOf('skp_') !== -1 ) console.log( window[b] );
+
 
 # JS Complexity-report
 $cr -cC jquery.filedrop.js > /c/inetpub/wwwroot/cr/index.txt
