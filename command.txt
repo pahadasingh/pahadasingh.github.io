@@ -1,5 +1,13 @@
 chrome://net-internals/
 
+http://www.softpanorama.org/Editors/vim.shtml
+https://sandilands.info/nsl/LinuxCommandLine.html
+https://discourse.osmc.tv/uploads/default/original/2X/2/298f72aef7cb36d04145db30ff38a63644cb1550.jpg
+
+
+
+set lhost 192.168.0.111
+set ltrac "cd /home/python3/site-packages/trac/"
 
 uname -m
 lsb_release -a
@@ -117,6 +125,35 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 
 -------------------------------------
 # About Linux Cron Tabs
+
+
+
+-------------------------------------
+# About Linux Vi Editor
+in vi.rc
+set nu -------> set number or set nonumber
+set ai
+set tabstop=4
+set ls=2
+
+:se nu
+:se nonu
+:q!
+:wq!
+Esc + i
+Esc + a ---> append after end of cursor
+Esc + A ---> append after end of line
+Esc + yy  -----> copy the lines
+Esc + dd  ----> delete the lines
+Esc + u ----> undo the last changes
+Esc + o ---> open a line in new editor
+/ = search forwar
+? = search backward
+:%s/NewWordToReplace/OldWord  -----> single replace
+:%s/NewWordToReplace/OldWord/g  -----> all replace
+:!pwd ----> view the current path in vi editor
+:[from],[to]d ---> ex.{:4,7d} ------- delete the lines from 4 to 7
+:1,4s/^/#   ----- comment lines from 1 to 4
 
 
 -------------------------------------
