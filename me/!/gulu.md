@@ -241,13 +241,13 @@ https://ebiz.licindia.in/D2CPM/#DashBoard
 
 `TradeJini`
 User: AS0444
-pwd: gl@12343..
+pwd: gl@234543..
 
 
 
 
 `udemy.com`
-sraban307@liagm.moc|liamg
+sraban307@liagm.moc|liamg|bd...4897h
 skp.pvt@liagm.moc|Kmr@Mahesh
 
 
