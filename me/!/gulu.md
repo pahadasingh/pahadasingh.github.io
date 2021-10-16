@@ -43,7 +43,7 @@ sraban_pvt@yahoo.com|pvt...
 sraban.pvt@moc.evil|chrn@lt
 
 `Naukri`
-- sraban307@moc.liamg|K...r@1...79
+- sraban4897@moc.liamg|K...r@1...78
 - sraban_pvt@moc.oohay|
 
 `angel.co`
@@ -51,7 +51,6 @@ sraban307@moc.liamg|30p^t29.23ltd21=3
 
 `letsfreelance.com`
 sraban307@mailg.com|chrn@lt
-
 
 `app.jobvite.com`
 01-sraban.pvt@moc.evil|Kmr@123...9
@@ -61,6 +60,8 @@ sraban307@mailg.com|chrn@lt
 02-sraban.pvt@moc.kooltuo|K...r@1....5689(8328848690-8079)
 02-sraban-pvt@hotmail.com|chrn@lt
 
+`Samsung`
+sraban4897@gmail.com|8328848690|chrn@lt@12|lt@chrn@12
 
 `Skype`
 - sraban.pvt@moc.evil|QW@1..68

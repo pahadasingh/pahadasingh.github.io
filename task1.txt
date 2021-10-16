@@ -1,0 +1,33 @@
+0. https://app.testdome.com/t
+
+1. Sort by Oldest, Newest, Threaded(in Hierachy) using jquery
+
+	List of Comments along with reply comments to it in Heirachy
+	ex.
+	   Comment1
+	     rComment1
+	     rComment2
+	     rComment3
+	     rComment4
+	   Comment2
+	   	 rComment5
+	   	   rrComment1
+	   	   rrComment2
+	   	   rrComment3
+	   	 rComment6
+	   	 rComment7
+	   	 rComment8
+
+2. Pagination/Lazy loading. From Viewport Screen, load the details of Every Card grid when it is scrolled in browser like TFS dashboard
+   Hints
+     - Load all empty cards with the width and height
+     - in view port set a flag for all displayed cards
+     - not collect the ids whose flags are set in view port --> send in one shot all the ids to server to collect the card details
+     - every time scroll if the detail is fetched for the cards set another flag not to fetch that ID second time
+     - get the position of element if it is within the view port height.(top view port, bottom view port position)
+
+3. Create a tree dropdown json from the database records using id|pid. Identify Files and Folders
+
+4. calculate the height of the verticall scroller moved uing javascript?
+  
+

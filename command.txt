@@ -111,6 +111,14 @@ install ubntu from windows store
 Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 Disable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+
+Reading the content like in linux: more, cat, type
+
+powershell -nologo "& "Get-Content -Wait c:\logFile.log -Tail 10"
+powershell -nologo "& "Get-Content -Wait %1 -Tail %2"
+powershell -nologo "& "Get-Content -Wait C:\windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\secrets\initialAdminPassword -Tail 10"
+password for jenkins: a5b191e2a116437d8b1fa8102ad0c7b1
+
 -------------------------------------
 # About Linux Trotting of requests
 
