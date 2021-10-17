@@ -116,7 +116,7 @@ Reading the content like in linux: more, cat, type
 
 powershell -nologo "& "Get-Content -Wait c:\logFile.log -Tail 10"
 powershell -nologo "& "Get-Content -Wait %1 -Tail %2"
-powershell -nologo "& "Get-Content -Wait C:\windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\secrets\initialAdminPassword -Tail 10"
+
 password for jenkins: a5b191e2a116437d8b1fa8102ad0c7b1
 
 -------------------------------------
@@ -297,3 +297,66 @@ $redis-cli
 >get *laravel_horizon:job*
 >SET title:1 "The Hobbit"
 >SET author:1 "J.R.R. Tolkien"
+
+
+
+
+
+
+
+
+
+
+------------------------------windows bat file -------------------
+@echo off
+cd "C:\Program Files\Microsoft Officeoot\Office16\"
+start EXCEL.EXE
+
+
+~~~~~~~~~0~~~~~~~~~~~
+@echo OFF
+FOR %%i IN (1 2 3 4 5) DO (
+  ng g c "components/comp%%i%"
+  ng g d "directives/dir%%i%"
+  ng g p "pipes/pp%%i%"
+  ng g s "service/srv%%i%"
+  ng g e "enum/enm%%i%"
+  ng g class "class/cls%%i%"
+  ng g guard "guard/grd%%i%"
+  ng g interface "interface/mdl%%i%"
+  ng g interceptor "interceptor/icpt%%i%"
+  ng g library "library%%i%"
+)
+PAUSE
+
+
+~~~~~~~~~1~~~~~~~~~~~
+@ECHO OFF 
+:: This batch file details Windows 10, hardware, and networking configuration.
+TITLE My System Info
+ECHO Please wait... Checking system information.
+:: Section 1: Windows 10 information
+ECHO ==========================
+ECHO WINDOWS INFO
+ECHO ============================
+systeminfo | findstr /c:"OS Name"
+systeminfo | findstr /c:"OS Version"
+systeminfo | findstr /c:"System Type"
+:: Section 2: Hardware information.
+ECHO ============================
+ECHO HARDWARE INFO
+ECHO ============================
+systeminfo | findstr /c:"Total Physical Memory"
+wmic cpu get name
+wmic diskdrive get name,model,size
+wmic path win32_videocontroller get name
+:: Section 3: Networking information.
+ECHO ============================
+ECHO NETWORK INFO
+ECHO ============================
+ipconfig | findstr IPv4
+ipconfig | findstr IPv6
+START https://support.microsoft.com/en-us/windows/windows-10-system-requirements-6d4e9a79-66bf-7950-467c-795cf0386715
+PAUSE
+
+~~~~~~~2~~~~~~~~~~~
