@@ -1,4 +1,5 @@
 Optimisation
+%SystemDrive%\inetpub\wwwroot
 
 bundle-size study: webpack-optimizer
 https://medium.com/js-dojo/how-to-reduce-your-vue-js-bundle-size-with-webpack-3145bf5019b7
