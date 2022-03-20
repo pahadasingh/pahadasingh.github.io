@@ -13,6 +13,11 @@ sraban307@gmail.com
 `Happyeasygo`
 skp.pvt@moc.liamg(8328848690)|chrn@lt
 
+`cloudinary.com`(sskkpp)
+https://api.cloudinary.com/v1_1/sskkpp/image/upload
+https://res.cloudinary.com/demo/image/upload/w_70,h_53,c_scale/turtles.jpg
+PvtLtd@..3
+
 `Pinterest`
 sraban307|mailg
 
@@ -68,12 +73,14 @@ sraban4897@gmail.com|8328848690|chrn@lt@12|lt@chrn@12
 - sraban.pvt@moc.evil|QW@1..68
 - sraban.edkal@moc.liamg|chrn@lt
 
+`statcounter`
+sraban_pvt@yahoo.com|ku..r@1..6
 
 `tweet`
 srabann|chrn@lt
 
 `Fb`
-- skp.pvt@moc.liamg|K...r@1...79
+- skp.pvt@moc.liamg|K...r@1...78
 - sraban_pvt@moc.oohay|
 - (8867818488)sai26nov2017@moc.liamg||26nov2017fb
 - pvt.puspa@moc.liamg|chrn@lt
@@ -95,6 +102,7 @@ sraban_pvt@ymail.com|30p^t29.23ltd21=3
 - puspatalk|chrn@lt
 - sraban307|chrn@lt
 - sraban4897|chrn@lt
+- sashikanta.pvt|Ku..@1..6
 
 `rediff`
  - srbn_pvt@rediffmail.com|chrn@lt
@@ -169,6 +177,8 @@ skp.pvt@gmail.com|chrn@lt
 `consumerhelpline.gov.in`
 skp.pvt@gmail.com|K...r@...6
 
+`WhatsAPP`
+PIN - 4897
 --------------------------------------------------------------
 `bajajfinserv.in`
 8328848690|K...r@...6
@@ -177,7 +187,7 @@ skp.pvt@gmail.com|K...r@...6
 CID.6034957218 | AC.039510043511 | CSFI.IPOS0000001
 8328848690@postbank
 832884869001@ippb
-MPN.8079-3029
+MPN.8079
 
 `POSA`
 ME.010004354581|CIF.403591265
@@ -188,13 +198,14 @@ FATHER.DOB:15-06-1962
 01-skp.pvt@moc.liamg|Lata2Charan
 
 `pahadasingh.onlinesbi`(14180246803000000-0753100NIBS)
+5514-4957-6544-8936(10/72-684)
 K...r@...67
 
 `202164529.OGB`(422800600436700-10BGOR0ABOI)
 pahadsingh
 
 `881666890.onlineaxis`(819599730010819-4910000BITU)
-K...r1...6
+K...r@1...6
 MPIN75.109
 
 `cc.9183288486904852@axisbank`
@@ -215,6 +226,9 @@ Charan@...8
 `blockchain`
 999098c8-6af9-4a0c-8d24-9222af6be999|30p^t29.23l#d21=3
 
+`CoinDcx`
+sraban_pvt@yahoo.com|Ku..@12...6
+
 `paytm`
 8328848690.paytm|K...r@...6
 
@@ -223,6 +237,9 @@ srabann|Kmr@12..79
 
 `ola`
 8328848690.ola(skp.pvt@mailg.moc|chrn@lt)
+
+`phonepay`
+75.019
 
 `RNLICL-Increasing Income (Double SA)`
 Policy-53413646 | ClientID-69928630 | Kmr@1....6
@@ -244,8 +261,7 @@ https://ebiz.licindia.in/D2CPM/#DashBoard
 
 `TradeJini`
 User: AS0444
-pwd: gl@234543..
-
+pwd: gl@34565..
 
 
 
@@ -341,13 +357,37 @@ rashmita.pvt@gmail.com
 welcome@123
 ======================
 rashmita.jun1996@gmail.com
-welcome@1234
+Rashmita Samantaray
+7847903928
+Ritu&6371
+
+https://onlineapp.bseodisha.ac.in/osstetII2021/default.aspx
 ==============================================
 
-=======
+=======ME=========
 ADHAR - 799415803502
 PAN - BDVPP4897H
 DL - KA0120210009758
+PP - N3879821
+https://resident.uidai.gov.in/vid-generation
+Virtual ID - 9197898466400078
+9151707875863553
+======Father=======
+ADHAR-528543406308
+SBI-32383679757
+DOB-04/05/1955
+Photo - yes
+======Mother=======
+ADHAR-
+SBI-
+DOB-
+Photo - yes
+======Dhobali APA=======
+ANNAPURNA ROUTRAY
+ADHAR- 600290653379
+BOB- 20448100007940(BARB0NIRAKA)
+DOB- 01-01-1982
+Photo - yes
 
 Address - 1:
 246/128, 24th Main, 3rd cross 3rd floor

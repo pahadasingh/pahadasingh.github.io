@@ -1,0 +1,72 @@
+Loading API on Scroll
+
+
+----------------------onLoad-----------------------------------
+
+var timeoutScroll = null;
+window.addEventListner('scroll', () => {
+	clearTimeout(timeoutScroll);
+	timeoutScroll = setTimeout( () => {
+		loadCurrentPage();
+	},1000);
+});
+
+----------------------------------------------------------
+
+function loadCurrentPage() {
+
+	var winHght = window.innerHeight || document.documentElement.ClientHeight || docuemnt.body.clientHeight;
+	var topLimit = 50, cardExits = false, cardApiOne = false, cardApiTwo = false;
+	var tmpPage1 = [], tmpPage2 = [];
+	[].forEach.call( document.querySelectorAll('.card'),  function(element) {
+
+		var rx = new RegExp('(^|\\ss)highlight(\\s|$)');
+		var thisTop = element.getBoundingClient().y;
+		var id = element.id;
+
+		if( !element.className.match(re) && thisTop >= topLimit && thisTop <= winHght ){
+			if(id && tmpPage2.indexOf(id) === -1 ) {
+				element.className += 'highlight';
+				tmpPage1.push(id);
+				cardExits = true;
+			}
+		} else if( !element.className.match(re) && thisTop >= winHght && thisTop <= 2*winHght ) {
+
+			if(id && tmpPage1.indexOf(id) === -1 ) {
+				element.className += 'highlight';
+				tmpPage2.push(id);
+				cardExits = true;
+			}
+		}
+
+	});
+
+	if(cardExits) {
+		cardExits = false;
+		cardApiOne = cardApis1(tmpPage1); // load APIs
+		cardApiTwo = cardApis2(tmpPage2); // Keep the IDS in variable
+	}
+
+	if(!cardApiOne && cardApiTwo) {
+		cardApis2Load();  // load APIs 2
+	}
+
+}
+
+function cardApis1(tmpPage1) {
+	// ajax load API - tmpPage1
+	// count if all APIs loaded from tmpPage1 { next call -> cardApis2Load() }
+	return true;
+}
+
+function cardApis2(tmpPage2) {
+	// Keep In window Variable - tmpPage2
+	window.tmpPage2 = tmpPage2;
+	return true;
+}
+
+function cardApis2Load() {
+	// ajax load API from window variable if available
+	// reset windows variable after loop 
+	window.tmpPage2 = []
+}
