@@ -28,7 +28,7 @@ sraban307@mailg|Ku...@1..6
 sraban307|mailg
 
 `Linkedin`
-sraban.pvt@moc.evil|chrn@1.3567
+sraban.pvt@moc.evil|K..r@1.3567
 
 `npmjs`
 skp.pvt@gmail.com|chn@lt1.3
@@ -200,6 +200,7 @@ FATHER.DOB:15-06-1962
 `pahadasingh.onlinesbi`(14180246803000000-0753100NIBS)
 5514-4957-6544-8936(10/72-684)
 K...r@...67
+8328848690|Ku..@123..6|6059
 
 `202164529.OGB`(422800600436700-10BGOR0ABOI)
 pahadsingh
@@ -225,6 +226,7 @@ Charan@...8
 
 `blockchain`
 999098c8-6af9-4a0c-8d24-9222af6be999|30p^t29.23l#d21=3
+sraban.pvt@live.com
 
 `CoinDcx`
 sraban_pvt@yahoo.com|Ku..@12...6
