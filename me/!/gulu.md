@@ -187,7 +187,7 @@ PIN - 4897
 CID.6034957218 | AC.039510043511 | CSFI.IPOS0000001
 8328848690@postbank
 832884869001@ippb
-MPN.8079
+MPN.4897
 
 `POSA`
 ME.010004354581|CIF.403591265
@@ -198,28 +198,39 @@ FATHER.DOB:15-06-1962
 01-skp.pvt@moc.liamg|Lata2Charan
 
 `pahadasingh.onlinesbi`(14180246803000000-0753100NIBS)
-5514-4957-6544-8936(10/72-684)
-K...r@...78
-8328848690|Ku..@123..6|6059
+K...r@...7
+`sbicard`
+rr.8936654449575514(10/72-684)
+832..4.690|Ku..@123..6|6059
+`yonosbi`
+MPN.752019
 
 `202164529.OGB`(422800600436700-10BGOR0ABOI)
 pahadsingh
 
 `881666890.onlineaxis`(819599730010819-4910000BITU)
 K...r@1...6
-MPIN75.109
+MPN.752109
 
 `cc.9183288486904852@axisbank`
-rr.2584763120265035|080
+rr.2584763120265035|080(retired)
+
+`cc.9183288486908268@axisbank`
+rr.8628710110600044|30/72|480|Sra Kuma P
+
+`cc.9183288486903717@axisbank`
+rr.7173073220265035|10/62|293|Sra Kuma P
+
+
 
 `523403650.onlineicici`
 charan@...6
 
+`5285186742.onlineidfcbank`
 pahadsingh.idfcbank(63623455001-6510800BFDI)
 K...r@...8
+MPIN6059
 
-`5285186742.onlineidfcbank`
-pahadsingh-Kmr@1..8
 
 `51505811.onlinehdfcbank`
 Charan@...8
@@ -233,6 +244,15 @@ sraban_pvt@yahoo.com|Ku..@12...6
 
 `paytm`
 8328848690.paytm|K...r@...6
+MPN.752019
+
+`gpay`
+MPN.752019
+
+`phonepay`
+MPN.752091
+
+
 
 `irctc`
 srabann|Kmr@12..79
@@ -240,8 +260,6 @@ srabann|Kmr@12..79
 `ola`
 8328848690.ola(skp.pvt@mailg.moc|chrn@lt)
 
-`phonepay`
-75.019
 
 `RNLICL-Increasing Income (Double SA)`
 Policy-53413646 | ClientID-69928630 | Kmr@1....6
@@ -261,9 +279,10 @@ Policy-597171036 | Chrn@1...6
 https://ebiz.licindia.in/D2CPM/#DashBoard
 
 
-`TradeJini`
+`TradeJini - Cube`
 User: AS0444
-pwd: gl@34565..
+pwd: gl@2345432
+MPN.4897
 
 
 
