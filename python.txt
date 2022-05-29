@@ -1,0 +1,56 @@
+# list all envirnment variables using commands
+set /?
+SET
+SET path
+SET | more
+SET > output.txt
+
+------------------------------------------------
+python location
+python veritual location
+pip location
+github copilot
+----------------------------------------------
+where python
+C:\Users\91832\AppData\Local\Microsoft\WindowsApps\python.exe
+----------------------------------------------
+python -c "import sys; print(sys.executable)"
+----------------------------------------------
+>>> import os
+>>> import sys
+>>> os.path.dirname(sys.executable)
+
+C:\Users\91832\AppData\Local\Programs\Python\Python39\python.exe
+----------------------------------------------
+# unistall python
+
+Open CMD
+
+To show all packages installed - pip list
+
+To copy the packages name to a file - pip freeze > requirements.txt
+
+To delete all packages - pip uninstall -r requirements.txt -y
+
+Check all packages are removed - pip list
+
+Uninstall pip and other remaining packages
+
+Control panel > Uninstall > Python uninstall (from UI)
+----------------------------------------------------------
+# Trac 1.5.3
+$ pip install https://download.edgewall.org/trac/Trac-latest-dev.tar.gz
+$ pip install babel docutils pygments textile PyMySQL
+$ pip uninstall Flask Jinja2 markupsafe
+$ pip install Flask==1.0.2 Jinja2==2.11.3 markupsafe==2.0.1
+trac-admin C:\tracenv initenv
+trac-admin C:\Python39\tracenv initenv
+mysql://root:secret@localhost:3306/trac
+tracd --port 8000 C:\Python39\tracenv
+$ tracd -s --port 8000 C:\Python39\tracenv
+
+trac-admin C:\Python39\tracenv permission add admin TRAC_ADMIN
+trac-admin C:\Python39\tracenv permission add anonymous TRAC_ADMIN
+
+Config:
+https://nsrc.org/workshops/2008/ait-net-manage/presos/trac/install-trac.html
