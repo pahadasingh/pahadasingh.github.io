@@ -198,7 +198,7 @@ FATHER.DOB:15-06-1962
 01-skp.pvt@moc.liamg|Lata2Charan
 
 `pahadasingh.onlinesbi`(14180246803000000-0753100NIBS)
-K...r@...7
+K...r@...789
 `sbicard`
 rr.8936654449575514(10/72-684)
 832..4.690|Ku..@123..6|6059
@@ -437,3 +437,11 @@ sraban307@gmail.com|direct
 3922819_pradipta|Kumar@12..6
 http://f33-preview.awardspace.net/pradipta.xyz
 ns5.awardspace.com and ns6.awardspace.com
+
+
+
+=========================================================================
+
+Laptop - 15s-dy3001TU
+$wmic memphysical get MaxCapacity, MemoryDevices
+
