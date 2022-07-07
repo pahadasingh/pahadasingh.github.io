@@ -109,6 +109,7 @@ sraban_pvt@ymail.com|30p^t29.23ltd21=3
 
 `Myntra`
 
+
 `Amazon`
 - sraban_pvt@moc.oohay|chrn@lt
 - 8328848690-skp.pvt@moc.liamg|chrn@lt
@@ -445,3 +446,13 @@ ns5.awardspace.com and ns6.awardspace.com
 Laptop - 15s-dy3001TU
 $wmic memphysical get MaxCapacity, MemoryDevices
 
+
+==========================================================================
+@Zoom
+pradiptakumar1601@gmail.com
+Pkp1601@
+
+MeetingID: 814 8094 0366
+PassCode: 465288
+
+https://drive.google.com/drive/folders/1CQcCmylBJaSZWZ-X-FzferW8XUmgMig2
