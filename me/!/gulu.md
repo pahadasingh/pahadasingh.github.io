@@ -52,8 +52,14 @@ sraban.pvt@moc.evil|chrn@lt
 - sraban4897@moc.liamg|K...r@1...78
 - sraban_pvt@moc.oohay|
 
+
 `angel.co`
 sraban307@moc.liamg|30p^t29.23ltd21=3
+
+
+`honeypot`
+- https://app.honeypot.io/users/login|Kumar@1...6
+
 
 `letsfreelance.com`
 sraban307@mailg.com|chrn@lt
@@ -188,10 +194,12 @@ PIN - 4897
 CID.6034957218 | AC.039510043511 | CSFI.IPOS0000001
 8328848690@postbank
 832884869001@ippb
-MPN.4897
+MPN.4897/*3029-2321/6059-5654/4039-3432/8079-7876/5049-4543/7069-6765
+`60-59+56-54=3`
 
 `POSA`
 ME.010004354581|CIF.403591265
+ME.PPF.010009722401|CIF.403591265
 PARENT.4603972238|CIF.379976572|CIF.379977161
 FATHER.DOB:15-06-1962
 
@@ -253,6 +261,8 @@ MPN.752019
 `phonepay`
 MPN.752091
 
+`Bajaj`
+CID: 464268882|
 
 
 `irctc`
@@ -302,6 +312,13 @@ sraban307@liagm.moc|liamg
 
 `discord.com`
 sraban307@liagm.moc|liamg
+
+`VueLand`
+https://discord.com/channels/325477692906536972/325654285255704578
+
+`slack`
+https://app.slack.com/client/T03TMGB3DFV|Chrn@Lt@123
+https://sraban.slack.com/
 
 http://sharetipstoday.com/
 Equity and commodity trading tips
@@ -458,3 +475,13 @@ PassCode: 465288
 https://drive.google.com/drive/folders/1CQcCmylBJaSZWZ-X-FzferW8XUmgMig2
 
 11may1972!@#$bitbucket
+
+
+
+https://digicom.reliancenipponlife.com/RegeneratePolicy_Mode/RegeneratePolicyServlet?productType=PS&subproductType=CPR&policyNumber=53413646&clientId=&memberID=&fromDate=11/05/2022&toDate=11/07/2022&dropYear=
+
+
+------------------ Amazon Workspace -------
+Code: w508962
+pwd: Nanisoni@1221
+MFA Code: 

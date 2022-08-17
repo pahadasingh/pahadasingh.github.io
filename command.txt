@@ -47,7 +47,7 @@ chown
 chmod
 passwd
 
-
+~~
 ------------------------------------
 sudo cat /etc/group | grep django
 
@@ -102,6 +102,8 @@ wsl --set-version <distribution name> <versionNumber>
 
 wsl --shutdown
 
+
+
 To Install WSL2
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 wsl --set-default-version 2
@@ -118,6 +120,16 @@ powershell -nologo "& "Get-Content -Wait c:\logFile.log -Tail 10"
 powershell -nologo "& "Get-Content -Wait %1 -Tail %2"
 
 password for jenkins: a5b191e2a116437d8b1fa8102ad0c7b1
+-------------------------------------
+WSL --- \\wsl$
+$sudo su -
+$username: sraban
+$pwd: kumar
+$hostname -I
+192.168.154.241
+$sudo service apache2 status
+$explorer.exe .
+
 
 -------------------------------------
 # About Linux Trotting of requests
