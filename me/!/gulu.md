@@ -4,7 +4,7 @@ pahadasingh(sraban307@gmail.com)|imagesk(sraban.pvt@live.com)
 https://gitlab.com/users/sign_in
 srabann|11may1972!@#$gitlab
 sraban307@gmail.com
-ppradipta|prdhn@lu#123(pradiptakumar1601@gmail.com)
+ppradipta|prdhn@lu#123(pradiptakumar1601@gmail.com)Pkp1601@
 ---
 https://bitbucket.org/
 srabann|Q5qVqmbC4vs23Apq74ux
