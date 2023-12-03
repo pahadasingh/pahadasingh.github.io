@@ -1,0 +1,286 @@
+{
+  "ITR": {
+    "ITR1": {
+      "CreationInfo": {
+        "SWVersionNo": "R1",
+        "SWCreatedBy": "SW10112324",
+        "JSONCreatedBy": "SW10112324",
+        "JSONCreationDate": "2023-10-29",
+        "Digest": "s2T51bjLtHXDq92JaRaFqZv+Fj9UDFOJuoIY/IwJmeU=",
+        "IntermediaryCity": "Delhi"
+      },
+      "Form_ITR1": {
+        "FormName": "ITR-1",
+        "Description": "For Indls having Income from Salary, Pension, family pension and Interest",
+        "AssessmentYear": "2023",
+        "SchemaVer": "Ver1.0",
+        "FormVer": "Ver1.0"
+      },
+      "PersonalInfo": {
+        "AssesseeName": {
+          "FirstName": "SRABAN",
+          "MiddleName": "KUMAR",
+          "SurNameOrOrgName": "PAHADASINGH"
+        },
+        "Address": {
+          "ResidenceNo": "At-Tainlo, Po-Bhatapada, Dist-Puri",
+          "ResidenceName": "Roopena Agrahara",
+          "RoadOrStreet": "Bhatapada B.O",
+          "LocalityOrArea": "Sahupada",
+          "CityOrTownOrDistrict": "PURI",
+          "StateCode": "24",
+          "CountryCode": "91",
+          "PinCode": 752019,
+          "CountryCodeMobile": 91,
+          "MobileNo": 8328848690,
+          "EmailAddress": "skp.pvt@gmail.com"
+        },
+        "PAN": "BDVPP4897H",
+        "DOB": "1988-05-11",
+        "EmployerCategory": "OTH",
+        "AadhaarCardNo": "799415803502"
+      },
+      "FilingStatus": {
+        "ReturnFileSec": 17,
+        "NewTaxRegime": "N",
+        "SeventhProvisio139": "N",
+        "IncrExpAggAmt2LkTrvFrgnCntryFlg": "N",
+        "IncrExpAggAmt1LkElctrctyPrYrFlg": "N",
+        "clauseiv7provisio139i": "N",
+        "ReceiptNo": "391518520080723",
+        "OrigRetFiledDate": "2023-07-08"
+      },
+      "ITR1_IncomeDeductions": {
+        "AllwncExemptUs10": {
+          "AllwncExemptUs10Dtls": [
+            {
+              "SalNatureDesc": "10(5)",
+              "SalOthAmount": 5636
+            },
+            {
+              "SalNatureDesc": "10(14)(i)",
+              "SalOthAmount": 120000
+            },
+            {
+              "SalNatureDesc": "10(14)(ii)",
+              "SalOthAmount": 15000
+            },
+            {
+              "SalNatureDesc": "10(13A)",
+              "SalOthAmount": 240000
+            }
+          ],
+          "TotalAllwncExemptUs10": 380636
+        },
+        "OthersInc": {
+          "OthersIncDtlsOthSrc": [
+            {
+              "OthSrcNatureDesc": "TAX",
+              "OthSrcOthAmount": 944
+            },
+            {
+              "OthSrcNatureDesc": "SAV",
+              "OthSrcOthAmount": 4811
+            }
+          ]
+        },
+        "UsrDeductUndChapVIA": {
+          "Section80C": 150000,
+          "Section80CCC": 0,
+          "Section80CCDEmployeeOrSE": 0,
+          "Section80CCD1B": 0,
+          "Section80CCDEmployer": 0,
+          "Section80D": 35000,
+          "Section80DD": 0,
+          "Section80DDB": 0,
+          "Section80E": 0,
+          "Section80EE": 0,
+          "Section80GG": 0,
+          "Section80GGA": 0,
+          "Section80GGC": 0,
+          "Section80U": 0,
+          "Section80TTA": 4811,
+          "Section80TTB": 0,
+          "TotalChapVIADeductions": 189811,
+          "Section80G": 0
+        },
+        "DeductUndChapVIA": {
+          "Section80C": 150000,
+          "Section80CCC": 0,
+          "Section80CCDEmployeeOrSE": 0,
+          "Section80CCD1B": 0,
+          "Section80CCDEmployer": 0,
+          "Section80D": 35000,
+          "Section80DD": 0,
+          "Section80DDB": 0,
+          "Section80E": 0,
+          "Section80EE": 0,
+          "Section80EEA": 0,
+          "Section80EEB": 0,
+          "Section80G": 0,
+          "Section80GG": 0,
+          "Section80GGA": 0,
+          "Section80GGC": 0,
+          "Section80U": 0,
+          "Section80TTA": 4811,
+          "Section80TTB": 0,
+          "AnyOthSec80CCH": 0,
+          "TotalChapVIADeductions": 189811
+        },
+        "ExemptIncAgriOthUs10": {
+          "ExemptIncAgriOthUs10Total": 0
+        },
+        "GrossSalary": 1685421,
+        "Salary": 1685421,
+        "PerquisitesValue": 0,
+        "ProfitsInSalary": 0,
+        "IncomeNotified89A": 0,
+        "NetSalary": 1304785,
+        "DeductionUs16": 52600,
+        "DeductionUs16ia": 50000,
+        "EntertainmentAlw16ii": 0,
+        "ProfessionalTaxUs16iii": 2600,
+        "IncomeFromSal": 1252185,
+        "AnnualValue": 0,
+        "StandardDeduction": 0,
+        "TotalIncomeOfHP": 0,
+        "IncomeOthSrc": 5755,
+        "DeductionUs57iia": 0,
+        "Increliefus89AOS": 0,
+        "GrossTotIncome": 1257940,
+        "TotalIncome": 1068130
+      },
+      "ITR1_TaxComputation": {
+        "IntrstPay": {
+          "IntrstPayUs234A": 0,
+          "IntrstPayUs234B": 0,
+          "IntrstPayUs234C": 0,
+          "LateFilingFee234F": 0
+        },
+        "TotalTaxPayable": 132939,
+        "Rebate87A": 0,
+        "TaxPayableOnRebate": 132939,
+        "EducationCess": 5318,
+        "GrossTaxLiability": 138257,
+        "Section89": 0,
+        "NetTaxLiability": 138257,
+        "TotalIntrstPay": 0,
+        "TotTaxPlusIntrstPay": 138257
+      },
+      "TaxPaid": {
+        "TaxesPaid": {
+          "AdvanceTax": 0,
+          "TDS": 192736,
+          "TCS": 0,
+          "SelfAssessmentTax": 0,
+          "TotalTaxesPaid": 192736
+        },
+        "BalTaxPayable": 0
+      },
+      "Refund": {
+        "BankAccountDtls": {
+          "AddtnlBankDetails": [
+            {
+              "IFSCCode": "UTIB0000194",
+              "BankName": "AXIS BANK",
+              "BankAccountNo": "918010037995918",
+              "UseForRefund": "true"
+            }
+          ]
+        },
+        "RefundDue": 54480
+      },
+      "Schedule80G": {
+        "Don100Percent": {
+          "TotDon100PercentCash": 0,
+          "TotDon100PercentOtherMode": 0,
+          "TotDon100Percent": 0,
+          "TotEligibleDon100Percent": 0
+        },
+        "Don50PercentNoApprReqd": {
+          "TotDon50PercentNoApprReqdCash": 0,
+          "TotDon50PercentNoApprReqdOtherMode": 0,
+          "TotDon50PercentNoApprReqd": 0,
+          "TotEligibleDon50Percent": 0
+        },
+        "Don100PercentApprReqd": {
+          "TotDon100PercentApprReqdCash": 0,
+          "TotDon100PercentApprReqdOtherMode": 0,
+          "TotDon100PercentApprReqd": 0,
+          "TotEligibleDon100PercentApprReqd": 0
+        },
+        "Don50PercentApprReqd": {
+          "TotDon50PercentApprReqdCash": 0,
+          "TotDon50PercentApprReqdOtherMode": 0,
+          "TotDon50PercentApprReqd": 0,
+          "TotEligibleDon50PercentApprReqd": 0
+        },
+        "TotalDonationsUs80GCash": 0,
+        "TotalDonationsUs80GOtherMode": 0,
+        "TotalDonationsUs80G": 0,
+        "TotalEligibleDonationsUs80G": 0
+      },
+      "Schedule80GGA": {
+        "TotalDonationAmtCash80GGA": 0,
+        "TotalDonationAmtOtherMode80GGA": 0,
+        "TotalDonationsUs80GGA": 0,
+        "TotalEligibleDonationAmt80GGA": 0
+      },
+      "Schedule80D": {
+        "Sec80DSelfFamSrCtznHealth": {
+          "SeniorCitizenFlag": "N",
+          "SelfAndFamily": 5000,
+          "PrevHlthChckUpSlfFam": 5000,
+          "SelfAndFamilySeniorCitizen": 0,
+          "ParentsSeniorCitizenFlag": "Y",
+          "Parents": 0,
+          "ParentsSeniorCitizen": 30000,
+          "MedicalExpParentsSrCtzn": 30000,
+          "EligibleAmountOfDedn": 35000
+        }
+      },
+      "TDSonSalaries": {
+        "TDSonSalary": [
+          {
+            "EmployerOrDeductorOrCollectDetl": {
+              "TAN": "HYDW00121C",
+              "EmployerOrDeductorOrCollecterName": "WISSEN INFOTECH PRIVATE LIMITED"
+            },
+            "IncChrgSal": 1157768,
+            "TotalTDSSal": 143944
+          },
+          {
+            "EmployerOrDeductorOrCollectDetl": {
+              "TAN": "BLRA17161E",
+              "EmployerOrDeductorOrCollecterName": "APPINESS INTERACTIVE PRIVATE LIMITED"
+            },
+            "IncChrgSal": 527653,
+            "TotalTDSSal": 48792
+          }
+        ],
+        "TotalTDSonSalaries": 192736
+      },
+      "TDSonOthThanSals": {
+        "TotalTDSonOthThanSals": 0
+      },
+      "ScheduleTDS3Dtls": {
+        "TotalTDS3Details": 0
+      },
+      "ScheduleTCS": {
+        "TotalSchTCS": 0
+      },
+      "TaxPayments": {
+        "TotalTaxPayments": 0
+      },
+      "Verification": {
+        "Declaration": {
+          "AssesseeVerName": "SRABAN KUMAR PAHADASINGH",
+          "FatherName": "KANHU CHARAN PAHADASINGH",
+          "AssesseeVerPAN": "BDVPP4897H"
+        },
+        "Capacity": "S",
+        "Place": "115.99.233.94"
+      }
+    }
+  }
+}
