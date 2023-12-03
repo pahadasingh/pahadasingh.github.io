@@ -33,7 +33,7 @@
 
 
         const extraParams = cURl.replace(browseUrl, '');
-        const apiUrl = `${url}${extraParams}`;
+        const apiUrl = `${url}${initDir === 'pahadasingh.github.io' ? '' : extraParams}`;
 
         fetch(apiUrl)
             .then((response) => {
