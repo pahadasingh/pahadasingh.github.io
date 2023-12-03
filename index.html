@@ -26,16 +26,16 @@
         const isLocal = cURl.indexOf('localhost') !== -1;
         const user = 'pahadasingh';
         const initDir = 'pahadasingh.github.io';
-        const browseUrl = isLocal ? `http://localhost:3000/${initDir}` : `https://${user}.github.io/${initDir}`;
+        let browseUrl = isLocal ? `http://localhost:3000/${initDir}` : `https://${user}.github.io/${initDir}`;
         const url = `https://api.github.com/repos/${user}/${initDir}/contents`;
         const ul = document.getElementById('list');
         const fragment = document.createDocumentFragment();
 
-
+        initDir === 'pahadasingh.github.io' && (browseUrl = cURl);
         const apiUrl = `${url}`;
-        let extraParams = cURl.replace(browseUrl, '');
-        extraParams = initDir === 'pahadasingh.github.io' ? '' : extraParams;
+        const extraParams = cURl.replace(browseUrl, '');
         
+
         fetch(apiUrl)
             .then((response) => {
                 return response.json();
