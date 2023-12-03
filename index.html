@@ -32,9 +32,10 @@
         const fragment = document.createDocumentFragment();
 
 
-        const extraParams = cURl.replace(browseUrl, '');
-        const apiUrl = `${url}${initDir === 'pahadasingh.github.io' ? '' : extraParams}`;
-
+        const apiUrl = `${url}`;
+        let extraParams = cURl.replace(browseUrl, '');
+        extraParams = initDir === 'pahadasingh.github.io' ? '' : extraParams;
+        
         fetch(apiUrl)
             .then((response) => {
                 return response.json();
