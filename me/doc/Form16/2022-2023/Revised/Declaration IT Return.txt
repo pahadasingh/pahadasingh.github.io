@@ -12,3 +12,28 @@ Others 1- 1.2lakh
 Others 2- 15k(office attire)
 Health Checkup - 30+5k(80D)
 Insurance - 1.5lakh(80C)
+
+
+----------------------
+1. ramayana-unravelled
+2. Mahabharata Unravelled
+3. Garuda Puran
+4. 
+
+
+https://api.github.com/repos/pahadasingh/book/contents/
+https://api.github.com/repos/pahadasingh/book/contents/politics
+https://api.github.com/repos/pahadasingh/book/contents/politics/What-Really-Led-to-Indian-Freedom
+https://pahadasingh.github.io/book/politics/What-Really-Led-to-Indian-Freedom/_OceanofPDF.com_What_Really_Led_to_Indian_Freedom_-_RAJNIKANT_PURANIK.epub
+
+=========================
+Sankrit Learning Book PDF
+Odia Bahajan Mala Songs
+=========================
+1. Leave apply
+2. Excel apply
+3. 
+
+
+
+
