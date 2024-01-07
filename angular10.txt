@@ -1,0 +1,168 @@
+Q. I am very very sorry, creating trouble(on my thought) to my well wishers...
+
+Q. Why my brain is hijacked and only prepare at the exam time(demo presentation, prepraing interview less idea on contents to deliver...s) ? So that I have very less Content to speak in organised detail way?
+
+Q. Under a table lamp, prepare/practise communication like Pavel.
+
+Q. While mind is under pressure, drink hot water & prepare exams(Question and answers)
+
+Q. Install some public project when are you leaving the job.
+
+Q. Before die/leave job, end with clean-chit(Mokhsa).
+
+Q. Try to understand/relax how company wants to keep into a well(in each moment/timestamp), so that can imagine outside world(project) to compare with their project.
+
+Q. Never Forget in life - Daily practise(every moment), [inside world ~ outside world] (What is inside job/outside job) then communication possible. (Always detach from exiting problem, to solve other - use Brain Gym)
+
+Q. Daily take a snapshot(of work-concept) what are you doing and delete it morning once it is written in book/doc. So that at the releive time(last working day) - not to think on this(like a thief).
+
+Q. Angular Hacker News (Open Source)
+
+Q.  
+------------------------------------
+Q. content projection and use the component instance inside the 
+	<child-component #instance>
+	 {{ instance.input() }}
+	</child-component>
+
+Q. fromEvent(window, 'load').pipe()
+Q. switchMapTo(combineLatest())
+Q. combileLatest([
+		this.store.route(select(fromContent.getPageLoadStatus)),
+		this.route.fragment
+	])
+Q. pipe(select(), tab() )
+Q. pipe(
+		filter<SomeModel[]>(Boolean),
+		ObserveOn(asyncScheduler),
+		take(1),
+		map()
+	)
+Q. Partial<LinkurlModel>
+------------------------------------
+Q. jest.spyOn(input, 'focus')
+
+Q. items?.[0]
+Q. <ng-container *ngTemplateOutlet/>
+------------------------------------
+Q. viewContainer.createComponent(imageFactory)
+   viewContainer.clear()
+   viewContainer.createEmbededView(this.routeTemplate)
+------------------------------------
+Q. @Input('urlResolver') url: Partial<LinkurlModel>;
+------------------------------------
+Q. @HostListener()
+   @ContentCHild()
+   @ViewChild()
+   this.elRef.nativeElement
+   this.cdr.detectChanges()
+------------------------------------
+Q. const {src, dest, watch, parallel } = require('gulp');
+   used for misification of css/js to include in angular project
+------------------------------------
+Q. @Directive({
+	selector: 'h1.monospace, h2.moospace, h3.monospace,..........'
+})
+------------------------------------
+Q. fixture.debugElement.query( By.css('ng-select') )
+------------------------------------
+Q. Install Swiper in angular Project for scrolling
+
+------------------------------------
+Q. Install Google Analytics in angular Project
+
+------------------------------------
+Q. Top 10 Projects in angular
+   https://themeselection.com/angular-projects-with-source-code/#h-jira-clone
+
+------------------------------------
+
+------------------------------------
+Q. Stencil Projects
+    https://auth0.com/blog/creating-web-components-with-stencil/
+	https://github.com/newbornfrontender/udemy-web-components-and-stencil
+
+------------------------------------
+Q. https://icomoon.io/
+   create custom icon.....
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
+
