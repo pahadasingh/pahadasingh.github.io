@@ -70,6 +70,11 @@ Q. Install Swiper in angular Project for scrolling
 
 ------------------------------------
 Q. Install Google Analytics in angular Project
+   - in core module
+      - constants
+      - models
+      - services
+      - include the external link dynmaically in index.html
 
 ------------------------------------
 Q. Top 10 Projects in angular
