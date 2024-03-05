@@ -510,3 +510,6 @@ Airaisa - Charan@Lata@123|8328848690
 hrmax.myadrenalin.com/AdrenalinMAX/#/
 sraban.pahadasingh@wisseninfotech.com(WISSEN)
 Chrn@Lt@1.3
+
+sodexo.in/login
+8328848690(Kmr@1..6)
