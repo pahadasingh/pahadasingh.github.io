@@ -277,7 +277,7 @@ srabann|Kmr@12..79
 
 
 `RNLICL-Increasing Income (Double SA)`
-Policy-53413646 | ClientID-69928630 | Kmr@1....6
+Policy-53413646 | ClientID-69928630 | Kmr@1....8
 https://customer.reliancenipponlife.com/
 rnlife.customerservice@relianceada.com
 sraban_pvt@moc.oohay
@@ -506,3 +506,10 @@ pwd: Nanisoni@1221
 MFA Code: 
 ------
 Airaisa - Charan@Lata@123|8328848690
+==========================
+hrmax.myadrenalin.com/AdrenalinMAX/#/
+sraban.pahadasingh@wisseninfotech.com(WISSEN)
+Chrn@Lt@1.3
+
+sodexo.in/login
+8328848690(Kmr@1..6)
