@@ -73,7 +73,7 @@ sraban307@mailg.com|chrn@lt
 
 `MS-live`
 01-sraban.pvt@moc.evil|K...r@1....467
-02-sraban.pvt@moc.kooltuo|K...r@1....5689(8328848690-8079)
+02-sraban.pvt@moc.kooltuo|K...r@1....8(8328848690-8079)
 02-sraban-pvt@hotmail.com|chrn@lt
 
 `Samsung`
@@ -524,6 +524,9 @@ sraban4897@gmail.com
 Lt@chrn@1.3
 
 
+`https://vmware.wd1.myworkdayjobs.com/en-US/vmware/login`
+sraban4897@gmail.com
+6vnJ4veQvNj-N9:
 
 https://learn.successgyan.com/web/activity
 8328848690
@@ -531,3 +534,5 @@ Ultimate Success Champion
 13,14,15 April - 2024
 sraban_pvt@yahoo.com|chrn@lta
 https://sso.teachable.com/secure/572530/users/sign_in?clean_login=true&reset_purchase_session=1
+
+
