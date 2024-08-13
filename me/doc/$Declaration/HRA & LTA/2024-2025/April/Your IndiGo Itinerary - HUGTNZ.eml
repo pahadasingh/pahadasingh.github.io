@@ -1,0 +1,2293 @@
+Delivered-To: sraban307@gmail.com
+Received: by 2002:a9d:754d:0:b0:6f0:4bfc:4b30 with SMTP id b13csp585252otl;
+        Sun, 12 May 2024 06:50:23 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHHtfggEroNdMShUxW0Tn2as1QUVS8JMNu1B3xkIPKj2o7LMKMtQ3NiNq4IFfkrGjoCKdp5
+X-Received: by 2002:a17:902:c94e:b0:1e5:62:7ac7 with SMTP id d9443c01a7336-1ef43d17037mr113769595ad.3.1715521823336;
+        Sun, 12 May 2024 06:50:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1715521823; cv=none;
+        d=google.com; s=arc-20160816;
+        b=EiZq+la0Lama4A6H0DT1HLS7/X6fUuiOvguqswsGAGYPKp7dlXf1tPG5L5zP8zx9BV
+         waemgBUHFggkh/2AOAiQXyPnM3is8ZdUKB4msUSZrs1lT1DHPnD4L1FGrE2DbcFuFIm+
+         53/nQSX+gyxj5L4M0PyPxqIyhlxDdyDRG57bqEQ9nbYkCY+gfItj+SKVCwdt5XrCyFT9
+         N9+V7fNojkIY1P/1BEGYbiux1soMeB/a8jtLFzJiNCt2Ho8lRwS3J+8ZQHKsdfKDoy31
+         kZMGE6Ozf/YNZ6LAIgIq6LT03akfvgB3Yr9YZVzAKIhAs+UM1Rc90XK0lHbam2xLdgjL
+         F9Jw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:mime-version:reply-to:to:date:subject:from
+         :dkim-signature;
+        bh=iar7BE5Q3qtSCE1MgawaEQUeOrYcy9mLLPhjSKW8fEk=;
+        fh=bnMGfRHjUF0WbRoTttJKB3SzXzWXpU3Y5lEm8Py6tM4=;
+        b=kjgquD4K93SsNmjniavLuEvJe9e5tF75vMZrbApQCLodPlqhxWONVUKP++D4vhRZ7P
+         bZCxWFWTSO8ej+4amaafKhiZoIzphUb3WEiM14onJC3ENMjozMpK9QvYFFNn2ess8tp3
+         N/ODRq+biKxnZCkr8Ajgm7Fyl49nzl/xgrZ//hetRaBnRAtMxg6SawE68PFD/qpm3CSo
+         +RuafHr7wtdcy1SEud+rmIzCc3Mid0B/IzzShgviGsyzahTPZsd8lNJ8XMD+I/ru9iAd
+         mcstLSeMk445OhINI7JA6S9OwjGPLuv6UIjdUv/ivhrWqUmdH9InsoVe5aI6E7Nt/pTf
+         /UTg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@customer.goindigo.in header.s=neolane header.b=wf+s6kRE;
+       spf=pass (google.com: domain of indigoaviation-rt-prod4@customer.goindigo.in designates 66.235.130.244 as permitted sender) smtp.mailfrom=indigoaviation-rt-prod4@customer.goindigo.in;
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=customer.goindigo.in
+Return-Path: <indigoaviation-rt-prod4@customer.goindigo.in>
+Received: from r244.customer.goindigo.in (r244.customer.goindigo.in. [66.235.130.244])
+        by mx.google.com with ESMTPS id d9443c01a7336-1ef0bf32b91si78106345ad.298.2024.05.12.06.50.22
+        for <sraban307@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 12 May 2024 06:50:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of indigoaviation-rt-prod4@customer.goindigo.in designates 66.235.130.244 as permitted sender) client-ip=66.235.130.244;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@customer.goindigo.in header.s=neolane header.b=wf+s6kRE;
+       spf=pass (google.com: domain of indigoaviation-rt-prod4@customer.goindigo.in designates 66.235.130.244 as permitted sender) smtp.mailfrom=indigoaviation-rt-prod4@customer.goindigo.in;
+       dmarc=pass (p=QUARANTINE sp=REJECT dis=NONE) header.from=customer.goindigo.in
+Return-Path: <indigoaviation-rt-prod4@customer.goindigo.in>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=customer.goindigo.in; s=neolane; t=1715521821;
+	bh=iar7BE5Q3qtSCE1MgawaEQUeOrYcy9mLLPhjSKW8fEk=;
+	h=From:Subject:Date:To:MIME-Version:Message-ID:Content-Type;
+	b=wf+s6kRED4r8cAKtfqsUim4bPkKsAC4PfWibK3NAkgQxdJKvGH+k1DcuPmTsw0d6I
+	 cnv0zviFKl+rG7ApBdivdqVpAGZ7kCq2SnsI5d/OPDNK5qB0xnCLYyN+KWrYsFf3+D
+	 B4N0Zv5oBq+Rnpi+y4HCf13r+wELGuGbE8ZTFJF5xJbbE/G6bOGug57PnMN8QiFGUL
+	 n6c3m6PhCKcfcu8mLpzvLBSdOtR3y/w+3qoiiahH+JoFniehNkIR0dsOMWqjyo8ZcS
+	 xlxiakTQ9iLb0A6hDGES6xm3P8mqZh2b/HN1H8b+LW20VE4Dg/gLKHiK7U07b5gh4R
+	 nNTnBwMBRioyw==
+X-MSFBL: UJHtZ0999Uht8OSBcZCkoNIqsbn7zh/g6f6K8yZf2fA=|eyJiIjoiYXdzX2luZGl
+	nb2F2aWF0aW9uX3Byb2Q0X2RlZmF1bHRfbW9tZW50dW0wMV9tdGEwMDFfNjYuMjM
+	1LjEzMC4yNDQiLCJyY3B0X21ldGEiOnsgImluIjogImluZGlnb2FfcnRfcHJvZDQ
+	iLCAiciI6ICJzcmFiYW4zMDdAZ21haWwuY29tIiwgIm0iOiAiMTUyOTUwMDExIiw
+	gImQiOiAiMTExMjE5OTMxIiwgImkiOiAiIiB9LCJnIjoiZGVmYXVsdF8xYzZjYmQ
+	5MS1iOTM3LTQ4MmMtODY1NC04M2IwYmUzY2JmMTciLCJyIjoic3JhYmFuMzA3QGd
+	tYWlsLmNvbSJ9
+Received: from [10.84.255.165] ([10.84.255.165:56342] helo=r243.customer.goindigo.in)
+	by momentum01.sin2.cpt.adobe.net (envelope-from <indigoaviation-rt-prod4@customer.goindigo.in>)
+	(ecelerity 4.2.38.999 r(:)) with ESMTP
+	id 00/A6-11664-D19C0466; Sun, 12 May 2024 06:50:21 -0700
+From: "IndiGo" <reservations@customer.goindigo.in>
+Subject: Your IndiGo Itinerary - HUGTNZ
+Date: Sun, 12 May 2024 19:20:20 +0530
+To: <sraban307@gmail.com>
+Reply-To: "IndiGo" <no-reply@customer.goindigo.in>
+MIME-Version: 1.0
+X-mailer: nlserver, Build 6.7.0
+Message-ID: <NM6091DD4FB06A114DBindigoa_rt_prod4@customer.goindigo.in>
+Content-Type: multipart/alternative;
+	charset="windows-1252";
+	boundary="----=_NextPart_895_9E0ACC98.9E0ACC98"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_895_9E0ACC98.9E0ACC98
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+
+	
+PNR/Booking Ref.: HUGTNZ	
+	
+
+Status Date of Booking* Payment Status 
+CONFIRMED	27Apr24 14:09:22 (UTC)
+													Approved	
+*Booking Date reflects in UTC (Universal Time Coordinated), all other timings mentioned are as per Local Time. 	
+
+  	
+
+IndiGo Passenger - 1/ 1
+	
+
+  	
+
+IndiGo Flight(s) 	
+
+  	
+
+
+	
+	
+Mr.Sraban kumarPahadasingh	
+	
+
+Date From (Terminal) Departs Flight Number 
+(Aircraft type) Check-in/Bag 
+drop closes To (Terminal) Arrives Via 
+13 May 24	Bhubaneshwar   (T 1)  	08:55	6E  141     
+( A320)  	 07:55	Chennai   (T 1)  	10:45		
+
+  	
+
+IndiGo Flight(s) 	
+
+  	
+
+
+	
+	
+Mr.Sraban kumarPahadasingh	
+	
+
+Date From (Terminal) Departs Flight Number 
+(Aircraft type) Check-in/Bag 
+drop closes To (Terminal) Arrives Via 
+13 May 24	Chennai   (T 1)  	18:15	6E  365   	 17:15	Bengaluru   (T 1)  	19:05		
+
+  	
+
+Seats and Additional Services 	
+
+
+BBI		MAA	
+
+MAA		BLR	
+
+Passenger name Seat Services Purchased Seat Services Purchased 
+
+Mr. Sraban kumar Pahadasingh	
+	26B		26E		
+	
+
+  	
+
+  	
+  	
+  	
+Check-in Online: To save time and skip queues.
+120 min before departure: Reach the airport  to allow yourself sufficient time for necessary procedures.
+60 min before departure: Drop your baggage and proceed to boarding.
+25 min before departure: Boarding gate closes.   
+Travel and Baggage Information 	
+
+
+
+BBI		MAA	
+	
+  •  Fare Type: Regular Fare
+ •  Airport counters close 60 minutes  prior to the scheduled departure time. 
+•  Boarding gates close 25 minutes  prior to the scheduled departure time. 
+•   
+								Check-in Baggage:   15kg per person (1 piece only). Excess baggage/additional piece is subject to applicable charges. 
+•   
+		Disclaimer:   15 Kg per person (One piece only). For Double/Triple or MultiSeats bookings, extra 10 kg will be applicable. Baggage in excess of 15 kg will be subject to additional charges of INR 1000 per piece in addition to the excess baggage charges of INR 550 per kg at the airport.
+	 
+•   
+			Hand Baggage:   
+		One hand bag up to 7 kgs and 115 cms (L+W+H), shall be allowed per customer. For contactless travel we recommend to place it under the seat in front, on board.
+	 
+•   All passengers must present valid photo identification in original at the time of check-in. 
+•    For Cards issued outside India:   All our customers using cards issued outside India will be unable to perform web check-in, as card verification is necessary. Customers travelling on such bookings must present either a hard or soft copy of their signed card for verification at the time of check-in at the airport. If the transaction remains un-verified, the amount will be refunded, and you can complete the same booking using an alternate mode of payment. Please note that failing which, your booking will be cancelled and the amount will be forfeited. We strongly recommend you to check your registered email ID for all the notifications regarding your booking.    
+•   Carry a printed or soft copy of boarding pass and baggage tag , you can print them at the airport kiosk as well. Please note only certain airports are equipped with kiosks which print baggage tags, hence it is advised that you mention your name and PNR on a thick paper and tag it to your baggage before reaching the airport. 
+•   Remember to wear your mask, carrying a sanitiser is recommended . 
+•   Please check state guidelines  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,343c http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,343d , before the journey. .     	
+	
+
+MAA		BLR	
+	
+  •  Fare Type: Regular Fare
+ •  Airport counters close 60 minutes  prior to the scheduled departure time. 
+•  Boarding gates close 25 minutes  prior to the scheduled departure time. 
+•   
+								Check-in Baggage:   15kg per person (1 piece only). Excess baggage/additional piece is subject to applicable charges. 
+•   
+		Disclaimer:   15 Kg per person (One piece only). For Double/Triple or MultiSeats bookings, extra 10 kg will be applicable. Baggage in excess of 15 kg will be subject to additional charges of INR 1000 per piece in addition to the excess baggage charges of INR 550 per kg at the airport.
+	 
+•   
+			Hand Baggage:   
+		One hand bag up to 7 kgs and 115 cms (L+W+H), shall be allowed per customer. For contactless travel we recommend to place it under the seat in front, on board.
+	 
+•   All passengers must present valid photo identification in original at the time of check-in. 
+•    For Cards issued outside India:   All our customers using cards issued outside India will be unable to perform web check-in, as card verification is necessary. Customers travelling on such bookings must present either a hard or soft copy of their signed card for verification at the time of check-in at the airport. If the transaction remains un-verified, the amount will be refunded, and you can complete the same booking using an alternate mode of payment. Please note that failing which, your booking will be cancelled and the amount will be forfeited. We strongly recommend you to check your registered email ID for all the notifications regarding your booking.    
+•   Carry a printed or soft copy of boarding pass and baggage tag , you can print them at the airport kiosk as well. Please note only certain airports are equipped with kiosks which print baggage tags, hence it is advised that you mention your name and PNR on a thick paper and tag it to your baggage before reaching the airport. 
+•   Remember to wear your mask, carrying a sanitiser is recommended . 
+•   Please check state guidelines  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,343c http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,343d , before the journey. .     	
+	
+
+  	
+
+
+Travel advisory: Safety during COVID-19 	
+We seek your kind assistance to safeguard your well-being, as well as that of your fellow passengers and our crew on board our flights, by following the guidelines set out below: 	
+• 	All customers should wear a mask  and sanitize their hands  before proceeding to the boarding gate. 	
+• 	Customers must wear a face mask covering their nose and mouth , throughout their journey with IndiGo. The mask may be removed only  while eating and drinking. 	
+• 	Please maintain appropriate social distancing  while boarding and de-boarding the aircraft. 	
+• 	Kindly adhere to all the announcements and other directives  issued by our ground staff and/or crew at all points of time during your journey. 	
+• 	Customers are also requested to familiarise themselves  with the guidelines for air passengers published by the Indian Ministry of Civil Aviation on the following link: 
+ http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3440 http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3441 in/sites/default/files/ Guidelines_for_Air_Passengers_ 21May.pdf 
+ http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3442 http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3443 	
+• 	Caution: Customers are advised to strictly follow all COVID-19 protocols. Failure to comply with these guidelines and the directions of our ground staff and/or crew may attract penal action against the concerned individual. 	
+	
+	
+
+  	
+
+Terms & Conditions 	
+
+	- • For more information on your itinerary, please  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,344d&cid=IndRT4DM196&bid=152950011 click here 
+	- • To read our conditions of carriage as per Indian regulations, please  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,344e&cid=IndRT4DM196&bid=152950011 click here 
+	- • For details on the Passenger Charter’ issued by the Ministry of Civil Aviation (MoCA), please  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,344f&cid=IndRT4DM196&bid=152950011 click here 
+	
+
+  	
+ http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3453&cid=IndRT4DM196&bid=152950011 	
+
+  	
+ www.goindigo.in/6eholidays 	
+
+
+Fare Summary 
+Airfare Charges	INR	4,048.00
+						
+ Aviation Security Fee	INR	236.00
+						
+ GST for Odisha	INR	202.00
+						
+ User Development Fee	INR	885.00
+						
+Total Fare 	INR	5,371.00	
+	
+Personal contact information 
+Company Name : Yatra Online Pvt Ltd	
+
+Home Phone : 918328848690	
+Email : sraban307@gmail.com	
+
+  	
+	
+
+  	
+
+Interglobe Aviation ltd.(IndiGo), Global Business Park, Gurgaon, Haryana, India. Call 0124-4973838 or 0124-6173838 	
+	
+ http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3454       http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3455  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3456&cid=IndRT4DM196&bid=152950011 Book Flight  |  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3457&cid=IndRT4DM196&bid=152950011 Flight Status  |  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3458&cid=IndRT4DM196&bid=152950011 Edit Booking  |  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3459&cid=IndRT4DM196&bid=152950011 Check-in  |  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,345a&cid=IndRT4DM196&bid=152950011 View GST Invoice  |  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,345b&cid=IndRT4DM196&bid=152950011 Partner Login  |  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,345c&cid=IndRT4DM196&bid=152950011 FAQs  |  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,345d&cid=IndRT4DM196&bid=152950011 Contact Us 
+Copyright 2024 IndiGo All rights reserved.  http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,345e   http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,345f   http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3460   http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3461   http://rt4-t.customer.goindigo.in/r/?id=t91dd4fb,6a114db,3462
+
+------=_NextPart_895_9E0ACC98.9E0ACC98
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+  <HEAD>
+    <TITLE>Email Itinerary</TITLE>
+  </HEAD>
+  <BODY style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BACKGROUND-COLO=
+R: #f1f1f1"> <SCRIPT type=3Dapplication/ld+json>
+      {
+        "context": "http://schema.org",
+        "type": "FlightReservation",
+        "reservationNumber": "FETCVS",
+        "reservationStatus": "PAYMENT PENDING",
+        "underName": {
+          "type": "Person",
+          "name": "N T"
+        },
+        "reservationFor": {
+          "type": "Flight",
+          "flightNumber": "6E 171 ",
+          "airline": {
+            "type": "Airline",
+            "name": "Indigo",
+            "iataCode": "6E"
+          },
+          "departureAirport": {
+            "type": "Airport",
+            "name": "Delhi ",
+            "iataCode": "DEL"
+          },
+          "departureTime": "08 Nov 19 04:55",
+          "arrivalAirport": {
+            "type": "Airport",
+            "name": "Mumbai ",
+            "iataCode": "BOM"
+          },
+          "arrivalTime": "07:05"
+        },
+        "checkinUrl": "https://www.goindigo.in/"
+      }
+    </SCRIPT>
+    <STYLE>
+      @charset "utf-8";
+
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      /* Prevent WebKit and Windows mobile changing default text sizes */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* CLIENT-SPECIFIC STYLES */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      /*      p{
+         margin:0; padding:0 30px 20px 44px; line-height:23px; font-size:16=
+px;font-family: 'Segoe UI', arial, sans-serif;
+         }*/
+      /* Prevent WebKit and Windows mobile changing default text sizes */
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      /* Remove spacing between tables in Outlook 2007 and up */
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* Allow smoother rendering of resized image in Internet Explorer */
+      /* RESET STYLES */
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+
+      table {
+        border-collapse: collapse !important;
+      }
+
+      .ExternalClass {
+        width: 100%;
+      }
+
+      body {
+        height: 100% !important;
+        width: 100% !important;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* ANDROID CENTER FIX */
+      div[style*=3D"margin: 16px 0;"] {
+        margin: 0 !important;
+      }
+
+      .imageContainer {
+        display: table;
+      }
+
+      .imageContainer span {
+        display: table-cell;
+      }
+
+      table {
+        border-collapse: collapse !important;
+      }
+
+      .ExternalClass {
+        width: 100%;
+      }
+
+      img[src$=3D".gif"],
+      img[src$=3D".png"] {
+        image-rendering: crisp-edges;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+        }
+      }
+
+      .holdText {
+        font-size: 9px !important;
+      }
+    </STYLE>
+    <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; WIDTH: 655px=
+; PADDING-BOTTOM: 19px; PADDING-TOP: 5px; PADDING-LEFT: 5px; MARGIN: 0px au=
+to; PADDING-RIGHT: 5px; BACKGROUND-COLOR: #ffffff" cellSpacing=3D0 cellPadd=
+ing=3D0 width=3D650 border=3D0>
+      <TBODY>
+        <TR>
+          <TD>
+            <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; MIN-=
+WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"BORDER-TOP: #26329f 5px solid; PADDING-BOTTO=
+M: 5px; PADDING-TOP: 19px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px" width=
+=3D150>
+                    <SPAN style=3D"MAX-WIDTH: 150px; FLOAT: left">
+                      <IMG style=3D"WIDTH: 60%" src=3D"https://www.goindigo=
+.in//content/dam/goindigo/generic-campaigns/email-campaigns/new_itinerary/I=
+ndiGo%20Logo.png" width=3D90>
+                    </SPAN>
+                  </TD>
+                  <TD class=3Dbarcode1 style=3D"FONT-SIZE: 12px; MAX-WIDTH:=
+ 470px; BORDER-TOP: #26329f 5px solid; FONT-WEIGHT: normal; PADDING-BOTTOM:=
+ 12px; TEXT-ALIGN: right; PADDING-TOP: 12px; PADDING-LEFT: 8px; PADDING-RIG=
+HT: 8px; MARGIN-RIGHT: 10px">
+                    <TABLE width=3D"100%" border=3D0>
+                      <TBODY>
+                        <TR>
+                          <TD>PNR/Booking Ref.: HUGTNZ </TD>
+                        </TR>
+                      </TBODY>
+                    </TABLE>
+                  </TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            
+       
+       
+    <TABLE style=3D"BORDER-TOP: #dadada 1px solid; FONT-FAMILY: Helvetica, =
+Arial, sans-serif; BORDER-RIGHT: #dadada 1px solid; BORDER-COLLAPSE: collap=
+se; MIN-WIDTH: 100%; BORDER-BOTTOM: #dadada 1px solid; BORDER-LEFT: #dadada=
+ 1px solid" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TH style=3D"FONT-SIZE: 12px; BORDER-TOP: #dadada 1px sol=
+id; BORDER-RIGHT: #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; FONT=
+-WEIGHT: normal; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; P=
+ADDING-LEFT: 15px; BORDER-LEFT: #dadada 1px solid; LINE-HEIGHT: 20px; PADDI=
+NG-RIGHT: 15px; BACKGROUND-COLOR: #dadada" scope=3Dcol>Status</TH>
+                  <TH style=3D"FONT-SIZE: 12px; BORDER-TOP: #dadada 1px sol=
+id; BORDER-RIGHT: #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; FONT=
+-WEIGHT: normal; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; P=
+ADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; LINE-HEIGHT: 20px; PADDIN=
+G-RIGHT: 6px; BACKGROUND-COLOR: #dadada" scope=3Dcol>Date of Booking*</TH> =
+<TH style=3D"FONT-SIZE: 12px; BORDER-TOP: #dadada 1px solid; BORDER-RIGHT: =
+#dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; FONT-WEIGHT: normal; P=
+ADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; =
+BORDER-LEFT: #dadada 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px; BACK=
+GROUND-COLOR: #dadada" scope=3Dcol>Payment Status</TH>
+                </TR>
+                <TR>
+                  <TD style=3D"FONT-SIZE: 12px; BORDER-TOP: #dadada 1px sol=
+id; BORDER-RIGHT: #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; FONT=
+-WEIGHT: bold; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PAD=
+DING-LEFT: 15px; BORDER-LEFT: #dadada 1px solid; LINE-HEIGHT: 20px; PADDING=
+-RIGHT: 15px">CONFIRMED </TD>
+                  <TD style=3D"FONT-SIZE: 12px; BORDER-TOP: #dadada 1px sol=
+id; BORDER-RIGHT: #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; FONT=
+-WEIGHT: bold; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PAD=
+DING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; LINE-HEIGHT: 20px; PADDING-=
+RIGHT: 6px">27Apr24 14:09:22 (UTC)
+=09=09=09=09=09=09=09=09=09=09=09=09 </TD> <TD style=3D"FONT-SIZE: 12px; BO=
+RDER-TOP: #dadada 1px solid; BORDER-RIGHT: #dadada 1px solid; BORDER-BOTTOM=
+: #dadada 1px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; TEXT-ALIGN: le=
+ft; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PA=
+DDING-RIGHT: 6px">Approved </TD>
+                </TR>
+                <TR>
+                  <TD style=3D"FONT-SIZE: 12px; BORDER-TOP: #dadada 1px sol=
+id; BORDER-RIGHT: #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADD=
+ING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 15px; BO=
+RDER-LEFT: #dadada 1px solid; PADDING-RIGHT: 15px" colSpan=3D5>
+                    <DIV style=3D"FONT-SIZE: 88%; FONT-WEIGHT: normal; LINE=
+-HEIGHT: 20px">*Booking Date reflects in UTC (Universal Time Coordinated), =
+all other timings mentioned are as per Local Time. </DIV>
+                  </TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORD=
+ER-COLLAPSE: collapse; MIN-WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0 wid=
+th=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM=
+: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+            <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORD=
+ER-COLLAPSE: collapse; MIN-WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0 wid=
+th=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"FONT-SIZE: 12px; BORDER-TOP: #dadada 1px sol=
+id; BORDER-RIGHT: #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; TEXT=
+-ALIGN: left; BORDER-LEFT: #dadada 1px solid">
+                    <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-ser=
+if; BORDER-COLLAPSE: collapse; MIN-WIDTH: 100%" cellSpacing=3D0 cellPadding=
+=3D0 width=3D"100%" border=3D0>
+                      <TBODY>
+                        <TR>
+                          <TH style=3D"FONT-SIZE: 12px; BORDER-RIGHT: #dada=
+da 1px solid; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADD=
+ING-LEFT: 15px; LINE-HEIGHT: 20px; PADDING-RIGHT: 15px; BACKGROUND-COLOR: #=
+dadada" width=3D201 scope=3Dcol>
+                            <DIV style=3D"FONT-SIZE: 12px; FONT-WEIGHT: nor=
+mal">IndiGo Passenger - 1/1 </DIV>
+                          </TH>
+
+  
+<th width=3D"133" valign=3D"middle" height=3D"28" scope=3D"col" valign=3D"m=
+iddle" style=3D"font-size:12px;text-align:center;padding:0 10px;background-=
+color:#26329f;border-right:1px solid #ffffff;"><a href=3D"http://rt4-t.cust=
+omer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3407&p1=3DHMlAZsXFxcWXPPcS1rk=
+=3D&p2=3DHMlAZsbGxsa1YvFETMrGUdiPFytbHAFmb9/Q" style=3D"background-color:#2=
+6329f;color:#fff;text-decoration:none;font-size:11px;text-align:center;widt=
+h:100%; display:inline-block;font-family:Helvetica, Arial, sans-serif;line-=
+height:28px;">Check-in now</a></th>
+ <TH class=3Dbtn style=3D"FONT-SIZE: 12px; PADDING-BOTTOM: 0px; TEXT-ALIGN:=
+ center; PADDING-TOP: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGRO=
+UND-COLOR: #26329f" valign=3D"middle" scope=3D"col" height=3D"28" width=3D"=
+133"><a style=3D"FONT-SIZE: 11px; TEXT-DECORATION: none; FONT-FAMILY: Helve=
+tica, Arial, sans-serif; WIDTH: 100%; COLOR: #fff; TEXT-ALIGN: center; DISP=
+LAY: inline-block; LINE-HEIGHT: 28px; BACKGROUND-COLOR: #26329f" href=3D"ht=
+tp://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3408&cid=3DIndRT=
+4DM196&bid=3D152950011&p1=3DdepDate=3D2024-05-13%7Corigin=3DBBI%7Cdestinati=
+on=3DMAA%7CflightNo=3D141">Flight Status</A></TH>
+
+ 
+                        </TR>
+                      </TBODY>
+                    </TABLE>
+                  </TD>
+                </TR></TBODY></TABLE>
+                <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; =
+BORDER-COLLAPSE: collapse; MIN-WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0=
+ width=3D"100%" border=3D0>
+                              <TBODY>
+                               <TR>
+                   
+          
+                                    </TR>
+                                  </TBODY>
+                    </TABLE>
+        
+        
+         
+    
+      <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-COL=
+LAPSE: collapse; MIN-WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0 width=3D"=
+100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM=
+: 5px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+      <TABLE class=3Dheading_table style=3D"FONT-SIZE: 12px; BORDER-TOP: #d=
+adada 1px solid; FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-RIGHT: #=
+dadada 1px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; TEXT-ALIGN: left;=
+ PADDING-TOP: 5px; PADDING-LEFT: 3px; BORDER-LEFT: #dadada 1px solid; PADDI=
+NG-RIGHT: 3px; BACKGROUND-COLOR: #dadada" cellSpacing=3D0 cellPadding=3D0 w=
+idth=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"FONT-WEIGHT: normal; PADDING-BOTTOM: 4px; PA=
+DDING-TOP: 4px; PADDING-LEFT: 15px; LINE-HEIGHT: 20px; PADDING-RIGHT: 15px"=
+>IndiGo Flight(s)</TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+      <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-COL=
+LAPSE: collapse; MIN-WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0 width=3D"=
+100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM=
+: 5px; PADDING-TOP: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+               
+                  
+                    <TABLE style=3D"LIST-STYLE-TYPE: decimal; FONT-SIZE: 14=
+px; OVERFLOW: hidden; FONT-FAMILY: Helvetica, Arial, sans-serif; WIDTH: 100=
+%; BORDER-COLLAPSE: collapse; MIN-WIDTH: 100%; MARGIN: 0px" cellSpacing=3D0=
+ cellPadding=3D0 width=3D"100%" border=3D0>
+                      <TBODY> <TR>
+                          <TD style=3D"FONT-SIZE: 12px; BORDER-TOP: medium =
+none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM=
+: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: =
+medium none; PADDING-RIGHT: 0px" vAlign=3Dtop width=3D240>
+                            <TABLE width=3D"100%" border=3D0>
+                              <TBODY>
+                                <TR>
+                                  <TD style=3D"FONT-SIZE: 12px; FONT-WEIGHT=
+: bold">
+                                    <IMG style=3D"WIDTH: 210px; DISPLAY: bl=
+ock" src=3D"http://t1.marketing.goindigo.in/barcode/tPDF417/h8/s2/vM1Pahada=
+singh/Sraban%20k%20HUGTNZ%20BBIMAA6E%200141%20134Y00000000%20000/barcode.gi=
+f" width=3D210>
+                                  </TD>
+                                </TR>
+                              </TBODY>
+                            </TABLE>
+                          </TD>
+                          <TD style=3D"FONT-SIZE: 12px; BORDER-TOP: medium =
+none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM=
+: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: =
+medium none; PADDING-RIGHT: 0px" vAlign=3Dtop>
+                            <TABLE width=3D"100%" border=3D0>
+                              <TBODY>
+                                <TR>
+                                  <TD style=3D"FONT-SIZE: 12px; FONT-WEIGHT=
+: bold">Mr. Sraban kumar Pahadasingh </TD>
+                                </TR>
+                              </TBODY>
+                            </TABLE>
+                          </TD>
+                        </TR> </TBODY>
+                    </TABLE>
+                      
+    
+            <TABLE style=3D"FONT-SIZE: 12px; BORDER-TOP: #dadada 1px solid;=
+ FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-RIGHT: #dadada 1px solid=
+; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #dadada 1px solid; BORDER-LEFT:=
+ #dadada 1px solid; BACKGROUND-COLOR: #fff" cellSpacing=3D0 cellPadding=3D0=
+ width=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 15px; BORDER-LEFT: #dadad=
+a 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" width=3D"12%" scope=3Dc=
+ol>Date</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>From (Termin=
+al)</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>Departs</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>Flight Numbe=
+r <BR>(Aircraft type) </TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; WORD-SPACING: normal; BORDER-BOTTOM: #dadada 1px solid;=
+ PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px=
+; BORDER-LEFT: #dadada 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" sc=
+ope=3Dcol>Check-in/Bag <BR>drop closes </TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>To (Terminal=
+)</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>Arrives</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>Via</TH>
+                </TR>  
+        
+        <TR>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 15px; BORDER-LEFT: #dadada 1px solid; PADDI=
+NG-RIGHT: 6px">13 May 24 </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px">Bhubaneshwar    <STRONG style=3D"PADDING-LEFT: 3px">(T1) </ST=
+RONG> </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px">08:55 </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; LINE-H=
+EIGHT: 20px; PADDING-RIGHT: 6px">6E  141    &nbsp; <BR>
+                    <STRONG>(A320) </STRONG>
+                  </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px"> 07:55 </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px">Chennai    <STRONG style=3D"PADDING-LEFT: 3px">(T1) </STRONG>=
+ </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px">10:45 </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px"> </TD>
+                </TR></TBODY></TABLE>
+      <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-COL=
+LAPSE: collapse; MIN-WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0 width=3D"=
+100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM=
+: 5px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+      <TABLE class=3Dheading_table style=3D"FONT-SIZE: 12px; BORDER-TOP: #d=
+adada 1px solid; FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-RIGHT: #=
+dadada 1px solid; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; TEXT-ALIGN: left;=
+ PADDING-TOP: 5px; PADDING-LEFT: 3px; BORDER-LEFT: #dadada 1px solid; PADDI=
+NG-RIGHT: 3px; BACKGROUND-COLOR: #dadada" cellSpacing=3D0 cellPadding=3D0 w=
+idth=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"FONT-WEIGHT: normal; PADDING-BOTTOM: 4px; PA=
+DDING-TOP: 4px; PADDING-LEFT: 15px; LINE-HEIGHT: 20px; PADDING-RIGHT: 15px"=
+>IndiGo Flight(s)</TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+      <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-COL=
+LAPSE: collapse; MIN-WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0 width=3D"=
+100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM=
+: 5px; PADDING-TOP: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD>
+                </TR>
+              </TBODY>
+            </TABLE>
+               
+                  
+                    <TABLE style=3D"LIST-STYLE-TYPE: decimal; FONT-SIZE: 14=
+px; OVERFLOW: hidden; FONT-FAMILY: Helvetica, Arial, sans-serif; WIDTH: 100=
+%; BORDER-COLLAPSE: collapse; MIN-WIDTH: 100%; MARGIN: 0px" cellSpacing=3D0=
+ cellPadding=3D0 width=3D"100%" border=3D0>
+                      <TBODY> <TR>
+                          <TD style=3D"FONT-SIZE: 12px; BORDER-TOP: medium =
+none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM=
+: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: =
+medium none; PADDING-RIGHT: 0px" vAlign=3Dtop width=3D240>
+                            <TABLE width=3D"100%" border=3D0>
+                              <TBODY>
+                                <TR>
+                                  <TD style=3D"FONT-SIZE: 12px; FONT-WEIGHT=
+: bold">
+                                    <IMG style=3D"WIDTH: 210px; DISPLAY: bl=
+ock" src=3D"http://t1.marketing.goindigo.in/barcode/tPDF417/h8/s2/vM1Pahada=
+singh/Sraban%20k%20HUGTNZ%20MAABLR6E%200365%20134Y00000000%20000/barcode.gi=
+f" width=3D210>
+                                  </TD>
+                                </TR>
+                              </TBODY>
+                            </TABLE>
+                          </TD>
+                          <TD style=3D"FONT-SIZE: 12px; BORDER-TOP: medium =
+none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM=
+: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: =
+medium none; PADDING-RIGHT: 0px" vAlign=3Dtop>
+                            <TABLE width=3D"100%" border=3D0>
+                              <TBODY>
+                                <TR>
+                                  <TD style=3D"FONT-SIZE: 12px; FONT-WEIGHT=
+: bold">Mr. Sraban kumar Pahadasingh </TD>
+                                </TR>
+                              </TBODY>
+                            </TABLE>
+                          </TD>
+                        </TR> </TBODY>
+                    </TABLE>
+                      
+    
+            <TABLE style=3D"FONT-SIZE: 12px; BORDER-TOP: #dadada 1px solid;=
+ FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-RIGHT: #dadada 1px solid=
+; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #dadada 1px solid; BORDER-LEFT:=
+ #dadada 1px solid; BACKGROUND-COLOR: #fff" cellSpacing=3D0 cellPadding=3D0=
+ width=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 15px; BORDER-LEFT: #dadad=
+a 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" width=3D"12%" scope=3Dc=
+ol>Date</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>From (Termin=
+al)</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>Departs</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>Flight Numbe=
+r <BR>(Aircraft type) </TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; WORD-SPACING: normal; BORDER-BOTTOM: #dadada 1px solid;=
+ PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px=
+; BORDER-LEFT: #dadada 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" sc=
+ope=3Dcol>Check-in/Bag <BR>drop closes </TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>To (Terminal=
+)</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>Arrives</TH>
+                  <TH style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" scope=3Dcol>Via</TH>
+                </TR>  
+        
+        <TR>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 15px; BORDER-LEFT: #dadada 1px solid; PADDI=
+NG-RIGHT: 6px">13 May 24 </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px">Chennai    <STRONG style=3D"PADDING-LEFT: 3px">(T1) </STRONG>=
+ </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px">18:15 </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; LINE-H=
+EIGHT: 20px; PADDING-RIGHT: 6px">6E  365   
+                  </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px"> 17:15 </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px">Bengaluru    <STRONG style=3D"PADDING-LEFT: 3px">(T1) </STRON=
+G> </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px">19:05 </TD>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #dadada 1px solid; PADDIN=
+G-RIGHT: 6px"> </TD>
+                </TR></TBODY></TABLE>
+              
+            <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORD=
+ER-COLLAPSE: collapse; MIN-WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0 wid=
+th=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM=
+: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD>
+                </TR>
+              </TBODY>
+            </TABLE> <TABLE style=3D"FONT-SIZE: 12px; BORDER-TOP: #b1b1b1 1=
+px solid; FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-RIGHT: #b1b1b1 =
+1px solid; FONT-WEIGHT: normal; PADDING-BOTTOM: 5px; TEXT-ALIGN: left; PADD=
+ING-TOP: 5px; PADDING-LEFT: 3px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RI=
+GHT: 3px; BACKGROUND-COLOR: #d4d4d4" cellSpacing=3D0 cellPadding=3D0 width=
+=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TD style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDI=
+NG-LEFT: 4px; LINE-HEIGHT: 20px; PADDING-RIGHT: 4px">Seats and Additional S=
+ervices </TD>
+                </TR>
+              </TBODY>
+            </TABLE> <TABLE class=3Dtable style=3D"FONT-SIZE: 12px; FONT-FA=
+MILY: Helvetica, Arial, sans-serif; BORDER-COLLAPSE: collapse; BACKGROUND-C=
+OLOR: #ffffff" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+              <TBODY>
+                <TR>
+                  <TH style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT:=
+ #b1b1b1 1px solid; BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1=
+ 1px solid; PADDING-RIGHT: 6px" width=3D150 scope=3Dcol></TH>
+                  <TH style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT:=
+ #b1b1b1 1px solid; BACKGROUND: #f5f5f5; BORDER-BOTTOM: #b1b1b1 1px solid; =
+PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 6px;=
+ BORDER-LEFT: #b1b1b1 1px solid; LINE-HEIGHT: 18px; PADDING-RIGHT: 6px" wid=
+th=3D246 colSpan=3D2 scope=3Dcol>
+                    <TABLE class=3Dflight_name style=3D"BORDER-TOP: medium =
+none; FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-RIGHT: medium none;=
+ BACKGROUND: #f5f5f5; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none"=
+ cellSpacing=3D0 cellPadding=3D0 border=3D0>
+                      <TBODY>
+                        <TR>
+                          <TD class=3Dflight_name_sec style=3D"FONT-SIZE: 1=
+5px; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BACKGROUND: #f5f5f=
+5; BORDER-BOTTOM: medium none; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; TEXT=
+-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: medium none=
+; LINE-HEIGHT: 20px; PADDING-RIGHT: 4px" vAlign=3Dmiddle width=3D40>BBI </T=
+D>
+                          <TD class=3Dimg_connect style=3D"BORDER-TOP: medi=
+um none; BORDER-RIGHT: medium none; BACKGROUND: #f5f5f5; BORDER-BOTTOM: med=
+ium none; FLOAT: left; PADDING-BOTTOM: 2px; TEXT-ALIGN: center; PADDING-TOP=
+: 2px; PADDING-LEFT: 2px; BORDER-LEFT: medium none; LINE-HEIGHT: 18px; PADD=
+ING-RIGHT: 2px" vAlign=3Dmiddle width=3D40>
+                            <IMG style=3D"WIDTH: 15px; PADDING-BOTTOM: 2px;=
+ PADDING-TOP: 3px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px" src=3D"https://ww=
+w.goindigo.in//content/dam/goindigo/generic-campaigns/email-campaigns/new_i=
+tinerary/Direction%20Arrow.png" width=3D15>
+                          </TD>
+                          <TD class=3Dflight_name_sec style=3D"FONT-SIZE: 1=
+5px; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BACKGROUND: #f5f5f=
+5; BORDER-BOTTOM: medium none; FLOAT: left; FONT-WEIGHT: bold; PADDING-BOTT=
+OM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT=
+: medium none; LINE-HEIGHT: 20px; PADDING-RIGHT: 4px" vAlign=3Dmiddle width=
+=3D40>MAA </TD>
+                        </TR>
+                      </TBODY>
+                    </TABLE>
+                  </TH>
+                  <TH style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT:=
+ #b1b1b1 1px solid; BACKGROUND: #f5f5f5; BORDER-BOTTOM: #b1b1b1 1px solid; =
+PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 6px;=
+ BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px" width=3D246 colSpan=3D=
+2 scope=3Dcol>
+                    <TABLE class=3Dflight_name style=3D"BORDER-TOP: medium =
+none; FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-RIGHT: medium none;=
+ BACKGROUND: #f5f5f5; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none"=
+ cellSpacing=3D0 cellPadding=3D0 border=3D0>
+                      <TBODY>
+                        <TR>
+                          <TD class=3Dflight_name_sec style=3D"FONT-SIZE: 1=
+5px; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BACKGROUND: #f5f5f=
+5; BORDER-BOTTOM: medium none; FLOAT: left; FONT-WEIGHT: bold; PADDING-BOTT=
+OM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT=
+: medium none; LINE-HEIGHT: 20px; PADDING-RIGHT: 4px" vAlign=3Dmiddle width=
+=3D40>MAA </TD>
+                          <TD class=3Dimg_connect style=3D"BORDER-TOP: medi=
+um none; BORDER-RIGHT: medium none; BACKGROUND: #f5f5f5; BORDER-BOTTOM: med=
+ium none; FLOAT: left; PADDING-BOTTOM: 2px; TEXT-ALIGN: center; PADDING-TOP=
+: 2px; PADDING-LEFT: 2px; BORDER-LEFT: medium none; LINE-HEIGHT: 18px; PADD=
+ING-RIGHT: 2px" vAlign=3Dmiddle width=3D40>
+                            <IMG style=3D"WIDTH: 15px; PADDING-BOTTOM: 2px;=
+ PADDING-TOP: 3px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px" src=3D"https://ww=
+w.goindigo.in//content/dam/goindigo/generic-campaigns/email-campaigns/new_i=
+tinerary/Direction%20Arrow.png" width=3D15>
+                          </TD>
+                          <TD class=3Dflight_name_sec style=3D"FONT-SIZE: 1=
+5px; BORDER-TOP: medium none; BORDER-RIGHT: medium none; BACKGROUND: #f5f5f=
+5; BORDER-BOTTOM: medium none; FLOAT: left; FONT-WEIGHT: bold; PADDING-BOTT=
+OM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT=
+: medium none; LINE-HEIGHT: 20px; PADDING-RIGHT: 4px" vAlign=3Dmiddle width=
+=3D40>BLR </TD>
+                        </TR>
+                      </TBODY>
+                    </TABLE>
+                  </TH>
+                </TR>
+                <TR>
+                  <TH style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT:=
+ #b1b1b1 1px solid; BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" width=3D150>Passenger na=
+me</TH>
+                  <TH style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT:=
+ #b1b1b1 1px solid; BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" width=3D35>Seat</TH>
+                  <TH style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT:=
+ #b1b1b1 1px solid; BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" width=3D211>Services Pur=
+chased</TH>
+                  <TH style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT:=
+ #b1b1b1 1px solid; BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" width=3D35>Seat</TH>
+                  <TH style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT:=
+ #b1b1b1 1px solid; BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1=
+ 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px" width=3D211>Services Pur=
+chased</TH>
+                </TR> <TR>
+                  <TD style=3D"BORDER-TOP: #dadada 1px solid; BORDER-RIGHT:=
+ #dadada 1px solid; BORDER-BOTTOM: #dadada 1px solid; PADDING-BOTTOM: 4px; =
+TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 15px; BORDER-LEFT: #dadad=
+a 1px solid; LINE-HEIGHT: 20px; PADDING-RIGHT: 15px" width=3D150>
+                    <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" b=
+order=3D0>
+                      <TBODY>
+                        <TR>
+                          <TD style=3D"FONT-WEIGHT: bold; TEXT-ALIGN: left;=
+ LINE-HEIGHT: 20px" colSpan=3D2>Mr. Sraban kumar Pahadasingh </TD>
+                        </TR>
+                      </TBODY>
+                    </TABLE>
+                  </TD> <TD style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-=
+RIGHT: #b1b1b1 1px solid; BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM:=
+ 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #=
+b1b1b1 1px solid; PADDING-RIGHT: 6px" width=3D35>26B </TD> <TD style=3D"BOR=
+DER-TOP: #b1b1b1 1px solid; BORDER-RIGHT: #b1b1b1 1px solid; BORDER-BOTTOM:=
+ #b1b1b1 1px solid; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px=
+; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1 1px solid; LINE-HEIGHT: 20px; PAD=
+DING-RIGHT: 6px" width=3D211> </TD> <TD style=3D"BORDER-TOP: #b1b1b1 1px so=
+lid; BORDER-RIGHT: #b1b1b1 1px solid; BORDER-BOTTOM: #b1b1b1 1px solid; PAD=
+DING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: 4px; PADDING-LEFT: 6px; BO=
+RDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px" width=3D35>26E </TD> <TD =
+style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT: #b1b1b1 1px solid; BO=
+RDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADD=
+ING-TOP: 4px; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1 1px solid; LINE-HEIGH=
+T: 20px; PADDING-RIGHT: 6px" width=3D211> </TD>
+                </TR> <TR></TR>
+              </TBODY>
+            </TABLE> <DIV class=3Dig-footer-link style=3D"FONT-SIZE: 0px; B=
+ORDER-TOP: #d1d1d1 1px solid; HEIGHT: 50px; BORDER-BOTTOM: #d1d1d1 1px soli=
+d; PAGE-BREAK-AFTER: always; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING=
+-LEFT: 0px; LINE-HEIGHT: 50px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #f1f1f=
+1">
+              <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; MI=
+N-WIDTH: 100%" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+                <TBODY>
+                  <TR>
+                    <TD style=3D"FONT-SIZE: 0px; BORDER-TOP: #d1d1d1 1px so=
+lid; HEIGHT: 50px; BORDER-BOTTOM: #d1d1d1 1px solid; PADDING-BOTTOM: 0px; P=
+ADDING-TOP: 0px; PADDING-LEFT: 0px; LINE-HEIGHT: 50px; PADDING-RIGHT: 0px; =
+BACKGROUND-COLOR: #f1f1f1">&nbsp; </TD>
+                  </TR>
+                </TBODY>
+              </TABLE>
+            </DIV>
+  <!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D'Hotel Strip' STARTS HE=
+RE =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D-->
+    
+  <!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D'Dangerous Goods Banner=
+' section update STARTS HERE =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D-->
+   
+
+      
+    <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD style=3D"LINE-HEIGHT: 5px" height=3D5>&nbsp;</TD></TR>
+        <TR>
+          <TD><a target=3D"_blank"><IMG style=3D"WIDTH: 100%; DISPLAY: bloc=
+k" 
+            src=3D"https://www.goindigo.in/content/dam/goindigo/generic-cam=
+paigns/email-campaigns/new_itinerary/Itinerary_icon.jpg" 
+            width=3D625></A></TD></TR>
+      <TR>
+<TD style=3D"LINE-HEIGHT: 5px" height=3D5>&nbsp;</TD></TR>
+      </TBODY>
+      </TABLE>
+      
+<!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D'Dangerous Goods Banner' =
+section update ENDS HERE =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+-->
+      
+   <!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D'Yellow Fever' Banner =
+Starts here =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D-->   
+      <!--<
+    for each(var flight in rtEvent.ctx.FlightDetails.FlightDetail)
+          {
+ if(rtEvent.ctx.BookingDetails.BookingStatus !=3D 'CANCELLED' && rtEvent.ct=
+x.FlightDetails.FlightDetail.ToCityCode =3D=3D 'NBO'){> 
+
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD style=3D"LINE-HEIGHT: 5px" height=3D5>&nbsp;</TD></TR>
+        <TR>
+          <TD><a href=3D"#" target=3D"_blank"><IMG style=3D"WIDTH: 100%; DI=
+SPLAY: block" 
+            src=3D"https://www.goindigo.in/content/dam/goindigo/generic-cam=
+paigns/email-campaigns/nairobi_27062023/Itinerary_banner_Yellow_fever_1.jpg=
+" 
+            width=3D625></A></TD></TR></TBODY></TABLE>
+} }>--->
+
+   <!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D'Yellow Fever' Banner =
+ENDS here =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D--> 
+   
+   <TABLE class=3Dheading_table 
+      style=3D"FONT-SIZE: 16px; BORDER-TOP: #b1b1b1 1px solid; FONT-FAMILY:=
+ Helvetica, Arial, sans-serif; BORDER-RIGHT: #b1b1b1 1px solid; BORDER-BOTT=
+OM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: =
+4px; PADDING-LEFT: 4px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 4px;=
+ BACKGROUND-COLOR: #d4d4d4" 
+      cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px=
+; LINE-HEIGHT: 20px; PADDING-RIGHT: 4px"><b><em>Refer Section-3, Series M P=
+art IV of the Civil Aviation Requirements for information on facilities in =
+cases of denied boarding, cancellations, and delays. Details at DGCA websit=
+e: <a href=3D"http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,=
+340a" target=3D"_blank">Home | Directorate General of Civil Aviation | Gove=
+rnment of India (dgca.gov.in)</b></em></a></TD></TR></TBODY></TABLE>
+<!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D'Tips to Hassle Free Trav=
+el Experience' section update STARTS HERE =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D--><table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"border-collapse:collapse;min-width:100%;font-family:=
+Helvetica, Arial, sans-serif;">
+                  <tbody>
+                     <tr>
+                        <td style=3D"padding:0;font-size:0px;height:10px;">=
+&nbsp;</td>
+                     </tr>
+                  </tbody>
+               </table>
+         
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"font-size:12px;text-align:left;background-color:#dadada;font-weight:no=
+rmal;padding:5px 3px;border-left:1px solid #dadada;border-right:1px solid #=
+dadada;border-top:1px solid #dadada;font-family:Helvetica, Arial, sans-seri=
+f;">
+                  <tbody>
+                     <tr>
+                        <td style=3D"padding:4px 15px;line-height:20px;">Ti=
+ps for a hassle-free travel experience</td>
+                     </tr>
+                  </tbody>
+               </table>
+<table class=3D"without_bgndborder" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"border:none;font-size:12px;font-family:He=
+lvetica, Arial, sans-serif;">
+                  <tbody>
+                     <tr>
+                        <td valign=3D"top" width=3D"25%" style=3D"padding:4=
+px 8px;text-align:center;">
+                           <div class=3D"bottom_img" style=3D"display:block=
+;width:100%;text-align:center;height:50px;padding-top:5%;"><img height=3D"5=
+0" src=3D"https://www.goindigo.in/content/dam/goindigo/generic-campaigns/em=
+ail-campaigns/new_itinerary/check-in.png" style=3D"max-height:40px;"></div>
+                           <div class=3D"img_desc">
+                            <a style=3D"color:#000000; text-decoration:none=
+; text-align:center;" href=3D"#">
+                             <span style=3D"display: block;font-size: 16px;=
+font-weight: 700;margin-bottom: 5px;line-height: 18px;">Free mandatory web =
+check-in</span>
+                             <span style=3D"display: block;font-size: 13px;=
+color: #222;">Check-in online for free 365 days to 60 min before flight.</s=
+pan>
+                           </a>
+                         </div>
+                        </td>
+                        <td valign=3D"top" width=3D"25%" style=3D"padding:4=
+px 8px;text-align:center;">
+                           <div class=3D"bottom_img" style=3D"display:block=
+;width:100%;text-align:center;height:50px;padding-top:5%;"><img height=3D"5=
+0" src=3D"https://www.goindigo.in/content/dam/goindigo/generic-campaigns/em=
+ail-campaigns/new_itinerary/120-mins.png" style=3D"max-height:40px;"></div>
+                           <div class=3D"img_desc">
+                            <a style=3D"color:#000000; text-decoration:none=
+; text-align:center;" href=3D"#">
+                              <span style=3D"display: block;font-size: 16px=
+;font-weight: 700;margin-bottom: 5px;line-height: 18px;">120 min before dep=
+arture</span>
+                             <span style=3D"display: block;font-size: 13px;=
+color: #222;">Reach the airport  to allow yourself sufficient time for nece=
+ssary procedures.</span>
+                            </a>
+                          </div>
+                        </td>
+                        <td valign=3D"top" width=3D"25%" style=3D"padding:4=
+px 8px;text-align:center;">
+                           <div class=3D"bottom_img" style=3D"display:block=
+;width:100%;text-align:center;height:50px;padding-top:5%;"><img height=3D"5=
+0" src=3D"https://www.goindigo.in/content/dam/goindigo/generic-campaigns/em=
+ail-campaigns/new_itinerary/45-mins.png" style=3D"max-height:40px;"></div>
+                            <div class=3D"img_desc">
+                              <a style=3D"color:#000000; text-decoration:no=
+ne; text-align:center;" href=3D"#">
+                                <span style=3D"display: block;font-size: 16=
+px;font-weight: 700;margin-bottom: 5px;line-height: 18px;">60 min before de=
+parture</span>
+                                <span>Drop your bags and proceed for boardi=
+ng.</span>
+                              </a>
+                            </div>
+                        </td>
+                        <td valign=3D"top" width=3D"25%" style=3D"padding:4=
+px 8px;text-align:center;">
+                           <div class=3D"bottom_img" style=3D"display:block=
+;width:100%;text-align:center;height:50px;padding-top:5%;"><img height=3D"5=
+0" src=3D"https://www.goindigo.in/content/dam/goindigo/generic-campaigns/em=
+ail-campaigns/new_itinerary/25-mins.png" style=3D"max-height:40px;"></div>
+                           <div class=3D"img_desc">
+                              <a style=3D"color:#000000; text-decoration:no=
+ne; text-align:center;" href=3D"#">
+                                <span style=3D"display: block;font-size: 16=
+px;font-weight: 700;margin-bottom: 5px;line-height: 18px;">25 min before de=
+parture</span>
+                               <span style=3D"display: block;font-size: 13p=
+x;color: #222;">Boarding gate closes.</span>
+                             </a>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"border-collapse:collapse;min-width:100%;font-family:Helvetica, Arial, =
+sans-serif;">
+                  <tbody>
+                     <tr>
+                        <td style=3D"padding:0;font-size:0px;height:10px;">=
+&nbsp;</td>
+                     </tr>
+                  </tbody>
+               </table>  <!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+'Tips to Hassle Free Travel Experience' section update ENDS HERE =3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D--><!-- start wheelchair-->
+
+<!-- end wheelchair -->  
+      <TABLE class=3Dheading_table 
+      style=3D"FONT-SIZE: 12px; BORDER-TOP: #b1b1b1 1px solid; FONT-FAMILY:=
+ Helvetica, Arial, sans-serif; BORDER-RIGHT: #b1b1b1 1px solid; BORDER-BOTT=
+OM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: =
+4px; PADDING-LEFT: 4px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 4px;=
+ BACKGROUND-COLOR: #d4d4d4" 
+      cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px=
+; LINE-HEIGHT: 20px; PADDING-RIGHT: 4px">Travel 
+            and Baggage Information</TD></TR></TBODY></TABLE>    
+      <TABLE class=3DtravleBaggage 
+      style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif" cellSpacing=3D0 
+      cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR> 
+          <TD class=3Dno_paddingforbaggage 
+          style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT: #b1b1b1 1px=
+ solid; BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; PADDING-TOP:=
+ 0px; PADDING-LEFT: 0px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 0px=
+" 
+          vAlign=3Dtop width=3D"50%">
+            <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif" 
+            cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+              <TBODY>
+              <TR class=3Dflight_sector 
+              style=3D"FONT-SIZE: 150%; BACKGROUND-COLOR: #f5f5f5">
+                <TD class=3Dbaggage_txt 
+                style=3D"FONT-SIZE: 15px; BORDER-BOTTOM: #b1b1b1 1px solid;=
+ FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4p=
+x; PADDING-RIGHT: 4px">
+                  <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif=
+" 
+                  cellSpacing=3D0 cellPadding=3D0 border=3D0>
+                    <TBODY>
+                    <TR>
+                      <TD class=3Dflight_name_sec 
+                      style=3D"FONT-SIZE: 15px; BORDER-TOP: medium none; BO=
+RDER-RIGHT: medium none; BACKGROUND: #f5f5f5; BORDER-BOTTOM: medium none; F=
+LOAT: left; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDI=
+NG-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: medium none; LINE-HEIGHT: 20px=
+; PADDING-RIGHT: 4px" 
+                      vAlign=3Dmiddle width=3D40>BBI </TD>
+                      <TD class=3Dimg_connect 
+                      style=3D"BORDER-TOP: medium none; BORDER-RIGHT: mediu=
+m none; BACKGROUND: #f5f5f5; BORDER-BOTTOM: medium none; FLOAT: left; PADDI=
+NG-BOTTOM: 2px; TEXT-ALIGN: center; PADDING-TOP: 2px; PADDING-LEFT: 2px; BO=
+RDER-LEFT: medium none; LINE-HEIGHT: 18px; PADDING-RIGHT: 2px" 
+                      vAlign=3Dmiddle width=3D40><IMG 
+                        style=3D"WIDTH: 15px; PADDING-BOTTOM: 2px; PADDING-=
+TOP: 3px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px" 
+                        src=3D"https://www.goindigo.in//content/dam/goindig=
+o/generic-campaigns/email-campaigns/new_itinerary/Direction%20Arrow.png" 
+                        width=3D15></TD>
+                      <TD class=3Dflight_name_sec 
+                      style=3D"FONT-SIZE: 15px; BORDER-TOP: medium none; BO=
+RDER-RIGHT: medium none; BACKGROUND: #f5f5f5; BORDER-BOTTOM: medium none; F=
+LOAT: right; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADD=
+ING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: medium none; LINE-HEIGHT: 20p=
+x; PADDING-RIGHT: 4px" 
+                      vAlign=3Dmiddle width=3D40>MAA 
+                  </TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD class=3DbaggageNormal 
+                style=3D"FONT-SIZE: 12px; PADDING-BOTTOM: 4px; PADDING-TOP:=
+ 4px; PADDING-LEFT: 6px; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px"><!--Delhi A=
+irport Change --> <!--Delhi Airport change --><!-- Navitaire Upgrade --> <!=
+--Navitaire Upgrade --><!-- Move fare type to travel and baggage section --=
+>=E2=80=A2&nbsp;&nbsp;Fare Type: 
+                  <STRONG>Regular Fare</STRONG> <BR> <!-- Move fare type to=
+ travel and baggage section -->=E2=80=A2&nbsp;&nbsp;Airport 
+                  counters close <STRONG>60 
+                  minutes</STRONG> prior to the scheduled 
+                  departure time.<BR>=E2=80=A2&nbsp;&nbsp;Boarding gates cl=
+ose 
+                  <STRONG>25 minutes</STRONG> prior to the scheduled depart=
+ure 
+                  time.  
+                  <BR>=E2=80=A2&nbsp;&nbsp;<STRONG> 
+=09=09=09=09=09=09=09=09Check-in Baggage: </STRONG> 15kg per person (1 piec=
+e only). Excess baggage/additional piece is subject to applicable charges. =
+ 
+                  <BR>=E2=80=A2&nbsp;&nbsp;<STRONG> 
+=09=09Disclaimer: </STRONG> 15 Kg per person (One piece only). For Double/T=
+riple or MultiSeats bookings, extra 10 kg will be applicable. Baggage in ex=
+cess of 15 kg will be subject to additional charges of INR 1000 per piece i=
+n addition to the excess baggage charges of INR 550 per kg at the airport.
+=09  
+                  <BR>=E2=80=A2&nbsp;&nbsp;<STRONG> 
+=09=09=09Hand Baggage: </STRONG> 
+=09=09One hand bag up to 7 kgs and 115 cms (L+W+H), shall be allowed per cu=
+stomer. For contactless travel we recommend to place it under the seat in f=
+ront, on board.
+=09  <BR>=E2=80=A2&nbsp;&nbsp;All passengers must present valid photo ident=
+ification in original at the time of check-in.  
+                  <BR>=E2=80=A2&nbsp;&nbsp;<STRONG>  For Cards issued outsi=
+de India: </STRONG> All our customers using cards issued outside India will=
+ be unable to perform web check-in, as card verification is necessary. Cust=
+omers travelling on such bookings must present either a hard or soft copy o=
+f their signed card for verification at the time of check-in at the airport=
+. If the transaction remains un-verified, the amount will be refunded, and =
+you can complete the same booking using an alternate mode of payment. Pleas=
+e note that failing which, your booking will be cancelled and the amount wi=
+ll be forfeited. We strongly recommend you to check your registered email I=
+D for all the notifications regarding your booking.    
+<!--<BR>&#8226;&nbsp;&nbsp;Add your <strong>check-in baggage and generate b=
+ag tags online</strong>--><BR>=E2=80=A2&nbsp;&nbsp;<STRONG>Carry 
+                  a printed or soft copy of boarding pass and baggage 
+                  tag</STRONG>, you can print them at the airport kiosk as =
+well. 
+                  Please note only certain airports are equipped with kiosk=
+s 
+                  which print baggage tags, hence it is advised that you me=
+ntion 
+                  your name and PNR on a thick paper and tag it to your bag=
+gage 
+                  before reaching the airport. <BR>=E2=80=A2&nbsp;&nbsp;<ST=
+RONG>Remember 
+                  to wear your mask, carrying a sanitiser is 
+                  recommended</STRONG>. <BR>=E2=80=A2&nbsp;&nbsp;<STRONG>Pl=
+ease check 
+                  state guidelines <a href=3D"http://rt4-t.customer.goindig=
+o.in/r/=3Fid=3Dh91dd4fb,6a114db,340f">https://bit.ly/3dC9zT5</A>, 
+                  before the journey.</STRONG>.      </TD></TR></TBODY></TA=
+BLE></TD>   
+          <TD class=3Dno_paddingforbaggage 
+          style=3D"BORDER-TOP: #b1b1b1 1px solid; BORDER-RIGHT: #b1b1b1 1px=
+ solid; BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; PADDING-TOP:=
+ 0px; PADDING-LEFT: 0px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 0px=
+" 
+          vAlign=3Dtop width=3D"50%">
+            <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif" 
+            cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+              <TBODY>
+              <TR class=3Dflight_sector 
+              style=3D"FONT-SIZE: 150%; BACKGROUND-COLOR: #f5f5f5">
+                <TD class=3Dbaggage_txt 
+                style=3D"FONT-SIZE: 15px; BORDER-BOTTOM: #b1b1b1 1px solid;=
+ FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4p=
+x; PADDING-RIGHT: 4px">
+                  <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif=
+" 
+                  cellSpacing=3D0 cellPadding=3D0 border=3D0>
+                    <TBODY>
+                    <TR>
+                      <TD class=3Dflight_name_sec 
+                      style=3D"FONT-SIZE: 15px; BORDER-TOP: medium none; BO=
+RDER-RIGHT: medium none; BACKGROUND: #f5f5f5; BORDER-BOTTOM: medium none; F=
+LOAT: left; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDI=
+NG-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: medium none; LINE-HEIGHT: 20px=
+; PADDING-RIGHT: 4px" 
+                      vAlign=3Dmiddle width=3D40>MAA </TD>
+                      <TD class=3Dimg_connect 
+                      style=3D"BORDER-TOP: medium none; BORDER-RIGHT: mediu=
+m none; BACKGROUND: #f5f5f5; BORDER-BOTTOM: medium none; FLOAT: left; PADDI=
+NG-BOTTOM: 2px; TEXT-ALIGN: center; PADDING-TOP: 2px; PADDING-LEFT: 2px; BO=
+RDER-LEFT: medium none; LINE-HEIGHT: 18px; PADDING-RIGHT: 2px" 
+                      vAlign=3Dmiddle width=3D40><IMG 
+                        style=3D"WIDTH: 15px; PADDING-BOTTOM: 2px; PADDING-=
+TOP: 3px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px" 
+                        src=3D"https://www.goindigo.in//content/dam/goindig=
+o/generic-campaigns/email-campaigns/new_itinerary/Direction%20Arrow.png" 
+                        width=3D15></TD>
+                      <TD class=3Dflight_name_sec 
+                      style=3D"FONT-SIZE: 15px; BORDER-TOP: medium none; BO=
+RDER-RIGHT: medium none; BACKGROUND: #f5f5f5; BORDER-BOTTOM: medium none; F=
+LOAT: right; FONT-WEIGHT: bold; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADD=
+ING-TOP: 4px; PADDING-LEFT: 4px; BORDER-LEFT: medium none; LINE-HEIGHT: 20p=
+x; PADDING-RIGHT: 4px" 
+                      vAlign=3Dmiddle width=3D40>BLR 
+                  </TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD class=3DbaggageNormal 
+                style=3D"FONT-SIZE: 12px; PADDING-BOTTOM: 4px; PADDING-TOP:=
+ 4px; PADDING-LEFT: 6px; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px"><!--Delhi A=
+irport Change --> <!--Delhi Airport change --><!-- Navitaire Upgrade --> <!=
+--Navitaire Upgrade --><!-- Move fare type to travel and baggage section --=
+>=E2=80=A2&nbsp;&nbsp;Fare Type: 
+                  <STRONG>Regular Fare</STRONG> <BR> <!-- Move fare type to=
+ travel and baggage section -->=E2=80=A2&nbsp;&nbsp;Airport 
+                  counters close <STRONG>60 
+                  minutes</STRONG> prior to the scheduled 
+                  departure time.<BR>=E2=80=A2&nbsp;&nbsp;Boarding gates cl=
+ose 
+                  <STRONG>25 minutes</STRONG> prior to the scheduled depart=
+ure 
+                  time.  
+                  <BR>=E2=80=A2&nbsp;&nbsp;<STRONG> 
+=09=09=09=09=09=09=09=09Check-in Baggage: </STRONG> 15kg per person (1 piec=
+e only). Excess baggage/additional piece is subject to applicable charges. =
+ 
+                  <BR>=E2=80=A2&nbsp;&nbsp;<STRONG> 
+=09=09Disclaimer: </STRONG> 15 Kg per person (One piece only). For Double/T=
+riple or MultiSeats bookings, extra 10 kg will be applicable. Baggage in ex=
+cess of 15 kg will be subject to additional charges of INR 1000 per piece i=
+n addition to the excess baggage charges of INR 550 per kg at the airport.
+=09  
+                  <BR>=E2=80=A2&nbsp;&nbsp;<STRONG> 
+=09=09=09Hand Baggage: </STRONG> 
+=09=09One hand bag up to 7 kgs and 115 cms (L+W+H), shall be allowed per cu=
+stomer. For contactless travel we recommend to place it under the seat in f=
+ront, on board.
+=09  <BR>=E2=80=A2&nbsp;&nbsp;All passengers must present valid photo ident=
+ification in original at the time of check-in.  
+                  <BR>=E2=80=A2&nbsp;&nbsp;<STRONG>  For Cards issued outsi=
+de India: </STRONG> All our customers using cards issued outside India will=
+ be unable to perform web check-in, as card verification is necessary. Cust=
+omers travelling on such bookings must present either a hard or soft copy o=
+f their signed card for verification at the time of check-in at the airport=
+. If the transaction remains un-verified, the amount will be refunded, and =
+you can complete the same booking using an alternate mode of payment. Pleas=
+e note that failing which, your booking will be cancelled and the amount wi=
+ll be forfeited. We strongly recommend you to check your registered email I=
+D for all the notifications regarding your booking.    
+<!--<BR>&#8226;&nbsp;&nbsp;Add your <strong>check-in baggage and generate b=
+ag tags online</strong>--><BR>=E2=80=A2&nbsp;&nbsp;<STRONG>Carry 
+                  a printed or soft copy of boarding pass and baggage 
+                  tag</STRONG>, you can print them at the airport kiosk as =
+well. 
+                  Please note only certain airports are equipped with kiosk=
+s 
+                  which print baggage tags, hence it is advised that you me=
+ntion 
+                  your name and PNR on a thick paper and tag it to your bag=
+gage 
+                  before reaching the airport. <BR>=E2=80=A2&nbsp;&nbsp;<ST=
+RONG>Remember 
+                  to wear your mask, carrying a sanitiser is 
+                  recommended</STRONG>. <BR>=E2=80=A2&nbsp;&nbsp;<STRONG>Pl=
+ease check 
+                  state guidelines <a href=3D"http://rt4-t.customer.goindig=
+o.in/r/=3Fid=3Dh91dd4fb,6a114db,340f">https://bit.ly/3dC9zT5</A>, 
+                  before the journey.</STRONG>.      </TD></TR></TBODY></TA=
+BLE></TD> 
+        </TR></TBODY></TABLE>
+      <TABLE 
+      style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-COLLAPSE: =
+collapse; MIN-WIDTH: 100%" 
+      cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM: 0px; PADDI=
+NG-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD></TR></TBODY=
+></TABLE> <!--=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D Baggage Section u=
+pdated ENDS HERE =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D--> 
+ <!--=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DAdd Travel Advisory Details- Starts HERE =
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+  
+
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3DbaggageNormal 
+          style=3D"FONT-SIZE: 12px; FONT-FAMILY: Helvetica, Arial, sans-ser=
+if; PADDING-BOTTOM: 15px; PADDING-TOP: 15px; PADDING-LEFT: 15px; LINE-HEIGH=
+T: 20px; PADDING-RIGHT: 15px; BACKGROUND-COLOR: #ffffff">
+            <TABLE 
+            style=3D"FONT-SIZE: 12px; FONT-FAMILY: Helvetica, Arial, sans-s=
+erif; LINE-HEIGHT: 20px" 
+            cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+              <TBODY>
+              <TR>
+                <TD 
+                style=3D"PADDING-BOTTOM: 10px; PADDING-TOP: 15px; PADDING-L=
+EFT: 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #f7f7cb">
+                  <TABLE 
+                  style=3D"FONT-SIZE: 12px; FONT-FAMILY: Helvetica,Arial,sa=
+ns-serif; LINE-HEIGHT: 20px" 
+                  cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0=
+>
+                    <TBODY>
+                    <TR>
+                      <TD 
+                      style=3D"FONT-SIZE: 18px; FONT-FAMILY: Helvetica,Aria=
+l,sans-serif; FONT-WEIGHT: bold; PADDING-BOTTOM: 10px; PADDING-TOP: 0px; PA=
+DDING-LEFT: 0px; PADDING-RIGHT: 0px" 
+                      colSpan=3D2>Travel advisory: Safety during COVID-19</=
+TD></TR>
+                    <TR>
+                      <TD style=3D"PADDING-BOTTOM: 4px" colSpan=3D2>We seek=
+ your 
+                        kind assistance to safeguard your well-being, as we=
+ll as 
+                        that of your fellow passengers and our crew on boar=
+d our 
+                        flights, by following the guidelines set out 
+below:</TD></TR>
+                    <TR>
+                      <TD vAlign=3Dtop width=3D10>=E2=80=A2</TD>
+                      <TD style=3D"PADDING-BOTTOM: 4px">All customers shoul=
+d 
+                        wear a <B>mask</B> and <B>sanitize their hands</B> 
+                        before proceeding to the boarding gate.</TD></TR>
+                    <TR>
+                      <TD vAlign=3Dtop width=3D10>=E2=80=A2</TD>
+                      <TD style=3D"PADDING-BOTTOM: 4px">Customers must wear=
+ a 
+                        <B>face mask covering their nose and mouth</B>, 
+                        throughout their journey with IndiGo. The mask may =
+be 
+                        removed <B>only</B> while eating and drinking. </TD=
+></TR>
+                    <TR>
+                      <TD vAlign=3Dtop width=3D10>=E2=80=A2</TD>
+                      <TD style=3D"PADDING-BOTTOM: 4px">Please maintain 
+                        appropriate <B>social distancing</B> while boarding=
+ and 
+                        de-boarding the aircraft.</TD></TR>
+                    <TR>
+                      <TD vAlign=3Dtop width=3D10>=E2=80=A2</TD>
+                      <TD style=3D"PADDING-BOTTOM: 4px">Kindly <B>adhere to=
+ all 
+                        the announcements and other directives</B> issued b=
+y our 
+                        ground staff and/or crew at all points of time duri=
+ng 
+                        your journey.</TD></TR>
+                    <TR>
+                      <TD vAlign=3Dtop width=3D10>=E2=80=A2</TD>
+                      <TD style=3D"PADDING-BOTTOM: 4px">Customers are also 
+                        requested to <B>familiarise themselves</B> with the=
+ 
+                        guidelines for air passengers published by the Indi=
+an 
+                        Ministry of Civil Aviation on the following link:<B=
+R><a style=3D"COLOR: #027bff" href=3D"http://t.marketing.goindigo.in/r/=3Fi=
+d=3Dh420bcf12,58edc7de,58edc804" target=3D"_blank" data-saferedirecturl=3D"=
+https://www.google.com/url=3Fq=3Dhttp://t.marketing.goindigo.in/r/=3Fid%3Dh=
+420bcf12,58edc7de,58edc804&source=3Dgmail&ust=3D1615964810810000&usg=3DAFQj=
+CNFlBrsB2BHcwjtOVETy2_j7qF-XlA">https://www.civilaviation.gov.<WBR>in/sites=
+/default/files/<WBR>Guidelines_for_Air_Passengers_<WBR>21May.pdf</A> 
+                        <BR><a style=3D"COLOR: #027bff" href=3D"https://www=
+.mohfw.gov.in/pdf/Guidelinesfordomestictravelflighttrainshipbusinterstatetr=
+avel.pdf" target=3D"_blank">https://www.mohfw.gov.in/pdf/Guidelinesfordomes=
+tictravelflighttrainshipbusinterstatetravel.pdf</A></TD></TR>
+                    <TR>
+                      <TD vAlign=3Dtop width=3D10>=E2=80=A2</TD>
+                      <TD 
+                        style=3D"FONT-WEIGHT: bold; PADDING-BOTTOM: 4px"><B=
+>Caution: 
+                        Customers are advised to strictly follow all COVID-=
+19 
+                        protocols. Failure to comply with these guidelines =
+and 
+                        the directions of our ground staff and/or crew may 
+                        attract penal action against the concerned 
+                        individual.</B></TD></TR></TBODY></TABLE></TD></TR>=
+</TBODY></TABLE></TD></TR></TBODY></TABLE> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DAdd=
+ Travel Advisory Details- Ends HERE =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D-->
+ 
+ <!--=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DAdd MediBuddy coupon Section- STARTS=
+ HERE =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D--> <!--=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3DAdd MediBuddy coupon Section- Ends HERE =3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D--> 
+       
+      <DIV>  <!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+</body>
+</html> <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" class=3D"bottom_heading" style=3D"font-size:12px; font-weight:bold; tex=
+t-align:center; color:#013871;padding:10px 0;font-family:Helvetica, Arial, =
+sans-serif;background-color:#ffffff;">
+  <tbody>
+  <tr> 
+    <td style=3D"padding:20px 4px 10px;line-height:20px;">For Your Benefits=
+ </td>
+  </tr>
+  </tbody>
+</table>
+<table class=3D"border" width=3D"100%" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0">
+     <tbody>
+        <tr>
+      <td valign=3D"top" bgcolor=3D"#ffffff" class=3D"banner" width=3D"50%"=
+ style=3D"padding-right: 1px;">
+          
+            <a href=3D"http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb=
+,6a114db,3417&cid=3DIndRT4DM196&bid=3D152950011&p1=3Dhttps://www.booking.co=
+m/index.en-gb.html=3Faid=3D1340950&label=3Dgen_ban&p2=3D2019-4-4-Chennai-1"=
+><IMG width=3D"315" style=3D"display: block; width: 100%;" alt=3D"booking.j=
+pg" src=3D"https://www.goindigo.in//content/dam/goindigo/generic-campaigns/=
+email-campaigns/itinerary/newbanner/general/booking.jpg"></A>
+          
+      <TD valign=3D"top" bgcolor=3D"#ffffff" class=3D"banner" width=3D"50%"=
+  style=3D"padding-left: 1px;">
+          
+            <a href=3D"http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb=
+,6a114db,341a&cid=3DIndRT4DM196&bid=3D152950011&p1=3Dhttps://www.goindigo.i=
+n/information/state-regulations.html&p2=3D2019-4-4-Chennai-2"><IMG width=3D=
+"315" style=3D"display: block; width: 100%;" alt=3D"state_itinerary.png" sr=
+c=3D"https://www.goindigo.in//content/dam/goindigo/generic-campaigns/email-=
+campaigns/itinerary/newbanner/general/state_itinerary.png"></A>
+          
+          
+      </TD>
+        </TR>
+    </TBODY>
+</TABLE> 
+</FONT> </DIV> <!-- SLT Covid stuff -->  <!-- SLT Covid stuff ends --><!-- =
+  6E Hello Banner/Lean Clean Banner -->
+      <TABLE 
+      style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-COLLAPSE: =
+collapse; MIN-WIDTH: 100%" 
+      cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM: 0px; PADDI=
+NG-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD></TR></TBODY=
+></TABLE><!-- 6E Hello Banner ends here --> <!--=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3DAdd SCUBA NOMAD coupon Section- STARTS HERE =3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D--> <!--=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DAdd SCUBA NO=
+MAD coupon Section- ENDS HERE =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+--><!-- <TABLE 
+      style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-COLLAPSE: =
+collapse; MIN-WIDTH: 100%" 
+      cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM: 0px; PADDI=
+NG-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD></TR></TBODY=
+></TABLE> -->
+      <TABLE class=3Dheading_table 
+      style=3D"FONT-SIZE: 12px; BORDER-TOP: #b1b1b1 1px solid; FONT-FAMILY:=
+ Helvetica, Arial, sans-serif; BORDER-RIGHT: #b1b1b1 1px solid; BORDER-BOTT=
+OM: #b1b1b1 1px solid; PADDING-BOTTOM: 4px; TEXT-ALIGN: left; PADDING-TOP: =
+4px; PADDING-LEFT: 4px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 4px;=
+ BACKGROUND-COLOR: #d4d4d4" 
+      cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 4px=
+; LINE-HEIGHT: 20px; PADDING-RIGHT: 4px">Terms 
+            &amp; Conditions</TD></TR></TBODY></TABLE>
+      <TABLE style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif" cellSpacin=
+g=3D0 
+      cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR><!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D Terms an=
+d Conditions STARTS HERE=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D-->
+          <TD 
+          style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 6px=
+; PADDING-RIGHT: 6px" 
+          scope=3Dcol>
+            <UL class=3Dterm_cond 
+            style=3D"LIST-STYLE-TYPE: none; FONT-SIZE: 11px; FONT-WEIGHT: n=
+ormal; PADDING-LEFT: 0px; MARGIN: 0px">
+              <LI style=3D"LINE-HEIGHT: 30px">=E2=80=A2&nbsp;For more infor=
+mation on your 
+              itinerary, please <a href=3D"http://rt4-t.customer.goindigo.i=
+n/r/=3Fid=3Dh91dd4fb,6a114db,3422&cid=3DIndRT4DM196&bid=3D152950011">click 
+              here</A> 
+              <LI style=3D"LINE-HEIGHT: 30px">=E2=80=A2&nbsp;To read our co=
+nditions of 
+              carriage as per Indian regulations, please <a href=3D"http://=
+rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3423&cid=3DIndRT4DM19=
+6&bid=3D152950011">click 
+              here</A> 
+              <LI style=3D"LINE-HEIGHT: 30px">=E2=80=A2&nbsp;For details on=
+ the Passenger 
+              Charter=E2=80=99 issued by the Ministry of Civil Aviation (Mo=
+CA), please 
+              <a href=3D"http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4=
+fb,6a114db,3424&cid=3DIndRT4DM196&bid=3D152950011">click 
+              here</A> </LI></UL></TD><!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D Terms and Conditions ENDS HERE=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D--></TR></TBODY></TABLE>
+
+  
+      
+  <!--0MAAMAA3650000-01-002018-03-25-->
+      <table class=3D"bottom_heading" cellSpacing=3D"0" cellPadding=3D"0" w=
+idth=3D"100%" border=3D"0" style=3D"font-size:12px;text-align:left;backgrou=
+nd-color:#d4d4d4;padding:4px;border-left:1px solid #b1b1b1;border-right:1px=
+ solid #b1b1b1;border-top:1px solid #b1b1b1;border-bottom:1px solid #b1b1b1=
+;font-family:Helvectica, Arial,sans-serif; ">
+      <tbody>
+      <tr>
+      <td style=3D"padding:4px;line-height:20px;">For your information</td>=
+</tr></tbody></table>
+      <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" style=3D"border-collapse:collapse;min-width:100%;font-family:Helvetica, A=
+rial, sans-serif;">
+  <tbody>
+  <tr>
+  <td height=3D"5" style=3D"line-height:5px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+      <table class=3D"border" width=3D"100%" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0">
+        <tbody>
+             <tr>
+            <td class=3D"banner" width=3D"100%"><img src=3D"https://www.goi=
+ndigo.in//content/dam/goindigo/generic-campaigns/email-campaigns/itinerary/=
+aocsban1.png"></td>
+            <td class=3D"banner" width=3D"100%"><img src=3D"https://www.goi=
+ndigo.in//content/dam/goindigo/generic-campaigns/email-campaigns/itinerary/=
+AirSewa1.jpg"></td>
+                </tr>
+        </tbody>
+      </table>
+       
+      
+  <!--=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DAdd Radission Section- STARTS HERE =
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D--> <!--=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3DAdd Radission Section- ENDS HERE =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D-->
+ 
+ <!--=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DDIGIYatra Banner- Starts HERE =3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D-->
+ 
+    
+ 
+  <!--=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DDIGIYatra Banner- Ends HERE =3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D-->
+   
+ <!--<
+ if(rtEvent.ctx.BookingDetails.BookingStatus !=3D 'CANCELLED' && journey.Jo=
+urneyType.trim() =3D=3D 'Domestic' ){> 
+
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD style=3D"LINE-HEIGHT: 5px" height=3D5>&nbsp;</TD></TR>
+        <TR>
+          <TD><a href=3D"www.goindigo.in/6eholidays" target=3D"_blank"><IMG=
+ style=3D"WIDTH: 100%; DISPLAY: block" 
+            src=3D"https://www.goindigo.in/content/dam/goindigo/generic-cam=
+paigns/email-campaigns/damlinks17jun22/Email-Itinerary-6E-Holidays.jpg" 
+            width=3D625></A></TD></TR></TBODY></TABLE><
+} > -->
+
+
+<!--=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3DAdd Urban Drive Banner- Ends HERE =3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D--><!-- 6E Top ups section starts he=
+re --><!--
+ 
+ 
+ 
+      
+
+
+
+
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" clas=
+s=3D"bottom_heading" style=3D"font-size:12px;font-weight:bold;text-align:ce=
+nter;color:#013871;padding:10px 0;font-family:Helvetica, Arial, sans-serif;=
+background-color:#ffffff;">
+<tbody><tr><td style=3D"padding:20px 4px 10px;line-height:20px;">Have you p=
+urchased 6E Top-ups for hassle-free travel=3F</td></tr></tbody></table>
+
+<table class=3D"without_bgndborder" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"border:none;font-size:12px;font-family:He=
+lvetica, Arial, sans-serif;">
+  <tbody>
+    <tr>
+      <td valign=3D"top" width=3D"25%" style=3D"padding:4px 2px;text-align:=
+center;"><div class=3D"bottom_img" style=3D"display:block;width:100%;text-a=
+lign:center;height:50px;padding-top:5%;"><img height=3D"50" src=3D"https://=
+www.goindigo.in//content/dam/goindigo/generic-campaigns/email-campaigns/new=
+_itinerary/Excess_Baggage_New.png" style=3D"max-height:40px;"></div>
+      <div class=3D"img_desc"><a style=3D"color:#000000; text-decoration:no=
+ne; text-align:center;" href=3D"https://book.goindigo.in/Booking/MealDeepLi=
+nk=3Fpnr=3DHMlAZs7Ozs5Md3Vkgws=3D&email=3DHMlAZs7Ozs53UFNSrD8InFmKXV659MmGD=
+KfS&">Pre-book additional baggage on your booking starting =E2=82=B91900/5 =
+kg.&nbsp;<span style=3D"color:#027bff;">Add Now!</span></a></div>
+      </td>
+      <td valign=3D"top" width=3D"25%" style=3D"padding:4px 2px;text-align:=
+center;"><div class=3D"bottom_img" style=3D"display:block;width:100%;text-a=
+lign:center;height:50px;padding-top:5%;"><img height=3D"50" src=3D"https://=
+www.goindigo.in//content/dam/goindigo/generic-campaigns/email-campaigns/new=
+_itinerary/Snacks_New.png" style=3D"max-height:40px;"></div>
+      <div class=3D"img_desc"><a style=3D"color:#000000; text-decoration:no=
+ne; text-align:center;" href=3D"https://book.goindigo.in/Booking/MealDeepLi=
+nk=3Fpnr=3DHMlAZs7Ozs5Md3Vkgws=3D&email=3DHMlAZs7Ozs53UFNSrD8InFmKXV659MmGD=
+KfS&">Pre-book your favourite snack combo on-board starting =E2=82=B9200.&n=
+bsp;<span style=3D"color:#027bff;">Add Now!</span></a></div></td>
+      <td valign=3D"top" width=3D"25%" style=3D"padding:4px 2px;text-align:=
+center;"><div class=3D"bottom_img" style=3D"display:block;width:100%;text-a=
+lign:center;height:50px;padding-top:5%;"><img height=3D"50" src=3D"https://=
+www.goindigo.in//content/dam/goindigo/generic-campaigns/email-campaigns/new=
+_itinerary/Fast_Forward_New.png" style=3D"max-height:40px;"></div>
+       <div class=3D"img_desc"><a style=3D"color:#000000; text-decoration:n=
+one; text-align:center;" href=3D"https://book.goindigo.in/Booking/MealDeepL=
+ink=3Fpnr=3DHMlAZs7Ozs5Md3Vkgws=3D&email=3DHMlAZs7Ozs53UFNSrD8InFmKXV659MmG=
+DKfS&">Priority check-in and priority baggage handling service starting =E2=
+=82=B9400.&nbsp;<span style=3D"color:#027bff;">Add Now!</span></a></div>
+      </td>
+      <td valign=3D"top" width=3D"25%" style=3D"padding:4px 2px;text-align:=
+center;"><div class=3D"bottom_img" style=3D"display:block;width:100%;text-a=
+lign:center;height:50px;padding-top:5%;"><img height=3D"50" src=3D"https://=
+www.goindigo.in//content/dam/goindigo/generic-campaigns/email-campaigns/new=
+_itinerary/Travel_Insurance_New.png" style=3D"max-height:40px;"></div>
+      <div class=3D"img_desc"><a style=3D"color:#000000; text-decoration:no=
+ne; text-align:center;" href=3D"https://book.goindigo.in/Booking/MealDeepLi=
+nk=3Fpnr=3DHMlAZs7Ozs5Md3Vkgws=3D&email=3DHMlAZs7Ozs53UFNSrD8InFmKXV659MmGD=
+KfS&">Get Travel Assistance and protect your travel starting =E2=82=B9159.&=
+nbsp;<span style=3D"color:#027bff;">Add Now!</span></a></div></td>
+    </tr>
+  </tbody>
+</table>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"border-collapse:collapse;min-width:100%;font-family:Helvetica, Arial, =
+sans-serif;">
+  <tbody>
+  <tr>
+  <td height=3D"10">&nbsp;</td>
+</tr>
+</tbody>
+</table> 
+      
+       
+     --><!-- 6E Top ups section ends here -->
+      <TABLE class=3Dpricesummary 
+      style=3D"FONT-SIZE: 10px; FONT-FAMILY: Helvetica, Arial, sans-serif; =
+FONT-WEIGHT: normal" 
+      cellSpacing=3D1 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3Dno_padding 
+          style=3D"PADDING-BOTTOM: 0px !important; PADDING-TOP: 0px !import=
+ant; PADDING-LEFT: 0px !important; PADDING-RIGHT: 4px !important" 
+          vAlign=3Dtop width=3D"50%">
+            <TABLE class=3DpriceBorder 
+            style=3D"BORDER-TOP: #b1b1b1 1px solid; FONT-FAMILY: Helvetica,=
+ Arial, sans-serif; BORDER-RIGHT: #b1b1b1 1px solid; BORDER-COLLAPSE: colla=
+pse; MIN-WIDTH: 100%; BORDER-BOTTOM: #b1b1b1 1px solid; BORDER-LEFT: #b1b1b=
+1 1px solid" 
+            cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+              <TBODY>
+              <TR>
+                <TH class=3Dborder_bottom 
+                style=3D"HEIGHT: 29px; BORDER-BOTTOM: #b1b1b1 1px solid; PA=
+DDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 6px; LINE-HEIGHT: 20px; =
+PADDING-RIGHT: 6px" 
+                colSpan=3D3 scope=3Dcol align=3Dleft><SPAN class=3Dheading 
+                  style=3D"FONT-SIZE: 12px; FONT-WEIGHT: normal">Fare Summa=
+ry 
+                  </SPAN></TH></TR><!-- 1111   --> <!-- 1111   -->  
+              <TR>
+                <TD 
+                style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEF=
+T: 6px; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal">Airfare Ch=
+arges</SPAN></TD>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal">INR</SPAN>=
+</TD>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px" 
+                align=3Dright><SPAN class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal">4,048.00
+=09=09=09=09=09</SPAN></TD></TR>   
+              <TR>
+                <TD 
+                style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEF=
+T: 6px; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal"> Aviation =
+Security Fee</SPAN></TD>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal">INR</SPAN>=
+</TD>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px" 
+                align=3Dright><SPAN class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal">236.00
+=09=09=09=09=09</SPAN></TD></TR>   
+              <TR>
+                <TD 
+                style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEF=
+T: 6px; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal"> GST for O=
+disha</SPAN></TD>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal">INR</SPAN>=
+</TD>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px" 
+                align=3Dright><SPAN class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal">202.00
+=09=09=09=09=09</SPAN></TD></TR>   
+              <TR>
+                <TD 
+                style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEF=
+T: 6px; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal"> User Deve=
+lopment Fee</SPAN></TD>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal">INR</SPAN>=
+</TD>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px" 
+                align=3Dright><SPAN class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal">885.00
+=09=09=09=09=09</SPAN></TD></TR>    
+
+              <TR>
+                <TD class=3Dborder_total 
+                style=3D"BORDER-TOP: #b1b1b1 1px solid; PADDING-BOTTOM: 4px=
+; PADDING-TOP: 4px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal; LINE-HEIGH=
+T: 20px"><STRONG>Total 
+                  Fare </STRONG></SPAN></TD>
+                <TD class=3Dtotal_boder-left 
+                style=3D"BORDER-TOP: #b1b1b1 1px solid; PADDING-BOTTOM: 0px=
+; PADDING-TOP: 0px; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1 1px solid; LINE=
+-HEIGHT: 20px; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal"><STRONG>IN=
+R</STRONG></SPAN></TD>
+                <TD class=3Dtotal_boder-left 
+                style=3D"BORDER-TOP: #b1b1b1 1px solid; PADDING-BOTTOM: 0px=
+; PADDING-TOP: 0px; PADDING-LEFT: 6px; BORDER-LEFT: #b1b1b1 1px solid; LINE=
+-HEIGHT: 20px; PADDING-RIGHT: 6px" 
+                align=3Dright><SPAN class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal"><STRONG>5,=
+371.00</STRONG></SPAN></TD></TR>  </TBODY></TABLE></TD>
+          <TD vAlign=3Dtop width=3D"50%">
+            <TABLE class=3DpriceBorder 
+            style=3D"BORDER-TOP: #b1b1b1 1px solid; FONT-FAMILY: Helvetica,=
+ Arial, sans-serif; BORDER-RIGHT: #b1b1b1 1px solid; BORDER-COLLAPSE: colla=
+pse; MIN-WIDTH: 100%; BORDER-BOTTOM: #b1b1b1 1px solid; BORDER-LEFT: #b1b1b=
+1 1px solid" 
+            cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+              <TBODY>
+              <TR>
+                <TH class=3Dborder_bottom 
+                style=3D"BORDER-BOTTOM: #b1b1b1 1px solid; PADDING-BOTTOM: =
+4px; PADDING-TOP: 4px; PADDING-LEFT: 6px; LINE-HEIGHT: 20px; PADDING-RIGHT:=
+ 6px" 
+                width=3D"100%" scope=3Dcol align=3Dleft><SPAN class=3Dheadi=
+ng 
+                  style=3D"FONT-SIZE: 12px; FONT-WEIGHT: normal">Personal c=
+ontact 
+                  information</SPAN></TH></TR>  
+              <TR>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal; LINE-HEIGH=
+T: 20px">Company 
+                  Name : Yatra Online Pvt Ltd</SPAN></TD></TR> 
+              <TR> 
+              <TR>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal; LINE-HEIGH=
+T: 20px">Home 
+                  Phone : 918328848690</SPAN></TD></TR>    
+              <TR>
+                <TD class=3Dboder-left 
+                style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEF=
+T: 6px; BORDER-LEFT: #b1b1b1 1px solid; PADDING-RIGHT: 6px"><SPAN 
+                  class=3Dpricesummary 
+                  style=3D"FONT-SIZE: 11px; FONT-WEIGHT: normal; LINE-HEIGH=
+T: 20px">Email 
+                  : sraban307@gmail.com</SPAN></TD> 
+                
+
+
+
+ </tr>
+         <tr><td class=3D"btn" align=3D"left" style=3D"padding:0 6px 10px;b=
+order-right:1px solid #b1b1b1;border-left:1px solid #b1b1b1;border-bottom:1=
+px solid #b1b1b1;">
+         <table celspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"15=
+0">
+         <td valign=3D"middle" style=3D"background-color:#26329f;  text-ali=
+gn:center;" height=3D"28"><a style=3D"font-size:11px; background-color:#263=
+29f;color:#ffffff;text-decoration:none;display:inline-block;font-family:Hel=
+vectica, Arial, sans-serif;line-height:28px;" href=3D"http://rt4-t.customer=
+.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3428&cid=3DIndRT4DM196&bid=3D152950=
+011&p1=3DHUGTNZ&p2=3DPahadasingh" class=3D"btnAnchor">Update Contact detail=
+s </a></td>
+         </table>
+         
+        
+        </td>
+        
+          <!--  <a href=3D"https://aem-dev.goindigo.in/#updateContactTab/HU=
+GTNZ/Pahadasingh" class=3D"btnAnchor">Update Contact details </a>-->  </TR>=
+</TBODY></TABLE>
+            <TABLE 
+            style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-COLL=
+APSE: collapse; MIN-WIDTH: 100%" 
+            cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+              <TBODY>
+              <TR>
+                <TD 
+                style=3D"FONT-SIZE: 0px; HEIGHT: 3px; PADDING-BOTTOM: 0px; =
+PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD></TR></=
+TBODY></TABLE>  </TD></TR></TBODY></TABLE>
+      <TABLE 
+      style=3D"FONT-FAMILY: Helvetica, Arial, sans-serif; BORDER-COLLAPSE: =
+collapse; MIN-WIDTH: 100%" 
+      cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"FONT-SIZE: 0px; HEIGHT: 10px; PADDING-BOTTOM: 0px; PADDI=
+NG-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">&nbsp;</TD></TR></TBODY=
+></TABLE>
+      <TABLE class=3Dheading_table 
+      style=3D"FONT-SIZE: 12px; BORDER-TOP: #b1b1b1 1px solid; FONT-FAMILY:=
+ Helvetica, Arial, sans-serif; BORDER-RIGHT: #b1b1b1 1px solid; BORDER-BOTT=
+OM: #b1b1b1 1px solid; FONT-WEIGHT: bold; TEXT-ALIGN: left; BORDER-LEFT: #b=
+1b1b1 1px solid; LINE-HEIGHT: 18px; BACKGROUND-COLOR: #d4d4d4" 
+      cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"PADDING-BOTTOM: 4px; PADDING-TOP: 4px; PADDING-LEFT: 6px=
+; LINE-HEIGHT: 20px; PADDING-RIGHT: 6px">Interglobe 
+            Aviation ltd.(IndiGo), Global Business Park, Gurgaon, Haryana, 
+            India. Call 0124-4973838 or 0124-6173838</TD></TR></TBODY></TAB=
+LE></TD></TR>
+  
+  <TR>
+    <TD 
+    style=3D"BORDER-TOP: #e0e0e0 1px solid; BACKGROUND: #f1f1f1; TEXT-ALIGN=
+: center; PADDING-TOP: 30px" 
+    width=3D600 align=3Dcenter>
+      <DIV style=3D"PADDING-BOTTOM: 20px"><a href=3D"http://rt4-t.customer.=
+goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3429"><IMG 
+      src=3D"https://www.goindigo.in/content/dam/goindigo/generic-campaigns=
+/email-campaigns/new_itinerary/appstore.png" 
+      width=3D121 height=3D34></A> &nbsp; &nbsp; <a href=3D"http://rt4-t.cu=
+stomer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,342a"><IMG 
+      src=3D"https://www.goindigo.in/content/dam/goindigo/generic-campaigns=
+/email-campaigns/new_itinerary/playstore.png" 
+      width=3D121 height=3D34></A> </DIV>
+      <DIV class=3Dig-footer-link 
+      style=3D"FONT-SIZE: 11px; FONT-FAMILY: arial, sans-serif; WIDTH: 66%;=
+ COLOR: #999; PADDING-BOTTOM: 20px; PADDING-LEFT: 10px; MARGIN: 0px auto; L=
+INE-HEIGHT: 22px; PADDING-RIGHT: 10px"><!--[if (gte mso 9)|(IE)]>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D628 align=3Dcenter bor=
+der=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"FONT-SIZE: 11px; FONT-FAMILY: arial, sans-serif,; PADDIN=
+G-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px" 
+          vAlign=3Dtop align=3Dcenter><![endif]--><a style=3D"TEXT-DECORATI=
+ON: underline; COLOR: #666" href=3D"http://rt4-t.customer.goindigo.in/r/=3F=
+id=3Dh91dd4fb,6a114db,342b&cid=3DIndRT4DM196&bid=3D152950011" target=3D"_bl=
+ank">Book 
+            Flight</A> | <a style=3D"TEXT-DECORATION: underline; COLOR: #66=
+6" href=3D"http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,342=
+c&cid=3DIndRT4DM196&bid=3D152950011" target=3D"_blank">Flight 
+            Status</A> | <a style=3D"TEXT-DECORATION: underline; COLOR: #66=
+6" href=3D"http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,342=
+d&cid=3DIndRT4DM196&bid=3D152950011" target=3D"_blank">Edit 
+            Booking</A> | <a style=3D"TEXT-DECORATION: underline; COLOR: #6=
+66" href=3D"http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,34=
+2e&cid=3DIndRT4DM196&bid=3D152950011" target=3D"_blank">Check-in</A> | <a s=
+tyle=3D"TEXT-DECORATION: underline; COLOR: #666" href=3D"http://rt4-t.custo=
+mer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,342f&cid=3DIndRT4DM196&bid=3D152=
+950011" target=3D"_blank">View GST 
+            Invoice</A> | <a style=3D"TEXT-DECORATION: underline; COLOR: #6=
+66" href=3D"http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,34=
+30&cid=3DIndRT4DM196&bid=3D152950011" target=3D"_blank">Partner Login</A> |=
+ <a style=3D"TEXT-DECORATION: underline; COLOR: #666" href=3D"http://rt4-t.=
+customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3431&cid=3DIndRT4DM196&bid=
+=3D152950011" target=3D"_blank">FAQs</A> | <a style=3D"TEXT-DECORATION: und=
+erline; COLOR: #666" href=3D"http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh9=
+1dd4fb,6a114db,3432&cid=3DIndRT4DM196&bid=3D152950011" target=3D"_blank">Co=
+ntact Us</A><!--[if (gte mso 9)|(IE)]> 
+      </TD></TR></TBODY></TABLE><![endif]--></DIV><!--[if (gte mso 9)|(IE)]=
+>
+      <TABLE cellSpacing=3D0 cellPadding=3D0 width=3D628 align=3Dcenter bor=
+der=3D0>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 0=
+px; PADDING-RIGHT: 0px" 
+          vAlign=3Dtop align=3Dcenter><![endif]-->
+            <DIV 
+            style=3D"FONT-SIZE: 11px; FONT-FAMILY: 'OpenSans-SemiBold', ari=
+al, sans-serif, OpenSans-SemiBold; COLOR: #666; PADDING-BOTTOM: 10px">Copyr=
+ight 
+            2024 IndiGo All rights 
+        reserved.</DIV><!--[if (gte mso 9)|(IE)]></TD></TR></TBODY></TABLE>=
+<![endif]-->
+      <DIV style=3D"MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 1=
+0px"><!--[if (gte mso 9)|(IE)]>
+      <TABLE 
+      style=3D"PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PA=
+DDING-RIGHT: 5px" 
+      cellSpacing=3D0 cellPadding=3D0 width=3D100 align=3Dcenter border=3D0=
+>
+        <TBODY>
+        <TR>
+          <TD 
+          style=3D"PADDING-BOTTOM: 10px; PADDING-TOP: 5px; PADDING-LEFT: 0p=
+x; PADDING-RIGHT: 0px" 
+          vAlign=3Dtop width=3D18 align=3Dcenter><![endif]--><a title=3D"Fa=
+cebook" style=3D"MARGIN: 5px; DISPLAY: inline-block" href=3D"http://rt4-t.c=
+ustomer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3433" target=3D"_blank"><IMG=
+ 
+            title=3DFacebook 
+            src=3D"https://www.goindigo.in/content/dam/goindigo/generic-cam=
+paigns/email-campaigns/new_itinerary/facebook.png" 
+            width=3D20 height=3D20> </A><!--[if (gte mso 9)|(IE)]></TD>
+          <TD 
+          style=3D"PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px=
+; PADDING-RIGHT: 5px" 
+          vAlign=3Dtop width=3D18 align=3Dcenter><![endif]--><a title=3D"In=
+stagram" style=3D"MARGIN: 5px; DISPLAY: inline-block" href=3D"http://rt4-t.=
+customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3434" target=3D"_blank"><IM=
+G 
+            title=3DInstagram 
+            src=3D"https://www.goindigo.in/content/dam/goindigo/generic-cam=
+paigns/email-campaigns/new_itinerary/Instagram.png" 
+            width=3D20 height=3D20> </A><!--[if (gte mso 9)|(IE)]></TD>
+          <TD 
+          style=3D"PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px=
+; PADDING-RIGHT: 5px" 
+          vAlign=3Dtop width=3D18 align=3Dcenter><![endif]--><a title=3D"Tw=
+itter" style=3D"MARGIN: 5px; DISPLAY: inline-block" href=3D"http://rt4-t.cu=
+stomer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3435" target=3D"_blank"><IMG =
+title=3DTwitter 
+            src=3D"https://app-static-prod-skyplus6e.goindigo.in/content/da=
+m/skyplus6e/generic-campaigns/email-campaigns/masterasset/twitter.png" 
+            width=3D20 height=3D20> </A><!--[if (gte mso 9)|(IE)]></TD>
+          <TD 
+          style=3D"PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px=
+; PADDING-RIGHT: 5px" 
+          vAlign=3Dtop width=3D18 align=3Dcenter><![endif]--><a title=3D"Yo=
+utube" style=3D"MARGIN: 5px; DISPLAY: inline-block" href=3D"http://rt4-t.cu=
+stomer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3436" target=3D"_blank"><IMG =
+title=3DYoutube 
+            src=3D"https://www.goindigo.in/content/dam/goindigo/generic-cam=
+paigns/email-campaigns/new_itinerary/youtube.png" 
+            width=3D20 height=3D20> </A><!--[if (gte mso 9)|(IE)]></TD>
+          <TD 
+          style=3D"PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px=
+; PADDING-RIGHT: 5px" 
+          vAlign=3Dtop width=3D18 align=3Dcenter><![endif]--><a title=3D"Li=
+nkedin" style=3D"MARGIN: 5px; DISPLAY: inline-block" href=3D"http://rt4-t.c=
+ustomer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,3437"><IMG 
+            title=3DLinkedin 
+            src=3D"https://www.goindigo.in/content/dam/goindigo/generic-cam=
+paigns/email-campaigns/new_itinerary/linkedin.png" 
+            width=3D20 height=3D20 target=3D"_blank"> 
+        </A><!--[if (gte mso 9)|(IE)]></TD></TR></TBODY></TABLE><![endif]--=
+></DIV></TD></TR></TBODY></TABLE><img height=3D'0' width=3D'0' alt=3D'' src=
+=3D'http://rt4-t.customer.goindigo.in/r/=3Fid=3Dh91dd4fb,6a114db,1'/></BODY=
+></HTML>
+
+------=_NextPart_895_9E0ACC98.9E0ACC98--
+
