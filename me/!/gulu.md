@@ -49,14 +49,6 @@ sraban_pvt@yahoo.com|pvt...
 `Gaana`
 sraban.pvt@moc.evil|chrn@lt
 
-`Naukri`
-- sraban4897@moc.liamg|K...r@1...78
-- sraban_pvt@moc.oohay|
-
-
-`angel.co`
-sraban307@moc.liamg|30p^t29.23ltd21=3
-
 
 `honeypot`
 - https://app.honeypot.io/users/login|Kumar@1...6
@@ -65,12 +57,9 @@ sraban307@moc.liamg|30p^t29.23ltd21=3
 `letsfreelance.com`
 sraban307@mailg.com|chrn@lt
 
-`app.jobvite.com`
-01-sraban.pvt@moc.evil|Kmr@123...9
-
 `MS-live`
 01-sraban.pvt@moc.evil|K...r@1....467
-02-sraban.pvt@moc.kooltuo|K...r@1....5689(8328848690-8079)
+02-sraban.pvt@moc.kooltuo|K...r@1....8(8328848690-8079)
 02-sraban-pvt@hotmail.com|chrn@lt
 
 `Samsung`
@@ -84,7 +73,7 @@ sraban4897@gmail.com|8328848690|chrn@lt@12|lt@chrn@12
 sraban_pvt@yahoo.com|ku..r@1..6
 
 `tweet`
-srabann|chrn@lt
+srabann|60pvt59@56ltd54=3|sraban_pvt@ymail.com
 
 `Fb`
 - skp.pvt@moc.liamg|K...r@1...78
@@ -194,10 +183,10 @@ PIN - 4897
 8328848690|K...r@...6
 
 `IPPB`
-CID.6034957218 | AC.039510043511 | CSFI.IPOS0000001
+CID.6034957218 | AC.039510043511 | CSFI.IPOS0000001 | (Basudev/Bisu/Raigiripur/Tainlo)
 8328848690@postbank
 832884869001@ippb
-MPN.4897/3029-*2321/6059-5654/4039-3432/8079-7876/5049-4543/7069-6765
+MPN.4897/3029-2321/*6059-5654/4039-3432/8079-7876/5049-4543/7069-6765
 `60-59+56-54=3`
 
 `POSA`
@@ -214,7 +203,7 @@ Chrn@lta@1..3
 80p79@78l76=3
 `sbicard`
 rr.8936654449575514(10/72-684)
-832..4.690|Ku..@123..6|6059
+832..4.690|Chrn@lta@3..1|4897
 `yonosbi`
 MPN.752019
 
@@ -235,14 +224,13 @@ rr.8628710110600044|30/72|480|Sra Kuma P
 rr.7173073220265035|10/62|293|Sra Kuma P
 
 
-
 `523403650.onlineicici`
 charan@...6
 
 `5285186742.onlineidfcbank`
 pahadsingh.idfcbank(63623455001-6510800BFDI)
 K...r@...89
-MPIN6059
+MPIN8079
 
 
 `51505811.onlinehdfcbank`
@@ -283,7 +271,7 @@ rnlife.customerservice@relianceada.com
 sraban_pvt@moc.oohay
 
 `EPFO-passbook.epfindia.gov.in`
-UAN - 101303150593|Kmr@1...67/8
+UAN - 101303150593|Kmr@1...68/9
 https://unifiedportal-mem.epfindia.gov.in/memberinterface/
 
 
@@ -309,6 +297,13 @@ User: AS0444
 pwd: gl@2345432
 MPN.4897
 
+### Passport
+:::Date of Birth and Hint Question/Answer
+:::SRABAN_PVT@YAHOO.COM
+:::Basanti
+:::11-05-1988
+:::Kumar@123456
+
 `https://bhulekh.ori.nic.in/RoRView.aspx`
 `https://www.igrodisha.gov.in/`
 sraban
@@ -321,9 +316,15 @@ sraban307@liagm.moc|liamg|bd...4897h
 skp.pvt@liagm.moc|Kmr@Mahesh
 c3ViYXNoLmthbmRhbmdhcHVyYXRoQHdpc3NlbmluZm90ZWNoLmNvbXxXaXNzZW5AMDE
 
+`Ultimate Success Champion`
+https://learn.successgyan.com/web/activity
+8328848690
+13,14,15 April - 2024
+sraban_pvt@yahoo.com|chrn@lta
+https://sso.teachable.com/secure/572530/users/sign_in?clean_login=true&reset_purchase_session=1
+
 `freechess.gro`
 srabann|p^t!td
-
 
 `academy.zenva.com`
 sraban307@liagm.moc|liamg
@@ -361,8 +362,6 @@ sxmettdanqcjcjtl
 skp.pvt|chrn@lt
 
 
-
-
 `leetcode`
 sraban4897@mailg|chrn@lt@12..6
 ----------------- Study --------------------------------
@@ -381,21 +380,46 @@ https://appinessinteractive.greythr.com/
 AIPL/20/480
 chrn@lta
 
----------------------WHY----------------------------------
+Office Appiness:
+#406, 24th Cross Rd, Siddanna Layout, 
+Banashankari Stage II, Banashankari, Bengaluru, Karnataka 560070
+---------------------------WHY------------------------------------
 w3m.WHY.swx
 5329450
 Sparkle@123
 
+Office Appiness:
+EPIP Zone Whitefield
+---------------------------WISSEN---------------------------------
+https://hrmax.myadrenalin.com/AdrenalinMAX/#/
+sraban.pahadasingh@wisseninfotech.com(WISSEN)
+Chrn@Lt@1.3
+
+sodexo.in/login
+8328848690(Kmr@1..6)
+
+Office Appiness:
+EPIP Zone Whitefield
 -------------------------------------------------------------------
 https://ebiz.licindia.in/D2CPM/#Payment/0300/31618919/31-03-2020/17:22:30/01
 https://pasteboard.co/J1DCIJe.png
 https://pasteboard.co/J1DGh9n.jpg
 
 
+=====================Bhauja=========================
+rashmita.pvt@gmail.com
+welcome@123
+###
+rashmita.pvt@gmail.com
+welcome@123
 
+rashmita.jun1996@gmail.com
+Rashmita Samantaray
+7847903928
+Ritu&6371
 
+https://onlineapp.bseodisha.ac.in/osstetII2021/default.aspx
 
--------------------------------------------------------------------
 https://internshala.com/internships
 rashmita1996@gmail.com
 welcome@123
@@ -406,22 +430,8 @@ https://openwho.org/
 rashmita.jun1996@gmail.com
 welcome@1234
 
-
 https://openwho.org/
-==============================================
-rashmita.pvt@gmail.com
-welcome@123
-###
-rashmita.pvt@gmail.com
-welcome@123
-======================
-rashmita.jun1996@gmail.com
-Rashmita Samantaray
-7847903928
-Ritu&6371
-
-https://onlineapp.bseodisha.ac.in/osstetII2021/default.aspx
-==============================================
+=====================================================
 
 =======ME=========
 ADHAR - 799415803502
@@ -448,6 +458,7 @@ BOB- 20448100007940(BARB0NIRAKA)
 DOB- 01-01-1982
 Photo - yes
 
+==========My Address==============
 Address - 1:
 246/128, 24th Main, 3rd cross 3rd floor
 Agara, HSR Layout, Bengaluru, Karnataka
@@ -462,28 +473,7 @@ Dist - Puri, Odisha, 752019, India
 Land Mark - Near to Sahupada UP School
 
 
-Office Appiness:
-#406, 24th Cross Rd, Siddanna Layout, 
-Banashankari Stage II, Banashankari, Bengaluru, Karnataka 560070
-
-
 ================================Lipu=====================================
-
-https://cp1.awardspace.net/welcome/
-sraban307@gmail.com|direct
-3922819_pradipta|Kumar@12..6
-http://f33-preview.awardspace.net/pradipta.xyz
-ns5.awardspace.com and ns6.awardspace.com
-
-
-
-=========================================================================
-
-Laptop - 15s-dy3001TU
-$wmic memphysical get MaxCapacity, MemoryDevices
-
-
-==========================================================================
 @Zoom
 pradiptakumar1601@gmail.com
 Pkp1601@
@@ -491,11 +481,24 @@ Pkp1601@
 MeetingID: 814 8094 0366
 PassCode: 465288
 
+https://cp1.awardspace.net/welcome/
+sraban307@gmail.com|direct
+3922819_pradipta|Kumar@12..6
+http://f33-preview.awardspace.net/pradipta.xyz
+ns5.awardspace.com and ns6.awardspace.com
+
+https://www.youtube.com/watch?v=SHXlXDNu1Ok
+
+=========================================================================
+
+Laptop - 15s-dy3001TU
+$wmic memphysical get MaxCapacity, MemoryDevices
+
+==========================================================================
+
 https://drive.google.com/drive/folders/1CQcCmylBJaSZWZ-X-FzferW8XUmgMig2
 
 11may1972!@#$bitbucket
-
-
 
 https://digicom.reliancenipponlife.com/RegeneratePolicy_Mode/RegeneratePolicyServlet?productType=PS&subproductType=CPR&policyNumber=53413646&clientId=&memberID=&fromDate=11/05/2022&toDate=11/07/2022&dropYear=
 
@@ -506,35 +509,52 @@ pwd: Nanisoni@1221
 MFA Code: 
 ------
 Airaisa - Charan@Lata@123|8328848690
-==========================
-hrmax.myadrenalin.com/AdrenalinMAX/#/
-sraban.pahadasingh@wisseninfotech.com(WISSEN)
-Chrn@Lt@1.3
-
-sodexo.in/login
-8328848690(Kmr@1..6)
+===========================================================================
 
 
-### Passport
-:::Date of Birth and Hint Question/Answer
-:::SRABAN_PVT@YAHOO.COM
-:::Basanti
-:::11-05-1988
-:::Kumar@123456
+### Interview Account(Requirtment Portals)
+`https://www.upwork.com/`
+sraban4897@liamg.com|Chrn@Lta@54..1|Basanti
 
-### Interview Account
+`Naukri`
+- sraban4897@moc.liamg|K...r@1...78
+- sraban_pvt@moc.oohay|
+
+`angel.co`
+sraban307@moc.liamg|30p^t29.23ltd21=3
+
+`app.jobvite.com`
+01-sraban.pvt@moc.evil|Kmr@123...9
+
+`oilandgasjobsearch`
+https://oilandgasjobsearch.com/
+Kumar@123456
+
+`gulf country`
+https://www.founditgulf.com/user
+Kumar@123456
+
+###### Indiviual Company
 
 https://ibegin.tcs.com/iBegin/login
-sraban.pvt@live.com
+tcs|sraban.pvt@live.com
 Kumar@123456
-
 
 https://tricentis.wd1.myworkdayjobs.com/en-US/Tricentis_Careers/userHome
-sraban4897@gmail.com
+tricentis|sraban4897@gmail.com
 Kumar@123456
 
+https://jobs.siemens.com/
+siemens|sraban4897@gmail.com
+Lt@chrn@1.3
 
+https://vmware.wd1.myworkdayjobs.com/en-US/vmware/login
+vmware|sraban4897@gmail.com
+6vnJ4veQvNj-N9:
 
-===============================
-# Lipu: Learn Live Projects:
-https://www.youtube.com/watch?v=SHXlXDNu1Ok
+https://jobs.harman.com/en_US/careers/ApplicationForm?jobId=23380&source=LinkedIn
+Harman|Kumar@12345678
+
+https://krb-sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=26059&siteid=5016&noback=1&fromSM=true&ShowNewPolicy=False&wftype=4
+IBM|sraban4897@gmail.com
+Charan@Lata@123
