@@ -199,7 +199,7 @@ FATHER.DOB:15-06-1962
 01-skp.pvt@moc.liamg|Lt@Chn@..3
 
 `pahadasingh.onlinesbi`(14180246803000000-0753100NIBS)
-Chrn@lta@1..3
+Lta@Chrn@1..3
 80p79@78l76=3
 `sbicard`
 rr.8936654449575514(10/72-684)
@@ -558,3 +558,9 @@ Harman|Kumar@12345678
 https://krb-sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=26059&siteid=5016&noback=1&fromSM=true&ShowNewPolicy=False&wftype=4
 IBM|sraban4897@gmail.com
 Charan@Lata@123
+
+https://lnw.wd5.myworkdayjobs.com/en-US/LightWonderExternalCareers/jobs
+Light & Wonder|sraban4897@gmail.com|Chrn@Lt@1..6
+
+https://broadridge.wd5.myworkdayjobs.com/en-US/Careers/login
+Chrn@Lta@123456
