@@ -76,7 +76,7 @@ sraban_pvt@yahoo.com|ku..r@1..6
 srabann|60pvt59@56ltd54=3|sraban_pvt@ymail.com
 
 `Fb`
-- skp.pvt@moc.liamg|K...r@1...78
+- skp.pvt@moc.liamg|K...r@1...89
 - sraban_pvt@moc.oohay|
 - (8867818488)sai26nov2017@moc.liamg||26nov2017fb
 - pvt.puspa@moc.liamg|chrn@lt
@@ -270,8 +270,9 @@ https://customer.reliancenipponlife.com/
 rnlife.customerservice@relianceada.com
 sraban_pvt@moc.oohay
 
-`EPFO-passbook.epfindia.gov.in`
-UAN - 101303150593|Kmr@1...68/9
+`
+-passbook.epfindia.gov.in`
+UAN - 101303150593|Kmr@1...67/8
 https://unifiedportal-mem.epfindia.gov.in/memberinterface/
 
 
@@ -542,7 +543,7 @@ Kumar@123456
 
 https://tricentis.wd1.myworkdayjobs.com/en-US/Tricentis_Careers/userHome
 tricentis|sraban4897@gmail.com
-Kumar@123456
+Kumar@1234567
 
 https://jobs.siemens.com/
 siemens|sraban4897@gmail.com
