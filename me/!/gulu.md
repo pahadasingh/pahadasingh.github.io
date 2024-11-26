@@ -1,6 +1,11 @@
 5572uNmdx862126
 sraban_pvt@moc.ohay|11may1972g!i@t#h$u%b
 pahadasingh(sraban307@gmail.com)|imagesk(sraban.pvt@live.com)
+MARKERS	5933657
+
+padding: 10px;
+background: #E4E4E7;
+color: #09090B;
 
 https://gitlab.com/users/sign_in
 srabann|11may1972!@#$gitlab
@@ -229,7 +234,7 @@ charan@...6
 
 `5285186742.onlineidfcbank`
 pahadsingh.idfcbank(63623455001-6510800BFDI)
-K...r@...89
+K...r@98...1
 MPIN8079
 
 
@@ -401,6 +406,11 @@ sodexo.in/login
 
 Office Appiness:
 EPIP Zone Whitefield
+------------------------infosys------------------------------------
+https://stsakaash.xxxx.com/adfs/ls/idpinitiatedsignon
+ITLINFOSYS\srabankumar.2182390
+srabankumar.2182390@ad.xxx.com
+Chrn@lta@123
 -------------------------------------------------------------------
 https://ebiz.licindia.in/D2CPM/#Payment/0300/31618919/31-03-2020/17:22:30/01
 https://pasteboard.co/J1DCIJe.png
@@ -511,6 +521,23 @@ MFA Code:
 ------
 Airaisa - Charan@Lata@123|8328848690
 ===========================================================================
+## Monthly Expenditure = 
+My last Salary was 20LPA ---> 40LPA (Expecting)
+-----------------------------------------
+Lipu ---  80k(Study-$1000)
+Food ---  20k(outing + home)
+Home ---  20k(Parent)
+Clothes - 10k(Quarter)
+Future -- 30k(Saving)[LIC + small investment]
+Rent ---- 30k
+Petrol -- 10k
+Books    -- 10k(Quarter)
+Checkup(Health)   -- 2k
+Gym/Yoga/English -- 10k
+Donation(Poor)  --- 5k
+-------------------------------------------
+Total/month = 2 lakh  + 20 k
+
 
 
 ### Interview Account(Requirtment Portals)
@@ -558,10 +585,18 @@ Harman|Kumar@12345678
 
 https://krb-sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=26059&siteid=5016&noback=1&fromSM=true&ShowNewPolicy=False&wftype=4
 IBM|sraban4897@gmail.com
-Charan@Lata@123
+Charan@Lata@12345
 
 https://lnw.wd5.myworkdayjobs.com/en-US/LightWonderExternalCareers/jobs
 Light & Wonder|sraban4897@gmail.com|Chrn@Lt@1..6
 
 https://broadridge.wd5.myworkdayjobs.com/en-US/Careers/login
-Chrn@Lta@123456
+Chrn@Lta@
+
+https://talproindia.zohorecruit.in/candidateportal/profile
+Chrn@Lta@12...6
+
+https://www.placementindia.com/recruitment-agency/bangalore-recruitment-agency.htm
+
+https://www.xing.com/profile?sc_o=jobs_recos_edit_criteria_empty_state_click
+

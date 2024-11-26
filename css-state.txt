@@ -1,0 +1,488 @@
+Implementing Advanced CSS Techniques for Layout and Styling.
+1. Centering Elements Vertically and Horizontally:
+- Use Flexbox for centering an element both vertically and horizontally.
+- Set display: flex; justify-content: center; align-items: center; height: 100vh;
+
+2. Responsive Text with `vw`:
+- Achieve text scaling proportionally with the viewport using vw units.
+- Set font-size: 5vw; for responsive text.
+
+3. Maintain Aspect Ratio:
+- Maintain aspect ratio for elements by using padding based on a percentage.
+- Set padding-top: 56.25%; for a 16:9 aspect ratio.
+
+4. Custom Checkbox and Radio Buttons:
+- Style default checkboxes and radio buttons by hiding the default input and styling a label.
+- Utilize CSS to customize checkboxes and radio buttons appearance.
+
+5. CSS Grid for Layouts:
+- Create complex layouts efficiently by using CSS Grid.
+- Define grid-template-columns, gap, and item styling for layout structure.
+
+6. Sticky Footer:
+- Make a footer stick to the bottom of the page utilizing Flexbox properties.
+- Set display: flex; flex-direction: column; min-height: 100vh; for a sticky footer.
+
+7. Smooth Scroll:
+- Add smooth scrolling to anchor links by setting scroll-behavior to smooth.
+- Enhance user experience with smooth navigation on the webpage.
+
+
+
+Ability to create Screens, 
+Controllers,
+OData DPC and MPC. 
+Hands-on HTML5, JS, CSS3 coding experience.
+SAP Web IDE, SAP Frontend Server Experience.
+---------------------------------------------------------
+## JS Quiz
+1. Javascript String Functions
+	slice()
+	splice()
+	indexOf()
+	*substr() ~ include()
+	*charAt()
+	.replace(//, '');
+	querySelector(), querySelectorAll()
+	.reverse()
+	.tolowerCase() .toUpperCase()
+	.split(), .join()
+	%
+	/
+	+
+
+2. Javascript Array Functions
+	Array.fromEntites()
+	array.from()
+	object.assign()
+	new Map(), new Set()
+
+3. map(), reducer(), filter()~find(), some()~every()
+   .forEach(), for() {}
+   
+4. let, const, ..., [{x, y}]
+
+   ===, !==, 
+   
+5. setTimeout(), new Promise(), setInterval()
+
+6. IIFE (function(){})()
+
+7. Math Functions
+   Math.floor(), Math.ceil(), Math.round(), Math.max(x,y)
+   
+8. navigator
+   .appName
+   .isNetavailable
+   
+9. Boolean(10 > 9), null, unefinded, NaN
+
+10. Webwoker(), MutationObserver(), asyn/await
+
+==================
+HTML & CSS
+flex: 1;
+grid: 1;
+transform: scale()
+object-fit: cover, fill, 
+svg, audio, video, canvas, range, meter
+specificity --- orders
+accessebilty
+contentEditable
+div + p, div.p, div ~ p
+$^* _________  a[href$^*=".pdf"]
+
+
+<div `focusgroup`="wrap horizental">
+
+<ol type="a">
+
+<input id="dateInput" type="date"><button onclick="dateInput.showPicker()">Select date</button>
+
+<dialog id="confirm">
+	<form method="dialog">
+		Are you sure?
+		<button value="1">Yes</button>
+		<button value="0">No</button>
+	</form>
+</dialog>
+
+
+<details open name="sidebar_panel" id="main_info">
+	<summary>Main info</summary>
+	<!-- controls Longer content -->
+</details>
+
+<button popovertarget="foo">Toggle the popover</button>
+<div id="foo" popover>Popover content</div>
+
+<div id=app inert class=loading>...</div> -- not visible in assistive technology
+
+<img src="picture.jpg" loading="lazy" /> <iframe src="supplementary.html" loading="lazy"></iframe>
+
+
+<template id="counter">
+	<div class="counter">Clicked {{ times }} times</div>
+</template>
+
+<sl-switch>Switch</sl-switch>
+
+
+<host-element>
+    <template shadowrootmode="open">
+        <!-- Shadow content -->
+    </template>
+</host-element>
+
+slot="slot_name"
+
+Landmark elements - <main>, <nav>, <aside>, <header>, <footer>, <section>
+
+<div role="button" tabindex="0">I’m Tabbable</div>
+
+
+<search>
+  <form action="search.php">
+    <label>Find: <input name="q" type="search"></label>
+    <button>Go!</button>
+  </form>
+</search>
+
+
+## 
+:has pseudo-class
+text-wrap: pretty!
+
+background: liner-graidient(yellow, blue);
+background: liner-graidient(in oklch, yellow, blue)
+
+select, ::picker(select) { 
+  appearance: base-select;
+}
+
+:focus-visible
+
+
+=============================
+online timer
+Regularly check for new job postings on remote job boards and company websites
+Toptal or Upwork to find freelance gigs
+https://github.com/mdn/dom-examples
+let fd = new FormData(form);
+let data = JSON.stringify(Object.fromEntries(fd));
+
+const range = document.caretPositionFromPoint(e.clientX, e.clientY);
+const textNode = range.offsetNode;
+const offset = range.offset;
+
+
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
+  );
+  
+  class MyElement extends HTMLElement { … }
+  customElements.define("my-element", MyElement);
+  
+  const registry = new CustomElementRegistry();
+  registry.define('sub-element', SubElement);
+  
+  this.shadowRoot = this.attachShadow({mode: "open"});
+
+this.attachShadow({mode: "open", slotAssignment: "manual" });
+this.shadowRoot.querySelector("slot[name=foo]").assign(element);
+
+this.#internals = this.attachInternals()
+this.#internals.ariaChecked = true;
+
+
+<script type="module">
+	import { TabList } from "./tablist.html" with { type: 'html' };
+	customElements.define("tab-list", TabList);
+</script>
+
+const handle = await window.showSaveFilePicker(opts);
+
+navigator.setAppBadge(unreadCount)
+
+navigator.share(shareData)
+
+"launch_handler": {"client_mode": "navigate-new"}
+
+"file_handlers": [{
+    "action": "/open-file",
+    "accept": {
+      "image/svg+xml": ".svg",
+      "image/png": ".png"
+    }
+  }]
+  
+"display_override": ["window-controls-overlay"]
+
+isolated-app://4tkr2qbhf7rlz2a3wo3rh4wqaaic/index.html
+
+
+//Web-Components..............
+Shoelace
+Spectrum Web Components
+Lightning Web Components
+FAST
+Elix
+Lion
+Material Web
+Lit
+Stencil
+Polymer
+Svelte
+Ionic
+
+//tools to build native apps
+JavaScript-based frameworks - React Native, Ionic, Electron, etc.
+Non-JavaScript framework - Tauri, Flutter, etc.
+Native technologies - Objective-C, Swift, Kotlin, .NET, etc
+
+//static or dynamic site generators
+Jekyll
+Elevety
+Hugo
+Gatsby
+Next.js
+Nuxt
+Astro
+SvelteKit
+Remix
+
+//validation tools do you regularly user
+W3C Validator
+Validator.nu HTML Checker
+HTML-validate
+HTMLHint
+
+
+//Tools- track and improve the performance of your websites
+Lighthouse
+Browser Devtools
+PageSpeed Insights
+WebPageTest
+Pingdom
+
+//analytics tools & services do you use to monitor your websites
+Google Analytics
+Plausible Analytics
+Fathom Analytics
+New Relic
+Mixpanel
+Clicky
+Matomo
+Heap
+Datadog
+
+//browser(s) do you primarily work in during initial development
+Edge
+Chrome
+Safari
+Firefox
+Internet Explorer 11
+Internet Explorer 8/9/10
+Opera Mini
+Safari iOS
+Chrome iOS
+Chrome Android
+Firefox Android
+Samsung Internet
+Vivaldi
+Brave
+UC Browser
+Opera
+Polypane
+Arc
+ladybird
+
+
+//resources do you consult to stay informed about web platform features
+W3C
+MDN
+Web.dev
+Can I Use
+Chrome Platform Status
+WebKit Blog
+HTTP Archive
+Web Features Explorer
+
+//some elements to HTML
+Data table
+Image Zoom
+Skeleton UI / Loading Placeholder
+Star Rating
+Accordion
+Infinite Scroll
+Context Menu / Right-Click Menu
+Tabs
+Carousel
+Segmented Button
+Switch / Toggle
+
+// industry sector(s) do you work in
+Automotive
+Consulting & Services
+Cyber Security
+Ecommerce & Retail
+Education
+Energy
+Entertainment
+Finance
+Government
+Healthcare
+Insurance
+Logistics
+Manufacturing
+Marketing/Sales/Analytics Tools
+News, Media, & Blogging
+Programming & Technical Tools
+Real Estate
+Social Media
+Tourism
+Transport
+
+//
+
+//tools do you use for accessibility testing?
+Accessibility Insights
+Arc
+Assistiv Labs
+Axe
+browser_devtools
+Firefox Accessibility Inspector
+Guidepup
+IBM Equal Access Accessibility Checker
+Lighthouse
+Pa11y
+Polypane
+Siteimprove
+Storybook
+VoiceOver.js
+WAVE
+
+
+//screen readers do you use for accessibility testing
+VoiceOver
+JAWS
+TalkBack
+NVDA
+Narrator
+Orca
+Chrome DevTools
+Chromevox
+WAVE
+
+//techniques are part of your regular accessibility strategy?
+Intuitive keyboard navigation
+Other than tab order.
+
+Descriptive alt text
+Providing alt text that describes the purpose or content of an image.
+
+Skip-to-content link
+Letting users skip straight to the main content of a page.
+
+<fieldset> and <legend>
+Using <fieldset> and <legend> to group related form elements.
+
+Information Hierarchy
+Using headings (<h1> - <h6>) that correctly represent a page's information hierarchy.
+
+Meaningful Link Text
+Ensuring that link text makes sense out of context
+
+Form Control Labels
+Ensuring every form control has a <label> (or aria-label, etc.).
+
+Visible Focus Ring
+Ensuring focus ring outline is clearly visible when needed.
+
+Not Relying on Pointer Only
+Ensuring pointer interactions (e.g. hover) have a keyboard alternative.
+
+Sufficient Contrast
+Using contrast checkers to ensure sufficient color contrast.
+
+Not Relying on Color Only
+Ensuring that no information is conveyed by color alone.
+
+`prefers-reduced-motion` media query
+
+Providing alternative CSS for users who prefer reduced motion.
+
+`prefers-contrast` media query
+
+Providing alternative CSS for users who prefer increased contrast.
+
+prefers-color-scheme
+
+
+
+//user disabilities do you account for when making websites?
+Low vision
+Blindness, high myopia, etc.
+
+Atypical color vision
+Color blindness
+
+Mobility impairments
+Arthritis, carpal tunnel, etc.
+
+Vestibular disorders
+Epilepsy, vertigo, etc.
+
+Learning disabilities
+Dyslexia, dyscalculia, etc.
+
+Other cognitive impairments
+Anxiety, Autism, OCD, ADHD, etc.
+
+Hearing impairments
+Deafness, tinnitus, etc.
+
+
+
+
+//Which other developer surveys do you participate in?
+https://survey.devographics.com/en-US/survey/state-of-html/2024/nw13E7Hl2ZdwD8r4N5ShH/10
+State of JavaScript
+State of CSS
+State of GraphQL
+JetBrains State of Developer Ecosystem
+Stack Overflow Annual Developer Survey
+CodinGame Developer Survey
+Design Tools Survey
+Postman State of the API Report
+Jamstack Community Survey
+
+#############################################
+https://www.youtube.com/watch?v=Jl57rgoNGwU
+https://www.youtube.com/watch?v=CDWUFnWVv5Q&list=PLSItThInuALsMJRRY4YDM-DTRvGAvZ-r7
+
+https://www.youtube.com/watch?v=6CXk84qyUxk
+
+
+Dardhyata Bhakti By Rama Das, Gita Das, Sarat
+Geet Govindam Odia(Gita Gobinda - ଶ୍ରୀଗୀତ ଗୋବିନ୍ଦ )
+1. https://www.youtube.com/watch?v=jqUy2wT7JdA&list=OLAK5uy_nhfdlyuFdMH9CXc-Lik-peduTvwwhlWgE
+2. https://www.youtube.com/watch?v=ZRPtFaEPkjQ
+3. https://www.youtube.com/watch?v=5rFnVQeFKZk
+4. https://www.youtube.com/watch?v=Jl57rgoNGwU - SitaCHori
+5. https://www.jiosaavn.com/artist/trupti-das/0HO-ZrmLdLA_
+
+Dardhyata Bhakti By Rama Das
+Dinabandhu Das samabad ra ditiya bhaga
+Gita Das, Sarat Nayak, Trupti Das
+Bharat Krushna Dash, Diapak Samantaray
+Vaisnav Charan samal, Charana Das
+
+
+HTTrack
+stackedit.io
+
+https://chatgpt.com/c/671ab6e7-6a7c-8013-8822-b0eaf3b05dc9
+https://chatgpt.com/share/671ae64d-43e8-8013-ae75-9994e148f371
