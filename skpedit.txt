@@ -1,3 +1,5 @@
+TJfF71bM3ngNCPgLFK90W5Jz1lGpuQ05KDef.SRABAN_ghp  ----> skpedit
+
 https://skpedit.github.io/
 https://skpedit.github.io/auth/callback ----- http://skpedit.42web.io/index.php
 
@@ -9,7 +11,8 @@ Client Secret: fcdbec5c171bad11e9486a5f93f67f435ae81895
 
 $npm install angular-oauth2-oidc
 
-_TJfF71bM3ngNCPgLFK90W5Jz1lGpuQ05KDef  ----> skpedit
+
+
 
 ----------------------------------------
 https://dash.infinityfree.com/register
