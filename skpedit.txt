@@ -9,7 +9,7 @@ Client Secret: fcdbec5c171bad11e9486a5f93f67f435ae81895
 
 $npm install angular-oauth2-oidc
 
-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  ----> skpedit
+php_TJfF71bM3ngNCPgLFK90W5Jz1lGpuQ05KDef  ----> skpedit
 
 ----------------------------------------
 https://dash.infinityfree.com/register
