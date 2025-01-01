@@ -204,7 +204,7 @@ FATHER.DOB:15-06-1962
 01-skp.pvt@moc.liamg|Lt@Chn@..3
 
 `pahadasingh.onlinesbi`(14180246803000000-0753100NIBS)
-Lta@Chrn@1..3
+Chr@Ltan@1..3
 80p79@78l76=3
 `sbicard`
 rr.8936654449575514(10/72-684)
@@ -482,6 +482,11 @@ At - Tainlo, Po - Bhatapada,
 Via - Nirakarpur, Block - Kanas
 Dist - Puri, Odisha, 752019, India
 Land Mark - Near to Sahupada UP School
+
+Address - 3:
+Name: Sraban Kumar pahadasingh
+Mob: 8328848690
+Plot - 392, 2nd floor, 1st room, BEML Layout Park, Near Dimond Stationary, Ganesh Medical Store, Bengaluru, Karnatak - 560066
 
 
 ================================Lipu=====================================

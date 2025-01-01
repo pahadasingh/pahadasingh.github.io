@@ -1,0 +1,186 @@
+Here is a curated list of **100 quiz questions** related to Camunda, covering topics like deployment, process versions, task management, APIs, forms, and best practices.
+
+---
+
+### **Camunda Basics**
+1. What is Camunda primarily used for?
+2. What is the BPMN standard, and how does Camunda implement it?
+3. What is the role of the process engine in Camunda?
+4. How does Camunda handle business process automation?
+5. What is the difference between BPMN, DMN, and CMMN in Camunda?
+
+---
+
+### **Process Deployment and Versions**
+6. When a workflow is deployed to the Camunda engine, what does it become?
+   - **Answer**: A process definition with a specific version.
+7. Can two process definitions with the same key but different versions exist simultaneously?
+8. How does Camunda decide which version of a process definition to use?
+9. What is the `deployment-aware` flag used for in multi-tenancy?
+10. What is the default behavior of the engine if a process definition with the same key is redeployed?
+
+---
+
+### **Process Instances**
+11. What is a process instance in Camunda?
+12. How can you start a process instance?
+13. What happens if a required variable is not provided when starting a process instance?
+14. How are process variables stored in the engine?
+15. What is the purpose of a business key in process instances?
+
+---
+
+### **User Tasks**
+16. What is a user task in BPMN?
+17. How can a user claim a task in Camunda?
+18. What is the difference between `assigned` and `unassigned` tasks?
+19. Can a task be reassigned after it is claimed? If so, how?
+20. What happens if no one claims a task?
+
+---
+
+### **Service Tasks**
+21. What is a service task in Camunda?
+22. How does the `JavaDelegate` interface work with service tasks?
+23. What is an external task in Camunda?
+24. How does an external task differ from a service task?
+25. How are retries configured for service tasks?
+
+---
+
+### **Events**
+26. What are the different types of events in BPMN?
+27. What is a start event in Camunda?
+28. How is a timer event triggered?
+29. What is a message event used for in a process?
+30. Can an error event interrupt a process flow?
+
+---
+
+### **Gateways**
+31. What is a gateway in BPMN?
+32. How does an exclusive gateway differ from a parallel gateway?
+33. When should you use an inclusive gateway?
+34. Can a gateway have conditions on outgoing flows?
+35. How does the engine evaluate gateway conditions?
+
+---
+
+### **Forms**
+36. What are embedded forms in Camunda?
+37. Where are forms typically stored in a Camunda project?
+38. Can a form dynamically populate its fields based on process variables?
+39. What is the difference between embedded and external forms?
+40. How does Camunda validate form submissions?
+
+---
+
+### **Variables**
+41. What data types can be stored as process variables?
+42. How can you retrieve a variable in a script task?
+43. Can process variables be shared across process instances?
+44. How are local variables different from global process variables?
+45. What happens to process variables when a process instance is completed?
+
+---
+
+### **Integration**
+46. How does Camunda integrate with REST APIs?
+47. What is the purpose of the `Fetch and Lock` API?
+48. How can you integrate Camunda with external systems using connectors?
+49. What is a webhook, and how does Camunda use it?
+50. Can Camunda call SOAP services directly?
+
+---
+
+### **History and Monitoring**
+51. What is the history level in Camunda used for?
+52. How can you view the execution history of a process instance?
+53. What information does the history table store?
+54. How does the Optimize tool enhance monitoring in Camunda?
+55. Can you delete historical data in Camunda? If so, how?
+
+---
+
+### **Error Handling**
+56. What is an incident in Camunda?
+57. How does the engine handle a failed task execution?
+58. Can you manually resolve incidents in Camunda?
+59. What is the difference between a boundary error event and an error thrown in code?
+60. How are retries configured for external tasks?
+
+---
+
+### **DMN Decision Tables**
+61. What is a DMN table in Camunda?
+62. How are decision tables evaluated in a process?
+63. What is the default hit policy in a DMN table?
+64. Can a decision table call another decision table?
+65. What is a DRD (Decision Requirements Diagram)?
+
+---
+
+### **Authorization**
+66. How does Camunda manage user access and permissions?
+67. What is a tenant in Camunda?
+68. Can you restrict process deployment to specific users?
+69. What are the available authorization levels in Camunda?
+70. How does Camunda handle authentication for REST APIs?
+
+---
+
+### **Best Practices**
+71. Why should you avoid long-running processes in Camunda?
+72. What are some best practices for managing process variables?
+73. How can you ensure scalability in a distributed Camunda setup?
+74. What is the recommended approach for error handling in service tasks?
+75. How do you test BPMN workflows in Camunda?
+
+---
+
+### **Advanced Topics**
+76. What is the Zeebe engine, and how does it differ from the classic Camunda engine?
+77. Can you deploy workflows to a Kubernetes cluster using Camunda 8?
+78. How does Camunda implement event-driven architecture?
+79. What is the role of Kafka in a Camunda 8 setup?
+80. How do worker nodes operate in Camunda 8?
+
+---
+
+### **Development Tools**
+81. What is the Camunda Modeler?
+82. How can you debug a BPMN model in the Modeler?
+83. Can you simulate workflows in the Camunda Modeler?
+84. What is the purpose of the deployment descriptor file?
+85. How can you unit test a BPMN workflow?
+
+---
+
+### **UI Tools**
+86. What is Tasklist in Camunda?
+87. How does Cockpit help with monitoring?
+88. What is Admin Console used for?
+89. Can you customize Tasklist for specific business needs?
+90. How can Angular or React forms be integrated with Camunda?
+
+---
+
+### **Scenarios**
+91. What happens if a deployed process contains an invalid task configuration?
+92. How do you suspend a process instance in Camunda?
+93. Can you resume a suspended process instance?
+94. How does the engine handle parallel process execution?
+95. What happens if a user task is deleted while in progress?
+
+---
+
+### **Miscellaneous**
+96. Can you export a BPMN model as a JSON or XML file?
+97. How does Camunda handle versioning for DMN tables?
+98. What is a process diagram's purpose in BPMN workflows?
+99. How does Camunda ensure high availability?
+100. What is the role of the job executor in Camunda?
+
+---
+
+Would you like answers or explanations for specific questions? Let me know!

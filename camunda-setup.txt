@@ -1,0 +1,67 @@
+curl -O https://raw.githubusercontent.com/camunda/camunda-platform/refs/heads/main/docker-compose.yaml
+
+
+==============================================================
+Cluster
+	Generate a client credential for your cluster
+	Navigate to API Clients and create a new client.
+	Download the credentials file (JSON) containing connection details and secrets.
+	
+	Trial Cluster: ef423fb3-957e-4740-9b0b-a55dae920601
+	camunda.client.mode=saas
+	camunda.client.auth.client-id=uc1zISbpQEVrz1U.5E.Wyp._LkOgdHBf
+	camunda.client.auth.client-secret=YxVYMoK8zmfBGOB1PaSkPrl7Jrzsuyeul0uK_vL6mcfCbMc70B6y3rTjNA4~1Kpc
+	camunda.client.cluster-id=ef423fb3-957e-4740-9b0b-a55dae920601
+	camunda.client.region=lhr-1
+	
+	## for uploading the BPMN to web
+	Cluster URL: https://ef423fb3-957e-4740-9b0b-a55dae920601.lhr-1.zeebe.camunda.io:443
+	Client ID: uc1zISbpQEVrz1U.5E.Wyp._LkOgdHBf
+	Client Secret: YxVYMoK8zmfBGOB1PaSkPrl7Jrzsuyeul0uK_vL6mcfCbMc70B6y3rTjNA4~1Kpc
+	
+	Scopes: Zeebe, Tasklist, Operate, Optimize, and Secrets
+	
+	
+	export ZEEBE_ADDRESS='ef423fb3-957e-4740-9b0b-a55dae920601.lhr-1.zeebe.camunda.io:443'
+export ZEEBE_CLIENT_ID='uc1zISbpQEVrz1U.5E.Wyp._LkOgdHBf'
+export ZEEBE_CLIENT_SECRET='YxVYMoK8zmfBGOB1PaSkPrl7Jrzsuyeul0uK_vL6mcfCbMc70B6y3rTjNA4~1Kpc'
+export ZEEBE_AUTHORIZATION_SERVER_URL='https://login.cloud.camunda.io/oauth/token'
+export ZEEBE_REST_ADDRESS='https://lhr-1.zeebe.camunda.io/ef423fb3-957e-4740-9b0b-a55dae920601'
+export ZEEBE_GRPC_ADDRESS='grpcs://ef423fb3-957e-4740-9b0b-a55dae920601.lhr-1.zeebe.camunda.io:443'
+export ZEEBE_TOKEN_AUDIENCE='zeebe.camunda.io'
+export CAMUNDA_CLUSTER_ID='ef423fb3-957e-4740-9b0b-a55dae920601'
+export CAMUNDA_CLIENT_ID='uc1zISbpQEVrz1U.5E.Wyp._LkOgdHBf'
+export CAMUNDA_CLIENT_SECRET='YxVYMoK8zmfBGOB1PaSkPrl7Jrzsuyeul0uK_vL6mcfCbMc70B6y3rTjNA4~1Kpc'
+export CAMUNDA_CLUSTER_REGION='lhr-1'
+export CAMUNDA_CREDENTIALS_SCOPES='Zeebe,Tasklist,Operate,Optimize,Secrets'
+export CAMUNDA_TASKLIST_BASE_URL='https://lhr-1.tasklist.camunda.io/ef423fb3-957e-4740-9b0b-a55dae920601'
+export CAMUNDA_OPTIMIZE_BASE_URL='https://lhr-1.optimize.camunda.io/ef423fb3-957e-4740-9b0b-a55dae920601'
+export CAMUNDA_OPERATE_BASE_URL='https://lhr-1.operate.camunda.io/ef423fb3-957e-4740-9b0b-a55dae920601'
+export CAMUNDA_OAUTH_URL='https://login.cloud.camunda.io/oauth/token'
+
+======================================================
+https://docs.camunda.io/docs/apis-tools/web-modeler-api/tutorial/
+https://docs.camunda.io/docs/apis-tools/administration-api/authentication/#generate-a-token
+https://console.camunda.io/org/762526c5-f0cc-4d5a-86b6-7641c41727f1/management/api
+
+curl --request POST https://login.cloud.camunda.io/oauth/token \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data-urlencode 'grant_type=client_credentials' \
+    --data-urlencode "audience=api.cloud.camunda.io" \
+    --data-urlencode "client_id=uc1zISbpQEVrz1U.5E.Wyp._LkOgdHBf"\
+    --data-urlencode "client_secret=YxVYMoK8zmfBGOB1PaSkPrl7Jrzsuyeul0uK_vL6mcfCbMc70B6y3rTjNA4~1Kpc"
+	
+export CAMUNDA_CONSOLE_CLIENT_ID='YwK4KpU70M488yR8'
+export CAMUNDA_CONSOLE_CLIENT_SECRET='0rc6d0Gxaudz8O9wog-cdUwsf0qW.2Q.'
+export CAMUNDA_OAUTH_URL='https://login.cloud.camunda.io/oauth/token'
+export CAMUNDA_CONSOLE_BASE_URL='https://api.cloud.camunda.io'
+export CAMUNDA_CONSOLE_OAUTH_AUDIENCE='api.cloud.camunda.io'
+	
+curl -v -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "audience=api.cloud.camunda.io" -d "client_id=YwK4KpU70M488yR8" -d "client_secret=0rc6d0Gxaudz8O9wog-cdUwsf0qW.2Q." https://login.cloud.camunda.io/oauth/token
+
+
+## for self managed website
+http://localhost:26500
+
+https://github.com/camunda/camunda-bpm-examples/tree/master
+embedded:app:task-form.html
