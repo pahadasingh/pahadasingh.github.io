@@ -205,7 +205,7 @@ FATHER.DOB:15-06-1962
 
 `pahadasingh.onlinesbi`(14180246803000000-0753100NIBS)
 Chr@Ltan@1..3
-80p79@78l76=3
+60p59@56l54=3
 `sbicard`
 rr.8936654449575514(10/72-684)
 832..4.690|Chrn@lta@3..1|4897
@@ -279,7 +279,7 @@ sraban_pvt@moc.oohay
 -passbook.epfindia.gov.in`
 UAN - 101303150593|Kmr@1...67/8
 https://unifiedportal-mem.epfindia.gov.in/memberinterface/
-
+https://passbook.epfindia.gov.in/MemberPassBook/login
 
 `https://nps.kfintech.com/`
 PRAN - 400060810777|Chrn@Lta@1234
@@ -605,3 +605,12 @@ https://www.placementindia.com/recruitment-agency/bangalore-recruitment-agency.h
 
 https://www.xing.com/profile?sc_o=jobs_recos_edit_criteria_empty_state_click
 
+
+https://books.zohosecure.in/portal/talproindiaprivatelimited/index
+sraban.pahadasing@talproindia.com
+Lta@8079
+
+
+https://themewagon.com/themes/free-bootstrap-education-template-edusite/
+https://preview.themeforest.net/item/eduport-angular-lms-education-and-course-template/full_screen_preview/55823060
+https://angular.envytheme.com/lian/
